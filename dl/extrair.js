@@ -55,7 +55,7 @@ const TIPO_TITULO = s => /^REQUERIMENTOS? DE COMISS/.test(s) ? "RQC" : /^REQUERI
 function classeRQ(item){
   const k = Math.max(item.lastIndexOf("(–"), item.lastIndexOf("(-"), item.lastIndexOf("( –"));
   const desp = k >= 0 ? item.slice(k) : "";
-  if (/anexe-se/i.test(desp)) return "ANEXADOS";
+  if (/anexe-se/i.test(desp) || /anexe-se ao/i.test(item)) return "ANEXADOS";
   if (/[àa]s? comiss/i.test(desp)) return "COMISSÕES TEMÁTICAS";
   if (/mesa da assembleia/i.test(desp)) return /provid[eê]ncia interna/i.test(desp) ? "MESA DA ASSEMBLEIA, ENCAMINHADOS PARA PROVIDÊNCIA INTERNA" : "MESA DA ASSEMBLEIA, VOTADO EM PLENÁRIO";
   if (/retirada de tramita/i.test(item)) return "SEM DESPACHO, RETIRADA DE TRAMITAÇÃO";
