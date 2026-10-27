@@ -271,7 +271,7 @@ function render(){
     const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
     tr.appendChild(el("td", "h", hora)); tr.appendChild(el("td", "n", nome)); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
     const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
-    for (const k of ORD) if (cnt[k]) sc.appendChild(el("span", "pill s-" + k, cnt[k] + " " + (LBL[k] || k)));
+    for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, k === "ok" ? String(cnt[k]) : cnt[k] + " " + (LBL[k] || k)); if (k === "ok") p.title = cnt[k] + " conferidos"; sc.appendChild(p); }
     tr.appendChild(sc);
     tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada ? "prob" : cnt.aguardando || cnt.revisar ? "esp" : cnt.ok ? "okk" : "neutra");
     t.appendChild(tr);
