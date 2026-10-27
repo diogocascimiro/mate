@@ -45,8 +45,8 @@ input[type=date],select{padding:6px 8px;border:1px solid var(--line);border-radi
 .day.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 .day b{font-family:var(--fm);font-size:13px}.day small{font-size:11px;color:var(--muted)}
 .dots{display:flex;gap:3px}.dots i{width:7px;height:7px;border-radius:50%}
-.summary{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-@media (max-width:760px){.summary{grid-template-columns:repeat(3,1fr)}}
+.summary{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+@media (max-width:900px){.summary{grid-template-columns:repeat(4,1fr)}}@media (max-width:560px){.summary{grid-template-columns:repeat(2,1fr)}}
 .stat{background:var(--paper);padding:12px 14px;display:grid;gap:2px;cursor:pointer;border:0;text-align:left;border-radius:0}
 .stat.on{background:var(--soft)}
 .stat .k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
@@ -93,6 +93,8 @@ table.itens td.p a{color:inherit}
 .stat.k-ok{background:var(--ok-s)}.stat.k-ok .v,.stat.k-ok .k{color:var(--ok)}
 .stat.k-divergente,.stat.k-pendente{background:var(--bad-s)}.stat.k-divergente .v,.stat.k-divergente .k,.stat.k-pendente .v,.stat.k-pendente .k{color:var(--bad)}
 .stat.k-aguardando{background:var(--warn-s)}.stat.k-aguardando .v,.stat.k-aguardando .k{color:var(--warn)}
+.stat.k-lancados{background:#e6eeec}.stat.k-lancados .v,.stat.k-lancados .k{color:#123b36}
+@media (prefers-color-scheme:dark){.stat.k-lancados{background:#1a2a27}.stat.k-lancados .v,.stat.k-lancados .k{color:#7fc4b8}}
 .stat.k-revisar{background:var(--info-s)}.stat.k-revisar .v,.stat.k-revisar .k{color:var(--info)}
 .stat.zero{background:var(--paper);border-color:var(--line)}.stat.zero .v,.stat.zero .k{color:var(--muted)!important}
 .stat.on{box-shadow:inset 0 0 0 2px currentColor}.stat.on.k-todos{box-shadow:inset 0 0 0 2px var(--accent)}
@@ -131,7 +133,7 @@ table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightne
 <script>
 (() => {
 const $ = id => document.getElementById(id);
-const ST = [["todos","Itens"],["ok","OK"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"],["revisar","Revisar"]];
+const ST = [["todos","Itens"],["lancados","Lançados"],["ok","Conferidos"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"],["revisar","Revisar"]];
 const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--info)", novo:"var(--muted)" };
 const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
 const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
@@ -162,7 +164,7 @@ function renderDays(){
 
 function render(){
   const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria");
-  const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status; cnt[k] = (cnt[k] || 0) + 1; });
+  const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status; cnt[k] = (cnt[k] || 0) + 1; if (i.status === "ok" || i.status === "divergente") cnt.lancados = (cnt.lancados || 0) + 1; });
   const sm = $("summary"); sm.textContent = "";
   for (const [k, l] of ST) {
     const b = el("button", "stat" + (filtro === k ? " on" : "")); b.type = "button";
@@ -174,7 +176,7 @@ function render(){
   const list = $("list"); list.textContent = "";
   const reun = dia ? dia.reunioes : [];
   if (!reun.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião encontrada nesta data.")); return; }
-  const passa = i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada");
+  const passa = i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada") || (filtro === "lancados" && (i.status === "ok" || i.status === "divergente"));
   const ORD = ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"];
   const card = el("section", "card"); const box = el("div", "tablebox"); const t = el("table", "grade");
   let mostradas = 0;
@@ -214,7 +216,7 @@ function render(){
   const plen = reun.filter(r => r.comissao_id === 0);
   if (plen.length) {
     secao("REUNIÕES DE PLENÁRIO", plen.length + (plen.length === 1 ? " reunião" : " reuniões"));
-    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), r.ocorrida === "S" ? (r.res_em ? String(todas.length) : "aguardando resultado") : (/sem quorum/i.test(r.tipo) ? "sem quórum" : (naoHouve(r) ? "não houve" : "?")), todas, r.ocorrida !== "S" && (naoHouve(r) || /sem quorum/i.test(r.tipo))); }
+    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), r.ocorrida === "S" ? (r.res_em ? String(todas.length) : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?"), todas, r.ocorrida !== "S" && naoHouve(r)); }
   }
   // Comissões (sem RQC nem designações)
   const com = reun.filter(r => r.comissao_id !== 0);
