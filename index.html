@@ -112,7 +112,7 @@ table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightne
 <div class="band"><div class="bandin"><a class="brandbar" href="https://almg.digital"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#123b36"/><rect x="13" y="13" width="16" height="16" rx="4.5" fill="#f3f1ea"/><rect x="35" y="13" width="16" height="16" rx="4.5" fill="#f3f1ea" opacity=".5"/><rect x="13" y="35" width="16" height="16" rx="4.5" fill="#f3f1ea" opacity=".5"/><rect x="35" y="35" width="16" height="16" rx="8" fill="#6e0d17"/></svg><span class="wordmark">ALMG<i>.</i><span>DIGITAL</span></span></a></div></div>
 <div class="wrap">
 <header>
-<div><h1>Conferência MATE</h1><div class="sub">Resultados de reunião de comissão × tramitação lançada no MATE</div></div>
+<div><h1>Conferência MATE</h1><div class="sub">Resultados de reunião de Plenário e de comissões × tramitação lançada no MATE</div></div>
 <div class="ctrl"><input type="date" id="data" aria-label="Data"><button id="rodar" type="button">Conferir agora</button></div>
 </header>
 <div class="days" id="days"></div>
@@ -123,7 +123,6 @@ table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightne
 <span><span class="pill s-pendente">pendente</span> nada lançado na data</span>
 <span><span class="pill s-aguardando">aguardando</span> dentro do prazo de 2 dias úteis</span>
 <span><span class="pill s-revisar">revisar</span> ação sem regra automática</span>
-<span><span class="pill s-silegis">via Silegis</span> designação ainda não lançada; vem dos Lançamentos de Tramitação do Silegis, sem prazo pelo resultado</span>
 <span><span class="pill s-pre_cadastro">pré-cadastro</span> RQC ainda não publicado; o pré-cadastro não aparece no portal até a publicação no DL</span>
 </div>
 <div id="list" style="display:grid;gap:12px"></div>
@@ -162,7 +161,7 @@ function renderDays(){
 }
 
 function render(){
-  const its = dia ? dia.itens : [];
+  const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria");
   const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status; cnt[k] = (cnt[k] || 0) + 1; });
   const sm = $("summary"); sm.textContent = "";
   for (const [k, l] of ST) {
@@ -174,43 +173,68 @@ function render(){
   }
   const list = $("list"); list.textContent = "";
   const reun = dia ? dia.reunioes : [];
-  if (!reun.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião de comissão encontrada nesta data.")); return; }
+  if (!reun.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião encontrada nesta data.")); return; }
+  const passa = i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada");
+  const ORD = ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"];
   const card = el("section", "card"); const box = el("div", "tablebox"); const t = el("table", "grade");
-  const cap = el("tr", "cap"); const ct = el("td"); ct.colSpan = 4; ct.append(el("b", null, "REUNIÕES DE COMISSÕES"), el("span", "m", " · " + reun.length + (reun.length === 1 ? " reunião" : " reuniões"))); cap.appendChild(ct); t.appendChild(cap);
   let mostradas = 0;
-  for (const r of reun) {
-    const todas = its.filter(i => i.reuniao_id === r.id);
-    const ri = todas.filter(i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada"));
-    if (filtro !== "todos" && !ri.length) continue;
+  function secao(titulo, qtd){ const cap = el("tr", "cap"); const ct = el("td"); ct.colSpan = 4; ct.append(el("b", null, titulo), el("span", "m", " · " + qtd)); cap.appendChild(ct); t.appendChild(cap); }
+  function linha(id, hora, nome, qtdTxt, todas, off){
+    const ri = todas.filter(passa);
+    if (filtro !== "todos" && !ri.length) return;
     mostradas++;
-    const nome = (/^comiss/i.test(r.comissao) ? r.comissao : "Comissão de " + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
-    const semRes = r.ocorrida !== "S";
-    const tr = el("tr", "reu" + (semRes ? " off" : "") + (todas.length ? " clic" : ""));
-    tr.appendChild(el("td", "h", r.hora));
-    tr.appendChild(el("td", "n", nome));
-    tr.appendChild(el("td", "q", semRes ? "não houve" : (r.res_em ? String(todas.length) : "aguardando resultado")));
-    const sc = el("td", "s");
-    const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
-    for (const k of ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"]) if (cnt[k]) sc.appendChild(el("span", "pill s-" + k, cnt[k] + " " + (LBL[k] || k)));
+    const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
+    tr.appendChild(el("td", "h", hora)); tr.appendChild(el("td", "n", nome)); tr.appendChild(el("td", "q", qtdTxt));
+    const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
+    for (const k of ORD) if (cnt[k]) sc.appendChild(el("span", "pill s-" + k, cnt[k] + " " + (LBL[k] || k)));
     tr.appendChild(sc);
     tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada ? "prob" : cnt.aguardando || cnt.revisar ? "esp" : cnt.ok ? "okk" : "neutra");
     t.appendChild(tr);
-    if (todas.length) {
-      const aberta = abertas.has(r.id) || filtro !== "todos";
-      const det = el("tr", "det"); det.hidden = !aberta; const dt = el("td"); dt.colSpan = 4;
-      const it = el("table", "itens");
-      for (const i of ri) {
-        const x = el("tr");
-        const pc = el("td", "p"); const [tp, na] = i.prop.split(" "); const lk = el("a", null, i.prop); lk.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; lk.target = "_blank"; lk.rel = "noopener"; pc.appendChild(lk); x.appendChild(pc);
-        x.appendChild(el("td", null, i.acao + (i.detalhe ? " · " + i.detalhe : "")));
-        x.appendChild(el("td", "m", i.mate || "—"));
-        const s = el("td"); s.appendChild(el("span", "pill s-" + i.status, LBL[i.status] || i.status)); x.appendChild(s);
-        it.appendChild(x);
-      }
-      dt.appendChild(it); det.appendChild(dt); t.appendChild(det);
-      tr.title = "Mostrar ou esconder os itens";
-      tr.addEventListener("click", () => { det.hidden = !det.hidden; if (det.hidden) abertas.delete(r.id); else abertas.add(r.id); tr.classList.toggle("aberta", !det.hidden); });
-      tr.classList.toggle("aberta", aberta);
+    if (!todas.length) return;
+    const aberta = abertas.has(id) || filtro !== "todos";
+    const det = el("tr", "det"); det.hidden = !aberta; const dt = el("td"); dt.colSpan = 4; const it = el("table", "itens");
+    for (const i of ri) {
+      const x = el("tr");
+      const pc = el("td", "p"); const [tp, na] = i.prop.split(" "); const lk = el("a", null, i.prop); lk.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; lk.target = "_blank"; lk.rel = "noopener"; pc.appendChild(lk); x.appendChild(pc);
+      x.appendChild(el("td", null, /^plen/i.test(i.acao) ? i.detalhe : i.acao + (i.detalhe ? " · " + i.detalhe : "")));
+      x.appendChild(el("td", "m", i.mate || "—"));
+      const s = el("td"); s.appendChild(el("span", "pill s-" + i.status, LBL[i.status] || i.status)); x.appendChild(s);
+      it.appendChild(x);
+    }
+    dt.appendChild(it); det.appendChild(dt); t.appendChild(det);
+    tr.title = "Mostrar ou esconder os itens";
+    tr.addEventListener("click", () => { det.hidden = !det.hidden; if (det.hidden) abertas.delete(id); else abertas.add(id); tr.classList.toggle("aberta", !det.hidden); });
+    tr.classList.toggle("aberta", aberta);
+  }
+  const visiveis = its.filter(i => i.acao !== "Designação de relatoria");
+  const estado = (r, n) => r.ocorrida !== "S" ? "não houve" : (r.res_em ? String(n) : "aguardando resultado");
+  // Plenário
+  const plen = reun.filter(r => r.comissao_id === 0);
+  if (plen.length) {
+    secao("REUNIÕES DE PLENÁRIO", plen.length + (plen.length === 1 ? " reunião" : " reuniões"));
+    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), r.ocorrida !== "S" ? (/sem quorum/i.test(r.tipo) ? "sem quórum" : "não houve") : (r.res_em ? String(todas.length) : "aguardando resultado"), todas, r.ocorrida !== "S"); }
+  }
+  // Comissões (sem RQC nem designações)
+  const com = reun.filter(r => r.comissao_id !== 0);
+  if (com.length) {
+    secao("REUNIÕES DE COMISSÕES", com.length + (com.length === 1 ? " reunião" : " reuniões"));
+    for (const r of com) {
+      const todas = visiveis.filter(i => i.reuniao_id === r.id && !/^RQC /.test(i.prop));
+      const nome = (/^comiss/i.test(r.comissao) ? r.comissao : "Comissão de " + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
+      linha(r.id, r.hora, nome, estado(r, todas.length), todas, r.ocorrida !== "S");
+    }
+    // Requerimentos de comissões, como na planilha: "RQC: SAÚDE, APROVADOS"
+    const grupos = [];
+    for (const r of com) {
+      const rq = visiveis.filter(i => i.reuniao_id === r.id && /^RQC /.test(i.prop));
+      const cat = i => /aprovad/i.test(i.acao) ? "APROVADOS" : /recebid/i.test(i.acao) ? "RECEBIDOS" : i.acao.toUpperCase();
+      const porCat = new Map(); rq.forEach(i => { const c = cat(i); if (!porCat.has(c)) porCat.set(c, []); porCat.get(c).push(i); });
+      for (const [c, l] of porCat) grupos.push([r, c, l]);
+    }
+    if (grupos.length) {
+      const tot = grupos.reduce((n, g) => n + g[2].length, 0);
+      secao("REQUERIMENTOS DE COMISSÕES", tot + (tot === 1 ? " requerimento" : " requerimentos"));
+      for (const [r, c, l] of grupos) linha(r.id + "|" + c, r.hora, "RQC: " + r.comissao.replace(/^comiss[aã]o (de |do |da |dos |das )?/i, "").toUpperCase() + ", " + c, String(l.length), l, false);
     }
   }
   box.appendChild(t); card.appendChild(box); list.appendChild(card);
