@@ -73,9 +73,9 @@ table.grade tr.cap td{background:var(--soft);border-top:0;font-size:13px;letter-
 table.grade tr.cap .m{color:var(--muted)}
 table.grade td.h{font-family:var(--fm);width:4.5em;color:var(--muted);white-space:nowrap}
 table.grade td.n{font-size:13.5px;font-weight:500}
-table.grade td.q{font-family:var(--fm);font-size:13px;width:9em;white-space:nowrap}
-table.grade td.s{text-align:right;white-space:normal}
-table.grade td.s .pill{margin-left:4px}
+table.grade td.q{font-family:var(--fm);font-size:13px;width:1%;white-space:nowrap;padding-right:14px}
+table.grade td.s{text-align:left;white-space:nowrap;width:1%;min-width:7em}
+table.grade td.s .pill{margin-right:4px}
 table.grade tr.off td{color:var(--muted)}
 table.grade tr.off td.n{font-weight:400}
 table.grade tr.clic{cursor:pointer}
@@ -185,8 +185,11 @@ tr.cap.sec-pz{--sc:#5b4b8a;--sc-t:#ece8f6}
 @media (prefers-color-scheme:dark){tr.cap.sec-pz{--sc:#b7a6ec;--sc-t:#241f38}}
 table.grade tr.cap{background:linear-gradient(90deg,var(--sc-t),transparent 70%)}
 table.grade tr.cap td{background:transparent!important}
+table.grade tr.cap td.s .pill{margin-right:4px}
 table.grade tr.cap td.q .lanc{font-family:var(--fm);font-size:11.5px;font-weight:600;color:var(--sc);white-space:nowrap}
 table.grade tr.cap a.tlink{color:inherit;text-decoration:none}
+table.grade tr.cap a.tlink::after{content:"↗";margin-left:5px;font-size:11px;opacity:.6}
+table.grade tr.cap a.tlink:hover::after{opacity:1}
 table.grade tr.cap a.tlink:hover b{text-decoration:underline;text-underline-offset:3px}
 table.grade a.rlink{margin-left:8px;font-size:12px;color:var(--muted);text-decoration:none;opacity:.55}
 table.grade tr:hover a.rlink{opacity:1}
@@ -319,7 +322,9 @@ function render(){
   let mostradas = 0;
   let secAtual = null; const fechada = () => fechadas.has(secAtual);
   const plural = (n, s, p) => n + " " + (n === 1 ? s : p);
-  function secao(titulo, qtd, cls, lanc, href){ secAtual = titulo; const f = fechadas.has(titulo); const cap = el("tr", "cap " + (cls || "") + (f ? " fechada" : "")); const ct = el("td"); ct.colSpan = 2; const bul = el("i", "bul"); bul.title = f ? "Mostrar a seção" : "Esconder a seção"; const tb = el("b", null, titulo); if (href) { const a = el("a", "tlink"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte"; a.appendChild(tb); ct.append(bul, a); } else ct.append(bul, tb); ct.append(el("span", "cnt", qtd)); cap.appendChild(ct); const cq = el("td", "q"); if (lanc != null) cq.appendChild(el("span", "lanc", lanc)); cap.append(cq, el("td")); bul.addEventListener("click", () => { if (fechadas.has(titulo)) fechadas.delete(titulo); else fechadas.add(titulo); try { localStorage.setItem("mate_fechadas", JSON.stringify([...fechadas])); } catch (e) {} render(); }); t.appendChild(cap); }
+  // pills de situação (mesmas das linhas): aparecem também no título, com a seção fechada
+  function pills(todas){ const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1); for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sc.appendChild(p); } return sc; }
+  function secao(titulo, qtd, cls, lanc, href, todas){ secAtual = titulo; const f = fechadas.has(titulo); const cap = el("tr", "cap " + (cls || "") + (f ? " fechada" : "")); const ct = el("td"); ct.colSpan = 2; const bul = el("i", "bul"); bul.title = f ? "Mostrar a seção" : "Esconder a seção"; const tb = el("b", null, titulo); if (href) { const a = el("a", "tlink"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte"; a.appendChild(tb); ct.append(bul, a); } else ct.append(bul, tb); ct.append(el("span", "cnt", qtd)); cap.appendChild(ct); const cq = el("td", "q"); if (lanc != null) cq.appendChild(el("span", "lanc", lanc)); cap.append(cq, pills(todas || [])); bul.addEventListener("click", () => { if (fechadas.has(titulo)) fechadas.delete(titulo); else fechadas.add(titulo); try { localStorage.setItem("mate_fechadas", JSON.stringify([...fechadas])); } catch (e) {} render(); }); t.appendChild(cap); }
   function linha(id, hora, nome, qtdTxt, todas, off, href){
     const ri = todas.filter(passa);
     if (filtro !== "todos" && !ri.length) return;
@@ -327,8 +332,7 @@ function render(){
     if (fechada()) return;
     const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
     tr.appendChild(el("td", "h", hora)); const tn = el("td", "n", nome); if (href) { const a = el("a", "rlink", "↗"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte"; a.addEventListener("click", e => e.stopPropagation()); tn.appendChild(a); } tr.appendChild(tn); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : qtdTxt === "-" ? "q0" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
-    const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
-    for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sc.appendChild(p); }
+    const sc = pills(todas); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
     tr.appendChild(sc);
     tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada ? "prob" : cnt.aguardando || cnt.revisar ? "esp" : cnt.ok ? "okk" : "neutra");
     t.appendChild(tr);
@@ -356,11 +360,11 @@ function render(){
   for (const [fonte, titulo, cls] of [["DE", "DIÁRIO DO EXECUTIVO", "sec-de"], ["DL", "DIÁRIO DO LEGISLATIVO", "sec-dl"]]) {
     const eds = diarios.filter(d => d.fonte === fonte && d.grupos.length);
     if (!eds.length) {   // como na planilha: o Diário do Executivo aparece mesmo sem nada a lançar
-      if (fonte === "DE") { secao(titulo, "0 seções", cls, plural(0, "lançamento", "lançamentos"), URLS.de(sel)); linha("DE-vazio", "-", "-", "-", [], true); }
+      if (fonte === "DE") { secao(titulo, "0 seções", cls, plural(0, "ação", "ações"), URLS.de(sel)); linha("DE-vazio", "-", "-", "-", [], true); }
       continue;
     }
     const nGr = eds.reduce((n, d) => n + d.grupos.length, 0), nIt = eds.reduce((n, d) => n + d.itens.length, 0);
-    secao(titulo, plural(nGr, "seção", "seções"), cls, plural(nIt, "lançamento", "lançamentos"), fonte === "DE" ? URLS.de(eds[0].data) : (eds[0].url || URLS.dl(eds[0].data)));
+    secao(titulo, plural(nGr, "seção", "seções"), cls, plural(nIt, "ação", "ações"), fonte === "DE" ? URLS.de(eds[0].data) : (eds[0].url || URLS.dl(eds[0].data)), eds.flatMap(d => d.itens));
     for (const d of eds) {
       d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc, String(l.length), l, false, fonte === "DL" && d.url && parseInt(g.pag) ? d.url + "#page=" + parseInt(g.pag) : null); });
     }
@@ -368,13 +372,13 @@ function render(){
   // Plenário
   const plen = reun.filter(r => r.comissao_id === 0);
   if (plen.length) {
-    secao("REUNIÕES DE PLENÁRIO", plural(plen.length, "reunião", "reuniões"), "sec-plen", plural(visiveis.filter(i => plen.some(r => r.id === i.reuniao_id)).length, "lançamento", "lançamentos"), URLS.plen(sel));
+    secao("REUNIÕES DE PLENÁRIO", plural(plen.length, "reunião", "reuniões"), "sec-plen", plural(visiveis.filter(i => plen.some(r => r.id === i.reuniao_id)).length, "ação", "ações"), URLS.plen(sel), visiveis.filter(i => plen.some(r => r.id === i.reuniao_id)));
     for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), estado(r, todas.length), todas, r.ocorrida !== "S" && naoHouve(r), URLS.reuPlen(r)); }
   }
   // Comissões (sem RQC nem designações)
   const com = reun.filter(r => r.comissao_id !== 0);
   if (com.length) {
-    secao("REUNIÕES DE COMISSÕES", plural(com.length, "reunião", "reuniões"), "sec-com", plural(visiveis.filter(i => !/^RQC /.test(i.prop) && com.some(r => r.id === i.reuniao_id)).length, "lançamento", "lançamentos"), URLS.com(sel));
+    secao("REUNIÕES DE COMISSÕES", plural(com.length, "reunião", "reuniões"), "sec-com", plural(visiveis.filter(i => !/^RQC /.test(i.prop) && com.some(r => r.id === i.reuniao_id)).length, "ação", "ações"), URLS.com(sel), visiveis.filter(i => !/^RQC /.test(i.prop) && com.some(r => r.id === i.reuniao_id)));
     for (const r of com) {
       const todas = visiveis.filter(i => i.reuniao_id === r.id && !/^RQC /.test(i.prop));
       const nome = (/^comiss/i.test(r.comissao) ? r.comissao : "Comissão de " + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
@@ -392,7 +396,7 @@ function render(){
     if (grupos.length) {
       const tot = grupos.reduce((n, g) => n + g[2].length, 0);
       const nReu = new Set(grupos.map(g => g[0].id)).size;
-      secao("REQUERIMENTOS DE COMISSÕES", plural(nReu, "reunião", "reuniões"), "sec-rqc", plural(tot, "requerimento", "requerimentos"), URLS.com(sel));
+      secao("REQUERIMENTOS DE COMISSÕES", plural(nReu, "reunião", "reuniões"), "sec-rqc", plural(tot, "ação", "ações"), URLS.com(sel), grupos.flatMap(g => g[2]));
       for (const [r, c, l] of grupos) linha(r.id + "|" + c, r.hora, "RQC: " + r.comissao.replace(/^comiss[aã]o (de |do |da |dos |das )?/i, "").toUpperCase() + ", " + c, String(l.length), l, false, URLS.reuCom(r));
     }
   }
@@ -401,7 +405,7 @@ function render(){
   if (pz.length) {
     const n = pz.reduce((a, d) => a + d.itens.length, 0);
     const nPub = pz.reduce((a, d) => a + d.grupos.length, 0);
-    secao("PRECLUSÃO DE PRAZO", plural(nPub, "publicação", "publicações"), "sec-pz", plural(n, "lançamento", "lançamentos"));
+    secao("PRECLUSÃO DE PRAZO", plural(nPub, "publicação", "publicações"), "sec-pz", plural(n, "ação", "ações"), pz[0].ref ? URLS.dl(pz[0].ref) : null, pz.flatMap(d => d.itens));
     for (const d of pz) d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha("PZ" + d.chave + "|" + k, g.pag || "—", g.desc.replace(/^PRECLUS[ÃA]O DE PRAZO:\s*/i, ""), String(l.length), l, false, d.ref ? URLS.dl(d.ref) : null); });
   }
   box.appendChild(t); card.appendChild(box); list.appendChild(card);
