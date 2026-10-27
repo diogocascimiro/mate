@@ -1,75 +1,85 @@
 {
- "versao": 6,
+ "versao": 7,
  "id": "2656412",
  "data": "2026-10-16",
  "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
  "obs": "",
  "paginas": 307,
- "extraido_em": "2026-10-27T20:11:48.890Z",
+ "extraido_em": "2026-10-27T20:25:17.895Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
    "pag": "1 - 6",
    "props": [
     {
-     "prop": "PROPLEI 27018",
+     "prop": "PL 2343/2024",
      "pag": 1,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 1",
+     "origem": "Proposição de Lei 27018"
     },
     {
-     "prop": "PROPLEI 27019",
+     "prop": "PL 3238/2025",
      "pag": 2,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 2",
+     "origem": "Proposição de Lei 27019"
     },
     {
-     "prop": "PROPLEI 27020",
+     "prop": "PL 4294/2025",
      "pag": 2,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 2",
+     "origem": "Proposição de Lei 27020"
     },
     {
-     "prop": "PROPLEI 27021",
+     "prop": "PL 2196/2024",
      "pag": 2,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 2",
+     "origem": "Proposição de Lei 27021"
     },
     {
-     "prop": "PROPLEI 27022",
+     "prop": "PL 4027/2022",
      "pag": 3,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 3",
+     "origem": "Proposição de Lei 27022"
     },
     {
-     "prop": "PROPLEI 27023",
+     "prop": "PL 3632/2022",
      "pag": 3,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 3",
+     "origem": "Proposição de Lei 27023"
     },
     {
-     "prop": "PROPLEI 27024",
+     "prop": "PL 5004/2025",
      "pag": 5,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 5",
+     "origem": "Proposição de Lei 27024"
     },
     {
-     "prop": "PROPLEI 27025",
+     "prop": "PL 4775/2025",
      "pag": 5,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 5",
+     "origem": "Proposição de Lei 27025"
     },
     {
-     "prop": "PROPLEI 27026",
+     "prop": "PL 4703/2025",
      "pag": 6,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 6",
+     "origem": "Proposição de Lei 27026"
     },
     {
-     "prop": "PROPLEI 27027",
+     "prop": "PL 4448/2025",
      "pag": 6,
-     "status": "revisar",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 6",
+     "origem": "Proposição de Lei 27027"
     }
    ]
   },
@@ -2198,5 +2208,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-27T20:11:48.890Z"
+ "conferido_em": "2026-10-27T20:25:29.479Z"
 }

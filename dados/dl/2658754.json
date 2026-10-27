@@ -1,11 +1,11 @@
 {
- "versao": 6,
+ "versao": 7,
  "id": "2658754",
  "data": "2026-10-16",
  "url": "https://mediaserver.almg.gov.br/acervo/658/754/2658754.pdf",
  "obs": "",
  "paginas": 1,
- "extraido_em": "2026-10-27T20:11:49.070Z",
+ "extraido_em": "2026-10-27T20:25:30.284Z",
  "grupos": [
   {
    "desc": "ERRATAS",
@@ -20,5 +20,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-27T20:11:49.070Z"
+ "conferido_em": "2026-10-27T20:25:30.284Z"
 }

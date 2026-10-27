@@ -1,11 +1,11 @@
 {
- "versao": 6,
+ "versao": 7,
  "id": "2658064",
  "data": "2026-10-22",
  "url": "https://mediaserver.almg.gov.br/acervo/658/64/2658064.pdf",
  "obs": "",
  "paginas": 55,
- "extraido_em": "2026-10-27T20:11:58.544Z",
+ "extraido_em": "2026-10-27T20:25:39.106Z",
  "grupos": [
   {
    "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, COM COMUNICAÇÃO",
@@ -804,12 +804,6 @@
      "mate": "Publicado no DL em 22 10 2026, pág 14"
     },
     {
-     "prop": "RQN 19726/2026",
-     "pag": 14,
-     "status": "ok",
-     "mate": "Publicado no DL em 22 10 2026, pág 14"
-    },
-    {
      "prop": "RQN 19727/2026",
      "pag": 14,
      "status": "ok",
@@ -919,6 +913,24 @@
     },
     {
      "prop": "RQN 19730/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 22 10 2026, pág 14"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - ANEXADOS",
+   "pag": "14",
+   "props": [
+    {
+     "prop": "RQN 19726/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 22 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 19723/2026",
      "pag": 14,
      "status": "ok",
      "mate": "Publicado no DL em 22 10 2026, pág 14"
@@ -2738,5 +2750,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-27T20:11:58.544Z"
+ "conferido_em": "2026-10-27T20:25:39.107Z"
 }
