@@ -86,6 +86,16 @@ table.grade tr.det>td{padding:0 10px 10px 4.5em;background:var(--soft)}
 table.itens{font-size:13px}
 table.itens td{border-top:1px solid var(--line);padding:4px 8px}
 table.itens td.p a{color:inherit}
+.summary{background:none;border:0;border-radius:0;gap:10px;overflow:visible}
+.stat{border-radius:12px;border:1px solid transparent;transition:transform .1s}
+.stat:hover{transform:translateY(-1px)}
+.stat.k-todos{background:var(--paper);border-color:var(--line)}
+.stat.k-ok{background:var(--ok-s)}.stat.k-ok .v,.stat.k-ok .k{color:var(--ok)}
+.stat.k-divergente,.stat.k-pendente{background:var(--bad-s)}.stat.k-divergente .v,.stat.k-divergente .k,.stat.k-pendente .v,.stat.k-pendente .k{color:var(--bad)}
+.stat.k-aguardando{background:var(--warn-s)}.stat.k-aguardando .v,.stat.k-aguardando .k{color:var(--warn)}
+.stat.k-revisar{background:var(--info-s)}.stat.k-revisar .v,.stat.k-revisar .k{color:var(--info)}
+.stat.zero{background:var(--paper);border-color:var(--line)}.stat.zero .v,.stat.zero .k{color:var(--muted)!important}
+.stat.on{box-shadow:inset 0 0 0 2px currentColor}.stat.on.k-todos{box-shadow:inset 0 0 0 2px var(--accent)}
 :root{--prob-bg:#fdf1f0;--esp-bg:#fdf8ec;--faixa-prob:#c0261d;--faixa-esp:#d4930b;--faixa-ok:#1e7a4c}
 @media (prefers-color-scheme:dark){:root{--prob-bg:#2e1a19;--esp-bg:#2c2412;--faixa-prob:#ff8a80;--faixa-esp:#f0b54a;--faixa-ok:#5fcf95}}
 table.grade tr.reu td.h{border-left:4px solid transparent}
@@ -158,7 +168,7 @@ function render(){
   for (const [k, l] of ST) {
     const b = el("button", "stat" + (filtro === k ? " on" : "")); b.type = "button";
     b.append(el("span", "k", l), el("span", "v", String(cnt[k] || 0)));
-    if (k !== "todos" && COR[k]) b.querySelector(".v").style.color = COR[k];
+    b.classList.add("k-" + k); if (!cnt[k]) b.classList.add("zero");
     b.addEventListener("click", () => { filtro = filtro === k ? "todos" : k; render(); });
     sm.appendChild(b);
   }
