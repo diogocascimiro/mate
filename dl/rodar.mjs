@@ -10,7 +10,7 @@ import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { extrairDL, refs } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
-const VERSAO = 6;                 // muda quando a extração muda: reprocessa as edições
+const VERSAO = 7;                 // muda quando a extração muda: reprocessa as edições
 const JANELA = 12;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -184,7 +184,14 @@ async function rodarDL(){
     const rx = new RegExp(`publicad[oa]s?\\s+no\\s+DL\\s+em\\s+${dataRx(e.data)}(,?\\s*p[áa]gs?\\.?\\s*[\\d, e-]+)?`, "i");
     for (const g of ed.grupos) for (const p of g.props) {
       if (p.status === "ok") continue;
-      if (/^PROPLEI /.test(p.prop)) { p.status = "revisar"; continue; }
+      if (/^PROPLEI /.test(p.prop)) {   // Proposição de Lei: o lançamento vai no projeto de origem
+        const n = p.prop.split(" ")[1];
+        let o = null;
+        try { const j = await api(`/proposicoes/pesquisa/avancada?tp=5&p=1&expr=${encodeURIComponent("Proposição de Lei " + n)}`); o = ((j && j.resultado && j.resultado.listaItem) || []).find(o => (o.listaHistoricoTramitacoes || []).some(h => new RegExp("Proposi[cç][aã]o de Lei " + n + "\\b").test(h.historico || ""))); } catch {}
+        if (!o) { p.status = uteisDesde(e.data) <= CARENCIA ? "aguardando" : "revisar"; continue; }
+        p.origem = "Proposição de Lei " + n; p.prop = o.siglaTipoProjeto + " " + o.numero + "/" + o.ano;
+        cacheHist.set(p.prop, o.listaHistoricoTramitacoes || []);
+      }
       const h = await historico(p.prop);
       const a = avaliar(e.data, h, rx);
       if (a) { p.status = a.status; p.mate = a.mate; }
