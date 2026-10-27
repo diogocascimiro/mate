@@ -191,6 +191,10 @@ table.grade tr.cap a.tlink{color:inherit;text-decoration:none}
 table.grade tr.cap a.tlink::after{content:"↗";margin-left:5px;font-size:11px;opacity:.6}
 table.grade tr.cap a.tlink:hover::after{opacity:1}
 table.grade tr.cap a.tlink:hover b{text-decoration:underline;text-underline-offset:3px}
+table.grade a.nlink{color:inherit;text-decoration:none}
+table.grade a.nlink::after{content:"↗";margin-left:6px;font-size:11px;opacity:.45}
+table.grade a.nlink:hover{text-decoration:underline;text-underline-offset:3px}
+table.grade a.nlink:hover::after{opacity:1}
 table.grade a.rlink{margin-left:8px;font-size:12px;color:var(--muted);text-decoration:none;opacity:.55}
 table.grade tr:hover a.rlink{opacity:1}
 table.grade a.rlink:hover{color:var(--accent)}
@@ -331,7 +335,7 @@ function render(){
     mostradas++;
     if (fechada()) return;
     const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
-    tr.appendChild(el("td", "h", hora)); const tn = el("td", "n", nome); if (href) { const a = el("a", "rlink", "↗"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte"; a.addEventListener("click", e => e.stopPropagation()); tn.appendChild(a); } tr.appendChild(tn); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : qtdTxt === "-" ? "q0" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
+    tr.appendChild(el("td", "h", hora)); const tn = el("td", "n"); if (href) { const a = el("a", "nlink", nome); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte (clique no restante da linha para ver os itens)"; a.addEventListener("click", e => e.stopPropagation()); tn.appendChild(a); } else tn.textContent = nome; tr.appendChild(tn); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : qtdTxt === "-" ? "q0" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
     const sc = pills(todas); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
     tr.appendChild(sc);
     tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada ? "prob" : cnt.aguardando || cnt.revisar ? "esp" : cnt.ok ? "okk" : "neutra");
