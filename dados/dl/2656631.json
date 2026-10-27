@@ -1,0 +1,36 @@
+{
+ "versao": 3,
+ "id": "2656631",
+ "data": "2026-10-17",
+ "url": "https://mediaserver.almg.gov.br/acervo/656/631/2656631.pdf",
+ "obs": "Nomeação de candidata da especialidades de Técnico de Apoio Legislativo - Cód. 101",
+ "paginas": 2,
+ "extraido_em": "2026-10-27T19:25:39.996Z",
+ "grupos": [
+  {
+   "desc": "PROPOSIÇÕES DE LEI",
+   "pag": "1",
+   "props": [
+    {
+     "prop": "PROPLEI 27028",
+     "pag": 1,
+     "status": "revisar",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "ERRATAS",
+   "pag": "2",
+   "props": [
+    {
+     "prop": "PL 6182/2026",
+     "pag": 2,
+     "status": "ok",
+     "mate": "publicada no DL em 17 10 2026, pág 2, "
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-10-27T19:25:39.996Z"
+}

@@ -1,0 +1,2231 @@
+{
+ "versao": 3,
+ "id": "2656412",
+ "data": "2026-10-16",
+ "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
+ "obs": "",
+ "paginas": 307,
+ "extraido_em": "2026-10-27T19:18:51.525Z",
+ "grupos": [
+  {
+   "desc": "PROPOSIÇÕES DE LEI",
+   "pag": "1 - 6",
+   "props": [
+    {
+     "prop": "PROPLEI 27018",
+     "pag": 1,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27019",
+     "pag": 2,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27020",
+     "pag": 2,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27021",
+     "pag": 2,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27022",
+     "pag": 3,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27023",
+     "pag": 3,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27024",
+     "pag": 5,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27025",
+     "pag": 5,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27026",
+     "pag": 6,
+     "status": "revisar",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27027",
+     "pag": 6,
+     "status": "revisar",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA VETO",
+   "pag": "8 - 11",
+   "props": [
+    {
+     "prop": "MSG 283/2026",
+     "pag": 8,
+     "status": "ok",
+     "mate": "Publicada no DL em 16 10 2026, pág 8"
+    },
+    {
+     "prop": "VET 36/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 8"
+    },
+    {
+     "prop": "MSG 285/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicada no DL em 16 10 2026, pág 9"
+    },
+    {
+     "prop": "VET 37/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 9"
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
+   "pag": "11 - 16",
+   "props": [
+    {
+     "prop": "MSG 290/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicada no DL em 16 10 2026, pág 11"
+    },
+    {
+     "prop": "PL 6177/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 12"
+    },
+    {
+     "prop": "MSG 291/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicada no DL em 16 10 2026, pág 13"
+    },
+    {
+     "prop": "PL 6186/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 13"
+    },
+    {
+     "prop": "MSG 292/2026",
+     "pag": 15,
+     "status": "ok",
+     "mate": "Publicada no DL em 16 10 2026, pág 15"
+    },
+    {
+     "prop": "PL 6187/2026",
+     "pag": 16,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 16"
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA SUBSTITUTIVO AO PROJETO DE LEI",
+   "pag": "21",
+   "props": [
+    {
+     "prop": "MSG 293/2026",
+     "pag": 21,
+     "status": "ok",
+     "mate": "Publicada no DL em 16 10 2026, pág 21"
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - PROJETOS DE LEI",
+   "pag": "21 - 28",
+   "props": [
+    {
+     "prop": "PL 6187/2026",
+     "pag": 21,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 16"
+    },
+    {
+     "prop": "PL 5456/2026",
+     "pag": 28,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 28"
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROPOSTA DE AÇÃO LEGISLATIVA",
+   "pag": "26",
+   "props": [
+    {
+     "prop": "MSG 294/2026",
+     "pag": 26,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 301"
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - REQUERIMENTOS",
+   "pag": "28",
+   "props": [
+    {
+     "prop": "RQN 17688/2026",
+     "pag": 28,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 28"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE LEI COMPLEMENTAR",
+   "pag": "28 - 33",
+   "props": [
+    {
+     "prop": "PLC 116/2026",
+     "pag": 28,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 28"
+    },
+    {
+     "prop": "PLC 117/2026",
+     "pag": 30,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 30"
+    },
+    {
+     "prop": "PLC 118/2026",
+     "pag": 33,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 33"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE RESOLUÇÃO",
+   "pag": "34 - 35",
+   "props": [
+    {
+     "prop": "PRE 135/2026",
+     "pag": 34,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 34"
+    },
+    {
+     "prop": "PRE 136/2026",
+     "pag": 35,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 35"
+    },
+    {
+     "prop": "PRE 137/2026",
+     "pag": 35,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 35"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE LEI",
+   "pag": "36 - 234",
+   "props": [
+    {
+     "prop": "PL 5956/2026",
+     "pag": 36,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 36"
+    },
+    {
+     "prop": "PL 6060/2026",
+     "pag": 37,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 37"
+    },
+    {
+     "prop": "PL 6061/2026",
+     "pag": 39,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 39"
+    },
+    {
+     "prop": "PL 6063/2026",
+     "pag": 42,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 42"
+    },
+    {
+     "prop": "PL 6068/2026",
+     "pag": 45,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 45"
+    },
+    {
+     "prop": "PL 6069/2026",
+     "pag": 45,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 45"
+    },
+    {
+     "prop": "PL 6070/2026",
+     "pag": 45,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 45"
+    },
+    {
+     "prop": "PL 6071/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 47"
+    },
+    {
+     "prop": "PL 6072/2026",
+     "pag": 49,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 49"
+    },
+    {
+     "prop": "PL 6073/2026",
+     "pag": 50,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 50"
+    },
+    {
+     "prop": "PL 6074/2026",
+     "pag": 50,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 50"
+    },
+    {
+     "prop": "PL 6075/2026",
+     "pag": 52,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 52"
+    },
+    {
+     "prop": "PL 6077/2026",
+     "pag": 52,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 52"
+    },
+    {
+     "prop": "PL 6078/2026",
+     "pag": 55,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 55"
+    },
+    {
+     "prop": "PL 6079/2026",
+     "pag": 56,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 56"
+    },
+    {
+     "prop": "PL 6080/2026",
+     "pag": 59,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 59"
+    },
+    {
+     "prop": "PL 6081/2026",
+     "pag": 61,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 61"
+    },
+    {
+     "prop": "PL 6082/2026",
+     "pag": 64,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 64"
+    },
+    {
+     "prop": "PL 6083/2026",
+     "pag": 66,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 66"
+    },
+    {
+     "prop": "PL 6084/2026",
+     "pag": 66,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 66"
+    },
+    {
+     "prop": "PL 6085/2026",
+     "pag": 67,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 67"
+    },
+    {
+     "prop": "PL 6086/2026",
+     "pag": 67,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 67"
+    },
+    {
+     "prop": "PL 6087/2026",
+     "pag": 67,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 67"
+    },
+    {
+     "prop": "PL 6088/2026",
+     "pag": 68,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 68"
+    },
+    {
+     "prop": "PL 6089/2026",
+     "pag": 69,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 69"
+    },
+    {
+     "prop": "PL 6090/2026",
+     "pag": 69,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 69"
+    },
+    {
+     "prop": "PL 6091/2026",
+     "pag": 71,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 71"
+    },
+    {
+     "prop": "PL 6092/2026",
+     "pag": 72,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 72"
+    },
+    {
+     "prop": "PL 6093/2026",
+     "pag": 73,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 73"
+    },
+    {
+     "prop": "PL 6094/2026",
+     "pag": 74,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 74"
+    },
+    {
+     "prop": "PL 6095/2026",
+     "pag": 76,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 76"
+    },
+    {
+     "prop": "PL 6096/2026",
+     "pag": 77,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 77"
+    },
+    {
+     "prop": "PL 6097/2026",
+     "pag": 78,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 78"
+    },
+    {
+     "prop": "PL 6098/2026",
+     "pag": 79,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 79"
+    },
+    {
+     "prop": "PL 6099/2026",
+     "pag": 80,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 80"
+    },
+    {
+     "prop": "PL 6100/2026",
+     "pag": 80,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 80"
+    },
+    {
+     "prop": "PL 6101/2026",
+     "pag": 81,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 81"
+    },
+    {
+     "prop": "PL 6102/2026",
+     "pag": 82,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 82"
+    },
+    {
+     "prop": "PL 6103/2026",
+     "pag": 85,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 85"
+    },
+    {
+     "prop": "PL 6104/2026",
+     "pag": 86,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 86"
+    },
+    {
+     "prop": "PL 6105/2026",
+     "pag": 88,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 88"
+    },
+    {
+     "prop": "PL 6107/2026",
+     "pag": 88,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 88"
+    },
+    {
+     "prop": "PL 6108/2026",
+     "pag": 89,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 89"
+    },
+    {
+     "prop": "PL 6109/2026",
+     "pag": 96,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 96"
+    },
+    {
+     "prop": "PL 6110/2026",
+     "pag": 97,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 97"
+    },
+    {
+     "prop": "PL 6111/2026",
+     "pag": 97,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 97"
+    },
+    {
+     "prop": "PL 6112/2026",
+     "pag": 98,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 98"
+    },
+    {
+     "prop": "PL 6113/2026",
+     "pag": 99,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 99"
+    },
+    {
+     "prop": "PL 6114/2026",
+     "pag": 100,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 100"
+    },
+    {
+     "prop": "PL 6115/2026",
+     "pag": 104,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 104"
+    },
+    {
+     "prop": "PL 6116/2026",
+     "pag": 112,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 112"
+    },
+    {
+     "prop": "PL 6117/2026",
+     "pag": 113,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 113"
+    },
+    {
+     "prop": "PL 6118/2026",
+     "pag": 113,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 113"
+    },
+    {
+     "prop": "PL 6119/2026",
+     "pag": 114,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 114"
+    },
+    {
+     "prop": "PL 6120/2026",
+     "pag": 119,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 119"
+    },
+    {
+     "prop": "PL 6121/2026",
+     "pag": 119,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 119"
+    },
+    {
+     "prop": "PL 6122/2026",
+     "pag": 120,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 120"
+    },
+    {
+     "prop": "PL 6123/2026",
+     "pag": 133,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 133"
+    },
+    {
+     "prop": "PL 6124/2026",
+     "pag": 143,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 143"
+    },
+    {
+     "prop": "PL 6125/2026",
+     "pag": 144,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 144"
+    },
+    {
+     "prop": "PL 6126/2026",
+     "pag": 146,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 146"
+    },
+    {
+     "prop": "PL 6127/2026",
+     "pag": 148,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 148"
+    },
+    {
+     "prop": "PL 6129/2026",
+     "pag": 149,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 149"
+    },
+    {
+     "prop": "PL 6130/2026",
+     "pag": 150,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 150"
+    },
+    {
+     "prop": "PL 6131/2026",
+     "pag": 152,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 152"
+    },
+    {
+     "prop": "PL 6132/2026",
+     "pag": 155,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 155"
+    },
+    {
+     "prop": "PL 6133/2026",
+     "pag": 157,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 157"
+    },
+    {
+     "prop": "PL 6134/2026",
+     "pag": 160,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 160"
+    },
+    {
+     "prop": "PL 6135/2026",
+     "pag": 162,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 162"
+    },
+    {
+     "prop": "PL 6136/2026",
+     "pag": 162,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 162"
+    },
+    {
+     "prop": "PL 6137/2026",
+     "pag": 163,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 163"
+    },
+    {
+     "prop": "PL 6138/2026",
+     "pag": 164,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 164"
+    },
+    {
+     "prop": "PL 6139/2026",
+     "pag": 168,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 168"
+    },
+    {
+     "prop": "PL 6140/2026",
+     "pag": 169,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 169"
+    },
+    {
+     "prop": "PL 6141/2026",
+     "pag": 170,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 170"
+    },
+    {
+     "prop": "PL 6142/2026",
+     "pag": 171,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 171"
+    },
+    {
+     "prop": "PL 6143/2026",
+     "pag": 172,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 172"
+    },
+    {
+     "prop": "PL 6146/2026",
+     "pag": 173,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 173"
+    },
+    {
+     "prop": "PL 6147/2026",
+     "pag": 173,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 173"
+    },
+    {
+     "prop": "PL 6148/2026",
+     "pag": 174,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 174"
+    },
+    {
+     "prop": "PL 6152/2026",
+     "pag": 174,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 174"
+    },
+    {
+     "prop": "PL 6153/2026",
+     "pag": 175,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 175"
+    },
+    {
+     "prop": "PL 6154/2026",
+     "pag": 176,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 176"
+    },
+    {
+     "prop": "PL 6155/2026",
+     "pag": 179,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 179"
+    },
+    {
+     "prop": "PL 6156/2026",
+     "pag": 180,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 180"
+    },
+    {
+     "prop": "PL 6157/2026",
+     "pag": 182,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 182"
+    },
+    {
+     "prop": "PL 6158/2026",
+     "pag": 183,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 183"
+    },
+    {
+     "prop": "PL 6159/2026",
+     "pag": 185,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 185"
+    },
+    {
+     "prop": "PL 6160/2026",
+     "pag": 186,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 186"
+    },
+    {
+     "prop": "PL 6161/2026",
+     "pag": 186,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 186"
+    },
+    {
+     "prop": "PL 6162/2026",
+     "pag": 187,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 187"
+    },
+    {
+     "prop": "PL 6163/2026",
+     "pag": 188,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 188"
+    },
+    {
+     "prop": "PL 6164/2026",
+     "pag": 190,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 190"
+    },
+    {
+     "prop": "PL 6165/2026",
+     "pag": 193,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 193"
+    },
+    {
+     "prop": "PL 6166/2026",
+     "pag": 195,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 195"
+    },
+    {
+     "prop": "PL 6168/2026",
+     "pag": 196,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 196"
+    },
+    {
+     "prop": "PL 6169/2026",
+     "pag": 197,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 197"
+    },
+    {
+     "prop": "PL 6170/2026",
+     "pag": 201,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 201"
+    },
+    {
+     "prop": "PL 6171/2026",
+     "pag": 201,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 201"
+    },
+    {
+     "prop": "PL 6172/2026",
+     "pag": 202,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 202"
+    },
+    {
+     "prop": "PL 6173/2026",
+     "pag": 203,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 203"
+    },
+    {
+     "prop": "PL 6174/2026",
+     "pag": 205,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 205"
+    },
+    {
+     "prop": "PL 6175/2026",
+     "pag": 207,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 207"
+    },
+    {
+     "prop": "PL 6176/2026",
+     "pag": 209,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 209"
+    },
+    {
+     "prop": "PL 6178/2026",
+     "pag": 211,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 211"
+    },
+    {
+     "prop": "PL 6179/2026",
+     "pag": 211,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 211"
+    },
+    {
+     "prop": "PL 6180/2026",
+     "pag": 212,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 212"
+    },
+    {
+     "prop": "PL 6181/2026",
+     "pag": 212,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 212"
+    },
+    {
+     "prop": "PL 6182/2026",
+     "pag": 216,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 216"
+    },
+    {
+     "prop": "PL 6183/2026",
+     "pag": 218,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 218"
+    },
+    {
+     "prop": "PL 6184/2026",
+     "pag": 221,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 221"
+    },
+    {
+     "prop": "PL 6185/2026",
+     "pag": 223,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 223"
+    },
+    {
+     "prop": "PL 6188/2026",
+     "pag": 230,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 230"
+    },
+    {
+     "prop": "PL 6190/2026",
+     "pag": 232,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 232"
+    },
+    {
+     "prop": "PL 6191/2026",
+     "pag": 233,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 233"
+    },
+    {
+     "prop": "PL 6193/2026",
+     "pag": 234,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 234"
+    },
+    {
+     "prop": "PL 6194/2026",
+     "pag": 234,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 234"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - COMISSÕES TEMÁTICAS",
+   "pag": "235 - 249",
+   "props": [
+    {
+     "prop": "RQN 19404/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19405/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19407/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19416/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19453/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19479/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19481/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19491/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19493/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19514/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19515/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19529/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19530/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19531/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19548/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19549/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19551/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19552/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19553/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19554/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19555/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19556/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19560/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19562/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19563/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19564/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19565/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19568/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19570/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19571/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19572/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "RQN 19575/2026",
+     "pag": 249,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 249"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, COM COMUNICAÇÃO",
+   "pag": "235 - 248",
+   "props": [
+    {
+     "prop": "RQN 19406/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19409/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19410/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19411/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19412/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19413/2026",
+     "pag": 235,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 235"
+    },
+    {
+     "prop": "RQN 19414/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19415/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19417/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19418/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19419/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19420/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19421/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19422/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19423/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19424/2026",
+     "pag": 236,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 236"
+    },
+    {
+     "prop": "RQN 19425/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19427/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19428/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19429/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19430/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19431/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19432/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19433/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19434/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19438/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19439/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19440/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19441/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19442/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19443/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19444/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19445/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19446/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19447/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19448/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19449/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19451/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19452/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19454/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19455/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19456/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19457/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19458/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19459/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19460/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19461/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19463/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19464/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19465/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19466/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19467/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19468/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19469/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19470/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19471/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19472/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19473/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19474/2026",
+     "pag": 240,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 240"
+    },
+    {
+     "prop": "RQN 19476/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19477/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19483/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19484/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19485/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19486/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19487/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19488/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19489/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19490/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19495/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19496/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19497/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19499/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19500/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19502/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19503/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19504/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19507/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19508/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19509/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19511/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19513/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19516/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19518/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19519/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19520/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19521/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19522/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19524/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19525/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19526/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19527/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19533/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19534/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19535/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19536/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19537/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19538/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19539/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19540/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19541/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19542/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19543/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19544/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19545/2026",
+     "pag": 246,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 246"
+    },
+    {
+     "prop": "RQN 19546/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19547/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    },
+    {
+     "prop": "RQN 19558/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - MESA DA ASSEMBLEIA",
+   "pag": "237 - 247",
+   "props": [
+    {
+     "prop": "RQN 19426/2026",
+     "pag": 237,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 237"
+    },
+    {
+     "prop": "RQN 19450/2026",
+     "pag": 238,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 238"
+    },
+    {
+     "prop": "RQN 19462/2026",
+     "pag": 239,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 239"
+    },
+    {
+     "prop": "RQN 19475/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19482/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19494/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 19498/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19501/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19505/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19506/2026",
+     "pag": 243,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 243"
+    },
+    {
+     "prop": "RQN 19510/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19512/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19517/2026",
+     "pag": 244,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 244"
+    },
+    {
+     "prop": "RQN 19523/2026",
+     "pag": 245,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 245"
+    },
+    {
+     "prop": "RQN 19557/2026",
+     "pag": 247,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 247"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - ANEXADOS",
+   "pag": "241",
+   "props": [
+    {
+     "prop": "RQN 19478/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    },
+    {
+     "prop": "RQN 19315/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 241"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, REUNIÃO ESPECIAL",
+   "pag": "241",
+   "props": [
+    {
+     "prop": "RQN 19480/2026",
+     "pag": 241,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 241"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, RETIRADA DE TRAMITAÇÃO",
+   "pag": "242 - 249",
+   "props": [
+    {
+     "prop": "RQN 19492/2026",
+     "pag": 242,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 14988/2025",
+     "pag": 242,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19559/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "PL 5724/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19566/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "PL 5407/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19573/2026",
+     "pag": 248,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "PL 2658/2024",
+     "pag": 248,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19574/2026",
+     "pag": 249,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 249"
+    },
+    {
+     "prop": "PL 5202/2026",
+     "pag": 249,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19577/2026",
+     "pag": 249,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 249"
+    },
+    {
+     "prop": "PL 2978/2021",
+     "pag": 249,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    }
+   ]
+  },
+  {
+   "desc": "DECISÃO DA PRESIDÊNCIA",
+   "pag": "251 - 252",
+   "props": [
+    {
+     "prop": "PL 5412/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "PL 2658/2024",
+     "pag": 252,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "PL 5853/2026",
+     "pag": 252,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 252"
+    }
+   ]
+  },
+  {
+   "desc": "DESPACHO DE REQUERIMENTOS",
+   "pag": "251",
+   "props": [
+    {
+     "prop": "RQN 19492/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 242"
+    },
+    {
+     "prop": "RQN 14988/2025",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19559/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "PL 5724/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19566/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "PL 5407/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19573/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 248"
+    },
+    {
+     "prop": "PL 2658/2024",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19574/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 249"
+    },
+    {
+     "prop": "PL 5202/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 19577/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 249"
+    },
+    {
+     "prop": "PL 2978/2021",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    },
+    {
+     "prop": "RQN 18574/2026",
+     "pag": 251,
+     "status": "ok",
+     "mate": "publicada no DL em 16 10 2026, pág 251"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: PARTICIPAÇÃO POPULAR, 14/10",
+   "pag": "300 - 301",
+   "props": [
+    {
+     "prop": "RQC 23612/2026",
+     "pag": 300,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 300"
+    },
+    {
+     "prop": "RQC 23613/2026",
+     "pag": 300,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 300"
+    },
+    {
+     "prop": "RQC 23615/2026",
+     "pag": 300,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 300"
+    },
+    {
+     "prop": "RQC 23639/2026",
+     "pag": 300,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 300"
+    },
+    {
+     "prop": "RQC 23640/2026",
+     "pag": 301,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 300"
+    }
+   ]
+  },
+  {
+   "desc": "TRAMITAÇÃO DE PROPOSIÇÕES: PARECERES",
+   "pag": "301 - 304",
+   "props": [
+    {
+     "prop": "MSG 294/2026",
+     "pag": 301,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 301"
+    },
+    {
+     "prop": "PL 3395/2021",
+     "pag": 303,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 303"
+    },
+    {
+     "prop": "PL 4922/2025",
+     "pag": 303,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 303"
+    },
+    {
+     "prop": "PL 5443/2026",
+     "pag": 304,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 304"
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - PROJETOS DE LEI",
+   "pag": "305",
+   "props": [
+    {
+     "prop": "PL 3692/2016",
+     "pag": 305,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 305"
+    },
+    {
+     "prop": "PL 1209/2019",
+     "pag": 305,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 305"
+    },
+    {
+     "prop": "PL 4566/2025",
+     "pag": 305,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 305"
+    },
+    {
+     "prop": "PL 5276/2026",
+     "pag": 305,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 305"
+    },
+    {
+     "prop": "PL 5649/2026",
+     "pag": 305,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 305"
+    }
+   ]
+  },
+  {
+   "desc": "ERRATAS",
+   "pag": "307",
+   "props": []
+  }
+ ],
+ "conferido_em": "2026-10-27T19:25:38.091Z"
+}

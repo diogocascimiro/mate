@@ -1,0 +1,140 @@
+{
+ "atualizado_em": "2026-10-27T19:31:11.680Z",
+ "edicoes": [
+  {
+   "fonte": "DL",
+   "id": "2659564",
+   "data": "2026-10-27",
+   "url": "https://mediaserver.almg.gov.br/acervo/659/564/2659564.pdf",
+   "obs": "Nomeação de candidato da especialidades de Técnico de Apoio Legislativo - Cód. 101",
+   "arquivo": "dados/dl/2659564.json",
+   "contagem": {
+    "ok": 4
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2660399",
+   "data": "2026-10-27",
+   "url": "https://mediaserver.almg.gov.br/acervo/660/399/2660399.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2660399.json",
+   "contagem": {}
+  },
+  {
+   "fonte": "DL",
+   "id": "2659175",
+   "data": "2026-10-24",
+   "url": "https://mediaserver.almg.gov.br/acervo/659/175/2659175.pdf",
+   "obs": "Nomeação de candidato da especialidade de Técnico de Apoio Legislativo - Cód. 101",
+   "arquivo": "dados/dl/2659175.json",
+   "contagem": {}
+  },
+  {
+   "fonte": "DL",
+   "id": "2659906",
+   "data": "2026-10-24",
+   "url": "https://mediaserver.almg.gov.br/acervo/659/906/2659906.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2659906.json",
+   "contagem": {}
+  },
+  {
+   "fonte": "DL",
+   "id": "2658668",
+   "data": "2026-10-23",
+   "url": "https://mediaserver.almg.gov.br/acervo/658/668/2658668.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2658668.json",
+   "contagem": {
+    "ok": 41
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2658064",
+   "data": "2026-10-22",
+   "url": "https://mediaserver.almg.gov.br/acervo/658/64/2658064.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2658064.json",
+   "contagem": {
+    "ok": 448,
+    "pendente": 1
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2657560",
+   "data": "2026-10-21",
+   "url": "https://mediaserver.almg.gov.br/acervo/657/560/2657560.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2657560.json",
+   "contagem": {
+    "ok": 9
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2657188",
+   "data": "2026-10-20",
+   "url": "https://mediaserver.almg.gov.br/acervo/657/188/2657188.pdf",
+   "obs": "Nomeação de candidata da especialidade de Consultor Legislativo - Área II - Meio Ambiente e Desenvolvimento Agrário - Cód. 212",
+   "arquivo": "dados/dl/2657188.json",
+   "contagem": {}
+  },
+  {
+   "fonte": "DL",
+   "id": "2656631",
+   "data": "2026-10-17",
+   "url": "https://mediaserver.almg.gov.br/acervo/656/631/2656631.pdf",
+   "obs": "Nomeação de candidata da especialidades de Técnico de Apoio Legislativo - Cód. 101",
+   "arquivo": "dados/dl/2656631.json",
+   "contagem": {
+    "revisar": 1,
+    "ok": 1
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2656412",
+   "data": "2026-10-16",
+   "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2656412.json",
+   "contagem": {
+    "revisar": 10,
+    "ok": 338
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2658754",
+   "data": "2026-10-16",
+   "url": "https://mediaserver.almg.gov.br/acervo/658/754/2658754.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2658754.json",
+   "contagem": {}
+  },
+  {
+   "fonte": "DL",
+   "id": "2656244",
+   "data": "2026-10-15",
+   "url": "https://mediaserver.almg.gov.br/acervo/656/244/2656244.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2656244.json",
+   "contagem": {
+    "ok": 7,
+    "nao_cadastrada": 1
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2656420",
+   "data": "2026-10-15",
+   "url": "https://mediaserver.almg.gov.br/acervo/656/420/2656420.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2656420.json",
+   "contagem": {}
+  }
+ ]
+}

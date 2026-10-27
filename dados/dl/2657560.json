@@ -1,0 +1,84 @@
+{
+ "versao": 3,
+ "id": "2657560",
+ "data": "2026-10-21",
+ "url": "https://mediaserver.almg.gov.br/acervo/657/560/2657560.pdf",
+ "obs": "",
+ "paginas": 19,
+ "extraido_em": "2026-10-27T19:25:41.467Z",
+ "grupos": [
+  {
+   "desc": "TRAMITAÇÃO DE PROPOSIÇÕES: PARECERES",
+   "pag": "5 - 13",
+   "props": [
+    {
+     "prop": "PRE 116/2026",
+     "pag": 5,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 5"
+    },
+    {
+     "prop": "PL 1758/2023",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 6"
+    },
+    {
+     "prop": "PL 5312/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 9"
+    },
+    {
+     "prop": "PL 5490/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 11"
+    },
+    {
+     "prop": "PL 2863/2024",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 13"
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - PROJETOS DE LEI",
+   "pag": "18",
+   "props": [
+    {
+     "prop": "PL 4896/2018",
+     "pag": 18,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 18"
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - REQUERIMENTOS",
+   "pag": "18",
+   "props": [
+    {
+     "prop": "RQN 11728/2022",
+     "pag": 18,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 18"
+    },
+    {
+     "prop": "RQN 18478/2026",
+     "pag": 18,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 18"
+    },
+    {
+     "prop": "RQN 19247/2026",
+     "pag": 18,
+     "status": "ok",
+     "mate": "Publicado no DL em 21 10 2026, pág 18"
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-10-27T19:25:51.729Z"
+}

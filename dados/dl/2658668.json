@@ -1,0 +1,312 @@
+{
+ "versao": 3,
+ "id": "2658668",
+ "data": "2026-10-23",
+ "url": "https://mediaserver.almg.gov.br/acervo/658/668/2658668.pdf",
+ "obs": "",
+ "paginas": 16,
+ "extraido_em": "2026-10-27T19:30:14.522Z",
+ "grupos": [
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROPOSTA DE EMENDA À CONSTITUIÇÃO",
+   "pag": "2",
+   "props": [
+    {
+     "prop": "MSG 297/2026",
+     "pag": 2,
+     "status": "ok",
+     "mate": "Publicada no DL em 23 10 2026, pág 2"
+    },
+    {
+     "prop": "PEC 69/2026",
+     "pag": 2,
+     "status": "ok",
+     "mate": "Publicada no DL em 23 10 2026, pág 2"
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - REQUERIMENTOS",
+   "pag": "3",
+   "props": [
+    {
+     "prop": "RQN 18545/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 3"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE RESOLUÇÃO",
+   "pag": "3",
+   "props": [
+    {
+     "prop": "PRE 139/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 3"
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE LEI",
+   "pag": "3 - 8",
+   "props": [
+    {
+     "prop": "PL 4372/2025",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 3"
+    },
+    {
+     "prop": "PL 6200/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 4"
+    },
+    {
+     "prop": "PL 6207/2026",
+     "pag": 5,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 5"
+    },
+    {
+     "prop": "PL 6209/2026",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 6"
+    },
+    {
+     "prop": "PL 6211/2026",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 6"
+    },
+    {
+     "prop": "PL 6212/2026",
+     "pag": 8,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 8"
+    },
+    {
+     "prop": "PL 6214/2026",
+     "pag": 8,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 8"
+    }
+   ]
+  },
+  {
+   "desc": "PALAVRAS DO PRESIDENTE",
+   "pag": "9",
+   "props": [
+    {
+     "prop": "PL 6186/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 9"
+    },
+    {
+     "prop": "PL 6187/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 9"
+    }
+   ]
+  },
+  {
+   "desc": "LEITURA DE COMUNICAÇÕES",
+   "pag": "10",
+   "props": [
+    {
+     "prop": "RQN 19061/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19062/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19294/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19306/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19308/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19401/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19311/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19315/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 19320/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    },
+    {
+     "prop": "RQN 18661/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "publicada no DL em 23 10 2026, pág 10"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: FISCALIZAÇÃO FINANCEIRA E ORÇAMENTÁRIA, 14/10",
+   "pag": "12",
+   "props": [
+    {
+     "prop": "RQC 23631/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 11"
+    },
+    {
+     "prop": "RQC 23632/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 11"
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - PROJETOS DE LEI",
+   "pag": "13",
+   "props": [
+    {
+     "prop": "PL 5193/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 13"
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - REQUERIMENTOS",
+   "pag": "13 - 14",
+   "props": [
+    {
+     "prop": "RQN 15311/2025",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 13"
+    },
+    {
+     "prop": "RQN 17267/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 17406/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 17991/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 18003/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 18092/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 18228/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 18556/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 18775/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 19160/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 19193/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 19204/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 19328/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQN 19352/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    },
+    {
+     "prop": "RQC 22765/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 23 10 2026, pág 14"
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-10-27T19:31:01.329Z"
+}
