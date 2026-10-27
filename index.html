@@ -334,11 +334,10 @@ function render(){
   const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? (n ? String(n) : "-") : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
   // Diários (Executivo e Legislativo), no formato da planilha: páginas · seção · quantidade
   for (const [fonte, titulo, cls] of [["DE", "DIÁRIO DO EXECUTIVO", "sec-de"], ["DL", "DIÁRIO DO LEGISLATIVO", "sec-dl"]]) {
-    const eds = diarios.filter(d => d.fonte === fonte); if (!eds.length) continue;
+    const eds = diarios.filter(d => d.fonte === fonte && d.grupos.length); if (!eds.length) continue;
     const nGr = eds.reduce((n, d) => n + d.grupos.length, 0);
     secao(titulo, nGr + (nGr === 1 ? " seção" : " seções"), cls);
     for (const d of eds) {
-      if ((eds.length > 1 || d.data !== sel) && !fechadas.has(titulo)) { const tr = el("tr", "edc"); const td = el("td"); td.colSpan = 4; const a = el("a", null, (fonte === "DL" ? "Edição de " : "") + fmtD(d.data) + (d.obs ? " · " + d.obs.slice(0, 80) : "") + (d.paginas ? " · " + d.paginas + " págs." : "")); if (d.url) { a.href = d.url; a.target = "_blank"; a.rel = "noopener"; } td.appendChild(a); tr.appendChild(td); t.appendChild(tr); }
       d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc, String(l.length), l, false); });
     }
   }
