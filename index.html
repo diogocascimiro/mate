@@ -175,6 +175,11 @@ table.itens td.p{width:1%;padding-right:14px}
 .fixo.stuck .stat::after{width:56px;height:56px;bottom:-22px}
 .fixo.stuck .day{padding-block:3px}
 @media (max-width:560px){.fixo.stuck .days{display:none}.fixo.stuck header .ctrl{display:none}}
+tr.cap.sec-de{--sc:#7a5a12;--st:#f7edd6;--sc-t:#f7edd6}
+tr.cap.sec-dl{--sc:#3b4f8c;--sc-t:#e4e8f6}
+@media (prefers-color-scheme:dark){tr.cap.sec-de{--sc:#e0b64f;--sc-t:#33290f}tr.cap.sec-dl{--sc:#9db0ea;--sc-t:#1c2238}}
+table.grade tr.edc td{padding:4px 12px;font-size:12px;color:var(--muted);border-top:0}
+table.grade tr.edc a{color:inherit}
 </style>
 </head>
 <body>
@@ -214,21 +219,44 @@ const wd = s => WD[new Date(s + "T12:00:00Z").getUTCDay()];
 const BASE = /workers\.dev$/.test(location.hostname) ? "" : "https://mate.diogocascimiro.workers.dev";
 async function get(u){ const r = await fetch(BASE + u, { cache:"no-store" }); return r.json(); }
 function el(tag, cls, txt){ const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
-const TIPO_NOME = { PL:"Projeto de Lei", PLC:"Projeto de Lei Complementar", PRE:"Projeto de Resolução", PEC:"Proposta de Emenda à Constituição", RQC:"Requerimento de Comissão", RQN:"Requerimento", VET:"Veto", MSG:"Mensagem", IND:"Indicação", OFI:"Ofício" };
-const TIPO_COR = { PL:"#5aa293", PLC:"#3f8f86", PRE:"#6c8fb3", PEC:"#8a6bb0", RQC:"#4f86a8", RQN:"#4f86a8", VET:"#a8566a", MSG:"#b08a3e" };
+const TIPO_NOME = { PL:"Projeto de Lei", PLC:"Projeto de Lei Complementar", PRE:"Projeto de Resolução", PEC:"Proposta de Emenda à Constituição", RQC:"Requerimento de Comissão", RQN:"Requerimento", VET:"Veto", MSG:"Mensagem", IND:"Indicação", OFI:"Ofício", LEI:"Lei", LCP:"Lei Complementar", EMC:"Emenda à Constituição", PROPLEI:"Proposição de Lei", PLE:"Proposta de Ação Legislativa" };
+const TIPO_COR = { PL:"#5aa293", PLC:"#3f8f86", PRE:"#6c8fb3", PEC:"#8a6bb0", RQC:"#4f86a8", RQN:"#4f86a8", VET:"#a8566a", MSG:"#b08a3e", LEI:"#7a6a3a", LCP:"#7a6a3a", EMC:"#7a6a3a", PROPLEI:"#8c7b4f" };
 function propCell(prop){
   const [tp, na] = prop.split(" ");
   const td = el("td", "p");
   const a = el("a", "propb"); a.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir no portal da ALMG";
-  const sg = el("span", "sg", tp); sg.style.background = TIPO_COR[tp] || "#5aa293";
+  if (/^(LEI|LCP|EMC)$/.test(tp)) a.href = "https://www.almg.gov.br/legislacao-mineira/texto/" + tp + "/" + na.replace("/", "/") + "/"; if (tp === "PROPLEI") { a.removeAttribute("href"); a.title = ""; }
+  const sg = el("span", "sg", tp === "PROPLEI" ? "PLEI" : tp); sg.style.background = TIPO_COR[tp] || "#5aa293";
   const nm = el("span", "nm"); nm.append(el("b", null, na), el("small", null, (TIPO_NOME[tp] || tp).toUpperCase()));
   a.append(sg, nm); td.appendChild(a); return td;
+}
+
+// ---------- Diários (gerados pelo GitHub Actions em /dados) ----------
+const DADOS = location.hostname === "mate.almg.digital" ? "" : "https://mate.almg.digital";
+let indice = null, diarios = [];
+const cacheDiario = new Map();
+// edição de sábado/domingo é trabalhada no dia útil seguinte (como na planilha)
+function diaTrab(d){ const x = new Date(d + "T12:00:00Z"); while (x.getUTCDay() === 0 || x.getUTCDay() === 6) x.setUTCDate(x.getUTCDate() + 1); return x.toISOString().slice(0, 10); }
+async function carregarDiarios(){
+  try { indice = await (await fetch(DADOS + "/dados/indice.json?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })).json(); } catch (e) { indice = indice || { edicoes: [] }; }
+  const eds = (indice.edicoes || []).filter(e => diaTrab(e.data) === sel).sort((a, b) => a.fonte.localeCompare(b.fonte) || a.data.localeCompare(b.data) || String(a.id).localeCompare(String(b.id)));
+  const out = [];
+  for (const e of eds) {
+    const chave = e.arquivo + "@" + JSON.stringify(e.contagem);
+    let j = cacheDiario.get(chave);
+    if (!j) { try { j = await (await fetch(DADOS + "/" + e.arquivo + "?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })).json(); cacheDiario.set(chave, j); } catch (err) { continue; } }
+    const itens = [];
+    (j.grupos || []).forEach((g, k) => g.props.forEach(p => itens.push({ grupo: k, prop: p.prop, acao: e.fonte === "DL" ? "Publicação no DL" : "Publicação no DE", detalhe: [p.pag ? "pág. " + p.pag : "", p.origem || ""].filter(Boolean).join(" · "), mate: p.mate || "", status: p.status === "novo" ? "aguardando" : p.status })));
+    out.push({ fonte: e.fonte, chave: String(e.id || e.data), data: e.data, url: e.url || j.url, obs: e.obs || "", paginas: j.paginas || 0, grupos: j.grupos || [], itens });
+  }
+  diarios = out;
 }
 
 function renderDays(){
   const box = $("days"); box.textContent = "";
   const by = {};
   for (const r of (resumo && resumo.dias) || []) { (by[r.data] = by[r.data] || {})[r.status] = r.n; }
+  for (const e of (indice && indice.edicoes) || []) { const d = diaTrab(e.data), o = (by[d] = by[d] || {}); for (const [k, n] of Object.entries(e.contagem || {})) o[k] = (o[k] || 0) + n; }
   const datas = new Set(Object.keys(by)); ((resumo && resumo.reunioes) || []).forEach(r => datas.add(r.data)); datas.add(hoje);
   [...datas].sort().reverse().slice(0, 15).forEach(d => {
     const b = el("button", "day" + (d === sel ? " sel" : ""));
@@ -246,7 +274,8 @@ function renderDays(){
 }
 
 function render(){
-  const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria");
+  const itsD = diarios.flatMap(d => d.itens);
+  const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria").concat(itsD);
   const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status; cnt[k] = (cnt[k] || 0) + 1; if (i.status === "ok" || i.status === "divergente") cnt.lancados = (cnt.lancados || 0) + 1; });
   const sm = $("summary"); sm.textContent = "";
   for (const [k, l] of ST) {
@@ -258,7 +287,7 @@ function render(){
   }
   const list = $("list"); list.textContent = "";
   const reun = dia ? dia.reunioes : [];
-  if (!reun.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião encontrada nesta data.")); return; }
+  if (!reun.length && !diarios.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião nem diário nesta data.")); return; }
   const passa = i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada") || (filtro === "lancados" && (i.status === "ok" || i.status === "divergente"));
   const ORD = ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"];
   const card = el("section", "card"); const box = el("div", "tablebox"); const t = el("table", "grade");
@@ -295,6 +324,16 @@ function render(){
   // "não houve" só quando o resultado diz isso (reunião desconvocada ou resultado publicado sem a reunião ter ocorrido); antes disso, "?"
   const naoHouve = r => r.ocorrida === "D" || r.ocorrida === "NH";
   const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? String(n) : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
+  // Diários (Executivo e Legislativo), no formato da planilha: páginas · seção · quantidade
+  for (const [fonte, titulo, cls] of [["DE", "DIÁRIO DO EXECUTIVO", "sec-de"], ["DL", "DIÁRIO DO LEGISLATIVO", "sec-dl"]]) {
+    const eds = diarios.filter(d => d.fonte === fonte); if (!eds.length) continue;
+    const nGr = eds.reduce((n, d) => n + d.grupos.length, 0);
+    secao(titulo, nGr + (nGr === 1 ? " seção" : " seções"), cls);
+    for (const d of eds) {
+      if (eds.length > 1 || d.data !== sel) { const tr = el("tr", "edc"); const td = el("td"); td.colSpan = 4; const a = el("a", null, (fonte === "DL" ? "Edição de " : "") + fmtD(d.data) + (d.obs ? " · " + d.obs.slice(0, 80) : "") + (d.paginas ? " · " + d.paginas + " págs." : "")); if (d.url) { a.href = d.url; a.target = "_blank"; a.rel = "noopener"; } td.appendChild(a); tr.appendChild(td); t.appendChild(tr); }
+      d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc, String(l.length), l, false); });
+    }
+  }
   // Plenário
   const plen = reun.filter(r => r.comissao_id === 0);
   if (plen.length) {
@@ -331,6 +370,7 @@ function render(){
 async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
+  try { await carregarDiarios(); } catch (e) { diarios = []; }
   renderDays(); render();
   const r = resumo && resumo.rodada;
   $("rodadaInfo").textContent = r ? "Última verificação: " + new Date(r.em).toLocaleString("pt-BR", { dateStyle:"short", timeStyle:"short" }) + " · confere de 10 em 10 minutos" : "Aguardando a primeira verificação.";
