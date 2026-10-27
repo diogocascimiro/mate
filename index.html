@@ -115,14 +115,64 @@ table.grade tr.reu.prob td{background:var(--prob-bg)}
 table.grade tr.reu.esp td{background:var(--esp-bg)}
 table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightness(.98)}
 .pill.s-ok{background:none;color:var(--ok)}
+
+/* detalhes de cor: cabeçalho, dias, seções e linhas */
+.apptitle{display:flex;align-items:center;gap:14px}
+.apptitle .tile{flex:none;filter:drop-shadow(0 6px 10px rgba(31,95,74,.25))}
+button.primary{background:#123b36;color:#fff;border-color:#123b36;font-weight:600;box-shadow:0 6px 14px -8px #123b36}
+button.primary:hover{background:#1a4d47;border-color:#1a4d47}
+button.primary:disabled{opacity:.7;cursor:wait}
+input[type=date]{border-color:#cfd8d5;background:#fff}
+.day{transition:transform .12s, box-shadow .12s;position:relative}
+.day:hover{transform:translateY(-2px);box-shadow:0 8px 16px -12px rgba(18,59,54,.6)}
+.day.sel{background:#123b36;border-color:#123b36;box-shadow:0 8px 16px -10px rgba(18,59,54,.7)}
+.day.sel small,.day.sel b{color:#fff}
+.day.tem-prob:not(.sel){border-color:#e9b8b3}
+.dots{gap:4px;min-height:16px}
+.dots i{width:auto;height:auto;min-width:16px;padding:1px 5px;border-radius:999px;font-style:normal;font-family:var(--fm);font-size:10.5px;font-weight:600;line-height:14px;color:#fff;text-align:center}
+.dots i.dp{background:#c2410c}.dots i.de{background:#b7791f}.dots i.do{background:#1e7a4c}
+.day.sel .dots i{box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
+table.grade tr.cap td{padding:9px 12px;border-top:0;background:linear-gradient(90deg,var(--sc-t),transparent 70%);color:var(--sc)}
+table.grade tr.cap b{font-family:var(--fd);font-weight:700;letter-spacing:.05em;font-size:13.5px}
+table.grade tr.cap .bul{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--sc);margin-right:9px;vertical-align:0}
+table.grade tr.cap .cnt{display:inline-block;margin-left:10px;padding:1px 9px;border-radius:999px;background:var(--sc);color:#fff;font-size:11.5px;font-weight:600;font-family:var(--fm)}
+tr.cap.sec-plen{--sc:#8c1c2e;--sc-t:#f6e3e6}
+tr.cap.sec-com{--sc:#123b36;--sc-t:#e3ecea}
+tr.cap.sec-rqc{--sc:#1f6f78;--sc-t:#e1f0f2}
+@media (prefers-color-scheme:dark){tr.cap.sec-plen{--sc:#e0566c;--sc-t:#3a1d24}tr.cap.sec-com{--sc:#7fc4b8;--sc-t:#1a2a27}tr.cap.sec-rqc{--sc:#79c3cc;--sc-t:#16292c}}
+.qp{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;font-weight:600}
+.qp.qv{background:#e3ecea;color:#123b36}
+.qp.q0{background:var(--soft);color:var(--muted)}
+.qp.qn{background:transparent;color:var(--muted);font-weight:500;font-style:italic;padding-left:0}
+.qp.qi{background:#fbf1dc;color:#b7791f}
+.qp.qa{background:#fbf1dc;color:#b7791f;font-family:var(--fb)}
+@media (prefers-color-scheme:dark){.qp.qv{background:#1a2a27;color:#7fc4b8}.qp.qi,.qp.qa{background:#3a2c10;color:#f0b54a}}
+.pill{border:1px solid transparent}
+.pill.s-ok{background:#e2f3ea;color:#1e7a4c}
+.pill.s-pendente,.pill.s-nao_cadastrada{background:#c2410c;color:#fff}
+.pill.s-divergente{background:#8c1c2e;color:#fff}
+.pill.s-aguardando{background:#fbf1dc;color:#9a6200;border-color:#efd9a6}
+.pill.s-revisar{background:#e4ebf6;color:#3b5b8c;border-color:#c9d6ec}
+.card{box-shadow:0 10px 30px -22px rgba(18,59,54,.45)}
+.legend{padding:10px 14px;border-radius:12px;background:var(--paper);border:1px dashed var(--line)}
+
+.propb{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:inherit;white-space:nowrap}
+.propb .sg{flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:4px;color:#fff;font-family:var(--fb);font-size:11.5px;font-weight:600;letter-spacing:.02em}
+.propb .nm{display:grid;line-height:1.15}
+.propb .nm b{font-family:var(--fb);font-weight:600;font-size:14.5px;color:#2f7d6d;border-bottom:1.5px solid #5aa293;padding-bottom:1px}
+.propb .nm small{font-size:9.5px;letter-spacing:.06em;color:var(--muted);margin-top:3px;max-width:150px;overflow:hidden;text-overflow:ellipsis}
+.propb:hover .nm b{color:#123b36}
+table.itens td{vertical-align:middle}
+table.itens td.p{width:1%;padding-right:14px}
+@media (prefers-color-scheme:dark){.propb .nm b{color:#7fc4b8;border-color:#7fc4b8}}
 </style>
 </head>
 <body>
 <div class="band"><div class="bandin"><a class="brandbar" href="https://almg.digital"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#123b36"/><rect x="13" y="13" width="16" height="16" rx="4.5" fill="#f3f1ea"/><rect x="35" y="13" width="16" height="16" rx="4.5" fill="#f3f1ea" opacity=".5"/><rect x="13" y="35" width="16" height="16" rx="4.5" fill="#f3f1ea" opacity=".5"/><rect x="35" y="35" width="16" height="16" rx="8" fill="#6e0d17"/></svg><span class="wordmark">ALMG<i>.</i><span>DIGITAL</span></span></a></div></div>
 <div class="wrap">
 <header>
-<div><h1>Conferência MATE</h1><div class="sub">Resultados de reunião de Plenário e de comissões × tramitação lançada no MATE</div></div>
-<div class="ctrl"><input type="date" id="data" aria-label="Data"><button id="rodar" type="button">Conferir agora</button></div>
+<div class="apptitle"><svg class="tile" viewBox="0 0 64 64" width="52" height="52" aria-hidden="true"><rect width="64" height="64" rx="18.7" fill="#1f5f4a"/><path d="M29 8h6v5h5v5h-5v4h-6v-4h-5v-5h5z" fill="#fff"/><path d="M22 24h20l-3 14h-14z" fill="#fff"/><path d="M24 40h16l3 8H21z" fill="#fff"/><rect x="16" y="50" width="32" height="6" rx="2" fill="#fff"/></svg><div><h1>Conferência MATE</h1><div class="sub">Resultados de reunião de Plenário e de comissões × tramitação lançada no MATE</div></div></div>
+<div class="ctrl"><input type="date" id="data" aria-label="Data"><button id="rodar" class="primary" type="button">↻ Conferir agora</button></div>
 </header>
 <div class="days" id="days"></div>
 <section class="summary" id="summary"></section>
@@ -133,14 +183,14 @@ table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightne
 <span><span class="pill s-pendente">pendente</span> nada lançado na data</span>
 <span><span class="pill s-aguardando">aguardando</span> dentro do prazo de 2 dias úteis</span>
 <span><span class="pill s-revisar">revisar</span> ação sem regra automática</span>
-<span><span class="pill s-pre_cadastro">pré-cadastro</span> RQC ainda não publicado; o pré-cadastro não aparece no portal até a publicação no DL</span>
+<span><span class="pill s-nao_cadastrada">não cadastrada</span> proposição ainda inexistente no portal após 2 dias úteis (ex.: RQC sem pré-cadastro)</span>
 </div>
 <footer><span id="rodadaInfo"></span><span>Fonte: API de Dados Abertos da ALMG. Iniciativa independente; confira sempre no Silegis.</span></footer>
 </div>
 <script>
 (() => {
 const $ = id => document.getElementById(id);
-const ST = [["todos","Itens"],["lancados","Lançados"],["ok","Conferidos"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"],["revisar","Revisar"]];
+const ST = [["todos","Ações"],["lancados","Lançados"],["ok","Conferidos"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"],["revisar","Revisar"]];
 const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--info)", novo:"var(--muted)" };
 const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
 const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
@@ -152,6 +202,16 @@ const wd = s => WD[new Date(s + "T12:00:00Z").getUTCDay()];
 const BASE = /workers\.dev$/.test(location.hostname) ? "" : "https://mate.diogocascimiro.workers.dev";
 async function get(u){ const r = await fetch(BASE + u, { cache:"no-store" }); return r.json(); }
 function el(tag, cls, txt){ const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+const TIPO_NOME = { PL:"Projeto de Lei", PLC:"Projeto de Lei Complementar", PRE:"Projeto de Resolução", PEC:"Proposta de Emenda à Constituição", RQC:"Requerimento de Comissão", RQN:"Requerimento", VET:"Veto", MSG:"Mensagem", IND:"Indicação", OFI:"Ofício" };
+const TIPO_COR = { PL:"#5aa293", PLC:"#3f8f86", PRE:"#6c8fb3", PEC:"#8a6bb0", RQC:"#4f86a8", RQN:"#4f86a8", VET:"#a8566a", MSG:"#b08a3e" };
+function propCell(prop){
+  const [tp, na] = prop.split(" ");
+  const td = el("td", "p");
+  const a = el("a", "propb"); a.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir no portal da ALMG";
+  const sg = el("span", "sg", tp); sg.style.background = TIPO_COR[tp] || "#5aa293";
+  const nm = el("span", "nm"); nm.append(el("b", null, na), el("small", null, (TIPO_NOME[tp] || tp).toUpperCase()));
+  a.append(sg, nm); td.appendChild(a); return td;
+}
 
 function renderDays(){
   const box = $("days"); box.textContent = "";
@@ -162,7 +222,11 @@ function renderDays(){
     const b = el("button", "day" + (d === sel ? " sel" : ""));
     b.append(el("small", null, wd(d)), el("b", null, fmtD(d)));
     const dots = el("span", "dots"); const s = by[d] || {};
-    for (const k of ["ok","divergente","pendente","nao_cadastrada","aguardando","revisar"]) if (s[k]) { const i = el("i"); i.style.background = COR[k]; i.title = s[k] + " " + LBL[k]; dots.appendChild(i); }
+    const prob = (s.divergente || 0) + (s.pendente || 0) + (s.nao_cadastrada || 0), esp = (s.aguardando || 0) + (s.revisar || 0);
+    if (prob) { const x = el("i", "dp", String(prob)); x.title = prob + " com problema"; dots.appendChild(x); }
+    if (esp) { const x = el("i", "de", String(esp)); x.title = esp + " aguardando ou a revisar"; dots.appendChild(x); }
+    if (s.ok) { const x = el("i", "do", String(s.ok)); x.title = s.ok + " conferidos"; dots.appendChild(x); }
+    if (prob) b.classList.add("tem-prob");
     b.appendChild(dots);
     b.addEventListener("click", () => { sel = d; $("data").value = d; load(); });
     box.appendChild(b);
@@ -187,13 +251,13 @@ function render(){
   const ORD = ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"];
   const card = el("section", "card"); const box = el("div", "tablebox"); const t = el("table", "grade");
   let mostradas = 0;
-  function secao(titulo, qtd){ const cap = el("tr", "cap"); const ct = el("td"); ct.colSpan = 4; ct.append(el("b", null, titulo), el("span", "m", " · " + qtd)); cap.appendChild(ct); t.appendChild(cap); }
+  function secao(titulo, qtd, cls){ const cap = el("tr", "cap " + (cls || "")); const ct = el("td"); ct.colSpan = 4; ct.append(el("i", "bul"), el("b", null, titulo), el("span", "cnt", qtd)); cap.appendChild(ct); t.appendChild(cap); }
   function linha(id, hora, nome, qtdTxt, todas, off){
     const ri = todas.filter(passa);
     if (filtro !== "todos" && !ri.length) return;
     mostradas++;
     const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
-    tr.appendChild(el("td", "h", hora)); tr.appendChild(el("td", "n", nome)); tr.appendChild(el("td", "q", qtdTxt));
+    tr.appendChild(el("td", "h", hora)); tr.appendChild(el("td", "n", nome)); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
     const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
     for (const k of ORD) if (cnt[k]) sc.appendChild(el("span", "pill s-" + k, cnt[k] + " " + (LBL[k] || k)));
     tr.appendChild(sc);
@@ -204,7 +268,7 @@ function render(){
     const det = el("tr", "det"); det.hidden = !aberta; const dt = el("td"); dt.colSpan = 4; const it = el("table", "itens");
     for (const i of ri) {
       const x = el("tr");
-      const pc = el("td", "p"); const [tp, na] = i.prop.split(" "); const lk = el("a", null, i.prop); lk.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; lk.target = "_blank"; lk.rel = "noopener"; pc.appendChild(lk); x.appendChild(pc);
+      x.appendChild(propCell(i.prop));
       x.appendChild(el("td", null, /^plen/i.test(i.acao) ? i.detalhe : i.acao + (i.detalhe ? " · " + i.detalhe : "")));
       x.appendChild(el("td", "m", i.mate || "—"));
       const s = el("td"); s.appendChild(el("span", "pill s-" + i.status, LBL[i.status] || i.status)); x.appendChild(s);
@@ -222,13 +286,13 @@ function render(){
   // Plenário
   const plen = reun.filter(r => r.comissao_id === 0);
   if (plen.length) {
-    secao("REUNIÕES DE PLENÁRIO", plen.length + (plen.length === 1 ? " reunião" : " reuniões"));
+    secao("REUNIÕES DE PLENÁRIO", plen.length + (plen.length === 1 ? " reunião" : " reuniões"), "sec-plen");
     for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), r.ocorrida === "S" ? (r.res_em ? String(todas.length) : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?"), todas, r.ocorrida !== "S" && naoHouve(r)); }
   }
   // Comissões (sem RQC nem designações)
   const com = reun.filter(r => r.comissao_id !== 0);
   if (com.length) {
-    secao("REUNIÕES DE COMISSÕES", com.length + (com.length === 1 ? " reunião" : " reuniões"));
+    secao("REUNIÕES DE COMISSÕES", com.length + (com.length === 1 ? " reunião" : " reuniões"), "sec-com");
     for (const r of com) {
       const todas = visiveis.filter(i => i.reuniao_id === r.id && !/^RQC /.test(i.prop));
       const nome = (/^comiss/i.test(r.comissao) ? r.comissao : "Comissão de " + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
@@ -244,7 +308,7 @@ function render(){
     }
     if (grupos.length) {
       const tot = grupos.reduce((n, g) => n + g[2].length, 0);
-      secao("REQUERIMENTOS DE COMISSÕES", tot + (tot === 1 ? " requerimento" : " requerimentos"));
+      secao("REQUERIMENTOS DE COMISSÕES", tot + (tot === 1 ? " requerimento" : " requerimentos"), "sec-rqc");
       for (const [r, c, l] of grupos) linha(r.id + "|" + c, r.hora, "RQC: " + r.comissao.replace(/^comiss[aã]o (de |do |da |dos |das )?/i, "").toUpperCase() + ", " + c, String(l.length), l, false);
     }
   }
