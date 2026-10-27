@@ -371,12 +371,12 @@ function render(){
       for (const [r, c, l] of grupos) linha(r.id + "|" + c, r.hora, "RQC: " + r.comissao.replace(/^comiss[aã]o (de |do |da |dos |das )?/i, "").toUpperCase() + ", " + c, String(l.length), l, false);
     }
   }
-  // Prazos encerrados (preclusão do art. 104), como na planilha, na seção CADASTRO DE E-MAILS
+  // Preclusão de prazo (art. 104): prazo contado da publicação no DL
   const pz = diarios.filter(d => d.fonte === "PRAZO");
   if (pz.length) {
     const n = pz.reduce((a, d) => a + d.itens.length, 0);
-    secao("CADASTRO DE E-MAILS", n + (n === 1 ? " lançamento" : " lançamentos"), "sec-pz");
-    for (const d of pz) d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha("PZ" + d.chave + "|" + k, g.pag || "—", g.desc, String(l.length), l, false); });
+    secao("PRECLUSÃO DE PRAZO", n + (n === 1 ? " lançamento" : " lançamentos"), "sec-pz");
+    for (const d of pz) d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha("PZ" + d.chave + "|" + k, g.pag || "—", g.desc.replace(/^PRECLUS[ÃA]O DE PRAZO:\s*/i, ""), String(l.length), l, false); });
   }
   box.appendChild(t); card.appendChild(box); list.appendChild(card);
   if (!mostradas) { list.textContent = ""; list.appendChild(el("div", "card empty", "Nenhum item com esse filtro.")); }
