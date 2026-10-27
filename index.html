@@ -45,8 +45,8 @@ input[type=date],select{padding:6px 8px;border:1px solid var(--line);border-radi
 .day.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 .day b{font-family:var(--fm);font-size:13px}.day small{font-size:11px;color:var(--muted)}
 .dots{display:flex;gap:3px}.dots i{width:7px;height:7px;border-radius:50%}
-.summary{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-@media (max-width:900px){.summary{grid-template-columns:repeat(4,1fr)}}@media (max-width:560px){.summary{grid-template-columns:repeat(2,1fr)}}
+.summary{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+@media (max-width:900px){.summary{grid-template-columns:repeat(3,1fr)}}@media (max-width:560px){.summary{grid-template-columns:repeat(2,1fr)}}
 .stat{background:var(--paper);padding:12px 14px;display:grid;gap:2px;cursor:pointer;border:0;text-align:left;border-radius:0}
 .stat.on{background:var(--soft)}
 .stat .k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
@@ -207,7 +207,7 @@ table.grade tr.edc a{color:inherit}
 <span><span class="pill s-divergente">divergente</span> há lançamento na data, mas o texto não bate</span>
 <span><span class="pill s-pendente">pendente</span> nada lançado na data</span>
 <span><span class="pill s-aguardando">aguardando</span> dentro do prazo de 2 dias úteis</span>
-<span><span class="pill s-revisar">revisar</span> ação sem regra automática</span>
+<span><span class="pill s-revisar">revisar</span> ação sem regra automática (conta em Divergentes)</span>
 <span><span class="pill s-nao_cadastrada">não cadastrada</span> proposição ainda inexistente no portal após 2 dias úteis (ex.: RQC sem pré-cadastro)</span>
 </div>
 <footer><span id="rodadaInfo"></span><span>Fontes públicas: dados abertos, portal e diários publicados da ALMG. Não substitui a conferência interna pelo Silegis.</span></footer>
@@ -215,7 +215,7 @@ table.grade tr.edc a{color:inherit}
 <script>
 (() => {
 const $ = id => document.getElementById(id);
-const ST = [["todos","Ações"],["lancados","Lançados"],["ok","Conferidos"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"],["revisar","Revisar"]];
+const ST = [["todos","Ações"],["lancados","Lançados"],["ok","Conferidos"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"]];
 const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--info)", novo:"var(--muted)" };
 const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
 const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
@@ -271,7 +271,7 @@ function renderDays(){
     const b = el("button", "day" + (d === sel ? " sel" : ""));
     b.append(el("small", null, wd(d)), el("b", null, fmtD(d)));
     const dots = el("span", "dots"); const s = by[d] || {};
-    const prob = (s.divergente || 0) + (s.pendente || 0) + (s.nao_cadastrada || 0), esp = (s.aguardando || 0) + (s.revisar || 0);
+    const prob = (s.divergente || 0) + (s.pendente || 0) + (s.nao_cadastrada || 0) + (s.revisar || 0), esp = (s.aguardando || 0);
     if (prob) { const x = el("i", "dp", String(prob)); x.title = prob + " com problema"; dots.appendChild(x); }
     if (esp) { const x = el("i", "de", String(esp)); x.title = esp + " aguardando ou a revisar"; dots.appendChild(x); }
     if (prob) b.classList.add("tem-prob");
@@ -285,7 +285,7 @@ function render(){
   const itsD = diarios.flatMap(d => d.itens);
   const ocorreu = new Set((dia ? dia.reunioes : []).filter(r => r.ocorrida === "S").map(r => r.id));   // só reuniões com resultado publicado
   const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria" && ocorreu.has(i.reuniao_id)).concat(itsD);
-  const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status; cnt[k] = (cnt[k] || 0) + 1; if (i.status === "ok" || i.status === "divergente") cnt.lancados = (cnt.lancados || 0) + 1; });
+  const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status === "revisar" ? "divergente" : i.status; cnt[k] = (cnt[k] || 0) + 1; if (i.status === "ok" || i.status === "divergente") cnt.lancados = (cnt.lancados || 0) + 1; });
   const sm = $("summary"); sm.textContent = "";
   for (const [k, l] of ST) {
     const b = el("button", "stat" + (filtro === k ? " on" : "")); b.type = "button";
@@ -297,7 +297,7 @@ function render(){
   const list = $("list"); list.textContent = "";
   const reun = dia ? dia.reunioes : [];
   if (!reun.length && !diarios.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião nem diário nesta data.")); return; }
-  const passa = i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada") || (filtro === "lancados" && (i.status === "ok" || i.status === "divergente"));
+  const passa = i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada") || (filtro === "divergente" && i.status === "revisar") || (filtro === "lancados" && (i.status === "ok" || i.status === "divergente"));
   const ORD = ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"];
   const card = el("section", "card"); const box = el("div", "tablebox"); const t = el("table", "grade");
   let mostradas = 0;
