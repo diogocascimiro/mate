@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conferência MATE · ALMG.DIGITAL</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18.7' fill='%231f5f4a'/%3E%3Cpath d='M29 8h6v5h5v5h-5v4h-6v-4h-5v-5h5z' fill='%23fff'/%3E%3Cpath d='M22 24h20l-3 14h-14z' fill='%23fff'/%3E%3Cpath d='M24 40h16l3 8H21z' fill='%23fff'/%3E%3Crect x='16' y='50' width='32' height='6' rx='2' fill='%23fff'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f3f1ea">
+<meta name="description" content="Conferência automática dos lançamentos de tramitação do MATE a partir dos resultados de reunião.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f2f4;--paper:#fff;--ink:#1d1a20;--muted:#6c6672;--line:#dcd8df;--soft:#f7f5f8;--accent:#123b36;--wine:#6e0d17;
+--ok:#1e7a4c;--ok-s:#e2f3ea;--warn:#9a6200;--warn-s:#fbf0d9;--bad:#b3261e;--bad-s:#fbe4e2;--info:#3b5b8c;--info-s:#e4ebf6;
+--fd:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--fb:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;--fm:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#141216;--paper:#1d1a20;--ink:#efecf1;--muted:#a39caa;--line:#36313b;--soft:#242028;--accent:#7fc4b8;--wine:#e0566c;
+--ok:#5fcf95;--ok-s:#173527;--warn:#f0b54a;--warn-s:#3a2c10;--bad:#ff8a80;--bad-s:#3d1b19;--info:#9db8e6;--info-s:#1c2738;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 var(--fb)}
+.band{background:#f3f1ea;border-bottom:1px solid #dcd8cf}
+.bandin,.wrap{max-width:1100px;margin:0 auto;padding-inline:16px}
+.bandin{padding-block:12px}
+.brandbar{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#123b36}
+.wordmark{font-family:var(--fd);font-weight:800;font-size:17px}.wordmark i{font-style:normal;color:#6e0d17}.wordmark span{font-weight:500;letter-spacing:.06em}
+.wrap{display:grid;gap:16px;padding-block:20px 48px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between}
+h1{font-family:var(--fd);font-weight:800;font-size:clamp(26px,5vw,34px);margin:0;line-height:1.05}
+.sub{color:var(--muted);font-size:13.5px}
+.ctrl{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+button,input,select{font:inherit;color:var(--ink)}
+button{cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--paper);padding:7px 12px}
+button:hover{border-color:var(--accent)}
+input[type=date],select{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+.days{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.day{flex:none;display:grid;gap:2px;justify-items:center;min-width:72px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--paper)}
+.day.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.day b{font-family:var(--fm);font-size:13px}.day small{font-size:11px;color:var(--muted)}
+.dots{display:flex;gap:3px}.dots i{width:7px;height:7px;border-radius:50%}
+.summary{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+@media (max-width:760px){.summary{grid-template-columns:repeat(3,1fr)}}
+.stat{background:var(--paper);padding:12px 14px;display:grid;gap:2px;cursor:pointer;border:0;text-align:left;border-radius:0}
+.stat.on{background:var(--soft)}
+.stat .k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.stat .v{font-family:var(--fm);font-weight:600;font-size:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px}
+.reun{padding:12px 16px;display:grid;gap:8px}
+.reun h2{font-family:var(--fd);font-weight:600;font-size:17px;margin:0}
+.reun .meta{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:6px 8px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;border-top:0}
+td.p{font-family:var(--fm);white-space:nowrap}
+td.m{color:var(--muted);font-size:13px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.s-ok{background:var(--ok-s);color:var(--ok)}.s-divergente{background:var(--bad-s);color:var(--bad)}.s-pendente{background:var(--bad-s);color:var(--bad)}
+.s-nao_cadastrada{background:var(--bad-s);color:var(--bad)}.s-aguardando{background:var(--warn-s);color:var(--warn)}.s-revisar{background:var(--info-s);color:var(--info)}.s-novo{background:var(--soft);color:var(--muted)}.s-silegis{background:var(--soft);color:var(--muted)}
+.empty{padding:24px;text-align:center;color:var(--muted)}
+.tablebox{overflow-x:auto}
+footer{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="band"><div class="bandin"><a class="brandbar" href="https://almg.digital"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#123b36"/><rect x="13" y="13" width="16" height="16" rx="4.5" fill="#f3f1ea"/><rect x="35" y="13" width="16" height="16" rx="4.5" fill="#f3f1ea" opacity=".5"/><rect x="13" y="35" width="16" height="16" rx="4.5" fill="#f3f1ea" opacity=".5"/><rect x="35" y="35" width="16" height="16" rx="8" fill="#6e0d17"/></svg><span class="wordmark">ALMG<i>.</i><span>DIGITAL</span></span></a></div></div>
+<div class="wrap">
+<header>
+<div><h1>Conferência MATE</h1><div class="sub">Resultados de reunião de comissão × tramitação lançada no MATE</div></div>
+<div class="ctrl"><input type="date" id="data" aria-label="Data"><button id="rodar" type="button">Conferir agora</button></div>
+</header>
+<div class="days" id="days"></div>
+<section class="summary" id="summary"></section>
+<div class="legend">
+<span><span class="pill s-ok">ok</span> lançado e confere</span>
+<span><span class="pill s-divergente">divergente</span> há lançamento na data, mas o texto não bate</span>
+<span><span class="pill s-pendente">pendente</span> nada lançado na data</span>
+<span><span class="pill s-aguardando">aguardando</span> dentro do prazo de 2 dias úteis</span>
+<span><span class="pill s-revisar">revisar</span> ação sem regra automática</span>
+<span><span class="pill s-silegis">via Silegis</span> designação ainda não lançada; vem dos Lançamentos de Tramitação do Silegis, sem prazo pelo resultado</span>
+</div>
+<div id="list" style="display:grid;gap:12px"></div>
+<footer><span id="rodadaInfo"></span><span>Fonte: API de Dados Abertos da ALMG. Iniciativa independente; confira sempre no Silegis.</span></footer>
+</div>
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const ST = [["todos","Itens"],["ok","OK"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"],["revisar","Revisar"]];
+const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--info)", novo:"var(--muted)" };
+const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", novo:"na fila" };
+const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
+let filtro = "todos", sel = new URLSearchParams(location.search).get("data") || hoje, dia = null, resumo = null;
+const fmtD = s => { const [y,m,d] = s.split("-"); return d + "/" + m; };
+const WD = ["dom","seg","ter","qua","qui","sex","sáb"];
+const wd = s => WD[new Date(s + "T12:00:00Z").getUTCDay()];
+const BASE = /workers\.dev$/.test(location.hostname) ? "" : "https://mate.diogocascimiro.workers.dev";
+async function get(u){ const r = await fetch(BASE + u, { cache:"no-store" }); return r.json(); }
+function el(tag, cls, txt){ const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+
+function renderDays(){
+  const box = $("days"); box.textContent = "";
+  const by = {};
+  for (const r of (resumo && resumo.dias) || []) { (by[r.data] = by[r.data] || {})[r.status] = r.n; }
+  const datas = new Set(Object.keys(by)); ((resumo && resumo.reunioes) || []).forEach(r => datas.add(r.data)); datas.add(hoje);
+  [...datas].sort().reverse().slice(0, 15).forEach(d => {
+    const b = el("button", "day" + (d === sel ? " sel" : ""));
+    b.append(el("small", null, wd(d)), el("b", null, fmtD(d)));
+    const dots = el("span", "dots"); const s = by[d] || {};
+    for (const k of ["ok","divergente","pendente","nao_cadastrada","aguardando","revisar"]) if (s[k]) { const i = el("i"); i.style.background = COR[k]; i.title = s[k] + " " + LBL[k]; dots.appendChild(i); }
+    b.appendChild(dots);
+    b.addEventListener("click", () => { sel = d; $("data").value = d; load(); });
+    box.appendChild(b);
+  });
+}
+
+function render(){
+  const its = dia ? dia.itens : [];
+  const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status; cnt[k] = (cnt[k] || 0) + 1; });
+  const sm = $("summary"); sm.textContent = "";
+  for (const [k, l] of ST) {
+    const b = el("button", "stat" + (filtro === k ? " on" : "")); b.type = "button";
+    b.append(el("span", "k", l), el("span", "v", String(cnt[k] || 0)));
+    if (k !== "todos" && COR[k]) b.querySelector(".v").style.color = COR[k];
+    b.addEventListener("click", () => { filtro = filtro === k ? "todos" : k; render(); });
+    sm.appendChild(b);
+  }
+  const list = $("list"); list.textContent = "";
+  const reun = dia ? dia.reunioes : [];
+  if (!reun.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião de comissão encontrada nesta data.")); return; }
+  for (const r of reun) {
+    const ri = its.filter(i => i.reuniao_id === r.id && (filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada")));
+    if (filtro !== "todos" && !ri.length) continue;
+    const c = el("section", "card reun");
+    c.appendChild(el("h2", null, "Comissão de " + r.comissao));
+    const estado = r.ocorrida !== "S" ? "não ocorrida ou sem resultado" : (r.res_em ? (r.itens ? r.itens + " itens no resultado" : "resultado sem itens a lançar") : "resultado ainda não lido");
+    c.appendChild(el("div", "meta", r.hora + " · " + r.tipo + " · " + estado));
+    if (ri.length) {
+      const box = el("div", "tablebox"); const t = el("table");
+      const h = el("tr"); ["Proposição","Resultado da reunião","No MATE",""].forEach(x => h.appendChild(el("th", null, x))); t.appendChild(h);
+      for (const i of ri) {
+        const tr = el("tr");
+        const pc = el("td", "p"); const [tp, na] = i.prop.split(" "); const lk = el("a", null, i.prop); lk.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; lk.target = "_blank"; lk.rel = "noopener"; lk.style.color = "inherit"; pc.appendChild(lk); tr.appendChild(pc);
+        tr.appendChild(el("td", null, i.acao + (i.detalhe ? " · " + i.detalhe : "")));
+        tr.appendChild(el("td", "m", i.mate || "—"));
+        const s = el("td"); s.appendChild(el("span", "pill s-" + i.status, LBL[i.status] || i.status)); tr.appendChild(s);
+        t.appendChild(tr);
+      }
+      box.appendChild(t); c.appendChild(box);
+    }
+    list.appendChild(c);
+  }
+  if (!list.children.length) list.appendChild(el("div", "card empty", "Nenhum item com esse filtro."));
+}
+
+async function load(){
+  history.replaceState(null, "", "?data=" + sel);
+  try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
+  renderDays(); render();
+  const r = resumo && resumo.rodada;
+  $("rodadaInfo").textContent = r ? "Última verificação: " + new Date(r.em).toLocaleString("pt-BR", { dateStyle:"short", timeStyle:"short" }) + " · confere de 10 em 10 minutos" : "Aguardando a primeira verificação.";
+}
+$("data").value = sel;
+$("data").addEventListener("change", e => { if (e.target.value) { sel = e.target.value; load(); } });
+$("rodar").addEventListener("click", async () => {
+  const b = $("rodar"); b.disabled = true; b.textContent = "Conferindo…";
+  try { const j = await get("/api/rodar"); b.textContent = j.ok ? "Iniciado; atualiza em 1 min" : j.msg; } catch { b.textContent = "Erro"; }
+  setTimeout(() => { load(); b.disabled = false; b.textContent = "Conferir agora"; }, 60000);
+});
+load(); setInterval(load, 60000);
+})();
+</script>
+</body>
+</html>
