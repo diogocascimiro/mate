@@ -207,8 +207,8 @@ function render(){
     tr.classList.toggle("aberta", aberta);
   }
   const visiveis = its.filter(i => i.acao !== "Designação de relatoria");
-  // "não houve" só quando o resultado diz isso: reunião desconvocada, ou dia já encerrado sem a reunião ter ocorrido; antes disso, "?"
-  const naoHouve = r => r.ocorrida === "D" || (r.ocorrida !== "S" && r.data < hoje);
+  // "não houve" só quando o resultado diz isso (reunião desconvocada ou resultado publicado sem a reunião ter ocorrido); antes disso, "?"
+  const naoHouve = r => r.ocorrida === "D" || r.ocorrida === "NH";
   const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? String(n) : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
   // Plenário
   const plen = reun.filter(r => r.comissao_id === 0);
