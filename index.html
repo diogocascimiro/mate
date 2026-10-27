@@ -77,6 +77,16 @@ table.grade tr.det>td{padding:0 10px 10px 4.5em;background:var(--soft)}
 table.itens{font-size:13px}
 table.itens td{border-top:1px solid var(--line);padding:4px 8px}
 table.itens td.p a{color:inherit}
+:root{--prob-bg:#fdf1f0;--esp-bg:#fdf8ec;--faixa-prob:#c0261d;--faixa-esp:#d4930b;--faixa-ok:#1e7a4c}
+@media (prefers-color-scheme:dark){:root{--prob-bg:#2e1a19;--esp-bg:#2c2412;--faixa-prob:#ff8a80;--faixa-esp:#f0b54a;--faixa-ok:#5fcf95}}
+table.grade tr.reu td.h{border-left:4px solid transparent}
+table.grade tr.reu.prob td.h{border-left-color:var(--faixa-prob)}
+table.grade tr.reu.esp td.h{border-left-color:var(--faixa-esp)}
+table.grade tr.reu.okk td.h{border-left-color:var(--faixa-ok)}
+table.grade tr.reu.prob td{background:var(--prob-bg)}
+table.grade tr.reu.esp td{background:var(--esp-bg)}
+table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightness(.98)}
+.pill.s-ok{background:none;color:var(--ok)}
 </style>
 </head>
 <body>
@@ -164,6 +174,7 @@ function render(){
     const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
     for (const k of ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"]) if (cnt[k]) sc.appendChild(el("span", "pill s-" + k, cnt[k] + " " + (LBL[k] || k)));
     tr.appendChild(sc);
+    tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada ? "prob" : cnt.aguardando || cnt.revisar ? "esp" : cnt.ok ? "okk" : "neutra");
     t.appendChild(tr);
     if (todas.length) {
       const aberta = abertas.has(r.id) || filtro !== "todos";
