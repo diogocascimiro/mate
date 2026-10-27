@@ -73,6 +73,7 @@ export function extrairDL(lines){
   const grupos = new Map();
   const doSumario = new Set(lines.filter(l => l.p === 1 && l.b > 0.8).map(l => (l.t.match(/^\d+ [–-] (.+)$/) || [])[1]).filter(Boolean).map(norm));
   const ehTopo = t => { const n = norm(t); return doSumario.has(n) || TOPO.test(n); };
+  const erratas = [];
   let topo = null, topoTxt = null, ata = null, sub = null, doc = null, sumario = false, ultimaDescMsg = null;
   const add = (desc, prop, pag) => {
     if (!grupos.has(desc)) grupos.set(desc, { desc, props: [], pags: new Set() });
@@ -115,10 +116,15 @@ export function extrairDL(lines){
     const upper = t === t.toUpperCase();
     if (bold && upper && !/^\d/.test(t) && ehTopo(t)) {
       flush(); topo = norm(t); topoTxt = /^ERRATA/.test(topo) ? "ERRATAS" : t; ata = null; sub = null; doc = null; sumario = false; ultimaDescMsg = null;
-      if (topoTxt === "ERRATAS") add("ERRATAS", null, l.p);
+      if (topoTxt === "ERRATAS") { add("ERRATAS", null, l.p); erratas.push({ titulo: "", texto: "", pag: l.p }); }
       continue;
     }
     if (!topo || IGNORA_TOPO.test(topo)) continue;
+    if (topoTxt === "ERRATAS") {   // guarda título (epígrafe) e texto de cada errata: o lançamento é na proposição da matéria corrigida
+      const e = erratas[erratas.length - 1];
+      if (bold) e.titulo += (e.titulo ? " " : "") + t; else e.texto += (e.texto ? " " : "") + t;
+      push("ERRATAS", t, l.p); continue;
+    }
     if (bold && /^ATA DA /.test(t)) {
       flush();
       let titulo = t; if (lines[li + 1] && lines[li + 1].b > 0.8 && !/^Presid/.test(lines[li + 1].t)) titulo += " " + lines[li + 1].t;
@@ -172,7 +178,9 @@ export function extrairDL(lines){
   const out = [];
   for (const g of grupos.values()) {
     const ps = [...g.pags].sort((a, b) => a - b);
-    out.push({ desc: g.desc, pag: ps[0] === ps[ps.length - 1] ? String(ps[0]) : ps[0] + " - " + ps[ps.length - 1], props: g.props });
+    const o = { desc: g.desc, pag: ps[0] === ps[ps.length - 1] ? String(ps[0]) : ps[0] + " - " + ps[ps.length - 1], props: g.props };
+    if (g.desc === "ERRATAS") o.erratas = erratas;
+    out.push(o);
   }
   out.sort((a, b) => parseInt(a.pag) - parseInt(b.pag));
   return out;
