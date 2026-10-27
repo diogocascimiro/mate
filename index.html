@@ -231,7 +231,7 @@ function propCell(prop){
   const td = el("td", "p");
   const a = el("a", "propb"); a.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir no portal da ALMG";
   if (/^(LEI|LCP|EMC)$/.test(tp)) a.href = "https://www.almg.gov.br/legislacao-mineira/texto/" + tp + "/" + na.replace("/", "/") + "/"; if (tp === "PROPLEI") { a.removeAttribute("href"); a.title = ""; }
-  const sg = el("span", "sg", tp === "PROPLEI" ? "PLEI" : tp); sg.style.background = TIPO_COR[tp] || "#5aa293";
+  const sg = el("span", "sg", tp === "PROPLEI" ? "PLE" : tp); sg.style.background = TIPO_COR[tp] || "#5aa293";
   const nm = el("span", "nm"); nm.append(el("b", null, na), el("small", null, (TIPO_NOME[tp] || tp).toUpperCase()));
   a.append(sg, nm); td.appendChild(a); return td;
 }
