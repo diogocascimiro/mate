@@ -1,11 +1,11 @@
 {
- "versao": 4,
+ "versao": 5,
  "id": "2657560",
  "data": "2026-10-21",
  "url": "https://mediaserver.almg.gov.br/acervo/657/560/2657560.pdf",
  "obs": "",
  "paginas": 19,
- "extraido_em": "2026-10-27T19:51:06.183Z",
+ "extraido_em": "2026-10-27T20:01:39.208Z",
  "grupos": [
   {
    "desc": "TRAMITAÇÃO DE PROPOSIÇÕES: PARECERES",
@@ -80,5 +80,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-27T19:51:06.183Z"
+ "conferido_em": "2026-10-27T20:01:39.209Z"
 }
