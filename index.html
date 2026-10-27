@@ -207,12 +207,14 @@ function render(){
     tr.classList.toggle("aberta", aberta);
   }
   const visiveis = its.filter(i => i.acao !== "Designação de relatoria");
-  const estado = (r, n) => r.ocorrida !== "S" ? "não houve" : (r.res_em ? String(n) : "aguardando resultado");
+  // "não houve" só quando o resultado diz isso: reunião desconvocada, ou dia já encerrado sem a reunião ter ocorrido; antes disso, "?"
+  const naoHouve = r => r.ocorrida === "D" || (r.ocorrida !== "S" && r.data < hoje);
+  const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? String(n) : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
   // Plenário
   const plen = reun.filter(r => r.comissao_id === 0);
   if (plen.length) {
     secao("REUNIÕES DE PLENÁRIO", plen.length + (plen.length === 1 ? " reunião" : " reuniões"));
-    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), r.ocorrida !== "S" ? (/sem quorum/i.test(r.tipo) ? "sem quórum" : "não houve") : (r.res_em ? String(todas.length) : "aguardando resultado"), todas, r.ocorrida !== "S"); }
+    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), r.ocorrida === "S" ? (r.res_em ? String(todas.length) : "aguardando resultado") : (/sem quorum/i.test(r.tipo) ? "sem quórum" : (naoHouve(r) ? "não houve" : "?")), todas, r.ocorrida !== "S" && (naoHouve(r) || /sem quorum/i.test(r.tipo))); }
   }
   // Comissões (sem RQC nem designações)
   const com = reun.filter(r => r.comissao_id !== 0);
@@ -221,7 +223,7 @@ function render(){
     for (const r of com) {
       const todas = visiveis.filter(i => i.reuniao_id === r.id && !/^RQC /.test(i.prop));
       const nome = (/^comiss/i.test(r.comissao) ? r.comissao : "Comissão de " + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
-      linha(r.id, r.hora, nome, estado(r, todas.length), todas, r.ocorrida !== "S");
+      linha(r.id, r.hora, nome, estado(r, todas.length), todas, r.ocorrida !== "S" && naoHouve(r));
     }
     // Requerimentos de comissões, como na planilha: "RQC: SAÚDE, APROVADOS"
     const grupos = [];
