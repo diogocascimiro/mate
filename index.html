@@ -144,9 +144,9 @@ tr.cap.sec-rqc{--sc:#1f6f78;--sc-t:#e1f0f2}
 .qp.qv{background:#e3ecea;color:#123b36}
 .qp.q0{background:var(--soft);color:var(--muted)}
 .qp.qn{background:transparent;color:var(--muted);font-weight:500;font-style:italic;padding-left:0}
-.qp.qi{background:#fbf1dc;color:#b7791f}
+.qp.qi{background:#fbe4e2;color:#b3261e}
 .qp.qa{background:#fbf1dc;color:#b7791f;font-family:var(--fb)}
-@media (prefers-color-scheme:dark){.qp.qv{background:#1a2a27;color:#7fc4b8}.qp.qi,.qp.qa{background:#3a2c10;color:#f0b54a}}
+@media (prefers-color-scheme:dark){.qp.qv{background:#1a2a27;color:#7fc4b8}.qp.qa{background:#3a2c10;color:#f0b54a}.qp.qi{background:#3d1b19;color:#ff8a80}}
 .pill{border:1px solid transparent}
 .pill.s-ok{background:#e2f3ea;color:#1e7a4c}
 .pill.s-pendente,.pill.s-nao_cadastrada{background:#c2410c;color:#fff}
@@ -300,7 +300,7 @@ function render(){
     const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
     tr.appendChild(el("td", "h", hora)); tr.appendChild(el("td", "n", nome)); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
     const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
-    for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, k === "ok" ? String(cnt[k]) : cnt[k] + " " + (LBL[k] || k)); if (k === "ok") p.title = cnt[k] + " conferidos"; sc.appendChild(p); }
+    for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sc.appendChild(p); }
     tr.appendChild(sc);
     tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada ? "prob" : cnt.aguardando || cnt.revisar ? "esp" : cnt.ok ? "okk" : "neutra");
     t.appendChild(tr);
