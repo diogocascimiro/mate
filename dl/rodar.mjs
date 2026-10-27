@@ -7,15 +7,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
-import { extrairDL } from "./extrair.js";
+import { extrairDL, refs } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
-const VERSAO = 3;                 // muda quando a extração muda: reprocessa as edições
+const VERSAO = 4;                 // muda quando a extração muda: reprocessa as edições
 const JANELA = 12;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-const DIR_DL = path.join(RAIZ, "dados", "dl"), DIR_DE = path.join(RAIZ, "dados", "de");
-fs.mkdirSync(DIR_DL, { recursive: true }); fs.mkdirSync(DIR_DE, { recursive: true });
+const DIR_DL = path.join(RAIZ, "dados", "dl"), DIR_DE = path.join(RAIZ, "dados", "de"), DIR_PZ = path.join(RAIZ, "dados", "prazo");
+for (const d of [DIR_DL, DIR_DE, DIR_PZ]) fs.mkdirSync(d, { recursive: true });
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let ultimo = 0;
@@ -90,6 +90,64 @@ function avaliar(data, hist, rx, carenciaTxt){
   return { status: uteisDesde(data) <= CARENCIA ? "aguardando" : "pendente", mate: "" };
 }
 
+// ---------- erratas: a proposição está na matéria corrigida (edição/página citadas no texto) ----------
+const normT = s => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().replace(/\s+/g, " ").trim();
+const cachePDF = new Map();
+async function paginasEdicao(data, pag){
+  if (!cachePDF.has(data)) {
+    const out = [];
+    try {
+      const j = await api(`/diario_legislativo/pesquisa?ini=${compact(data)}&fim=${compact(data)}&tp=20&p=1`);
+      for (const x of ((j && j.list && j.list.lista) || [])) { try { out.push(...(await linhasPDF(x.url))); } catch {} }
+    } catch {}
+    cachePDF.set(data, out);
+  }
+  return cachePDF.get(data).filter(l => l.p >= pag && l.p <= pag + 1);
+}
+async function propsErrata(g){
+  for (const e of g.erratas || []) {
+    const achados = new Set(refs(e.titulo + " " + e.texto));
+    const chave = normT(e.titulo).slice(0, 45);
+    for (const m of e.texto.matchAll(/edi[cç][aã]o de (\d{1,2})\/(\d{1,2})\/(\d{4}),?\s*(?:na\s+)?p[áa]gs?\.?\s*(\d+)/gi)) {
+      const data = `${m[3]}-${m[2].padStart(2, "0")}-${m[1].padStart(2, "0")}`;
+      const ls = await paginasEdicao(data, +m[4]);
+      for (let i = 0; i < ls.length; i++) {
+        if (!(ls[i].b > 0.8) || !chave || !normT(ls[i].t + " " + (ls[i + 1] ? ls[i + 1].t : "")).startsWith(chave.slice(0, 30))) continue;
+        let txt = ""; for (let j = i; j < ls.length && j < i + 60; j++) { if (j > i + 2 && ls[j].b > 0.8 && /^ERRATAS?$/.test(ls[j].t)) break; txt += " " + ls[j].t; }
+        for (const r of refs(txt, /COMISS/.test(chave))) achados.add(r);
+      }
+    }
+    for (const r of achados) if (!g.props.some(p => p.prop === r)) g.props.push({ prop: r, pag: e.pag });
+  }
+}
+
+// ---------- preclusão de prazo (art. 104): requerimentos aprovados conclusivamente na Comunicação da Presidência ----------
+function somaUteis(data, n){ const d = new Date(data + "T12:00:00Z"); while (n > 0) { d.setUTCDate(d.getUTCDate() + 1); const w = d.getUTCDay(); if (w > 0 && w < 6) n--; } return ymd(d); }
+async function rodarPrazos(){
+  const resumo = [];
+  for (const f of fs.readdirSync(DIR_DL)) {
+    const ed = lerJSON(path.join(DIR_DL, f), null); if (!ed) continue;
+    const props = []; for (const g of ed.grupos) if (/^COMUNICA[CÇ][AÃ]O DA PRESID/i.test(g.desc)) for (const p of g.props) if (/^RQN /.test(p.prop)) props.push(p.prop);
+    if (!props.length) continue;
+    const alvo = somaUteis(ed.data, 3);
+    const arq = path.join(DIR_PZ, ed.id + ".json");
+    const ant = lerJSON(arq, { grupos: [{ props: [] }] }); const antigo = new Map(ant.grupos[0].props.map(p => [p.prop, p]));
+    const [y, m, d] = ed.data.split("-");
+    const grupo = { desc: "PRECLUSÃO DE PRAZO: REQUERIMENTOS, APROVADOS", pag: `${d}/${m}/${y}`, props: props.map(p => antigo.get(p) || { prop: p, status: "novo", mate: "" }) };
+    for (const p of grupo.props) {
+      if (p.status === "ok") continue;
+      if (brHoje() < alvo) { p.status = "aguardando"; continue; }
+      const h = await historico(p.prop); if (h === undefined) continue;
+      const x = (h || []).find(x => x.data >= ed.data && /encerrado o prazo do artigo 104/i.test(String(x.historico || "")));
+      p.status = x ? "ok" : h === null ? "nao_cadastrada" : uteisDesde(alvo) <= CARENCIA ? "aguardando" : "pendente";
+      p.mate = x ? String(x.historico).replace(/\s+/g, " ").match(/Encerrado o prazo[^.]*\./i)[0] : "";
+    }
+    gravar(arq, { data: alvo, referencia: ed.data, grupos: [grupo], conferido_em: new Date().toISOString() });
+    resumo.push({ fonte: "PRAZO", id: ed.id, data: alvo, arquivo: "dados/prazo/" + ed.id + ".json", contagem: contar([grupo]) });
+  }
+  return resumo;
+}
+
 // ---------- Diário do Legislativo ----------
 async function edicoesDL(){
   const fim = new Date(Date.now() - 3 * 3600e3), ini = new Date(fim.getTime() - JANELA * 864e5);
@@ -113,6 +171,7 @@ async function rodarDL(){
       try {
         const linhas = await linhasPDF(e.url);
         const grupos = extrairDL(linhas);
+        for (const g of grupos) if (g.erratas) await propsErrata(g);
         const antigo = new Map(); if (ed) for (const g of ed.grupos) for (const p of g.props) antigo.set(p.prop, p);
         for (const g of grupos) g.props = g.props.map(p => { const a = antigo.get(p.prop); return a && a.status === "ok" ? { ...p, status: "ok", mate: a.mate } : { ...p, status: "novo", mate: "" }; });
         ed = { versao: VERSAO, id: e.id, data: e.data, url: e.url, obs: e.obs, paginas: linhas.length ? linhas[linhas.length - 1].p : 0, extraido_em: new Date().toISOString(), grupos };
@@ -191,9 +250,11 @@ const t0 = Date.now();
 const dl = await rodarDL();
 let de = [];
 try { de = await rodarDE(); } catch (e) { console.log("DE falhou:", e.message); }
+let pz = [];
+try { pz = await rodarPrazos(); } catch (e) { console.log("prazos falhou:", e.message); }
 const anterior = lerJSON(path.join(RAIZ, "dados", "indice.json"), { edicoes: [] });
 const mapa = new Map(anterior.edicoes.map(x => [x.arquivo, x]));
-for (const x of [...dl, ...de]) mapa.set(x.arquivo, x);
+for (const x of [...dl, ...de, ...pz]) mapa.set(x.arquivo, x);
 const limite = ymd(new Date(Date.now() - 60 * 864e5));
 const edicoes = [...mapa.values()].filter(x => x.data >= limite).sort((a, b) => b.data.localeCompare(a.data));
 gravar(path.join(RAIZ, "dados", "indice.json"), { atualizado_em: new Date().toISOString(), edicoes });
