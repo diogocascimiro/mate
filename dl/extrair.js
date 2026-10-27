@@ -53,10 +53,11 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
 }
 const TIPO_TITULO = s => /^REQUERIMENTOS? DE COMISS/.test(s) ? "RQC" : /^REQUERIMENTO/.test(s) ? "RQN" : /^PROJETOS? DE LEI COMPLEMENTAR/.test(s) ? "PLC" : /^PROJETOS? DE LEI/.test(s) ? "PL" : /^PROJETOS? DE RESOLU/.test(s) ? "PRE" : /^PROPOSTAS? DE EMENDA/.test(s) ? "PEC" : /^MENSAGE/.test(s) ? "MSG" : /^VETO/.test(s) ? "VET" : null;
 function classeRQ(item){
-  const desp = (item.match(/\(\s*[–-][^()]*\)\s*\.?\s*$/) || [""])[0];
+  const k = Math.max(item.lastIndexOf("(–"), item.lastIndexOf("(-"), item.lastIndexOf("( –"));
+  const desp = k >= 0 ? item.slice(k) : "";
   if (/anexe-se/i.test(desp)) return "ANEXADOS";
   if (/[àa]s? comiss/i.test(desp)) return "COMISSÕES TEMÁTICAS";
-  if (/mesa da assembleia/i.test(desp)) return /vota|plen[aá]rio/i.test(desp) ? "MESA DA ASSEMBLEIA, VOTADO EM PLENÁRIO" : /provid[eê]ncia interna/i.test(desp) ? "MESA DA ASSEMBLEIA, ENCAMINHADOS PARA PROVIDÊNCIA INTERNA" : "MESA DA ASSEMBLEIA";
+  if (/mesa da assembleia/i.test(desp)) return /provid[eê]ncia interna/i.test(desp) ? "MESA DA ASSEMBLEIA, ENCAMINHADOS PARA PROVIDÊNCIA INTERNA" : "MESA DA ASSEMBLEIA, VOTADO EM PLENÁRIO";
   if (/retirada de tramita/i.test(item)) return "SEM DESPACHO, RETIRADA DE TRAMITAÇÃO";
   if (/reuni[aã]o especial/i.test(item)) return "SEM DESPACHO, REUNIÃO ESPECIAL";
   if (/desarquiv/i.test(item)) return "SEM DESPACHO, DESARQUIVAMENTO";
@@ -94,7 +95,8 @@ export function extrairDL(lines){
           const rs = refs(item, false, true, "RQN"); if (!rs.length) continue;
           const cl = classeRQ(item); const d = bdesc + " - " + cl;
           add(d, rs[0].prop, pagDe(ini[q] + rs[0].idx));
-          if (/RETIRADA|ANEXADOS/.test(cl)) for (const r of rs.slice(1)) add(d, r.prop, pagDe(ini[q] + r.idx));
+          // anexado: o principal também recebe lançamento; retirada sem despacho: só o requerimento
+          if (cl === "ANEXADOS") for (const r of rs.slice(1)) add(d, r.prop, pagDe(ini[q] + r.idx));
         }
       } else for (const r of refs(buf, bRQC, true, bTipo)) {
         if (bFiltro && !bFiltro.test(r.prop)) continue;
