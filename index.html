@@ -31,7 +31,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 var(--fb)}
 .bandin{padding-block:12px}
 .brandbar{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#123b36}
 .wordmark{font-family:var(--fd);font-weight:800;font-size:17px}.wordmark i{font-style:normal;color:#6e0d17}.wordmark span{font-weight:500;letter-spacing:.06em}
-.wrap{display:grid;gap:16px;padding-block:20px 48px}
+.wrap{display:grid;gap:16px;padding-block:6px 48px}
 header{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between}
 h1{font-family:var(--fd);font-weight:800;font-size:clamp(26px,5vw,34px);margin:0;line-height:1.05}
 .sub{color:var(--muted);font-size:13.5px}
@@ -344,7 +344,7 @@ $("rodar").addEventListener("click", async () => {
 });
 load(); setInterval(load, 60000);
 })();
-(function(){const f=document.getElementById("fixo");const sen=document.createElement("div");sen.style.height="1px";f.before(sen);new IntersectionObserver(([e])=>f.classList.toggle("stuck",!e.isIntersecting)).observe(sen);})();
+(function(){const f=document.getElementById("fixo");const sen=document.createElement("div");sen.style.cssText="position:absolute;top:0;left:0;height:1px;width:1px";f.parentNode.style.position="relative";f.before(sen);new IntersectionObserver(([e])=>f.classList.toggle("stuck",!e.isIntersecting)).observe(sen);})();
 </script>
 </body>
 </html>
