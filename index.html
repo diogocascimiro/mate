@@ -58,6 +58,25 @@ td.m{color:var(--muted);font-size:13px}
 .tablebox{overflow-x:auto}
 footer{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
 .legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12.5px;color:var(--muted)}
+table.grade{min-width:720px}
+table.grade td{padding:5px 10px}
+table.grade tr.cap td{background:var(--soft);border-top:0;font-size:13px;letter-spacing:.04em}
+table.grade tr.cap .m{color:var(--muted)}
+table.grade td.h{font-family:var(--fm);width:4.5em;color:var(--muted)}
+table.grade td.n{font-size:13.5px;font-weight:500}
+table.grade td.q{font-family:var(--fm);font-size:13px;width:9em;white-space:nowrap}
+table.grade td.s{text-align:right;white-space:normal}
+table.grade td.s .pill{margin-left:4px}
+table.grade tr.off td{color:var(--muted)}
+table.grade tr.off td.n{font-weight:400}
+table.grade tr.clic{cursor:pointer}
+table.grade tr.clic:hover td{background:var(--soft)}
+table.grade tr.clic td.n::before{content:"▸ ";color:var(--muted)}
+table.grade tr.clic.aberta td.n::before{content:"▾ "}
+table.grade tr.det>td{padding:0 10px 10px 4.5em;background:var(--soft)}
+table.itens{font-size:13px}
+table.itens td{border-top:1px solid var(--line);padding:4px 8px}
+table.itens td.p a{color:inherit}
 </style>
 </head>
 <body>
@@ -88,6 +107,7 @@ const ST = [["todos","Itens"],["ok","OK"],["divergente","Divergentes"],["pendent
 const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--info)", novo:"var(--muted)" };
 const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
 const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
+const abertas = new Set();
 let filtro = "todos", sel = new URLSearchParams(location.search).get("data") || hoje, dia = null, resumo = null;
 const fmtD = s => { const [y,m,d] = s.split("-"); return d + "/" + m; };
 const WD = ["dom","seg","ter","qua","qui","sex","sáb"];
@@ -126,29 +146,45 @@ function render(){
   const list = $("list"); list.textContent = "";
   const reun = dia ? dia.reunioes : [];
   if (!reun.length) { list.appendChild(el("div", "card empty", "Nenhuma reunião de comissão encontrada nesta data.")); return; }
+  const card = el("section", "card"); const box = el("div", "tablebox"); const t = el("table", "grade");
+  const cap = el("tr", "cap"); const ct = el("td"); ct.colSpan = 4; ct.append(el("b", null, "REUNIÕES DE COMISSÕES"), el("span", "m", " · " + reun.length + (reun.length === 1 ? " reunião" : " reuniões"))); cap.appendChild(ct); t.appendChild(cap);
+  let mostradas = 0;
   for (const r of reun) {
-    const ri = its.filter(i => i.reuniao_id === r.id && (filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada")));
+    const todas = its.filter(i => i.reuniao_id === r.id);
+    const ri = todas.filter(i => filtro === "todos" || i.status === filtro || (filtro === "pendente" && i.status === "nao_cadastrada"));
     if (filtro !== "todos" && !ri.length) continue;
-    const c = el("section", "card reun");
-    c.appendChild(el("h2", null, "Comissão de " + r.comissao));
-    const estado = r.ocorrida !== "S" ? "não ocorrida ou sem resultado" : (r.res_em ? (r.itens ? r.itens + " itens no resultado" : "resultado sem itens a lançar") : "resultado ainda não lido");
-    c.appendChild(el("div", "meta", r.hora + " · " + r.tipo + " · " + estado));
-    if (ri.length) {
-      const box = el("div", "tablebox"); const t = el("table");
-      const h = el("tr"); ["Proposição","Resultado da reunião","No MATE",""].forEach(x => h.appendChild(el("th", null, x))); t.appendChild(h);
+    mostradas++;
+    const nome = (/^comiss/i.test(r.comissao) ? r.comissao : "Comissão de " + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
+    const semRes = r.ocorrida !== "S";
+    const tr = el("tr", "reu" + (semRes ? " off" : "") + (todas.length ? " clic" : ""));
+    tr.appendChild(el("td", "h", r.hora));
+    tr.appendChild(el("td", "n", nome));
+    tr.appendChild(el("td", "q", semRes ? "não houve" : (r.res_em ? String(todas.length) : "aguardando resultado")));
+    const sc = el("td", "s");
+    const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
+    for (const k of ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"]) if (cnt[k]) sc.appendChild(el("span", "pill s-" + k, cnt[k] + " " + (LBL[k] || k)));
+    tr.appendChild(sc);
+    t.appendChild(tr);
+    if (todas.length) {
+      const aberta = abertas.has(r.id) || filtro !== "todos";
+      const det = el("tr", "det"); det.hidden = !aberta; const dt = el("td"); dt.colSpan = 4;
+      const it = el("table", "itens");
       for (const i of ri) {
-        const tr = el("tr");
-        const pc = el("td", "p"); const [tp, na] = i.prop.split(" "); const lk = el("a", null, i.prop); lk.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; lk.target = "_blank"; lk.rel = "noopener"; lk.style.color = "inherit"; pc.appendChild(lk); tr.appendChild(pc);
-        tr.appendChild(el("td", null, i.acao + (i.detalhe ? " · " + i.detalhe : "")));
-        tr.appendChild(el("td", "m", i.mate || "—"));
-        const s = el("td"); s.appendChild(el("span", "pill s-" + i.status, LBL[i.status] || i.status)); tr.appendChild(s);
-        t.appendChild(tr);
+        const x = el("tr");
+        const pc = el("td", "p"); const [tp, na] = i.prop.split(" "); const lk = el("a", null, i.prop); lk.href = "https://www.almg.gov.br/projetos-de-lei/" + tp + "/" + na; lk.target = "_blank"; lk.rel = "noopener"; pc.appendChild(lk); x.appendChild(pc);
+        x.appendChild(el("td", null, i.acao + (i.detalhe ? " · " + i.detalhe : "")));
+        x.appendChild(el("td", "m", i.mate || "—"));
+        const s = el("td"); s.appendChild(el("span", "pill s-" + i.status, LBL[i.status] || i.status)); x.appendChild(s);
+        it.appendChild(x);
       }
-      box.appendChild(t); c.appendChild(box);
+      dt.appendChild(it); det.appendChild(dt); t.appendChild(det);
+      tr.title = "Mostrar ou esconder os itens";
+      tr.addEventListener("click", () => { det.hidden = !det.hidden; if (det.hidden) abertas.delete(r.id); else abertas.add(r.id); tr.classList.toggle("aberta", !det.hidden); });
+      tr.classList.toggle("aberta", aberta);
     }
-    list.appendChild(c);
   }
-  if (!list.children.length) list.appendChild(el("div", "card empty", "Nenhum item com esse filtro."));
+  box.appendChild(t); card.appendChild(box); list.appendChild(card);
+  if (!mostradas) { list.textContent = ""; list.appendChild(el("div", "card empty", "Nenhum item com esse filtro.")); }
 }
 
 async function load(){
