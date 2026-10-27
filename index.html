@@ -53,7 +53,7 @@ td.p{font-family:var(--fm);white-space:nowrap}
 td.m{color:var(--muted);font-size:13px}
 .pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
 .s-ok{background:var(--ok-s);color:var(--ok)}.s-divergente{background:var(--bad-s);color:var(--bad)}.s-pendente{background:var(--bad-s);color:var(--bad)}
-.s-nao_cadastrada{background:var(--bad-s);color:var(--bad)}.s-aguardando{background:var(--warn-s);color:var(--warn)}.s-revisar{background:var(--info-s);color:var(--info)}.s-novo{background:var(--soft);color:var(--muted)}.s-silegis{background:var(--soft);color:var(--muted)}
+.s-nao_cadastrada{background:var(--bad-s);color:var(--bad)}.s-aguardando{background:var(--warn-s);color:var(--warn)}.s-revisar{background:var(--info-s);color:var(--info)}.s-novo{background:var(--soft);color:var(--muted)}.s-silegis{background:var(--soft);color:var(--muted)}.s-pre_cadastro{background:var(--soft);color:var(--muted)}
 .empty{padding:24px;text-align:center;color:var(--muted)}
 .tablebox{overflow-x:auto}
 footer{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
@@ -76,6 +76,7 @@ footer{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 1
 <span><span class="pill s-aguardando">aguardando</span> dentro do prazo de 2 dias úteis</span>
 <span><span class="pill s-revisar">revisar</span> ação sem regra automática</span>
 <span><span class="pill s-silegis">via Silegis</span> designação ainda não lançada; vem dos Lançamentos de Tramitação do Silegis, sem prazo pelo resultado</span>
+<span><span class="pill s-pre_cadastro">pré-cadastro</span> RQC ainda não publicado; o pré-cadastro não aparece no portal até a publicação no DL</span>
 </div>
 <div id="list" style="display:grid;gap:12px"></div>
 <footer><span id="rodadaInfo"></span><span>Fonte: API de Dados Abertos da ALMG. Iniciativa independente; confira sempre no Silegis.</span></footer>
@@ -85,7 +86,7 @@ footer{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 1
 const $ = id => document.getElementById(id);
 const ST = [["todos","Itens"],["ok","OK"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"],["revisar","Revisar"]];
 const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--info)", novo:"var(--muted)" };
-const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", novo:"na fila" };
+const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
 const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
 let filtro = "todos", sel = new URLSearchParams(location.search).get("data") || hoje, dia = null, resumo = null;
 const fmtD = s => { const [y,m,d] = s.split("-"); return d + "/" + m; };
