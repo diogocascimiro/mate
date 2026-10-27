@@ -1,11 +1,11 @@
 {
- "versao": 5,
+ "versao": 6,
  "id": "2658064",
  "data": "2026-10-22",
  "url": "https://mediaserver.almg.gov.br/acervo/658/64/2658064.pdf",
  "obs": "",
  "paginas": 55,
- "extraido_em": "2026-10-27T20:01:40.230Z",
+ "extraido_em": "2026-10-27T20:11:58.544Z",
  "grupos": [
   {
    "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, COM COMUNICAÇÃO",
@@ -886,17 +886,11 @@
      "pag": 2,
      "status": "ok",
      "mate": "Publicado no DL em 22 10 2026, pág 2"
-    },
-    {
-     "prop": "PL 5853/2026",
-     "pag": 2,
-     "status": "pendente",
-     "mate": ""
     }
    ]
   },
   {
-   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - MESA DA ASSEMBLEIA",
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - MESA DA ASSEMBLEIA, VOTADO EM PLENÁRIO",
    "pag": "3 - 14",
    "props": [
     {
@@ -2744,5 +2738,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-27T20:01:40.365Z"
+ "conferido_em": "2026-10-27T20:11:58.544Z"
 }

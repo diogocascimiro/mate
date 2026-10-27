@@ -1,11 +1,11 @@
 {
- "versao": 5,
+ "versao": 6,
  "id": "2656412",
  "data": "2026-10-16",
  "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
  "obs": "",
  "paginas": 307,
- "extraido_em": "2026-10-27T20:01:32.752Z",
+ "extraido_em": "2026-10-27T20:11:48.890Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -1808,7 +1808,7 @@
    ]
   },
   {
-   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - MESA DA ASSEMBLEIA",
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - MESA DA ASSEMBLEIA, VOTADO EM PLENÁRIO",
    "pag": "237 - 247",
    "props": [
     {
@@ -1944,22 +1944,10 @@
      "mate": "Publicado no DL em 16 10 2026, pág 242"
     },
     {
-     "prop": "RQN 14988/2025",
-     "pag": 242,
-     "status": "ok",
-     "mate": "publicada no DL em 16 10 2026, pág 251"
-    },
-    {
      "prop": "RQN 19559/2026",
      "pag": 248,
      "status": "ok",
      "mate": "Publicado no DL em 16 10 2026, pág 248"
-    },
-    {
-     "prop": "PL 5724/2026",
-     "pag": 248,
-     "status": "ok",
-     "mate": "publicada no DL em 16 10 2026, pág 251"
     },
     {
      "prop": "RQN 19566/2026",
@@ -1968,22 +1956,10 @@
      "mate": "Publicado no DL em 16 10 2026, pág 248"
     },
     {
-     "prop": "PL 5407/2026",
-     "pag": 248,
-     "status": "ok",
-     "mate": "publicada no DL em 16 10 2026, pág 251"
-    },
-    {
      "prop": "RQN 19573/2026",
      "pag": 248,
      "status": "ok",
      "mate": "Publicado no DL em 16 10 2026, pág 248"
-    },
-    {
-     "prop": "PL 2658/2024",
-     "pag": 248,
-     "status": "ok",
-     "mate": "publicada no DL em 16 10 2026, pág 251"
     },
     {
      "prop": "RQN 19574/2026",
@@ -1992,22 +1968,10 @@
      "mate": "Publicado no DL em 16 10 2026, pág 249"
     },
     {
-     "prop": "PL 5202/2026",
-     "pag": 249,
-     "status": "ok",
-     "mate": "publicada no DL em 16 10 2026, pág 251"
-    },
-    {
      "prop": "RQN 19577/2026",
      "pag": 249,
      "status": "ok",
      "mate": "Publicado no DL em 16 10 2026, pág 249"
-    },
-    {
-     "prop": "PL 2978/2021",
-     "pag": 249,
-     "status": "ok",
-     "mate": "publicada no DL em 16 10 2026, pág 251"
     }
    ]
   },
@@ -2234,5 +2198,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-27T20:01:32.752Z"
+ "conferido_em": "2026-10-27T20:11:48.890Z"
 }
