@@ -178,6 +178,11 @@ table.itens td.p{width:1%;padding-right:14px}
 tr.cap.sec-de{--sc:#7a5a12;--st:#f7edd6;--sc-t:#f7edd6}
 tr.cap.sec-dl{--sc:#3b4f8c;--sc-t:#e4e8f6}
 @media (prefers-color-scheme:dark){tr.cap.sec-de{--sc:#e0b64f;--sc-t:#33290f}tr.cap.sec-dl{--sc:#9db0ea;--sc-t:#1c2238}}
+table.grade tr.cap .bul{cursor:pointer;transition:transform .12s, background .12s}
+table.grade tr.cap .bul:hover{transform:scale(1.25)}
+table.grade tr.cap.fechada .bul{background:transparent;box-shadow:inset 0 0 0 2px var(--sc)}
+tr.cap.sec-pz{--sc:#5b4b8a;--sc-t:#ece8f6}
+@media (prefers-color-scheme:dark){tr.cap.sec-pz{--sc:#b7a6ec;--sc-t:#241f38}}
 table.grade tr.edc td{padding:4px 12px;font-size:12px;color:var(--muted);border-top:0}
 table.grade tr.edc a{color:inherit}
 </style>
@@ -187,7 +192,7 @@ table.grade tr.edc a{color:inherit}
 <div class="wrap">
 <div class="fixo" id="fixo">
 <header>
-<div class="apptitle"><svg class="tile" viewBox="0 0 64 64" width="52" height="52" aria-hidden="true"><rect width="64" height="64" rx="18.7" fill="#1f5f4a"/><path d="M29 8h6v5h5v5h-5v4h-6v-4h-5v-5h5z" fill="#fff"/><path d="M22 24h20l-3 14h-14z" fill="#fff"/><path d="M24 40h16l3 8H21z" fill="#fff"/><rect x="16" y="50" width="32" height="6" rx="2" fill="#fff"/></svg><div><h1>MATE - Matérias em Tramitação</h1><div class="sub">Resultados de reunião de Plenário e de comissões × tramitação lançada no MATE</div></div></div>
+<div class="apptitle"><svg class="tile" viewBox="0 0 64 64" width="52" height="52" aria-hidden="true"><rect width="64" height="64" rx="18.7" fill="#1f5f4a"/><path d="M29 8h6v5h5v5h-5v4h-6v-4h-5v-5h5z" fill="#fff"/><path d="M22 24h20l-3 14h-14z" fill="#fff"/><path d="M24 40h16l3 8H21z" fill="#fff"/><rect x="16" y="50" width="32" height="6" rx="2" fill="#fff"/></svg><div><h1>MATE - Matérias em Tramitação</h1><div class="sub">Diários, resultados de reunião de Plenário e de comissões × tramitação publicada no portal</div></div></div>
 <div class="ctrl"><input type="date" id="data" aria-label="Data"><button id="rodar" class="primary" type="button">↻ Conferir agora</button></div>
 </header>
 <div class="days" id="days"></div>
@@ -202,7 +207,7 @@ table.grade tr.edc a{color:inherit}
 <span><span class="pill s-revisar">revisar</span> ação sem regra automática</span>
 <span><span class="pill s-nao_cadastrada">não cadastrada</span> proposição ainda inexistente no portal após 2 dias úteis (ex.: RQC sem pré-cadastro)</span>
 </div>
-<footer><span id="rodadaInfo"></span><span>Fonte: API de Dados Abertos da ALMG. Iniciativa independente; confira sempre no Silegis.</span></footer>
+<footer><span id="rodadaInfo"></span><span>Fontes públicas: dados abertos, portal e diários publicados da ALMG. Não substitui a conferência interna pelo Silegis.</span></footer>
 </div>
 <script>
 (() => {
@@ -234,6 +239,7 @@ function propCell(prop){
 // ---------- Diários (gerados pelo GitHub Actions em /dados) ----------
 const DADOS = location.hostname === "mate.almg.digital" ? "" : "https://mate.almg.digital";
 let indice = null, diarios = [];
+let fechadas = new Set(); try { fechadas = new Set(JSON.parse(localStorage.getItem("mate_fechadas") || "[]")); } catch (e) {}
 const cacheDiario = new Map();
 // edição de sábado/domingo é trabalhada no dia útil seguinte (como na planilha)
 function diaTrab(d){ const x = new Date(d + "T12:00:00Z"); while (x.getUTCDay() === 0 || x.getUTCDay() === 6) x.setUTCDate(x.getUTCDate() + 1); return x.toISOString().slice(0, 10); }
@@ -246,7 +252,7 @@ async function carregarDiarios(){
     let j = cacheDiario.get(chave);
     if (!j) { try { j = await (await fetch(DADOS + "/" + e.arquivo + "?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })).json(); cacheDiario.set(chave, j); } catch (err) { continue; } }
     const itens = [];
-    (j.grupos || []).forEach((g, k) => g.props.forEach(p => itens.push({ grupo: k, prop: p.prop, acao: e.fonte === "DL" ? "Publicação no DL" : "Publicação no DE", detalhe: [p.pag ? "pág. " + p.pag : "", p.origem || ""].filter(Boolean).join(" · "), mate: p.mate || "", status: p.status === "novo" ? "aguardando" : p.status })));
+    (j.grupos || []).forEach((g, k) => g.props.forEach(p => itens.push({ grupo: k, prop: p.prop, acao: e.fonte === "DL" ? "Publicação no DL" : e.fonte === "PRAZO" ? "Preclusão de prazo (art. 104)" : "Publicação no DE", detalhe: [p.pag ? "pág. " + p.pag : "", p.origem || ""].filter(Boolean).join(" · "), mate: p.mate || "", status: p.status === "novo" ? "aguardando" : p.status })));
     out.push({ fonte: e.fonte, chave: String(e.id || e.data), data: e.data, url: e.url || j.url, obs: e.obs || "", paginas: j.paginas || 0, grupos: j.grupos || [], itens });
   }
   diarios = out;
@@ -265,7 +271,6 @@ function renderDays(){
     const prob = (s.divergente || 0) + (s.pendente || 0) + (s.nao_cadastrada || 0), esp = (s.aguardando || 0) + (s.revisar || 0);
     if (prob) { const x = el("i", "dp", String(prob)); x.title = prob + " com problema"; dots.appendChild(x); }
     if (esp) { const x = el("i", "de", String(esp)); x.title = esp + " aguardando ou a revisar"; dots.appendChild(x); }
-    if (s.ok) { const x = el("i", "do", String(s.ok)); x.title = s.ok + " conferidos"; dots.appendChild(x); }
     if (prob) b.classList.add("tem-prob");
     b.appendChild(dots);
     b.addEventListener("click", () => { sel = d; $("data").value = d; load(); });
@@ -275,7 +280,8 @@ function renderDays(){
 
 function render(){
   const itsD = diarios.flatMap(d => d.itens);
-  const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria").concat(itsD);
+  const ocorreu = new Set((dia ? dia.reunioes : []).filter(r => r.ocorrida === "S").map(r => r.id));   // só reuniões com resultado publicado
+  const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria" && ocorreu.has(i.reuniao_id)).concat(itsD);
   const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status; cnt[k] = (cnt[k] || 0) + 1; if (i.status === "ok" || i.status === "divergente") cnt.lancados = (cnt.lancados || 0) + 1; });
   const sm = $("summary"); sm.textContent = "";
   for (const [k, l] of ST) {
@@ -292,13 +298,15 @@ function render(){
   const ORD = ["divergente","pendente","nao_cadastrada","aguardando","revisar","silegis","pre_cadastro","novo","ok"];
   const card = el("section", "card"); const box = el("div", "tablebox"); const t = el("table", "grade");
   let mostradas = 0;
-  function secao(titulo, qtd, cls){ const cap = el("tr", "cap " + (cls || "")); const ct = el("td"); ct.colSpan = 4; ct.append(el("i", "bul"), el("b", null, titulo), el("span", "cnt", qtd)); cap.appendChild(ct); t.appendChild(cap); }
+  let secAtual = null; const fechada = () => fechadas.has(secAtual);
+  function secao(titulo, qtd, cls){ secAtual = titulo; const f = fechadas.has(titulo); const cap = el("tr", "cap " + (cls || "") + (f ? " fechada" : "")); const ct = el("td"); ct.colSpan = 4; const bul = el("i", "bul"); bul.title = f ? "Mostrar a seção" : "Esconder a seção"; ct.append(bul, el("b", null, titulo), el("span", "cnt", qtd)); cap.appendChild(ct); bul.addEventListener("click", () => { if (fechadas.has(titulo)) fechadas.delete(titulo); else fechadas.add(titulo); try { localStorage.setItem("mate_fechadas", JSON.stringify([...fechadas])); } catch (e) {} render(); }); t.appendChild(cap); }
   function linha(id, hora, nome, qtdTxt, todas, off){
     const ri = todas.filter(passa);
     if (filtro !== "todos" && !ri.length) return;
     mostradas++;
+    if (fechada()) return;
     const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
-    tr.appendChild(el("td", "h", hora)); tr.appendChild(el("td", "n", nome)); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
+    tr.appendChild(el("td", "h", hora)); tr.appendChild(el("td", "n", nome)); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : qtdTxt === "-" ? "q0" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
     const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
     for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sc.appendChild(p); }
     tr.appendChild(sc);
@@ -323,14 +331,14 @@ function render(){
   const visiveis = its.filter(i => i.acao !== "Designação de relatoria");
   // "não houve" só quando o resultado diz isso (reunião desconvocada ou resultado publicado sem a reunião ter ocorrido); antes disso, "?"
   const naoHouve = r => r.ocorrida === "D" || r.ocorrida === "NH";
-  const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? String(n) : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
+  const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? (n ? String(n) : "-") : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
   // Diários (Executivo e Legislativo), no formato da planilha: páginas · seção · quantidade
   for (const [fonte, titulo, cls] of [["DE", "DIÁRIO DO EXECUTIVO", "sec-de"], ["DL", "DIÁRIO DO LEGISLATIVO", "sec-dl"]]) {
     const eds = diarios.filter(d => d.fonte === fonte); if (!eds.length) continue;
     const nGr = eds.reduce((n, d) => n + d.grupos.length, 0);
     secao(titulo, nGr + (nGr === 1 ? " seção" : " seções"), cls);
     for (const d of eds) {
-      if (eds.length > 1 || d.data !== sel) { const tr = el("tr", "edc"); const td = el("td"); td.colSpan = 4; const a = el("a", null, (fonte === "DL" ? "Edição de " : "") + fmtD(d.data) + (d.obs ? " · " + d.obs.slice(0, 80) : "") + (d.paginas ? " · " + d.paginas + " págs." : "")); if (d.url) { a.href = d.url; a.target = "_blank"; a.rel = "noopener"; } td.appendChild(a); tr.appendChild(td); t.appendChild(tr); }
+      if ((eds.length > 1 || d.data !== sel) && !fechadas.has(titulo)) { const tr = el("tr", "edc"); const td = el("td"); td.colSpan = 4; const a = el("a", null, (fonte === "DL" ? "Edição de " : "") + fmtD(d.data) + (d.obs ? " · " + d.obs.slice(0, 80) : "") + (d.paginas ? " · " + d.paginas + " págs." : "")); if (d.url) { a.href = d.url; a.target = "_blank"; a.rel = "noopener"; } td.appendChild(a); tr.appendChild(td); t.appendChild(tr); }
       d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc, String(l.length), l, false); });
     }
   }
@@ -338,7 +346,7 @@ function render(){
   const plen = reun.filter(r => r.comissao_id === 0);
   if (plen.length) {
     secao("REUNIÕES DE PLENÁRIO", plen.length + (plen.length === 1 ? " reunião" : " reuniões"), "sec-plen");
-    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), r.ocorrida === "S" ? (r.res_em ? String(todas.length) : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?"), todas, r.ocorrida !== "S" && naoHouve(r)); }
+    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), estado(r, todas.length), todas, r.ocorrida !== "S" && naoHouve(r)); }
   }
   // Comissões (sem RQC nem designações)
   const com = reun.filter(r => r.comissao_id !== 0);
@@ -353,7 +361,8 @@ function render(){
     const grupos = [];
     for (const r of com) {
       const rq = visiveis.filter(i => i.reuniao_id === r.id && /^RQC /.test(i.prop));
-      const cat = i => /aprovad/i.test(i.acao) ? "APROVADOS" : /recebid/i.test(i.acao) ? "RECEBIDOS" : i.acao.toUpperCase();
+      // RQC sem tramitação anterior à reunião (nem publicado, nem recebido antes): "RECEBIDOS E APROVADOS", como na planilha
+      const cat = i => /aprovad/i.test(i.acao) ? (i.anterior === 1 ? "APROVADOS" : "RECEBIDOS E APROVADOS") : /recebid/i.test(i.acao) ? "RECEBIDOS" : i.acao.toUpperCase();
       const porCat = new Map(); rq.forEach(i => { const c = cat(i); if (!porCat.has(c)) porCat.set(c, []); porCat.get(c).push(i); });
       for (const [c, l] of porCat) grupos.push([r, c, l]);
     }
@@ -362,6 +371,13 @@ function render(){
       secao("REQUERIMENTOS DE COMISSÕES", tot + (tot === 1 ? " requerimento" : " requerimentos"), "sec-rqc");
       for (const [r, c, l] of grupos) linha(r.id + "|" + c, r.hora, "RQC: " + r.comissao.replace(/^comiss[aã]o (de |do |da |dos |das )?/i, "").toUpperCase() + ", " + c, String(l.length), l, false);
     }
+  }
+  // Prazos encerrados (preclusão do art. 104), como na planilha, na seção CADASTRO DE E-MAILS
+  const pz = diarios.filter(d => d.fonte === "PRAZO");
+  if (pz.length) {
+    const n = pz.reduce((a, d) => a + d.itens.length, 0);
+    secao("CADASTRO DE E-MAILS", n + (n === 1 ? " lançamento" : " lançamentos"), "sec-pz");
+    for (const d of pz) d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha("PZ" + d.chave + "|" + k, g.pag || "—", g.desc, String(l.length), l, false); });
   }
   box.appendChild(t); card.appendChild(box); list.appendChild(card);
   if (!mostradas) { list.textContent = ""; list.appendChild(el("div", "card empty", "Nenhum item com esse filtro.")); }
