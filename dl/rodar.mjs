@@ -10,7 +10,7 @@ import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { extrairDL, refs } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
-const VERSAO = 4;                 // muda quando a extração muda: reprocessa as edições
+const VERSAO = 5;                 // muda quando a extração muda: reprocessa as edições
 const JANELA = 12;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -114,7 +114,10 @@ async function propsErrata(g){
       for (let i = 0; i < ls.length; i++) {
         if (!(ls[i].b > 0.8) || !chave || !normT(ls[i].t + " " + (ls[i + 1] ? ls[i + 1].t : "")).startsWith(chave.slice(0, 30))) continue;
         let txt = ""; for (let j = i; j < ls.length && j < i + 60; j++) { if (j > i + 2 && ls[j].b > 0.8 && /^ERRATAS?$/.test(ls[j].t)) break; txt += " " + ls[j].t; }
-        for (const r of refs(txt, /COMISS/.test(chave))) achados.add(r);
+        // o que foi acrescentado/corrigido vem entre aspas: “nº 3.670/2023, do deputado ...”
+        const cit = [...txt.matchAll(/[“"]([^”"]{5,})[”"]/g)].map(x => x[1]).join(" ; ");
+        const base = /COMISS/.test(chave) ? "RQC" : null;
+        for (const r of (cit ? refs(cit, !!base, false, base) : refs(txt, !!base))) achados.add(r);
       }
     }
     for (const r of achados) if (!g.props.some(p => p.prop === r)) g.props.push({ prop: r, pag: e.pag });
