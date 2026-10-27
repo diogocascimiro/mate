@@ -87,17 +87,24 @@ table.itens{font-size:13px}
 table.itens td{border-top:1px solid var(--line);padding:4px 8px}
 table.itens td.p a{color:inherit}
 .summary{background:none;border:0;border-radius:0;gap:10px;overflow:visible}
-.stat{border-radius:12px;border:1px solid transparent;transition:transform .1s}
-.stat:hover{transform:translateY(-1px)}
-.stat.k-todos{background:var(--paper);border-color:var(--line)}
-.stat.k-ok{background:var(--ok-s)}.stat.k-ok .v,.stat.k-ok .k{color:var(--ok)}
-.stat.k-divergente,.stat.k-pendente{background:var(--bad-s)}.stat.k-divergente .v,.stat.k-divergente .k,.stat.k-pendente .v,.stat.k-pendente .k{color:var(--bad)}
-.stat.k-aguardando{background:var(--warn-s)}.stat.k-aguardando .v,.stat.k-aguardando .k{color:var(--warn)}
-.stat.k-lancados{background:#e6eeec}.stat.k-lancados .v,.stat.k-lancados .k{color:#123b36}
-@media (prefers-color-scheme:dark){.stat.k-lancados{background:#1a2a27}.stat.k-lancados .v,.stat.k-lancados .k{color:#7fc4b8}}
-.stat.k-revisar{background:var(--info-s)}.stat.k-revisar .v,.stat.k-revisar .k{color:var(--info)}
-.stat.zero{background:var(--paper);border-color:var(--line)}.stat.zero .v,.stat.zero .k{color:var(--muted)!important}
-.stat.on{box-shadow:inset 0 0 0 2px currentColor}.stat.on.k-todos{box-shadow:inset 0 0 0 2px var(--accent)}
+.stat{--c:#123b36;--t:#e7efed;border-radius:14px;border:0;background:var(--c);color:#fff;transition:transform .12s, box-shadow .12s;position:relative;overflow:hidden}
+.stat::after{content:"";position:absolute;right:-18px;bottom:-26px;width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.10)}
+.stat:hover{transform:translateY(-2px);box-shadow:0 8px 18px -10px var(--c)}
+.stat .k{color:rgba(255,255,255,.82)!important;letter-spacing:.09em}
+.stat .v{color:#fff!important;font-size:28px}
+.stat.k-todos{--c:#123b36;--t:#e3ecea}
+.stat.k-lancados{--c:#1f6f78;--t:#e1f0f2}
+.stat.k-ok{--c:#1e7a4c;--t:#e2f3ea}
+.stat.k-divergente{--c:#8c1c2e;--t:#f6e3e6}
+.stat.k-pendente{--c:#c2410c;--t:#fbe9df}
+.stat.k-aguardando{--c:#b7791f;--t:#fbf1dc}
+.stat.k-revisar{--c:#3b5b8c;--t:#e4ebf6}
+.stat.zero{background:var(--t)}
+.stat.zero::after{background:rgba(0,0,0,.035)}
+.stat.zero .k{color:var(--c)!important;opacity:.8}
+.stat.zero .v{color:var(--c)!important;opacity:.55}
+.stat.on{background:var(--c);box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--c)}.stat.zero.on{background:var(--t)}
+@media (prefers-color-scheme:dark){.stat.zero{background:color-mix(in srgb,var(--c) 22%,#1d1a20)}.stat.zero .k,.stat.zero .v{color:#efecf1!important}}
 :root{--prob-bg:#fdf1f0;--esp-bg:#fdf8ec;--faixa-prob:#c0261d;--faixa-esp:#d4930b;--faixa-ok:#1e7a4c}
 @media (prefers-color-scheme:dark){:root{--prob-bg:#2e1a19;--esp-bg:#2c2412;--faixa-prob:#ff8a80;--faixa-esp:#f0b54a;--faixa-ok:#5fcf95}}
 table.grade tr.reu td.h{border-left:4px solid transparent}
@@ -119,6 +126,7 @@ table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightne
 </header>
 <div class="days" id="days"></div>
 <section class="summary" id="summary"></section>
+<div id="list" style="display:grid;gap:12px"></div>
 <div class="legend">
 <span><span class="pill s-ok">ok</span> lançado e confere</span>
 <span><span class="pill s-divergente">divergente</span> há lançamento na data, mas o texto não bate</span>
@@ -127,7 +135,6 @@ table.grade tr.reu.prob:hover td,table.grade tr.reu.esp:hover td{filter:brightne
 <span><span class="pill s-revisar">revisar</span> ação sem regra automática</span>
 <span><span class="pill s-pre_cadastro">pré-cadastro</span> RQC ainda não publicado; o pré-cadastro não aparece no portal até a publicação no DL</span>
 </div>
-<div id="list" style="display:grid;gap:12px"></div>
 <footer><span id="rodadaInfo"></span><span>Fonte: API de Dados Abertos da ALMG. Iniciativa independente; confira sempre no Silegis.</span></footer>
 </div>
 <script>
