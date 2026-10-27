@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-27T19:31:11.680Z",
+ "atualizado_em": "2026-10-27T19:57:01.907Z",
  "edicoes": [
   {
    "fonte": "DL",
@@ -20,6 +20,15 @@
    "obs": "",
    "arquivo": "dados/dl/2660399.json",
    "contagem": {}
+  },
+  {
+   "fonte": "PRAZO",
+   "id": "2658064",
+   "data": "2026-10-27",
+   "arquivo": "dados/prazo/2658064.json",
+   "contagem": {
+    "ok": 270
+   }
   },
   {
    "fonte": "DL",
@@ -124,7 +133,8 @@
    "arquivo": "dados/dl/2656244.json",
    "contagem": {
     "ok": 7,
-    "nao_cadastrada": 1
+    "nao_cadastrada": 1,
+    "pendente": 1
    }
   },
   {

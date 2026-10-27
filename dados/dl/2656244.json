@@ -1,11 +1,11 @@
 {
- "versao": 3,
+ "versao": 4,
  "id": "2656244",
  "data": "2026-10-15",
  "url": "https://mediaserver.almg.gov.br/acervo/656/244/2656244.pdf",
  "obs": "",
  "paginas": 14,
- "extraido_em": "2026-10-27T19:18:38.009Z",
+ "extraido_em": "2026-10-27T19:50:53.582Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: FISCALIZAÇÃO FINANCEIRA E ORÇAMENTÁRIA, 17/09",
@@ -76,9 +76,22 @@
      "pag": 14,
      "status": "nao_cadastrada",
      "mate": ""
+    },
+    {
+     "prop": "PL 5417/2026",
+     "pag": 14,
+     "status": "pendente",
+     "mate": ""
+    }
+   ],
+   "erratas": [
+    {
+     "titulo": "PARECER PARA O 2º TURNO DO PROJETO DE LEI Nº 2.868/2024 Comissão de Cultura",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 14/10/2026, na pág. 27, após as assinaturas, na redação do vencido, onde se lê: “Projeto de Lei nº 2.868/2025”, leia-se: “Projeto de Lei nº 2.868/2024”.",
+     "pag": 14
     }
    ]
   }
  ],
- "conferido_em": "2026-10-27T19:18:46.975Z"
+ "conferido_em": "2026-10-27T19:50:55.005Z"
 }

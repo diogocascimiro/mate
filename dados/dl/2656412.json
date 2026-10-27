@@ -1,11 +1,11 @@
 {
- "versao": 3,
+ "versao": 4,
  "id": "2656412",
  "data": "2026-10-16",
  "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
  "obs": "",
  "paginas": 307,
- "extraido_em": "2026-10-27T19:18:51.525Z",
+ "extraido_em": "2026-10-27T19:51:00.200Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -2224,8 +2224,15 @@
   {
    "desc": "ERRATAS",
    "pag": "307",
-   "props": []
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "ATOS DA MESA DA ASSEMBLEIA",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 15/10/2026, na pág. 14, onde se lê: “Na data de 15/10/2026”, leia-se: “Na data de 13/10/2026”.",
+     "pag": 307
+    }
+   ]
   }
  ],
- "conferido_em": "2026-10-27T19:25:38.091Z"
+ "conferido_em": "2026-10-27T19:51:00.201Z"
 }

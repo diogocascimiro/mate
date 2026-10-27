@@ -1,17 +1,24 @@
 {
- "versao": 3,
+ "versao": 4,
  "id": "2657188",
  "data": "2026-10-20",
  "url": "https://mediaserver.almg.gov.br/acervo/657/188/2657188.pdf",
  "obs": "Nomeação de candidata da especialidade de Consultor Legislativo - Área II - Meio Ambiente e Desenvolvimento Agrário - Cód. 212",
  "paginas": 8,
- "extraido_em": "2026-10-27T19:25:40.707Z",
+ "extraido_em": "2026-10-27T19:51:05.286Z",
  "grupos": [
   {
    "desc": "ERRATAS",
    "pag": "8",
-   "props": []
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "ATOS DA MESA DA ASSEMBLEIA",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 9/10/2026, na pág. 3, onde se lê: “Julio Cesar Moreira Chaves”, leia-se: “Julio Cesar Moreira Chagas”.",
+     "pag": 8
+    }
+   ]
   }
  ],
- "conferido_em": "2026-10-27T19:25:40.708Z"
+ "conferido_em": "2026-10-27T19:51:05.286Z"
 }

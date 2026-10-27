@@ -1,17 +1,24 @@
 {
- "versao": 3,
+ "versao": 4,
  "id": "2659175",
  "data": "2026-10-24",
  "url": "https://mediaserver.almg.gov.br/acervo/659/175/2659175.pdf",
  "obs": "Nomeação de candidato da especialidade de Técnico de Apoio Legislativo - Cód. 101",
  "paginas": 2,
- "extraido_em": "2026-10-27T19:31:02.422Z",
+ "extraido_em": "2026-10-27T19:51:10.545Z",
  "grupos": [
   {
    "desc": "ERRATAS",
    "pag": "2",
-   "props": []
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "ATA DA 17ª REUNIÃO EXTRAORDINÁRIA DA COMISSÃO DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA NA 1ª SESSÃO LEGISLATIVA ORDINÁRIA DA 20ª LEGISLATURA, EM 18/8/2023",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 22/8/2023, na pág. 9, acrescente-se, em primeiro lugar, à lista de requerimentos recebidos pela presidência, submetidos a votação e aprovados o seguinte: “3.670/2023, do deputado Lucas Lasmar, em que requer seja realizada visita à Fundação Ezequiel Dias para conhecer a estrutura atual da entidade;”.",
+     "pag": 2
+    }
+   ]
   }
  ],
- "conferido_em": "2026-10-27T19:31:02.422Z"
+ "conferido_em": "2026-10-27T19:51:10.545Z"
 }
