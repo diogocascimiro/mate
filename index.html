@@ -71,7 +71,8 @@ table.grade{min-width:720px}
 table.grade td{padding:5px 10px}
 table.grade tr.cap td{background:var(--soft);border-top:0;font-size:13px;letter-spacing:.04em}
 table.grade tr.cap .m{color:var(--muted)}
-table.grade td.h{font-family:var(--fm);width:4.5em;color:var(--muted);white-space:nowrap}
+table.grade td.h{font-family:var(--fm);width:4.5em;color:var(--muted);white-space:nowrap;text-align:center}
+table.grade tr.reu:not(.clic) td.n::before{content:"";display:inline-block;width:24px;margin:0 6px 0 -6px;vertical-align:middle}
 table.grade td.n{font-size:13.5px;font-weight:500}
 table.grade td.q{font-family:var(--fm);font-size:13px;width:1%;white-space:nowrap;padding-right:14px}
 table.grade td.s{text-align:left;white-space:nowrap;width:1%;min-width:7em}
@@ -80,8 +81,9 @@ table.grade tr.off td{color:var(--muted)}
 table.grade tr.off td.n{font-weight:400}
 table.grade tr.clic{cursor:pointer}
 table.grade tr.clic:hover td{background:var(--soft)}
-table.grade tr.clic td.n::before{content:"▸ ";color:var(--muted)}
-table.grade tr.clic.aberta td.n::before{content:"▾ "}
+table.grade tr.clic td.n::before{content:"▸";display:inline-grid;place-items:center;width:24px;height:24px;margin:-4px 6px -4px -6px;border-radius:6px;font-size:14px;color:var(--muted);background:var(--soft);border:1px solid var(--line);vertical-align:middle;cursor:pointer;transition:background .12s}
+table.grade tr.clic:hover td.n::before{background:var(--paper);color:var(--accent);border-color:var(--accent)}
+table.grade tr.clic.aberta td.n::before{content:"▾"}
 table.grade tr.det>td{padding:0 10px 10px 4.5em;background:var(--soft)}
 table.itens{font-size:13px}
 table.itens td{border-top:1px solid var(--line);padding:4px 8px}
