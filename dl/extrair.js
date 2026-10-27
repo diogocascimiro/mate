@@ -20,6 +20,7 @@ function tipoDe(palavra){
 }
 export function refs(texto, forcarRQC, comPos, tipoBase){
   const out = [];
+  texto = String(texto).replace(/\bn[º°]s?\s+(?=n[º°])/gi, "");   // "nº nº 3.734/2023"
   const rn0 = /\bn[º°]s?\.?\s*(?=\d)/gi;
   let m, tipo = tipoBase || null;
   const pos = []; while ((m = rn0.exec(texto))) pos.push([m.index, rn0.lastIndex]);
