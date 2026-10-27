@@ -370,7 +370,7 @@ function render(){
     const nGr = eds.reduce((n, d) => n + d.grupos.length, 0), nIt = eds.reduce((n, d) => n + d.itens.length, 0);
     secao(titulo, plural(nGr, "seção", "seções"), cls, plural(nIt, "ação", "ações"), fonte === "DE" ? URLS.de(eds[0].data) : (eds[0].url || URLS.dl(eds[0].data)), eds.flatMap(d => d.itens));
     for (const d of eds) {
-      d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc, String(l.length), l, false, fonte === "DL" && d.url && parseInt(g.pag) ? d.url + "#page=" + parseInt(g.pag) : null); });
+      d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc.replace(/^TRAMITA[ÇC][ÃA]O DE PROPOSI[ÇC][ÕO]ES: PARECERES$/, "PARECERES"), String(l.length), l, false, fonte === "DL" && d.url && parseInt(g.pag) ? d.url + "#page=" + parseInt(g.pag) : null); });
     }
   }
   // Plenário
