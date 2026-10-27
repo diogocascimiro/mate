@@ -166,7 +166,7 @@ export function extrairDL(lines){
       if (bold && /^PARECER/i.test(t)) {
         flush();
         let titulo = t; let j = li + 1; while (lines[j] && lines[j].b > 0.8 && titulo.length < 300 && !/n[º°o]\s*[\d.]+\/\d{4}/i.test(titulo)) titulo += " " + lines[j++].t;
-        for (const r of refs(titulo).slice(0, 1)) add(/^PARECERES SOBRE VETO/.test(topo) ? "PARECERES SOBRE VETO" : "TRAMITAÇÃO DE PROPOSIÇÕES: PARECERES", r, l.p);
+        for (const r of refs(titulo).slice(0, 1)) add(/^PARECERES SOBRE VETO/.test(topo) ? "PARECERES SOBRE VETO" : "PARECERES", r, l.p);
       }
       continue;
     } else if (/^PROPOSICOES DE LEI/.test(topo)) {
