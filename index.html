@@ -422,6 +422,8 @@ function render(){
 // (aprovação conclusiva "Aprovada a proposição em turno único"; relator com "Dr."/"Dra." no nome)
 const normC = s => String(s || "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/g, " ").trim();
 function reconferir(i){
+  if (!i._de) i._de = i.status;
+  if (i.status === "revisar" && i.mate && /^rejeitad/.test(normC(i.acao))) { const ok = /rejeitad/.test(normC(i.mate)); if (ok) i.status = "ok"; return ok; }   // "Rejeitado": parecer rejeitado na reunião
   if (i.status !== "divergente" || !i.mate || /^RQ/.test(i.prop) || !normC(i.acao).startsWith("parecer aprovado")) return false;
   const t = normC(i.mate), d = normC(i.detalhe);
   let ok = (/parecer/.test(t) && /aprovad/.test(t)) || /aprovada a proposicao/.test(t);
@@ -433,7 +435,7 @@ function reconferir(i){
 }
 function ajustarResumo(data, itens){
   const n = itens.filter(reconferir).length; if (!n || !resumo || !resumo.dias) return;
-  const dv = resumo.dias.find(r => r.data === data && r.status === "divergente"); if (dv) dv.n = Math.max(0, dv.n - n);
+  for (const st of ["divergente", "revisar"]) { const k = itens.filter(i => i.status === "ok" && i._de === st).length; const dv = resumo.dias.find(r => r.data === data && r.status === st); if (dv && k) dv.n = Math.max(0, dv.n - k); }
   const ok = resumo.dias.find(r => r.data === data && r.status === "ok"); if (ok) ok.n += n; else resumo.dias.push({ data, status: "ok", n });
 }
 async function load(){
@@ -441,7 +443,7 @@ async function load(){
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
   if (dia && dia.itens) ajustarResumo(sel, dia.itens);
   if (resumo && resumo.dias) {   // demais dias com divergentes: corrige o balão
-    const outros = [...new Set(resumo.dias.filter(r => r.status === "divergente" && r.n > 0 && r.data !== sel).map(r => r.data))];
+    const outros = [...new Set(resumo.dias.filter(r => (r.status === "divergente" || r.status === "revisar") && r.n > 0 && r.data !== sel).map(r => r.data))];
     await Promise.all(outros.map(async d => { try { const x = await get("/api/dia?data=" + d); if (x && x.itens) ajustarResumo(d, x.itens); } catch (e) {} }));
   }
   try { await carregarDiarios(); } catch (e) { diarios = []; }
