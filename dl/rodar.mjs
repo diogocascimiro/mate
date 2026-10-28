@@ -22,14 +22,14 @@ let ultimo = 0;
 async function api(p){
   const w = ultimo + 1100 - Date.now(); if (w > 0) await sleep(w);
   ultimo = Date.now();
-  for (let t = 0; t < 3; t++) {
+  for (let t = 0; t < 6; t++) {
     try {
       const r = await fetch(API + p, { headers: { Accept: "application/json", "User-Agent": "almg.digital-mate/1.0" } });
       ultimo = Date.now();
       if (r.status === 404) return null;
       if (!r.ok) throw new Error("HTTP " + r.status);
       return await r.json();
-    } catch (e) { if (t === 2) throw e; await sleep(3000); }
+    } catch (e) { if (t === 5) throw e; await sleep(10000 * (t + 1)); }   // API da ALMG às vezes recusa conexão: tenta por até ~2,5 min
   }
 }
 const brHoje = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
