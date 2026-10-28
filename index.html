@@ -379,7 +379,13 @@ function render(){
   const plen = reun.filter(r => r.comissao_id === 0);
   if (plen.length) {
     secao("REUNIÕES DE PLENÁRIO", plural(plen.length, "reunião", "reuniões"), "sec-plen", plural(visiveis.filter(i => plen.some(r => r.id === i.reuniao_id)).length, "ação", "ações"), URLS.plen(sel), visiveis.filter(i => plen.some(r => r.id === i.reuniao_id)));
-    for (const r of plen) { const todas = visiveis.filter(i => i.reuniao_id === r.id); linha(r.id, r.hora, (r.tipo || "Reunião").split(" · ")[0].toUpperCase(), estado(r, todas.length), todas, r.ocorrida !== "S" && naoHouve(r), URLS.reuPlen(r)); }
+    for (const r of plen) {
+      const todas = visiveis.filter(i => i.reuniao_id === r.id); const nome = (r.tipo || "Reunião").split(" · ")[0].toUpperCase();
+      // uma linha por fase da Ordem do Dia ("ORDINÁRIA - 2ª FASE"), como na planilha
+      const fases = [...new Set(todas.map(i => (i.acao.match(/(\dª Fase)/) || [])[1]).filter(Boolean))].sort();
+      if (fases.length) for (const f of fases) { const l = todas.filter(i => i.acao.includes(f)); linha(r.id + "|" + f, r.hora, nome + " - " + f.toUpperCase(), String(l.length), l, false, URLS.reuPlen(r)); }
+      else linha(r.id, r.hora, nome, estado(r, todas.length), todas, r.ocorrida !== "S" && naoHouve(r), URLS.reuPlen(r));
+    }
   }
   // Comissões (sem RQC nem designações)
   const com = reun.filter(r => r.comissao_id !== 0);
@@ -395,7 +401,7 @@ function render(){
     for (const r of com) {
       const rq = visiveis.filter(i => i.reuniao_id === r.id && /^RQC /.test(i.prop));
       // RQC sem tramitação anterior à reunião (nem publicado, nem recebido antes): "RECEBIDOS E APROVADOS", como na planilha
-      const cat = i => /aprovad/i.test(i.acao) ? (i.anterior === 1 ? "APROVADOS" : "RECEBIDOS E APROVADOS") : /recebid/i.test(i.acao) ? "RECEBIDOS" : i.acao.toUpperCase();
+      const cat = i => /relat[oó]rio/i.test(i.acao) ? "RELATÓRIO" : /aprovad/i.test(i.acao) ? (i.anterior === 1 ? "APROVADOS" : "RECEBIDOS E APROVADOS") : /recebid/i.test(i.acao) ? "RECEBIDOS" : i.acao.toUpperCase();
       const porCat = new Map(); rq.forEach(i => { const c = cat(i); if (!porCat.has(c)) porCat.set(c, []); porCat.get(c).push(i); });
       for (const [c, l] of porCat) grupos.push([r, c, l]);
     }
@@ -403,7 +409,7 @@ function render(){
       const tot = grupos.reduce((n, g) => n + g[2].length, 0);
       const nReu = new Set(grupos.map(g => g[0].id)).size;
       secao("REQUERIMENTOS DE COMISSÕES", plural(nReu, "reunião", "reuniões"), "sec-rqc", plural(tot, "ação", "ações"), URLS.com(sel), grupos.flatMap(g => g[2]));
-      for (const [r, c, l] of grupos) linha(r.id + "|" + c, r.hora, "RQC: " + r.comissao.replace(/^comiss[aã]o (de |do |da |dos |das )?/i, "").toUpperCase() + ", " + c, String(l.length), l, false, URLS.reuCom(r));
+      for (const [r, c, l] of grupos) linha(r.id + "|" + c, r.hora, "RQC: " + r.comissao.replace(/^comiss[aã]o (de |do |da |dos |das )?/i, "").replace(/^extraordin[aá]ria (de |do |da |dos |das )?/i, "").toUpperCase() + (r.tipo && /^extraord/i.test(r.tipo) ? " - EXTRAORDINÁRIA" : "") + ", " + c, String(l.length), l, false, URLS.reuCom(r));
     }
   }
   // Preclusão de prazo (art. 104): prazo contado da publicação no DL
