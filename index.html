@@ -423,6 +423,7 @@ function render(){
 const normC = s => String(s || "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/g, " ").trim();
 function reconferir(i){
   if (!i._de) i._de = i.status;
+  if (i.status === "pendente" && !i.mate && /^RQC /.test(i.prop)) { i.status = "aguardando"; return false; }   // RQC: lançamento só aparece no portal após a publicação da ata
   if (i.status === "revisar" && i.mate && /^rejeitad/.test(normC(i.acao))) { const ok = /rejeitad/.test(normC(i.mate)); if (ok) i.status = "ok"; return ok; }   // "Rejeitado": parecer rejeitado na reunião
   if (i.status !== "divergente" || !i.mate || /^RQ/.test(i.prop) || !normC(i.acao).startsWith("parecer aprovado")) return false;
   const t = normC(i.mate), d = normC(i.detalhe);
