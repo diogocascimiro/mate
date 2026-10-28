@@ -30,6 +30,7 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     const kw = antes.match(KW);
     if (kw) tipo = tipoDe(kw[1]);
     else if (!/[;:.()]\s*[–-]?\s*$/.test(antes) && antes.trim()) tipo = null;
+    else if (!tipo && tipoBase) tipo = tipoBase;   // lista de requerimentos: volta ao tipo da lista depois de "Processo nº ..." etc.
     let t = tipo; if (t === "RQN" && forcarRQC) t = "RQC";
     const prox = q + 1 < pos.length ? pos[q + 1][0] : texto.length;
     const pv = texto.indexOf(";", i);
@@ -149,7 +150,7 @@ export function extrairDL(lines){
       sub = null; doc = null; sumario = !ata.comissao; if (ata.comissao && lines[li + 1] && lines[li + 1].b > 0.8) li++; continue;
     }
     if (sumario) { if (bold && /^(Comparecimento|Abertura)/.test(t)) sumario = false; else continue; }
-    if (topo === "ATAS" && ata && ata.comissao) { push("REQUERIMENTOS DE COMISSÃO: " + ata.comissao + ", " + ata.data, t, l.p, true, /^RQC /); continue; }
+    if (topo === "ATAS" && ata && ata.comissao) { push("REQUERIMENTOS DE COMISSÃO: " + ata.comissao + ", " + ata.data, t, l.p, true, /^RQC /, "RQC"); continue; }
     const plenMat = /^MATERIA DE REUNIAO DO PLENARIO/.test(topo);
     const temNum = /n[º°o]\s*[\d.]+\/\d{4}/i.test(t);
     if (bold && t.length < 90 && !temNum && ((!upper && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
@@ -187,6 +188,7 @@ export function extrairDL(lines){
       continue;
     } else if (/^CORRESPOND/.test(topo)) desc = "CORRESPONDÊNCIA: OFÍCIOS";
     else desc = topoTxt;
+    if (/^REQUERIMENTOS APROVADOS/.test(topo) && !bold) continue;   // só o título "REQUERIMENTO Nº ..."; o texto cita outros requerimentos
     push(desc, t, l.p, false, null, doc ? TIPO_TITULO(doc) : null);
   }
   flush();
