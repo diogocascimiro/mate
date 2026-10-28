@@ -433,18 +433,35 @@ function reconferir(i){
   if (ok) i.status = "ok";
   return ok;
 }
-function ajustarResumo(data, itens){
-  const n = itens.filter(reconferir).length; if (!n || !resumo || !resumo.dias) return;
-  for (const st of ["divergente", "revisar"]) { const k = itens.filter(i => i.status === "ok" && i._de === st).length; const dv = resumo.dias.find(r => r.data === data && r.status === st); if (dv && k) dv.n = Math.max(0, dv.n - k); }
-  const ok = resumo.dias.find(r => r.data === data && r.status === "ok"); if (ok) ok.n += n; else resumo.dias.push({ data, status: "ok", n });
+// comissão especial: o resultado traz "Comissão Especial para Emitir Parecer sobre o Veto nº 36/2026"; o portal registra só "Comissão Especial"
+async function especiais(itens){
+  for (const i of itens) {
+    if (!["aguardando", "pendente"].includes(i.status) || i.mate || !/^comiss[aã]o especial/i.test(i.comissao || "") || !normC(i.acao).startsWith("parecer aprovado")) continue;
+    const [tp, na] = i.prop.split(" "); const [n, a] = na.split("/");
+    try {
+      const j = await (await fetch(`https://dadosabertos.almg.gov.br/api/v2/proposicoes/${tp}/${n}/${a}?formato=json`)).json();
+      const h = ((j.resultado.listaItem[0] || {}).listaHistoricoTramitacoes || []).filter(x => x.data === i.data && normC(x.local) === "comissao especial");
+      if (!h.length) continue;
+      i._de = i.status; i.mate = h.map(x => String(x.historico || "").replace(/\s+/g, " ").trim()).join(" ‖ "); i.status = "divergente"; reconferir(i);
+    } catch (e) {}
+  }
+}
+async function ajustarResumo(data, itens){
+  await especiais(itens);
+  itens.forEach(reconferir);
+  const mud = itens.filter(i => i._de && i._de !== i.status); if (!mud.length || !resumo || !resumo.dias) return;
+  for (const i of mud) {
+    const de = resumo.dias.find(r => r.data === data && r.status === i._de); if (de) de.n = Math.max(0, de.n - 1);
+    const pa = resumo.dias.find(r => r.data === data && r.status === i.status); if (pa) pa.n += 1; else resumo.dias.push({ data, status: i.status, n: 1 });
+  }
 }
 async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
-  if (dia && dia.itens) ajustarResumo(sel, dia.itens);
+  if (dia && dia.itens) await ajustarResumo(sel, dia.itens);
   if (resumo && resumo.dias) {   // demais dias com divergentes: corrige o balão
-    const outros = [...new Set(resumo.dias.filter(r => (r.status === "divergente" || r.status === "revisar") && r.n > 0 && r.data !== sel).map(r => r.data))];
-    await Promise.all(outros.map(async d => { try { const x = await get("/api/dia?data=" + d); if (x && x.itens) ajustarResumo(d, x.itens); } catch (e) {} }));
+    const outros = [...new Set(resumo.dias.filter(r => ["divergente", "revisar", "aguardando", "pendente"].includes(r.status) && r.n > 0 && r.data !== sel).map(r => r.data))];
+    await Promise.all(outros.map(async d => { try { const x = await get("/api/dia?data=" + d); if (x && x.itens) await ajustarResumo(d, x.itens); } catch (e) {} }));
   }
   try { await carregarDiarios(); } catch (e) { diarios = []; }
   renderDays(); render();
