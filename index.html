@@ -76,7 +76,9 @@ table.grade tr.reu:not(.clic) td.n::before{content:"";display:inline-block;width
 table.grade td.n{font-size:13.5px;font-weight:500}
 table.grade td.q{font-family:var(--fm);font-size:13px;width:1%;white-space:nowrap;padding-right:14px}
 table.grade td.s{text-align:left;white-space:nowrap;width:1%;min-width:7em}
-table.grade td.s .pill{margin-right:4px}
+table.grade td.s .slots{display:inline-grid;grid-template-columns:repeat(3,minmax(3.4em,auto));column-gap:6px;align-items:center}
+table.grade td.s .slot{display:flex;gap:4px}
+table.grade td.s .pill{min-width:2.4em;text-align:center;box-sizing:border-box}
 table.grade tr.off td{color:var(--muted)}
 table.grade tr.off td.n{font-weight:400}
 table.grade tr.clic{cursor:pointer}
@@ -187,7 +189,7 @@ tr.cap.sec-pz{--sc:#5b4b8a;--sc-t:#ece8f6}
 @media (prefers-color-scheme:dark){tr.cap.sec-pz{--sc:#b7a6ec;--sc-t:#241f38}}
 table.grade tr.cap{background:linear-gradient(90deg,var(--sc-t),transparent 70%)}
 table.grade tr.cap td{background:transparent!important}
-table.grade tr.cap td.s .pill{margin-right:4px}
+
 table.grade tr.cap td.q .lanc{font-family:var(--fm);font-size:11.5px;font-weight:600;color:var(--sc);white-space:nowrap}
 table.grade tr.cap a.tlink{color:inherit;text-decoration:none}
 table.grade tr.cap a.tlink:hover b{text-decoration:underline;text-underline-offset:3px}
@@ -325,7 +327,9 @@ function render(){
   let secAtual = null; const fechada = () => fechadas.has(secAtual);
   const plural = (n, s, p) => n + " " + (n === 1 ? s : p);
   // pills de situação (mesmas das linhas): aparecem também no título, com a seção fechada
-  function pills(todas){ const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1); for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sc.appendChild(p); } return sc; }
+  // três colunas fixas (problemas · em espera · conferidos), para os números ficarem alinhados entre as linhas
+  const SLOT = k => (k === "divergente" || k === "pendente" || k === "nao_cadastrada") ? 0 : k === "ok" ? 2 : 1;
+  function pills(todas){ const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1); if (!todas.length) return sc; const g = el("span", "slots"); const sl = [0, 1, 2].map(() => g.appendChild(el("span", "slot"))); for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sl[SLOT(k)].appendChild(p); } sc.appendChild(g); return sc; }
   function secao(titulo, qtd, cls, lanc, href, todas){ secAtual = titulo; const f = fechadas.has(titulo); const cap = el("tr", "cap " + (cls || "") + (f ? " fechada" : "")); const ct = el("td"); ct.colSpan = 2; const bul = el("i", "bul"); bul.title = f ? "Mostrar a seção" : "Esconder a seção"; const tb = el("b", null, titulo); if (href) { const a = el("a", "tlink"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte"; a.appendChild(tb); ct.append(bul, a); } else ct.append(bul, tb); ct.append(el("span", "cnt", qtd)); cap.appendChild(ct); const cq = el("td", "q"); if (lanc != null) cq.appendChild(el("span", "lanc", lanc)); cap.append(cq, pills(todas || [])); bul.addEventListener("click", () => { if (fechadas.has(titulo)) fechadas.delete(titulo); else fechadas.add(titulo); try { localStorage.setItem("mate_fechadas", JSON.stringify([...fechadas])); } catch (e) {} render(); }); t.appendChild(cap); }
   function linha(id, hora, nome, qtdTxt, todas, off, href){
     const ri = todas.filter(passa);
