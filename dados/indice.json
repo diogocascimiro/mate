@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-28T13:00:46.780Z",
+ "atualizado_em": "2026-10-28T13:20:05.989Z",
  "edicoes": [
   {
    "fonte": "DL",
@@ -161,8 +161,7 @@
    "obs": "Nomeações de candidatos da especialidades de Técnico de Apoio Legislativo - Cód. 101",
    "arquivo": "dados/dl/2655622.json",
    "contagem": {
-    "ok": 14,
-    "nao_cadastrada": 1
+    "ok": 15
    }
   },
   {

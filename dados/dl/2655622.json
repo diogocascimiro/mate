@@ -1,11 +1,11 @@
 {
- "versao": 9,
+ "versao": 10,
  "id": "2655622",
  "data": "2026-10-14",
  "url": "https://mediaserver.almg.gov.br/acervo/655/622/2655622.pdf",
  "obs": "Nomeações de candidatos da especialidades de Técnico de Apoio Legislativo - Cód. 101",
  "paginas": 32,
- "extraido_em": "2026-10-28T12:55:10.878Z",
+ "extraido_em": "2026-10-28T13:14:10.593Z",
  "grupos": [
   {
    "desc": "PARECERES",
@@ -108,10 +108,10 @@
    "pag": "32",
    "props": [
     {
-     "prop": "RQN 12464/2025",
+     "prop": "RQC 12465/2025",
      "pag": 32,
-     "status": "nao_cadastrada",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 14 10 2026, pág 32, "
     }
    ],
    "erratas": [
@@ -123,5 +123,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T12:55:11.248Z"
+ "conferido_em": "2026-10-28T13:14:10.783Z"
 }
