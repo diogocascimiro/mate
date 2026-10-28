@@ -1,11 +1,11 @@
 {
- "versao": 7,
+ "versao": 8,
  "id": "2658064",
  "data": "2026-10-22",
  "url": "https://mediaserver.almg.gov.br/acervo/658/64/2658064.pdf",
  "obs": "",
  "paginas": 55,
- "extraido_em": "2026-10-27T20:25:39.106Z",
+ "extraido_em": "2026-10-28T12:33:38.278Z",
  "grupos": [
   {
    "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, COM COMUNICAÇÃO",
@@ -2576,7 +2576,7 @@
    ]
   },
   {
-   "desc": "TRAMITAÇÃO DE PROPOSIÇÕES: PARECERES",
+   "desc": "PARECERES",
    "pag": "16 - 50",
    "props": [
     {
@@ -2750,5 +2750,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T11:41:30.617Z"
+ "conferido_em": "2026-10-28T12:33:38.278Z"
 }

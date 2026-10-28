@@ -1,11 +1,11 @@
 {
- "versao": 7,
+ "versao": 8,
  "id": "2660955",
  "data": "2026-10-28",
  "url": "https://mediaserver.almg.gov.br/acervo/660/955/2660955.pdf",
  "obs": "",
  "paginas": 166,
- "extraido_em": "2026-10-28T11:41:41.015Z",
+ "extraido_em": "2026-10-28T12:34:03.907Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: EDUCAÇÃO, CIÊNCIA E TECNOLOGIA, 14/10",
@@ -14,8 +14,8 @@
     {
      "prop": "RQC 23266/2026",
      "pag": 4,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
     }
    ]
   },
@@ -362,8 +362,8 @@
     {
      "prop": "RQN 19612/2026",
      "pag": 72,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 28 10 2026, pág 72"
     },
     {
      "prop": "RQN 19613/2026",
@@ -1856,5 +1856,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T11:48:08.536Z"
+ "conferido_em": "2026-10-28T12:38:58.144Z"
 }
