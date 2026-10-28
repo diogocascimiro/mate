@@ -1,11 +1,11 @@
 {
- "versao": 8,
+ "versao": 9,
  "id": "2659175",
  "data": "2026-10-24",
  "url": "https://mediaserver.almg.gov.br/acervo/659/175/2659175.pdf",
  "obs": "Nomeação de candidato da especialidade de Técnico de Apoio Legislativo - Cód. 101",
  "paginas": 2,
- "extraido_em": "2026-10-28T12:33:43.558Z",
+ "extraido_em": "2026-10-28T12:55:40.447Z",
  "grupos": [
   {
    "desc": "ERRATAS",
@@ -20,5 +20,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T12:45:51.609Z"
+ "conferido_em": "2026-10-28T12:55:40.447Z"
 }

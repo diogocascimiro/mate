@@ -1,11 +1,11 @@
 {
- "versao": 8,
+ "versao": 9,
  "id": "2656244",
  "data": "2026-10-15",
  "url": "https://mediaserver.almg.gov.br/acervo/656/244/2656244.pdf",
  "obs": "",
  "paginas": 14,
- "extraido_em": "2026-10-28T12:45:31.738Z",
+ "extraido_em": "2026-10-28T12:55:12.291Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: FISCALIZAÇÃO FINANCEIRA E ORÇAMENTÁRIA, 17/09",
@@ -70,12 +70,6 @@
      "pag": 14,
      "status": "ok",
      "mate": "Publicada no DL em 15 10 2026, pág 14, "
-    },
-    {
-     "prop": "PL 2868/2025",
-     "pag": 14,
-     "status": "nao_cadastrada",
-     "mate": ""
     }
    ],
    "erratas": [
@@ -87,5 +81,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T12:45:31.927Z"
+ "conferido_em": "2026-10-28T12:55:12.291Z"
 }

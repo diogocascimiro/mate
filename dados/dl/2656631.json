@@ -1,11 +1,11 @@
 {
- "versao": 8,
+ "versao": 9,
  "id": "2656631",
  "data": "2026-10-17",
  "url": "https://mediaserver.almg.gov.br/acervo/656/631/2656631.pdf",
  "obs": "Nomeação de candidata da especialidades de Técnico de Apoio Legislativo - Cód. 101",
  "paginas": 2,
- "extraido_em": "2026-10-28T12:33:32.094Z",
+ "extraido_em": "2026-10-28T12:55:31.890Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -40,5 +40,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T12:45:51.607Z"
+ "conferido_em": "2026-10-28T12:55:32.033Z"
 }
