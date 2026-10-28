@@ -11,7 +11,7 @@ import { extrairDL, refs } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
 const VERSAO = 8;                 // muda quando a extração muda: reprocessa as edições
-const JANELA = 12;                // dias para trás
+const JANELA = 14;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const DIR_DL = path.join(RAIZ, "dados", "dl"), DIR_DE = path.join(RAIZ, "dados", "de"), DIR_PZ = path.join(RAIZ, "dados", "prazo");
