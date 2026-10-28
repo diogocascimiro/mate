@@ -71,6 +71,18 @@ const IGNORA_SUB = /^(Comparecimento|Abertura|Atas|Encerramento|Quest(ão|ões) 
 const SUB_NOME = s => norm(s);
 const ATA_SUB = /^(Atas|Correspond[eê]ncia|Apresenta[cç][aã]o de Proposi[cç][oõ]es|Recebimento de Proposi[cç][oõ]es|Palavras d[ao] President[ea]|Comunica[cç](ão|ões) da Presid[eê]ncia|Leitura de Comunica[cç][oõ]es|Designa[cç][aã]o de Comiss(ão|ões)|Decis(ão|ões) da Presid[eê]ncia|Despacho de Requerimentos?|Vota[cç][aã]o de Requerimentos?|Acordo de L[ií]deres|Quest(ão|ões) de Ordem|Comunica[cç][oõ]es|Discuss[aã]o e Vota[cç][aã]o d|Mat[eé]ria Votada|Vota[cç](ão|ões) Nomina|Homenagem P[oó]stuma|Declara[cç](ão|ões) de Voto|Encerramento|Comparecimento|Abertura|[123]ª (Parte|Fase)|Ordem do Dia|Inexist[eê]ncia de Qu[oó]rum|Falta de Qu[oó]rum|Oradores Inscritos|Registro de Presen|Suspens|Reabertura|Interrup|Prorroga|Leitura e Aprova|Requerimentos?$|Pronunciamentos|Questão de Ordem|Recebimento de Correspond|Pareceres|Recebimento|Vota[cç][aã]o|Elei[cç][aã]o)/i;
 const IGNORA_SUB2 = /^(Discuss[aã]o e Vota[cç][aã]o d|Mat[eé]ria Votada|Homenagem P[oó]stuma|Declara[cç](ão|ões) de Voto|Pronunciamentos|Elei[cç][aã]o)/i;
+// proposição de uma errata: a do título (epígrafe); senão, a do trecho acrescentado entre aspas
+// (“nº 12.465/2025, do deputado ...”: em ata de comissão é RQC); senão, a do texto.
+// O número citado em "onde se lê" é o errado, e "logo após o resumo do Requerimento nº X" é só referência.
+export function refsErrata(e){
+  const tit = refs(e.titulo); if (tit.length) return tit;
+  const txt = e.texto.replace(/onde se l[eê]\s*:?\s*[“"][^”"]*[”"]/gi, " ");
+  const base = /COMISS/i.test(e.titulo) ? "RQC" : null;
+  const cit = [...txt.matchAll(/[“"]([^”"]{5,})[”"]/g)].map(x => x[1]).join(" ; ");
+  const rc = cit ? refs(cit, !!base, false, base) : [];
+  return rc.length ? rc : refs(txt.replace(/ap[óo]s o resumo d[oa] [^,.;]*?n[º°]\s*[\d.]+\/\d{4}/gi, " "), !!base, false, base);
+}
+
 export function extrairDL(lines){
   const grupos = new Map();
   const doSumario = new Set(lines.filter(l => l.p === 1 && l.b > 0.8).map(l => (l.t.match(/^\d+ [–-] (.+)$/) || [])[1]).filter(Boolean).map(norm));
@@ -187,7 +199,7 @@ export function extrairDL(lines){
       // proposição da errata: a do título (epígrafe); sem título com número, a do texto, sem o número errado citado em "onde se lê"
       const vistos = new Set(); o.props = [];
       for (const e of erratas) {
-        const rs = refs(e.titulo).length ? refs(e.titulo) : refs(e.texto.replace(/onde se l[eê]\s*:?\s*[“"][^”"]*[”"]/gi, " "));
+        const rs = refsErrata(e);
         for (const r of rs) if (!vistos.has(r)) { vistos.add(r); o.props.push({ prop: r, pag: e.pag }); }
       }
     }
