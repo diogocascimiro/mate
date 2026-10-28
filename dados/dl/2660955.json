@@ -1,11 +1,11 @@
 {
- "versao": 11,
+ "versao": 12,
  "id": "2660955",
  "data": "2026-10-28",
  "url": "https://mediaserver.almg.gov.br/acervo/660/955/2660955.pdf",
  "obs": "",
  "paginas": 166,
- "extraido_em": "2026-10-28T21:24:40.342Z",
+ "extraido_em": "2026-10-28T21:35:54.617Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: EDUCAÇÃO, CIÊNCIA E TECNOLOGIA, 14/10",
@@ -392,6 +392,360 @@
     {
      "prop": "RQC 23408/2026",
      "pag": 8,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23409/2026",
+     "pag": 8,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23410/2026",
+     "pag": 8,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23414/2026",
+     "pag": 8,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23415/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23421/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23422/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23425/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23426/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23427/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23428/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23429/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23430/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23431/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23432/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23433/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23434/2026",
+     "pag": 9,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23435/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23436/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23437/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23438/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23439/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23440/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23441/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23442/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23443/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23444/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23445/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23446/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23447/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23448/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23449/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23450/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23451/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23452/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23453/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23454/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23455/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23456/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23457/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23458/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23459/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23460/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23461/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23462/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23463/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23464/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23465/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23466/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23467/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23468/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23469/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23470/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23471/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23472/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23473/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23474/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23475/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23477/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 28 10 2026, pág 4"
+    },
+    {
+     "prop": "RQC 23478/2026",
+     "pag": 13,
      "status": "ok",
      "mate": "Publicado no DL em 28 10 2026, pág 4"
     },
@@ -2648,5 +3002,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T21:31:54.641Z"
+ "conferido_em": "2026-10-28T21:41:31.029Z"
 }
