@@ -24,5 +24,18 @@ jobs:
         run: |
           git config user.name "mate-bot"
           git config user.email "mate-bot@users.noreply.github.com"
-          git add dados
-          git diff --cached --quiet || (git commit -m "dados: DL e DE $(date -u +%F' '%H:%M)" && git pull --rebase -X theirs && git push)
+          # guarda os dados gerados nesta rodada
+          rm -rf "$RUNNER_TEMP/dados" && cp -r dados "$RUNNER_TEMP/dados"
+          # publica sobre a versao mais recente do repositorio (evita conflito de merge)
+          for tentativa in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp -r "$RUNNER_TEMP/dados/." dados/
+            git add dados
+            if git diff --cached --quiet; then echo "Sem mudancas nos dados"; exit 0; fi
+            git commit -m "dados: DL e DE $(date -u +%F' '%H:%M)"
+            if git push; then exit 0; fi
+            echo "Push recusado (tentativa $tentativa), tentando de novo..."
+            sleep 10
+          done
+          exit 1
