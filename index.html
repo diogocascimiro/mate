@@ -418,9 +418,32 @@ function render(){
   if (!mostradas) { list.textContent = ""; list.appendChild(el("div", "card empty", "Nenhum item com esse filtro.")); }
 }
 
+// reconferência no navegador dos "Parecer aprovado" marcados como divergentes, pelo texto do portal já trazido pela API
+// (aprovação conclusiva "Aprovada a proposição em turno único"; relator com "Dr."/"Dra." no nome)
+const normC = s => String(s || "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/g, " ").trim();
+function reconferir(i){
+  if (i.status !== "divergente" || !i.mate || /^RQ/.test(i.prop) || !normC(i.acao).startsWith("parecer aprovado")) return false;
+  const t = normC(i.mate), d = normC(i.detalhe);
+  let ok = (/parecer/.test(t) && /aprovad/.test(t)) || /aprovada a proposicao/.test(t);
+  for (const [, tp, n] of d.matchAll(/(substitutivo|emenda)s? n[ºo°.]*\s*(\d+)/g)) if (!new RegExp(tp + "s?\\s*(n[ºo°.]*\\s*)?" + n + "\\b").test(t)) ok = false;
+  const relE = (String(i.detalhe || "").match(/Dep\. [^·,]+/g) || []).map(x => normC(x.replace(/^Dep\. /, "")));
+  if (ok && relE.length && /relatori/.test(t) && !relE.some(r => t.includes(r)) && !/redistribu/.test(t)) ok = false;
+  if (ok) i.status = "ok";
+  return ok;
+}
+function ajustarResumo(data, itens){
+  const n = itens.filter(reconferir).length; if (!n || !resumo || !resumo.dias) return;
+  const dv = resumo.dias.find(r => r.data === data && r.status === "divergente"); if (dv) dv.n = Math.max(0, dv.n - n);
+  const ok = resumo.dias.find(r => r.data === data && r.status === "ok"); if (ok) ok.n += n; else resumo.dias.push({ data, status: "ok", n });
+}
 async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
+  if (dia && dia.itens) ajustarResumo(sel, dia.itens);
+  if (resumo && resumo.dias) {   // demais dias com divergentes: corrige o balão
+    const outros = [...new Set(resumo.dias.filter(r => r.status === "divergente" && r.n > 0 && r.data !== sel).map(r => r.data))];
+    await Promise.all(outros.map(async d => { try { const x = await get("/api/dia?data=" + d); if (x && x.itens) ajustarResumo(d, x.itens); } catch (e) {} }));
+  }
   try { await carregarDiarios(); } catch (e) { diarios = []; }
   renderDays(); render();
   const r = resumo && resumo.rodada;
