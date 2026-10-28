@@ -25,4 +25,4 @@ jobs:
           git config user.name "mate-bot"
           git config user.email "mate-bot@users.noreply.github.com"
           git add dados
-          git diff --cached --quiet || (git commit -m "dados: DL e DE $(date -u +%F' '%H:%M)" && git pull --rebase && git push)
+          git diff --cached --quiet || (git commit -m "dados: DL e DE $(date -u +%F' '%H:%M)" && git pull --rebase -X theirs && git push)
