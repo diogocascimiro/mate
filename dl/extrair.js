@@ -30,7 +30,7 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     const kw = antes.match(KW);
     if (kw) tipo = tipoDe(kw[1]);
     else if (!/[;:.()]\s*[–-]?\s*$/.test(antes) && antes.trim()) tipo = null;
-    else if (!tipo && tipoBase) tipo = tipoBase;   // lista de requerimentos: volta ao tipo da lista depois de "Processo nº ..." etc.
+    else if (tipoBase && (!tipo || /;\s*$/.test(antes))) tipo = tipoBase;   // lista ("...; nº 23.409/2026, ..."): cada item volta ao tipo da lista, mesmo depois de "Projeto de Lei nº ..." citado no item anterior
     let t = tipo; if (t === "RQN" && forcarRQC) t = "RQC";
     const prox = q + 1 < pos.length ? pos[q + 1][0] : texto.length;
     const pv = texto.indexOf(";", i);
