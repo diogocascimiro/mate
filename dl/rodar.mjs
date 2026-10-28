@@ -7,10 +7,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
-import { extrairDL, refs } from "./extrair.js";
+import { extrairDL, refs, refsErrata } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
-const VERSAO = 9;                 // muda quando a extração muda: reprocessa as edições
+const VERSAO = 10;                 // muda quando a extração muda: reprocessa as edições
 const JANELA = 14;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -106,10 +106,10 @@ async function paginasEdicao(data, pag){
 }
 async function propsErrata(g){
   for (const e of g.erratas || []) {
-    // título com a proposição (ex.: "PARECER ... DO PROJETO DE LEI Nº 2.868/2024"): só ela; o número de "onde se lê" é o errado
-    const doTitulo = refs(e.titulo);
-    if (doTitulo.length) { for (const r of doTitulo) if (!g.props.some(p => p.prop === r)) g.props.push({ prop: r, pag: e.pag }); continue; }
-    const achados = new Set(refs(e.texto.replace(/onde se l[eê]\s*:?\s*[“"][^”"]*[”"]/gi, " ")));
+    // título, trecho acrescentado entre aspas ou texto da errata (ver refsErrata); sem número, vai à página corrigida
+    const diretos = refsErrata(e);
+    if (diretos.length) { for (const r of diretos) if (!g.props.some(p => p.prop === r)) g.props.push({ prop: r, pag: e.pag }); continue; }
+    const achados = new Set();
     const chave = normT(e.titulo).slice(0, 45);
     for (const m of e.texto.matchAll(/edi[cç][aã]o de (\d{1,2})\/(\d{1,2})\/(\d{4}),?\s*(?:na\s+)?p[áa]gs?\.?\s*(\d+)/gi)) {
       const data = `${m[3]}-${m[2].padStart(2, "0")}-${m[1].padStart(2, "0")}`;
