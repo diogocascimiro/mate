@@ -182,7 +182,15 @@ export function extrairDL(lines){
   for (const g of grupos.values()) {
     const ps = [...g.pags].sort((a, b) => a - b);
     const o = { desc: g.desc, pag: ps[0] === ps[ps.length - 1] ? String(ps[0]) : ps[0] + " - " + ps[ps.length - 1], props: g.props };
-    if (g.desc === "ERRATAS") o.erratas = erratas;
+    if (g.desc === "ERRATAS") {
+      o.erratas = erratas;
+      // proposição da errata: a do título (epígrafe); sem título com número, a do texto, sem o número errado citado em "onde se lê"
+      const vistos = new Set(); o.props = [];
+      for (const e of erratas) {
+        const rs = refs(e.titulo).length ? refs(e.titulo) : refs(e.texto.replace(/onde se l[eê]\s*:?\s*[“"][^”"]*[”"]/gi, " "));
+        for (const r of rs) if (!vistos.has(r)) { vistos.add(r); o.props.push({ prop: r, pag: e.pag }); }
+      }
+    }
     out.push(o);
   }
   out.sort((a, b) => parseInt(a.pag) - parseInt(b.pag));
