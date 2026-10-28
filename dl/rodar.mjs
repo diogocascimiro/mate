@@ -184,7 +184,7 @@ async function rodarDL(){
       } catch (err) { console.log("falha no PDF", e.id, err.message); continue; }
     }
     // conferência: "Publicado(a) no DL em <data>"
-    const rx = new RegExp(`publicad[oa]s?\\s+no\\s+DL\\s+em\\s+${dataRx(e.data)}(,?\\s*p[áa]gs?\\.?\\s*[\\d, e-]+)?`, "i");
+    const rx = new RegExp(`publicad[oa]s?(\\s+na\\s+[íi]ntegra[^.]{0,80}?,)?\\s+no\\s+DL\\s+em\\s+${dataRx(e.data)}(,?\\s*p[áa]gs?\\.?\\s*[\\d, e-]+)?`, "i");
     for (const g of ed.grupos) for (const p of g.props) {
       if (p.status === "ok") continue;
       if (/^PROPLEI /.test(p.prop)) {   // Proposição de Lei: o lançamento vai no projeto de origem
