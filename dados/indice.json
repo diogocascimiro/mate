@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-28T12:39:02.092Z",
+ "atualizado_em": "2026-10-28T12:50:52.112Z",
  "edicoes": [
   {
    "fonte": "DL",
@@ -142,8 +142,7 @@
    "arquivo": "dados/dl/2656244.json",
    "contagem": {
     "ok": 7,
-    "nao_cadastrada": 1,
-    "pendente": 1
+    "nao_cadastrada": 1
    }
   },
   {
@@ -153,6 +152,27 @@
    "url": "https://mediaserver.almg.gov.br/acervo/656/420/2656420.pdf",
    "obs": "",
    "arquivo": "dados/dl/2656420.json",
+   "contagem": {}
+  },
+  {
+   "fonte": "DL",
+   "id": "2655622",
+   "data": "2026-10-14",
+   "url": "https://mediaserver.almg.gov.br/acervo/655/622/2655622.pdf",
+   "obs": "Nomeações de candidatos da especialidades de Técnico de Apoio Legislativo - Cód. 101",
+   "arquivo": "dados/dl/2655622.json",
+   "contagem": {
+    "ok": 14,
+    "nao_cadastrada": 1
+   }
+  },
+  {
+   "fonte": "DL",
+   "id": "2656254",
+   "data": "2026-10-14",
+   "url": "https://mediaserver.almg.gov.br/acervo/656/254/2656254.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2656254.json",
    "contagem": {}
   }
  ]

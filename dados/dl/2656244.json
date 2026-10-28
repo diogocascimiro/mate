@@ -1,11 +1,11 @@
 {
- "versao": 7,
+ "versao": 8,
  "id": "2656244",
  "data": "2026-10-15",
  "url": "https://mediaserver.almg.gov.br/acervo/656/244/2656244.pdf",
  "obs": "",
  "paginas": 14,
- "extraido_em": "2026-10-27T20:25:10.364Z",
+ "extraido_em": "2026-10-28T12:45:31.738Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: FISCALIZAÇÃO FINANCEIRA E ORÇAMENTÁRIA, 17/09",
@@ -32,7 +32,7 @@
    ]
   },
   {
-   "desc": "TRAMITAÇÃO DE PROPOSIÇÕES: PARECERES",
+   "desc": "PARECERES",
    "pag": "8 - 12",
    "props": [
     {
@@ -76,12 +76,6 @@
      "pag": 14,
      "status": "nao_cadastrada",
      "mate": ""
-    },
-    {
-     "prop": "PL 5417/2026",
-     "pag": 14,
-     "status": "pendente",
-     "mate": ""
     }
    ],
    "erratas": [
@@ -93,5 +87,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-27T23:07:27.823Z"
+ "conferido_em": "2026-10-28T12:45:31.927Z"
 }

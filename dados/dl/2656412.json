@@ -1,11 +1,11 @@
 {
- "versao": 7,
+ "versao": 8,
  "id": "2656412",
  "data": "2026-10-16",
  "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
  "obs": "",
  "paginas": 307,
- "extraido_em": "2026-10-27T20:25:17.895Z",
+ "extraido_em": "2026-10-28T12:45:39.880Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -2130,7 +2130,7 @@
    ]
   },
   {
-   "desc": "TRAMITAÇÃO DE PROPOSIÇÕES: PARECERES",
+   "desc": "PARECERES",
    "pag": "301 - 304",
    "props": [
     {
@@ -2208,5 +2208,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-28T11:41:30.614Z"
+ "conferido_em": "2026-10-28T12:45:51.606Z"
 }

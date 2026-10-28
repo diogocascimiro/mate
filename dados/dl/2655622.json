@@ -1,0 +1,127 @@
+{
+ "versao": 8,
+ "id": "2655622",
+ "data": "2026-10-14",
+ "url": "https://mediaserver.almg.gov.br/acervo/655/622/2655622.pdf",
+ "obs": "Nomeações de candidatos da especialidades de Técnico de Apoio Legislativo - Cód. 101",
+ "paginas": 32,
+ "extraido_em": "2026-10-28T12:45:11.357Z",
+ "grupos": [
+  {
+   "desc": "PARECERES",
+   "pag": "13 - 30",
+   "props": [
+    {
+     "prop": "PL 3978/2022",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 13"
+    },
+    {
+     "prop": "PL 3233/2025",
+     "pag": 15,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 15"
+    },
+    {
+     "prop": "PL 4889/2025",
+     "pag": 16,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 16"
+    },
+    {
+     "prop": "PL 5384/2026",
+     "pag": 17,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 17"
+    },
+    {
+     "prop": "PL 5482/2026",
+     "pag": 18,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 18"
+    },
+    {
+     "prop": "PL 5570/2026",
+     "pag": 20,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 20"
+    },
+    {
+     "prop": "PL 5659/2026",
+     "pag": 21,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 21"
+    },
+    {
+     "prop": "PL 3184/2021",
+     "pag": 23,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 23"
+    },
+    {
+     "prop": "PL 1824/2023",
+     "pag": 24,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 24"
+    },
+    {
+     "prop": "PL 2868/2024",
+     "pag": 26,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 26"
+    },
+    {
+     "prop": "PL 5417/2026",
+     "pag": 27,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 27"
+    },
+    {
+     "prop": "PL 5462/2026",
+     "pag": 29,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 29"
+    },
+    {
+     "prop": "PL 5647/2026",
+     "pag": 30,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 30"
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - REQUERIMENTOS",
+   "pag": "31",
+   "props": [
+    {
+     "prop": "RQN 19021/2026",
+     "pag": 31,
+     "status": "ok",
+     "mate": "Publicado no DL em 14 10 2026, pág 31"
+    }
+   ]
+  },
+  {
+   "desc": "ERRATAS",
+   "pag": "32",
+   "props": [
+    {
+     "prop": "RQN 12464/2025",
+     "pag": 32,
+     "status": "nao_cadastrada",
+     "mate": ""
+    }
+   ],
+   "erratas": [
+    {
+     "titulo": "ATA DA 2ª REUNIÃO ORDINÁRIA DA COMISSÃO DE SEGURANÇA PÚBLICA NA 3ª SESSÃO LEGISLATIVA ORDINÁRIA DA 20ª LEGISLATURA, EM 26/2/2025 ATOS DA MESA DA ASSEMBLEIA",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 7/3/2025, na pág. 3, acrescente-se, logo após o resumo do Requerimento nº 12.464/2025, o seguinte: “nº 12.465/2025, do deputado Sargento Rodrigues, em que requer seja encaminhado à Polícia Militar pedido de providências para verificar com o governo do Estado a possibilidade de reformar imóvel de propriedade do Estado localizado no Distrito de Maringá Minas, em Bocaina de Minas, para posterior cessão à corporação com a finalidade de melhor aparelhar os policiais militares lotados na região;”. Na publicação da matéria em epígrafe, na edição de 8/10/2026, na pág. 4, onde se lê: “José Vieira do Carmo”, leia-se: “José do Carmo Vieira”.",
+     "pag": 32
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-10-28T12:45:29.463Z"
+}
