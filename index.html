@@ -366,11 +366,11 @@ function render(){
   for (const [fonte, titulo, cls] of [["DE", "DIÁRIO DO EXECUTIVO", "sec-de"], ["DL", "DIÁRIO DO LEGISLATIVO", "sec-dl"]]) {
     const eds = diarios.filter(d => d.fonte === fonte && d.grupos.length);
     if (!eds.length) {   // como na planilha: o Diário do Executivo aparece mesmo sem nada a lançar
-      if (fonte === "DE") { secao(titulo, "0 seções", cls, plural(0, "ação", "ações"), URLS.de(sel)); linha("DE-vazio", "-", "-", "-", [], true); }
+      if (fonte === "DE") { secao(titulo, "0 tópicos", cls, plural(0, "ação", "ações"), URLS.de(sel)); linha("DE-vazio", "-", "-", "-", [], true); }
       continue;
     }
     const nGr = eds.reduce((n, d) => n + d.grupos.length, 0), nIt = eds.reduce((n, d) => n + d.itens.length, 0);
-    secao(titulo, plural(nGr, "seção", "seções"), cls, plural(nIt, "ação", "ações"), fonte === "DE" ? URLS.de(eds[0].data) : (eds[0].url || URLS.dl(eds[0].data)), eds.flatMap(d => d.itens));
+    secao(titulo, plural(nGr, "tópico", "tópicos"), cls, plural(nIt, "ação", "ações"), fonte === "DE" ? URLS.de(eds[0].data) : (eds[0].url || URLS.dl(eds[0].data)), eds.flatMap(d => d.itens));
     for (const d of eds) {
       d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc.replace(/^TRAMITA[ÇC][ÃA]O DE PROPOSI[ÇC][ÕO]ES: PARECERES$/, "PARECERES"), String(l.length), l, false, fonte === "DL" && d.url && parseInt(g.pag) ? d.url + "#page=" + parseInt(g.pag) : null); });
     }
