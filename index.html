@@ -258,6 +258,25 @@ let fechadas = new Set(); try { fechadas = new Set(JSON.parse(localStorage.getIt
 const cacheDiario = new Map();
 // edição de sábado/domingo é trabalhada no dia útil seguinte (como na planilha)
 function diaTrab(d){ const x = new Date(d + "T12:00:00Z"); while (x.getUTCDay() === 0 || x.getUTCDay() === 6) x.setUTCDate(x.getUTCDate() + 1); return x.toISOString().slice(0, 10); }
+// reconferência no navegador dos itens do DL ainda não conferidos (a rodada do GitHub pode estar atrasada ou sem acesso à API)
+async function reconfDL(e, j){
+  const [y, m, d] = e.data.split("-");
+  const rx = new RegExp(`publicad[oa]s?(\\s+na\\s+[íi]ntegra[^.]{0,80}?,)?\\s+no\\s+DL\\s+em\\s+0?${+d}[\\/ .]0?${+m}[\\/ .]${y}(,?\\s*p[áa]gs?\\.?\\s*[\\d, e-]+)?`, "i");
+  const fila = []; for (const g of j.grupos || []) for (const p of g.props) if (p.status !== "ok" && /^[A-Z]{2,4} \d+\/\d{4}$/.test(p.prop)) fila.push(p);
+  if (!fila.length) return;
+  const um = async p => {
+    const k = "dl|" + p.prop + "|" + e.data; let mate = null;
+    try { mate = sessionStorage.getItem(k); } catch (er) {}
+    if (mate === null) {
+      const [tp, na] = p.prop.split(" "); const [n, a] = na.split("/");
+      try { const r = await (await fetch(`https://dadosabertos.almg.gov.br/api/v2/proposicoes/${tp}/${n}/${a}?formato=json`)).json(); const h = ((r.resultado.listaItem[0] || {}).listaHistoricoTramitacoes || []); const x = h.map(h => String(h.historico || "").replace(/\s+/g, " ").match(rx)).find(Boolean); mate = x ? x[0] : ""; } catch (er) { return; }
+      try { if (mate) sessionStorage.setItem(k, mate); } catch (er) {}
+    }
+    if (mate) { p.status = "ok"; p.mate = mate; }
+  };
+  for (let i = 0; i < fila.length; i += 8) await Promise.all(fila.slice(i, i + 8).map(um));
+  const c = {}; for (const g of j.grupos || []) for (const p of g.props) c[p.status] = (c[p.status] || 0) + 1; e.contagem = c;
+}
 async function carregarDiarios(){
   try { indice = await (await fetch(DADOS + "/dados/indice.json?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })).json(); } catch (e) { indice = indice || { edicoes: [] }; }
   const eds = (indice.edicoes || []).filter(e => diaTrab(e.data) === sel).sort((a, b) => a.fonte.localeCompare(b.fonte) || a.data.localeCompare(b.data) || String(a.id).localeCompare(String(b.id)));
@@ -266,6 +285,7 @@ async function carregarDiarios(){
     const chave = e.arquivo + "@" + JSON.stringify(e.contagem);
     let j = cacheDiario.get(chave);
     if (!j) { try { j = await (await fetch(DADOS + "/" + e.arquivo + "?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })).json(); cacheDiario.set(chave, j); } catch (err) { continue; } }
+    if (e.fonte === "DL") await reconfDL(e, j);
     const itens = [];
     (j.grupos || []).forEach((g, k) => g.props.forEach(p => itens.push({ grupo: k, prop: p.prop, acao: e.fonte === "DL" ? "Publicação no DL" : e.fonte === "PRAZO" ? "Preclusão de prazo (art. 104)" : "Publicação no DE", detalhe: [p.pag ? "pág. " + p.pag : "", p.origem || ""].filter(Boolean).join(" · "), mate: p.mate || "", status: p.status === "novo" ? "aguardando" : p.status })));
     out.push({ fonte: e.fonte, chave: String(e.id || e.data), data: e.data, ref: j.referencia || null, url: e.url || j.url, obs: e.obs || "", paginas: j.paginas || 0, grupos: j.grupos || [], itens });
