@@ -461,18 +461,27 @@ function reconferir(i){
   if (ok) i.status = "ok";
   return ok;
 }
+// itens ainda "aguardando"/"pendente" do dia: consulta o portal direto (a rodada do worker passa por todos aos poucos)
 // comissão especial: o resultado traz "Comissão Especial para Emitir Parecer sobre o Veto nº 36/2026"; o portal registra só "Comissão Especial"
+const semLanc = new Map();
 async function especiais(itens){
-  for (const i of itens) {
-    if (!["aguardando", "pendente"].includes(i.status) || i.mate || !/^comiss[aã]o especial/i.test(i.comissao || "") || !normC(i.acao).startsWith("parecer aprovado")) continue;
+  const fila = itens.filter(i => ["aguardando", "pendente"].includes(i.status) && !i.mate && /^[A-Z]{2,4} \d+\/\d{4}$/.test(i.prop) && i.acao !== "Designação de relatoria");
+  const um = async i => {
+    const ck = i.prop + "|" + i.data; if (Date.now() - (semLanc.get(ck) || 0) < 10 * 60000) return;   // sem lançamento há pouco: não consulta de novo antes de 10 min
     const [tp, na] = i.prop.split(" "); const [n, a] = na.split("/");
     try {
       const j = await (await fetch(`https://dadosabertos.almg.gov.br/api/v2/proposicoes/${tp}/${n}/${a}?formato=json`)).json();
-      const h = ((j.resultado.listaItem[0] || {}).listaHistoricoTramitacoes || []).filter(x => x.data === i.data && normC(x.local) === "comissao especial");
-      if (!h.length) continue;
-      i._de = i.status; i.mate = h.map(x => String(x.historico || "").replace(/\s+/g, " ").trim()).join(" ‖ "); i.status = "divergente"; reconferir(i);
+      const com = normC(i.comissao || "");
+      const h = ((j.resultado.listaItem[0] || {}).listaHistoricoTramitacoes || []).filter(x => x.data === i.data && (!x.local || normC(x.local).includes(com) || (/^comissao especial/.test(com) && normC(x.local) === "comissao especial")));
+      if (!h.length) { semLanc.set(ck, Date.now()); return; }
+      const mate = h.map(x => String(x.historico || "").replace(/\s+/g, " ").trim()).join(" ‖ "), t = normC(mate), ac = normC(i.acao);
+      i._de = i.status; i.mate = mate;
+      if (ac.startsWith("parecer aprovado")) { i.status = "divergente"; reconferir(i); return; }
+      const ok = /^aprovad/.test(ac) ? /aprovad/.test(t) : /^recebid/.test(ac) ? /recebid/.test(t) : /relatorio/.test(ac) ? /relatorio/.test(t) : /^plenario/.test(ac) ? true : t.includes(ac);
+      i.status = ok ? "ok" : "divergente";
     } catch (e) {}
-  }
+  };
+  for (let k = 0; k < fila.length; k += 8) await Promise.all(fila.slice(k, k + 8).map(um));
 }
 async function ajustarResumo(data, itens){
   await especiais(itens);
