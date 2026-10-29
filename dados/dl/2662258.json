@@ -1,11 +1,11 @@
 {
- "versao": 14,
+ "versao": 15,
  "id": "2662258",
  "data": "2026-10-29",
  "url": "https://mediaserver.almg.gov.br/acervo/662/258/2662258.pdf",
  "obs": "",
  "paginas": 58,
- "extraido_em": "2026-10-29T14:25:45.661Z",
+ "extraido_em": "2026-10-29T15:06:56.775Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -100,7 +100,7 @@
    ]
   },
   {
-   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI - CRÉDITO SUPLEMENTAR",
    "pag": "5 - 6",
    "props": [
     {
@@ -118,7 +118,7 @@
    ]
   },
   {
-   "desc": "FONTE DE RECURSO ‒ DESCRIÇÃO VALOR (R$)",
+   "desc": "ANEXO",
    "pag": "10 - 11",
    "props": [
     {
@@ -154,7 +154,7 @@
    ]
   },
   {
-   "desc": "“ACORDO DE LÍDERES",
+   "desc": "DECISÃO DA PRESIDÊNCIA, ACORDO DE LÍDERES",
    "pag": "11 - 12",
    "props": [
     {
@@ -172,7 +172,7 @@
    ]
   },
   {
-   "desc": "RECEBIMENTO DE SUBSTITUTIVO E EMENDA",
+   "desc": "EMENDAS OU SUBSTITUTIVOS PUBLICADOS",
    "pag": "12",
    "props": [
     {
@@ -180,18 +180,6 @@
      "pag": 12,
      "status": "ok",
      "mate": "Publicada no DL em 29 10 2026, pág 10"
-    },
-    {
-     "prop": "MSG 300/2026",
-     "pag": 12,
-     "status": "ok",
-     "mate": "Publicada no DL em 29 10 2026, pág 10"
-    },
-    {
-     "prop": "MSG 294/2026",
-     "pag": 12,
-     "status": "aguardando",
-     "mate": ""
     },
     {
      "prop": "PL 3830/2025",
@@ -412,5 +400,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T14:25:56.184Z"
+ "conferido_em": "2026-10-29T15:06:59.583Z"
 }
