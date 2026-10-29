@@ -1,11 +1,11 @@
 {
- "versao": 16,
+ "versao": 17,
  "id": "2659906",
  "data": "2026-10-24",
  "url": "https://mediaserver.almg.gov.br/acervo/659/906/2659906.pdf",
  "obs": "",
  "paginas": 1,
- "extraido_em": "2026-10-29T15:12:24.165Z",
+ "extraido_em": "2026-10-29T15:18:11.882Z",
  "grupos": [
   {
    "desc": "ERRATAS",
@@ -20,5 +20,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T15:12:24.165Z"
+ "conferido_em": "2026-10-29T15:18:11.882Z"
 }

@@ -1,11 +1,11 @@
 {
- "versao": 16,
+ "versao": 17,
  "id": "2662258",
  "data": "2026-10-29",
  "url": "https://mediaserver.almg.gov.br/acervo/662/258/2662258.pdf",
  "obs": "",
  "paginas": 58,
- "extraido_em": "2026-10-29T15:12:51.735Z",
+ "extraido_em": "2026-10-29T15:18:37.782Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -144,13 +144,7 @@
      "pag": 11,
      "status": "ok",
      "mate": "Publicada no DL em 29 10 2026, pág 11"
-    }
-   ]
-  },
-  {
-   "desc": "OFÍCIOS - PROJETOS DE LEI",
-   "pag": "11",
-   "props": [
+    },
     {
      "prop": "PL 5234/2026",
      "pag": 11,
@@ -406,5 +400,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T15:12:54.571Z"
+ "conferido_em": "2026-10-29T15:18:40.226Z"
 }

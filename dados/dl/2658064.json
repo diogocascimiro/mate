@@ -1,11 +1,11 @@
 {
- "versao": 16,
+ "versao": 17,
  "id": "2658064",
  "data": "2026-10-22",
  "url": "https://mediaserver.almg.gov.br/acervo/658/64/2658064.pdf",
  "obs": "",
  "paginas": 55,
- "extraido_em": "2026-10-29T15:12:14.533Z",
+ "extraido_em": "2026-10-29T15:17:59.380Z",
  "grupos": [
   {
    "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, COM COMUNICAÇÃO",
@@ -2750,5 +2750,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T15:12:14.533Z"
+ "conferido_em": "2026-10-29T15:17:59.380Z"
 }

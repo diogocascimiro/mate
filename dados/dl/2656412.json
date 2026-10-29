@@ -1,11 +1,11 @@
 {
- "versao": 16,
+ "versao": 17,
  "id": "2656412",
  "data": "2026-10-16",
  "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
  "obs": "",
  "paginas": 307,
- "extraido_em": "2026-10-29T15:11:32.371Z",
+ "extraido_em": "2026-10-29T15:17:32.703Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -170,16 +170,22 @@
      "pag": 21,
      "status": "ok",
      "mate": "Publicada no DL em 16 10 2026, pág 21"
+    },
+    {
+     "prop": "PL 6187/2026",
+     "pag": 21,
+     "status": "ok",
+     "mate": "Publicado no DL em 16 10 2026, pág 16"
     }
    ]
   },
   {
    "desc": "OFÍCIOS - PROJETOS DE LEI",
-   "pag": "21 - 28",
+   "pag": "25 - 28",
    "props": [
     {
      "prop": "PL 6187/2026",
-     "pag": 21,
+     "pag": 25,
      "status": "ok",
      "mate": "Publicado no DL em 16 10 2026, pág 16"
     },
@@ -2214,5 +2220,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T15:11:47.715Z"
+ "conferido_em": "2026-10-29T15:17:49.714Z"
 }
