@@ -31,7 +31,7 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     if (kw) tipo = tipoDe(kw[1]);
     else if (!/[;:.()]\s*[–-]?\s*$/.test(antes) && antes.trim()) tipo = null;
     else if (tipoBase && (!tipo || /;\s*$/.test(antes))) tipo = tipoBase;   // lista ("...; nº 23.409/2026, ..."): cada item volta ao tipo da lista, mesmo depois de "Projeto de Lei nº ..." citado no item anterior
-    let t = tipo; if (t === "RQN" && forcarRQC) t = "RQC";
+    let t = tipo; if (t === "RQN" && forcarRQC && !(kw && /^requerimentos$/i.test(kw[1].trim()) && /n[º°]s/i.test(texto.slice(ini, i)))) t = "RQC";   // "aprovados os Requerimentos nºs 19.294, ... e 19.401/2026" na ata de comissão: são RQN (dispensam o Plenário)
     const prox = q + 1 < pos.length ? pos[q + 1][0] : texto.length;
     const pv = texto.indexOf(";", i);
     const fim = Math.min(prox, pv < 0 ? texto.length : pv);
@@ -151,7 +151,7 @@ export function extrairDL(lines){
     }
     if (sumario) { if (bold && /^(Comparecimento|Abertura)/.test(t)) sumario = false; else continue; }
     if (topo === "ATAS" && ata && ata.comissao) { push("REQUERIMENTOS DE COMISSÃO: " + ata.comissao + ", " + ata.data, t, l.p, true, /^RQC /, "RQC"); continue; }
-    const plenMat = /^MATERIA DE REUNIAO DO PLENARIO/.test(topo);
+    const plenMat = /^MATERIA DE REUNIAO D[OE] PLENARIO/.test(topo);
     const temNum = /n[º°o]\s*[\d.]+\/\d{4}/i.test(t);
     if (bold && t.length < 90 && !temNum && ((!upper && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
     if (bold && !upper && topo === "ATAS") continue;
