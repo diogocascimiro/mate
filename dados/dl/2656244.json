@@ -1,11 +1,11 @@
 {
- "versao": 13,
+ "versao": 14,
  "id": "2656244",
  "data": "2026-10-15",
  "url": "https://mediaserver.almg.gov.br/acervo/656/244/2656244.pdf",
  "obs": "",
  "paginas": 14,
- "extraido_em": "2026-10-29T14:16:32.471Z",
+ "extraido_em": "2026-10-29T14:24:55.316Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: FISCALIZAÇÃO FINANCEIRA E ORÇAMENTÁRIA, 17/09",
@@ -20,7 +20,7 @@
    ]
   },
   {
-   "desc": "RECEBIMENTO DE CORRESPONDÊNCIA",
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA DECISÃO DA MESA",
    "pag": "3",
    "props": [
     {
@@ -81,5 +81,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T14:16:32.471Z"
+ "conferido_em": "2026-10-29T14:24:55.316Z"
 }
