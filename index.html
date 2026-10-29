@@ -487,7 +487,7 @@ async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
   // Plenário: a API marca "com quórum" antes da hora da reunião; até a hora marcada, ainda não houve
-  if (dia && dia.reunioes) { const agora = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16).replace("T", " "); for (const r of dia.reunioes) if (r.comissao_id === 0 && r.data + " " + r.hora > agora) r.ocorrida = "N"; }
+  if (dia && dia.reunioes) { const agora = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16).replace("T", " "); for (const r of dia.reunioes) if (r.comissao_id === 0 && r.data + " " + r.hora > agora && r.ocorrida === "S") { r.ocorrida = "N"; for (const i of dia.itens || []) if (i.reuniao_id === r.id && resumo && resumo.dias) { const x = resumo.dias.find(d => d.data === i.data && d.status === i.status); if (x) x.n = Math.max(0, x.n - 1); } } }
   if (dia && dia.itens) await ajustarResumo(sel, dia.itens);
   if (resumo && resumo.dias) {   // demais dias com divergentes: corrige o balão
     // só divergentes/revisar, e no máximo uma consulta por dia a cada 30 min (poupa o limite diário do banco D1)
