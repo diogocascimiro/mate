@@ -153,7 +153,7 @@ export function extrairDL(lines){
     if (topo === "ATAS" && ata && ata.comissao) { push("REQUERIMENTOS DE COMISSÃO: " + ata.comissao + ", " + ata.data, t, l.p, true, /^RQC /, "RQC"); continue; }
     const plenMat = /^MATERIA DE REUNIAO D[OE] PLENARIO/.test(topo);
     const temNum = /n[º°o]\s*[\d.]+\/\d{4}/i.test(t);
-    if (bold && t.length < 90 && !temNum && ((!upper && !plenMat && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
+    if (bold && t.length < 90 && !temNum && ((!upper && !plenMat && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t) && !/^ANEXOS?\b/.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
     if (bold && !upper && topo === "ATAS") continue;
     if (bold && upper && t.length < 120) { flush(); doc = t; }
     let desc = null;
