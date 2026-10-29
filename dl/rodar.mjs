@@ -10,7 +10,7 @@ import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { extrairDL, refs, refsErrata } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
-const VERSAO = 12;                 // muda quando a extração muda: reprocessa as edições
+const VERSAO = 13;                 // muda quando a extração muda: reprocessa as edições
 const JANELA = 14;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
