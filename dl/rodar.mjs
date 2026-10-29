@@ -19,17 +19,20 @@ for (const d of [DIR_DL, DIR_DE, DIR_PZ]) fs.mkdirSync(d, { recursive: true });
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let ultimo = 0;
+// ponte pelo worker da Cloudflare: usada quando a ALMG recusa a conexão vinda do GitHub
+const PONTE = "https://mate.diogocascimiro.workers.dev";
+let viaPonte = false;
 async function api(p){
   const w = ultimo + 1100 - Date.now(); if (w > 0) await sleep(w);
   ultimo = Date.now();
   for (let t = 0; t < 6; t++) {
     try {
-      const r = await fetch(API + p, { headers: { Accept: "application/json", "User-Agent": "almg.digital-mate/1.0" } });
+      const r = await fetch(viaPonte ? PONTE + "/api/almg?p=" + encodeURIComponent(p) : API + p, { headers: { Accept: "application/json", "User-Agent": "almg.digital-mate/1.0" } });
       ultimo = Date.now();
       if (r.status === 404) return null;
       if (!r.ok) throw new Error("HTTP " + r.status);
       return await r.json();
-    } catch (e) { if (t === 5) throw e; await sleep(10000 * (t + 1)); }   // API da ALMG às vezes recusa conexão: tenta por até ~2,5 min
+    } catch (e) { if (t === 5) throw e; if (!viaPonte && t >= 1) { viaPonte = true; console.log("ALMG sem resposta direta: usando a ponte pela Cloudflare"); continue; } await sleep(10000 * (t + 1)); }
   }
 }
 const brHoje = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
@@ -45,7 +48,10 @@ const gravar = (f, o) => fs.writeFileSync(f, JSON.stringify(o, null, 1));
 
 // ---------- PDF → linhas {p, t, b} ----------
 async function linhasPDF(url){
-  const r = await fetch(url); if (!r.ok) throw new Error("PDF " + r.status);
+  let r = null;
+  if (!viaPonte) { try { r = await fetch(url); } catch (e) { viaPonte = true; } }
+  if (viaPonte) r = await fetch(PONTE + "/api/almgpdf?u=" + encodeURIComponent(url));
+  if (!r.ok) throw new Error("PDF " + r.status);
   const data = new Uint8Array(await r.arrayBuffer());
   const doc = await getDocument({ data, isEvalSupported: false, useSystemFonts: false, verbosity: 0 }).promise;
   const out = [];
