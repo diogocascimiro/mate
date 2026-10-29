@@ -172,7 +172,7 @@ export function extrairDL(lines){
           }
           desc = ultimaDescMsg || "MENSAGEM DO GOVERNADOR";
           if (!(bold && upper)) { if (/^[–-]\s*Anexe-se/i.test(t)) push(desc, t, l.p); continue; }   // despacho "– Anexe-se ao Projeto de Resolução nº 139/2026"; a mensagem citada no texto não entra
-        } else if (doc && /^(PROJETO|PROPOSTA|VETO)/.test(doc) && ultimaDescMsg) {
+        } else if (doc && /^(PROJETO|PROPOSTA|VETO|EMENDA|SUBSTITUTIVO)/.test(doc) && ultimaDescMsg) {
           desc = ultimaDescMsg; if (!(bold && upper)) continue;
         } else desc = "OFÍCIOS";
       } else if (/^(APRESENTACAO|RECEBIMENTO) DE PROPOSICOES/.test(S)) {
