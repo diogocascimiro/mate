@@ -463,18 +463,22 @@ function reconferir(i){
 }
 // itens ainda "aguardando"/"pendente" do dia: consulta o portal direto (a rodada do worker passa por todos aos poucos)
 // comissão especial: o resultado traz "Comissão Especial para Emitir Parecer sobre o Veto nº 36/2026"; o portal registra só "Comissão Especial"
-const semLanc = new Map();
+const semLanc = new Map(), achados = new Map();   // achados: lançamento já encontrado no portal (não consulta de novo)
 async function especiais(itens){
   const fila = itens.filter(i => ["aguardando", "pendente"].includes(i.status) && !i.mate && /^[A-Z]{2,4} \d+\/\d{4}$/.test(i.prop) && i.acao !== "Designação de relatoria");
   const um = async i => {
     const ck = i.prop + "|" + i.data; if (Date.now() - (semLanc.get(ck) || 0) < 10 * 60000) return;   // sem lançamento há pouco: não consulta de novo antes de 10 min
     const [tp, na] = i.prop.split(" "); const [n, a] = na.split("/");
     try {
-      const j = await (await fetch(`https://dadosabertos.almg.gov.br/api/v2/proposicoes/${tp}/${n}/${a}?formato=json`)).json();
       const com = normC(i.comissao || "");
-      const h = ((j.resultado.listaItem[0] || {}).listaHistoricoTramitacoes || []).filter(x => x.data === i.data && (!x.local || normC(x.local).includes(com) || (/^comissao especial/.test(com) && normC(x.local) === "comissao especial")));
-      if (!h.length) { semLanc.set(ck, Date.now()); return; }
-      const mate = h.map(x => String(x.historico || "").replace(/\s+/g, " ").trim()).join(" ‖ "), t = normC(mate), ac = normC(i.acao);
+      let mate = achados.get(ck + "|" + com);
+      if (!mate) {
+        const j = await (await fetch(`https://dadosabertos.almg.gov.br/api/v2/proposicoes/${tp}/${n}/${a}?formato=json`)).json();
+        const h = (((j.resultado.listaItem || [])[0] || {}).listaHistoricoTramitacoes || []).filter(x => x.data === i.data && (!x.local || normC(x.local).includes(com) || (/^comissao especial/.test(com) && normC(x.local) === "comissao especial")));
+        if (!h.length) { semLanc.set(ck, Date.now()); return; }
+        mate = h.map(x => String(x.historico || "").replace(/\s+/g, " ").trim()).join(" ‖ "); achados.set(ck + "|" + com, mate);
+      }
+      const t = normC(mate), ac = normC(i.acao);
       i._de = i.status; i.mate = mate;
       if (ac.startsWith("parecer aprovado")) { i.status = "divergente"; reconferir(i); return; }
       const ok = /^aprovad/.test(ac) ? /aprovad/.test(t) : /^recebid/.test(ac) ? /recebid/.test(t) : /relatorio/.test(ac) ? /relatorio/.test(t) : /^plenario/.test(ac) ? true : t.includes(ac);
@@ -493,6 +497,8 @@ async function ajustarResumo(data, itens){
   }
 }
 const cacheDia = new Map();
+// a cópia guardada do dia só vale se as contagens por situação ainda batem com o resumo (senão a rodada já mudou algo)
+function bate(d, s){ const n = {}; for (const i of (JSON.parse(s).itens || [])) n[i.status] = (n[i.status] || 0) + 1; return resumo.dias.filter(r => r.data === d).every(r => (n[r.status] || 0) === r.n); }
 async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
@@ -501,8 +507,10 @@ async function load(){
   if (dia && dia.itens) await ajustarResumo(sel, dia.itens);
   if (resumo && resumo.dias) {   // demais dias com divergentes: corrige o balão
     // só divergentes/revisar, e no máximo uma consulta por dia a cada 30 min (poupa o limite diário do banco D1)
-    const outros = [...new Set(resumo.dias.filter(r => ["divergente", "revisar"].includes(r.status) && r.n > 0 && r.data !== sel).map(r => r.data))];
-    await Promise.all(outros.map(async d => { try { let c = cacheDia.get(d); if (!c || Date.now() - c.t > 30 * 60000) { c = { t: Date.now(), s: JSON.stringify(await get("/api/dia?data=" + d)) }; cacheDia.set(d, c); } const x = JSON.parse(c.s); if (x && x.itens) await ajustarResumo(d, x.itens); } catch (e) {} }));
+    // aguardando/pendente: só os dias da faixa de balões (últimos 14 dias); a conferência desses itens é feita no navegador, direto no portal
+    const desde = new Date(Date.now() - 14 * 864e5).toISOString().slice(0, 10);
+    const outros = [...new Set(resumo.dias.filter(r => r.n > 0 && r.data !== sel && (["divergente", "revisar"].includes(r.status) || (["aguardando", "pendente"].includes(r.status) && r.data >= desde))).map(r => r.data))];
+    await Promise.all(outros.map(async d => { try { let c = cacheDia.get(d); if (!c || Date.now() - c.t > 30 * 60000 || !bate(d, c.s)) { c = { t: Date.now(), s: JSON.stringify(await get("/api/dia?data=" + d)) }; cacheDia.set(d, c); } const x = JSON.parse(c.s); if (x && x.itens) await ajustarResumo(d, x.itens); } catch (e) {} }));
   }
   try { await carregarDiarios(); } catch (e) { diarios = []; }
   renderDays(); render();
