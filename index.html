@@ -511,7 +511,7 @@ function adiar(x){
 }
 const cacheDia = new Map();
 // a cópia guardada do dia só vale se as contagens por situação ainda batem com o resumo (senão a rodada já mudou algo)
-function bate(d, s){ const n = {}; for (const i of (JSON.parse(s).itens || [])) n[i.status] = (n[i.status] || 0) + 1; return resumo.dias.filter(r => r.data === d).every(r => (n[r.status] || 0) === r.n); }
+function bate(d, s){ const x = JSON.parse(s), oc = new Set((x.reunioes || []).filter(r => r.ocorrida === "S").map(r => r.id)), n = {}; for (const i of (x.itens || [])) if (oc.has(i.reuniao_id) && i.acao !== "Designação de relatoria") n[i.status] = (n[i.status] || 0) + 1; return resumo.dias.filter(r => r.data === d).every(r => (n[r.status] || 0) === r.n); }
 async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
