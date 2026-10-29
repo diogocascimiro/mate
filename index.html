@@ -62,7 +62,7 @@ td.p{font-family:var(--fm);white-space:nowrap}
 td.m{color:var(--muted);font-size:13px}
 .pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
 .s-ok{background:var(--ok-s);color:var(--ok)}.s-divergente{background:var(--bad-s);color:var(--bad)}.s-pendente{background:var(--bad-s);color:var(--bad)}
-.s-nao_cadastrada{background:var(--bad-s);color:var(--bad)}.s-aguardando{background:var(--warn-s);color:var(--warn)}.s-revisar{background:var(--info-s);color:var(--info)}.s-novo{background:var(--soft);color:var(--muted)}.s-silegis{background:var(--soft);color:var(--muted)}.s-pre_cadastro{background:var(--soft);color:var(--muted)}
+.s-nao_cadastrada{background:var(--bad-s);color:var(--bad)}.s-aguardando{background:var(--warn-s);color:var(--warn)}.s-revisar{background:var(--bad-s);color:var(--bad)}.s-novo{background:var(--soft);color:var(--muted)}.s-silegis{background:var(--soft);color:var(--muted)}.s-pre_cadastro{background:var(--soft);color:var(--muted)}
 .empty{padding:24px;text-align:center;color:var(--muted)}
 .tablebox{overflow-x:auto}
 footer{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
@@ -156,7 +156,7 @@ tr.cap.sec-rqc{--sc:#1f6f78;--sc-t:#e1f0f2}
 .pill.s-pendente,.pill.s-nao_cadastrada{background:#c2410c;color:#fff}
 .pill.s-divergente{background:#8c1c2e;color:#fff}
 .pill.s-aguardando{background:#fbf1dc;color:#9a6200;border-color:#efd9a6}
-.pill.s-revisar{background:#e4ebf6;color:#3b5b8c;border-color:#c9d6ec}
+.pill.s-revisar{background:#8c1c2e;color:#fff}
 .card{box-shadow:0 10px 30px -22px rgba(18,59,54,.45)}
 .legend{padding:10px 14px;border-radius:12px;background:var(--paper);border:1px dashed var(--line)}
 
@@ -219,7 +219,6 @@ table.grade tr.edc a{color:inherit}
 <span><span class="pill s-divergente">divergente</span> há lançamento na data, mas o texto ou o relator não bate</span>
 <span><span class="pill s-pendente">pendente</span> prazo vencido sem lançamento no portal (ou proposição ainda não cadastrada)</span>
 <span><span class="pill s-aguardando">aguardando</span> dentro do prazo de 2 dias úteis; RQC até a publicação</span>
-<span><span class="pill s-revisar">revisar</span> ação sem regra automática (conta em Divergentes)</span>
 </div>
 <footer><span id="rodadaInfo"></span><span>Fontes públicas: dados abertos, portal e diários publicados da ALMG. Não substitui a conferência interna pelo Silegis.</span></footer>
 </div>
@@ -227,8 +226,8 @@ table.grade tr.edc a{color:inherit}
 (() => {
 const $ = id => document.getElementById(id);
 const ST = [["todos","Ações"],["lancados","Lançados"],["ok","Conferidos"],["divergente","Divergentes"],["pendente","Pendentes"],["aguardando","Aguardando"]];
-const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--info)", novo:"var(--muted)" };
-const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"revisar", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
+const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--bad)", novo:"var(--muted)" };
+const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"divergente", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
 const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
 const abertas = new Set();
 let filtro = "todos", sel = new URLSearchParams(location.search).get("data") || hoje, dia = null, resumo = null;
@@ -354,7 +353,7 @@ function render(){
   // pills de situação (mesmas das linhas): aparecem também no título, com a seção fechada
   // três colunas fixas (problemas · em espera · conferidos), para os números ficarem alinhados entre as linhas
   const SLOT = k => (k === "divergente" || k === "pendente" || k === "nao_cadastrada") ? 0 : k === "ok" ? 2 : 1;
-  function pills(todas){ const sc = el("td", "s"); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1); if (!todas.length) return sc; const g = el("span", "slots"); const sl = [0, 1, 2].map(() => g.appendChild(el("span", "slot"))); for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sl[SLOT(k)].appendChild(p); } sc.appendChild(g); return sc; }
+  function pills(todas){ const sc = el("td", "s"); const cnt = {}; todas.forEach(i => { const k = i.status === "revisar" ? "divergente" : i.status; cnt[k] = (cnt[k] || 0) + 1; }); if (!todas.length) return sc; const g = el("span", "slots"); const sl = [0, 1, 2].map(() => g.appendChild(el("span", "slot"))); for (const k of ORD) if (cnt[k]) { const p = el("span", "pill s-" + k, String(cnt[k])); p.title = cnt[k] + " " + (k === "ok" ? "conferidos" : (LBL[k] || k)); sl[SLOT(k)].appendChild(p); } sc.appendChild(g); return sc; }
   function secao(titulo, qtd, cls, lanc, href, todas){ secAtual = titulo; const f = fechadas.has(titulo); const cap = el("tr", "cap " + (cls || "") + (f ? " fechada" : "")); const ct = el("td"); ct.colSpan = 2; const bul = el("i", "bul"); bul.title = f ? "Mostrar a seção" : "Esconder a seção"; const tb = el("b", null, titulo); if (href) { const a = el("a", "tlink"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte"; a.appendChild(tb); ct.append(bul, a); } else ct.append(bul, tb); ct.append(el("span", "cnt", qtd)); cap.appendChild(ct); const cq = el("td", "q"); if (lanc != null) cq.appendChild(el("span", "lanc", lanc)); cap.append(cq, pills(todas || [])); bul.addEventListener("click", () => { if (fechadas.has(titulo)) fechadas.delete(titulo); else fechadas.add(titulo); try { localStorage.setItem("mate_fechadas", JSON.stringify([...fechadas])); } catch (e) {} render(); }); t.appendChild(cap); }
   function linha(id, hora, nome, qtdTxt, todas, off, href){
     const ri = todas.filter(passa);
@@ -365,7 +364,7 @@ function render(){
     tr.appendChild(el("td", "h", hora)); const tn = el("td", "n"); if (href) { const a = el("a", "nlink", nome); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte (clique no restante da linha para ver os itens)"; a.addEventListener("click", e => e.stopPropagation()); tn.appendChild(a); } else tn.textContent = nome; tr.appendChild(tn); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : qtdTxt === "-" ? "q0" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
     const sc = pills(todas); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
     tr.appendChild(sc);
-    tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada ? "prob" : cnt.aguardando || cnt.revisar ? "esp" : cnt.ok ? "okk" : "neutra");
+    tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada || cnt.revisar ? "prob" : cnt.aguardando ? "esp" : cnt.ok ? "okk" : "neutra");
     t.appendChild(tr);
     if (!todas.length) return;
     const aberta = abertas.has(id) || filtro !== "todos";
