@@ -1,0 +1,356 @@
+{
+ "versao": 12,
+ "id": "2662258",
+ "data": "2026-10-29",
+ "url": "https://mediaserver.almg.gov.br/acervo/662/258/2662258.pdf",
+ "obs": "",
+ "paginas": 58,
+ "extraido_em": "2026-10-29T13:56:43.714Z",
+ "grupos": [
+  {
+   "desc": "PROPOSIÇÕES DE LEI",
+   "pag": "1",
+   "props": [
+    {
+     "prop": "PL 1003/2023",
+     "pag": 1,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 1",
+     "origem": "Proposição de Lei 27029"
+    },
+    {
+     "prop": "PL 2896/2024",
+     "pag": 1,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 1",
+     "origem": "Proposição de Lei 27030"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: SEGURANÇA PÚBLICA, 19/08",
+   "pag": "3 - 4",
+   "props": [
+    {
+     "prop": "RQC 19294/2026",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 19306/2026",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 19308/2026",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 19311/2026",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 19315/2026",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 19320/2026",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 19401/2026",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23044/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23045/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23240/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23242/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23255/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23257/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23258/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23259/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23260/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23261/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    },
+    {
+     "prop": "RQC 23267/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 2"
+    }
+   ]
+  },
+  {
+   "desc": "PARECERES",
+   "pag": "19 - 46",
+   "props": [
+    {
+     "prop": "PL 5866/2026",
+     "pag": 19,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 19"
+    },
+    {
+     "prop": "PRE 116/2026",
+     "pag": 20,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 20"
+    },
+    {
+     "prop": "PL 727/2019",
+     "pag": 22,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 22"
+    },
+    {
+     "prop": "PL 2145/2024",
+     "pag": 23,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 23"
+    },
+    {
+     "prop": "PL 2294/2024",
+     "pag": 24,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 24"
+    },
+    {
+     "prop": "PL 2639/2024",
+     "pag": 25,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 25"
+    },
+    {
+     "prop": "PL 4473/2025",
+     "pag": 26,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 26"
+    },
+    {
+     "prop": "PL 4551/2025",
+     "pag": 28,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 28"
+    },
+    {
+     "prop": "PL 4637/2025",
+     "pag": 30,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 30"
+    },
+    {
+     "prop": "PL 5010/2025",
+     "pag": 32,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 32"
+    },
+    {
+     "prop": "PL 5305/2026",
+     "pag": 33,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 33"
+    },
+    {
+     "prop": "PL 5549/2026",
+     "pag": 35,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 35"
+    },
+    {
+     "prop": "PL 5408/2026",
+     "pag": 36,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 36"
+    },
+    {
+     "prop": "PL 1550/2023",
+     "pag": 40,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 40"
+    },
+    {
+     "prop": "PL 2176/2024",
+     "pag": 43,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 43"
+    },
+    {
+     "prop": "PL 3823/2025",
+     "pag": 44,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 44"
+    },
+    {
+     "prop": "PRE 139/2026",
+     "pag": 46,
+     "status": "ok",
+     "mate": "Publicada no DL em 29 10 2026, pág 10"
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - REQUERIMENTOS",
+   "pag": "46",
+   "props": [
+    {
+     "prop": "RQN 12809/2025",
+     "pag": 46,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 46"
+    },
+    {
+     "prop": "RQN 17758/2026",
+     "pag": 46,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 46"
+    },
+    {
+     "prop": "RQN 18235/2026",
+     "pag": 46,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 46"
+    },
+    {
+     "prop": "RQC 22934/2026",
+     "pag": 46,
+     "status": "ok",
+     "mate": "Publicado no DL em 29 10 2026, pág 46"
+    }
+   ]
+  },
+  {
+   "desc": "MANIFESTAÇÕES",
+   "pag": "47",
+   "props": [
+    {
+     "prop": "RQN 18661/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19061/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19062/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19294/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19306/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19308/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19311/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19315/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    },
+    {
+     "prop": "RQN 19401/2026",
+     "pag": 47,
+     "status": "ok",
+     "mate": "publicada no DL em 29 10 2026, pág 47"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS APROVADOS",
+   "pag": "57",
+   "props": [
+    {
+     "prop": "RQN 19320/2026",
+     "pag": 57,
+     "status": "ok",
+     "mate": "Publicado na íntegra o teor deste requerimento, no DL em 29 10 2026, pág 57, e"
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-10-29T13:57:45.614Z"
+}
