@@ -1,11 +1,11 @@
 {
- "versao": 14,
+ "versao": 15,
  "id": "2657560",
  "data": "2026-10-21",
  "url": "https://mediaserver.almg.gov.br/acervo/657/560/2657560.pdf",
  "obs": "",
  "paginas": 19,
- "extraido_em": "2026-10-29T14:25:20.455Z",
+ "extraido_em": "2026-10-29T14:58:41.337Z",
  "grupos": [
   {
    "desc": "PARECERES",
@@ -80,5 +80,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T14:25:20.455Z"
+ "conferido_em": "2026-10-29T14:58:41.337Z"
 }

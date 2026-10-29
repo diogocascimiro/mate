@@ -1,11 +1,11 @@
 {
- "versao": 14,
+ "versao": 15,
  "id": "2656412",
  "data": "2026-10-16",
  "url": "https://mediaserver.almg.gov.br/acervo/656/412/2656412.pdf",
  "obs": "",
  "paginas": 307,
- "extraido_em": "2026-10-29T14:25:03.441Z",
+ "extraido_em": "2026-10-29T14:58:25.151Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -114,8 +114,8 @@
    ]
   },
   {
-   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
-   "pag": "11 - 16",
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI - CRÉDITO SUPLEMENTAR",
+   "pag": "11 - 12",
    "props": [
     {
      "prop": "MSG 290/2026",
@@ -128,7 +128,13 @@
      "pag": 12,
      "status": "ok",
      "mate": "Publicado no DL em 16 10 2026, pág 12"
-    },
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
+   "pag": "13 - 16",
+   "props": [
     {
      "prop": "MSG 291/2026",
      "pag": 13,
@@ -156,7 +162,7 @@
    ]
   },
   {
-   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA SUBSTITUTIVO AO PROJETO DE LEI",
+   "desc": "MENSAGEM DO GOVERNADOR QUE RETIFICA MENSAGEM ANTERIOR",
    "pag": "21",
    "props": [
     {
@@ -2208,5 +2214,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T14:25:15.305Z"
+ "conferido_em": "2026-10-29T14:58:36.773Z"
 }

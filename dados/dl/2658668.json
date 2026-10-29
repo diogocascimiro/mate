@@ -1,11 +1,11 @@
 {
- "versao": 14,
+ "versao": 15,
  "id": "2658668",
  "data": "2026-10-23",
  "url": "https://mediaserver.almg.gov.br/acervo/658/668/2658668.pdf",
  "obs": "",
  "paginas": 16,
- "extraido_em": "2026-10-29T14:25:22.818Z",
+ "extraido_em": "2026-10-29T14:58:43.545Z",
  "grupos": [
   {
    "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROPOSTA DE EMENDA À CONSTITUIÇÃO",
@@ -308,5 +308,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T14:25:22.818Z"
+ "conferido_em": "2026-10-29T14:58:43.545Z"
 }
