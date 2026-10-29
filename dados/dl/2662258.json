@@ -1,11 +1,11 @@
 {
- "versao": 15,
+ "versao": 16,
  "id": "2662258",
  "data": "2026-10-29",
  "url": "https://mediaserver.almg.gov.br/acervo/662/258/2662258.pdf",
  "obs": "",
  "paginas": 58,
- "extraido_em": "2026-10-29T15:06:56.775Z",
+ "extraido_em": "2026-10-29T15:12:51.735Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -118,7 +118,7 @@
    ]
   },
   {
-   "desc": "ANEXO",
+   "desc": "MENSAGEM DO GOVERNADOR QUE RETIFICA MENSAGEM ANTERIOR",
    "pag": "10 - 11",
    "props": [
     {
@@ -128,23 +128,29 @@
      "mate": "Publicada no DL em 29 10 2026, pág 10"
     },
     {
-     "prop": "MSG 294/2026",
-     "pag": 10,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
      "prop": "PRE 139/2026",
      "pag": 11,
      "status": "ok",
      "mate": "Publicada no DL em 29 10 2026, pág 10"
-    },
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA EMENDA OU SUBSTITUTIVO COM DESPACHO À MESA",
+   "pag": "11",
+   "props": [
     {
      "prop": "MSG 301/2026",
      "pag": 11,
      "status": "ok",
      "mate": "Publicada no DL em 29 10 2026, pág 11"
-    },
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - PROJETOS DE LEI",
+   "pag": "11",
+   "props": [
     {
      "prop": "PL 5234/2026",
      "pag": 11,
@@ -400,5 +406,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T15:06:59.583Z"
+ "conferido_em": "2026-10-29T15:12:54.571Z"
 }

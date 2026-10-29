@@ -1,11 +1,11 @@
 {
- "versao": 15,
+ "versao": 16,
  "id": "2656244",
  "data": "2026-10-15",
  "url": "https://mediaserver.almg.gov.br/acervo/656/244/2656244.pdf",
  "obs": "",
  "paginas": 14,
- "extraido_em": "2026-10-29T14:58:19.051Z",
+ "extraido_em": "2026-10-29T15:11:21.585Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: FISCALIZAÇÃO FINANCEIRA E ORÇAMENTÁRIA, 17/09",
@@ -81,5 +81,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T15:06:53.677Z"
+ "conferido_em": "2026-10-29T15:11:21.585Z"
 }
