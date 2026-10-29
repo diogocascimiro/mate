@@ -1,11 +1,11 @@
 {
- "versao": 12,
+ "versao": 13,
  "id": "2662258",
  "data": "2026-10-29",
  "url": "https://mediaserver.almg.gov.br/acervo/662/258/2662258.pdf",
  "obs": "",
  "paginas": 58,
- "extraido_em": "2026-10-29T13:56:43.714Z",
+ "extraido_em": "2026-10-29T14:17:13.956Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -31,48 +31,6 @@
    "desc": "REQUERIMENTOS DE COMISSÃO: SEGURANÇA PÚBLICA, 19/08",
    "pag": "3 - 4",
    "props": [
-    {
-     "prop": "RQC 19294/2026",
-     "pag": 3,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 19306/2026",
-     "pag": 3,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 19308/2026",
-     "pag": 3,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 19311/2026",
-     "pag": 3,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 19315/2026",
-     "pag": 3,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 19320/2026",
-     "pag": 3,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 19401/2026",
-     "pag": 3,
-     "status": "aguardando",
-     "mate": ""
-    },
     {
      "prop": "RQC 23044/2026",
      "pag": 3,
@@ -352,5 +310,5 @@
    ]
   }
  ],
- "conferido_em": "2026-10-29T13:57:45.614Z"
+ "conferido_em": "2026-10-29T14:17:16.614Z"
 }
