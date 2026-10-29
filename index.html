@@ -217,10 +217,9 @@ table.grade tr.edc a{color:inherit}
 <div class="legend">
 <span><span class="pill s-ok">ok</span> publicado no portal e confere</span>
 <span><span class="pill s-divergente">divergente</span> há lançamento na data, mas o texto ou o relator não bate</span>
-<span><span class="pill s-pendente">pendente</span> prazo vencido sem lançamento no portal</span>
+<span><span class="pill s-pendente">pendente</span> prazo vencido sem lançamento no portal (ou proposição ainda não cadastrada)</span>
 <span><span class="pill s-aguardando">aguardando</span> dentro do prazo de 2 dias úteis; RQC até a publicação</span>
 <span><span class="pill s-revisar">revisar</span> ação sem regra automática (conta em Divergentes)</span>
-<span><span class="pill s-nao_cadastrada">não cadastrada</span> proposição inexistente no portal após o prazo (conta em Pendentes)</span>
 </div>
 <footer><span id="rodadaInfo"></span><span>Fontes públicas: dados abertos, portal e diários publicados da ALMG. Não substitui a conferência interna pelo Silegis.</span></footer>
 </div>
@@ -237,7 +236,13 @@ const fmtD = s => { const [y,m,d] = s.split("-"); return d + "/" + m; };
 const WD = ["dom","seg","ter","qua","qui","sex","sáb"];
 const wd = s => WD[new Date(s + "T12:00:00Z").getUTCDay()];
 const BASE = /workers\.dev$/.test(location.hostname) ? "" : "https://mate.diogocascimiro.workers.dev";
-async function get(u){ const r = await fetch(BASE + u, { cache:"no-store" }); return r.json(); }
+// "não cadastrada" (proposição ainda inexistente no portal após o prazo) é exibida como "pendente": para quem confere, é o mesmo caso
+async function get(u){
+  const j = await (await fetch(BASE + u, { cache:"no-store" })).json();
+  if (j && j.itens) for (const i of j.itens) if (i.status === "nao_cadastrada") i.status = "pendente";
+  if (j && j.dias) { const m = new Map(); for (const r of j.dias) { const st = r.status === "nao_cadastrada" ? "pendente" : r.status, k = r.data + "|" + st; if (m.has(k)) m.get(k).n += r.n; else m.set(k, { ...r, status: st }); } j.dias = [...m.values()]; }
+  return j;
+}
 function el(tag, cls, txt){ const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
 const TIPO_NOME = { PL:"Projeto de Lei", PLC:"Projeto de Lei Complementar", PRE:"Projeto de Resolução", PEC:"Proposta de Emenda à Constituição", RQC:"Requerimento de Comissão", RQN:"Requerimento", VET:"Veto", MSG:"Mensagem", IND:"Indicação", OFI:"Ofício", LEI:"Lei", LCP:"Lei Complementar", EMC:"Emenda à Constituição", PROPLEI:"Proposição de Lei", PLE:"Proposta de Ação Legislativa" };
 const TIPO_COR = { PL:"#5aa293", PLC:"#3f8f86", PRE:"#6c8fb3", PEC:"#8a6bb0", RQC:"#4f86a8", RQN:"#4f86a8", VET:"#a8566a", MSG:"#b08a3e", LEI:"#7a6a3a", LCP:"#7a6a3a", EMC:"#7a6a3a", PROPLEI:"#8c7b4f" };
