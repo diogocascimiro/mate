@@ -66,7 +66,7 @@ function classeRQ(item){
   return "SEM DESPACHO, COM COMUNICAÇÃO";
 }
 const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase().replace(/\s+/g, " ").trim();
-const TOPO = /^(ATAS|PARECERES|PARECERES SOBRE VETOS?|TRAMITA[CÇ][AÃ]O DE PROPOSI[CÇ][OÕ]ES|CORRESPOND[EÊ]NCIA DESPACHADA PELO 1[ºo°]-SECRET[AÁ]RIO|ERRATAS?|MAT[EÉ]RIA ADMINISTRATIVA|EDITAIS DE CONVOCA[CÇ][AÃ]O|ORDENS? DO DIA|LEIS PROMULGADAS|PROPOSI[CÇ][OÕ]ES DE LEI|RESOLU[CÇ][AÃ]O|RESOLU[CÇ][OÕ]ES|MANIFESTA[CÇ][OÕ]ES|PRONUNCIAMENTOS|COMUNICA[CÇ][OÕ]ES DESPACHADAS PELO PRESIDENTE|DECIS[AÃ]O DA PRESID[EÊ]NCIA|ACORDO DE L[IÍ]DERES|COMUNICA[CÇ][AÃ]O DA PRESID[EÊ]NCIA|EMENDAS? OU SUBSTITUTIVOS? PUBLICADOS|EMENDAS N[AÃ]O RECEBIDAS PUBLICADAS|VOTA[CÇ][OÕ]ES NOMINAIS|PROPOSI[CÇ][OÕ]ES N[AÃ]O RECEBIDAS|ORDEM DO DIA|LEIS)$/;
+const TOPO = /^(ATAS|MAT[EÉ]RIA DE REUNI[AÃ]O D[OE] PLEN[AÁ]RIO|PARECERES|PARECERES SOBRE VETOS?|TRAMITA[CÇ][AÃ]O DE PROPOSI[CÇ][OÕ]ES|CORRESPOND[EÊ]NCIA DESPACHADA PELO 1[ºo°]-SECRET[AÁ]RIO|ERRATAS?|MAT[EÉ]RIA ADMINISTRATIVA|EDITAIS DE CONVOCA[CÇ][AÃ]O|ORDENS? DO DIA|LEIS PROMULGADAS|PROPOSI[CÇ][OÕ]ES DE LEI|RESOLU[CÇ][AÃ]O|RESOLU[CÇ][OÕ]ES|MANIFESTA[CÇ][OÕ]ES|PRONUNCIAMENTOS|COMUNICA[CÇ][OÕ]ES DESPACHADAS PELO PRESIDENTE|DECIS[AÃ]O DA PRESID[EÊ]NCIA|ACORDO DE L[IÍ]DERES|COMUNICA[CÇ][AÃ]O DA PRESID[EÊ]NCIA|EMENDAS? OU SUBSTITUTIVOS? PUBLICADOS|EMENDAS N[AÃ]O RECEBIDAS PUBLICADAS|VOTA[CÇ][OÕ]ES NOMINAIS|PROPOSI[CÇ][OÕ]ES N[AÃ]O RECEBIDAS|ORDEM DO DIA|LEIS)$/;
 const IGNORA_TOPO = /^(MAT[EÉ]RIA ADMINISTRATIVA|MAT[EÉ]RIA VOTADA|ASSEMBLEIA FISCALIZA|EDITAIS DE CONVOCA|ORDENS? DO DIA|ORDEM DO DIA|PRONUNCIAMENTOS|MESA DA ASSEMBLEIA|SUM[AÁ]RIO)/;
 const IGNORA_SUB = /^(Comparecimento|Abertura|Atas|Encerramento|Quest(ão|ões) de Ordem|Falta de Qu[oó]rum|Abertura de Inscri|1ª Parte|2ª Parte|1ª Fase|2ª Fase|3ª Fase|Presid[eê]ncia d|Oradores Inscritos|Registro de Presen|Interrup|Suspens|Inexist[eê]ncia de Qu[oó]rum|Comunica[cç][oõ]es$|Discuss[aã]o e Vota[cç][aã]o de Pareceres$)/i;
 const SUB_NOME = s => norm(s);
@@ -160,7 +160,7 @@ export function extrairDL(lines){
     if (topo === "ATAS" || plenMat) {
       if (!sub || IGNORA_SUB.test(sub) || IGNORA_SUB2.test(sub)) continue;
       const S = SUB_NOME(sub);
-      if (/^CORRESPONDENCIA/.test(S)) {
+      if (/^(RECEBIMENTO DE )?CORRESPONDENCIA/.test(S)) {
         if (doc && /^MENSAGEM/.test(doc)) {
           if (bold && /^MENSAGEM/.test(t)) { const nx = lines.slice(li + 1, li + 120).find(x => x.b > 0.8 && x.t === x.t.toUpperCase() && !/^MENSAGEM/.test(x.t)); const tp = nx ? nx.t.replace(/\s+N[º°O].*$/i, "") : "PROPOSIÇÃO"; ultimaDescMsg = "MENSAGEM DO GOVERNADOR QUE ENCAMINHA " + tp.toUpperCase(); }
           desc = ultimaDescMsg || "MENSAGEM DO GOVERNADOR";
