@@ -153,7 +153,7 @@ export function extrairDL(lines){
     if (topo === "ATAS" && ata && ata.comissao) { push("REQUERIMENTOS DE COMISSÃO: " + ata.comissao + ", " + ata.data, t, l.p, true, /^RQC /, "RQC"); continue; }
     const plenMat = /^MATERIA DE REUNIAO D[OE] PLENARIO/.test(topo);
     const temNum = /n[º°o]\s*[\d.]+\/\d{4}/i.test(t);
-    if (bold && t.length < 90 && !temNum && ((!upper && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
+    if (bold && t.length < 90 && !temNum && ((!upper && !plenMat && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
     if (bold && !upper && topo === "ATAS") continue;
     if (bold && upper && t.length < 120) { flush(); doc = t; }
     let desc = null;
@@ -162,9 +162,16 @@ export function extrairDL(lines){
       const S = SUB_NOME(sub);
       if (/^(RECEBIMENTO DE )?CORRESPONDENCIA/.test(S)) {
         if (doc && /^MENSAGEM/.test(doc)) {
-          if (bold && /^MENSAGEM/.test(t)) { const nx = lines.slice(li + 1, li + 120).find(x => x.b > 0.8 && x.t === x.t.toUpperCase() && !/^MENSAGEM/.test(x.t)); const tp = nx ? nx.t.replace(/\s+N[º°O].*$/i, "") : "PROPOSIÇÃO"; ultimaDescMsg = "MENSAGEM DO GOVERNADOR QUE ENCAMINHA " + tp.toUpperCase(); }
+          if (bold && /^MENSAGEM/.test(t)) {
+            const nx = lines.slice(li + 1, li + 120).find(x => x.b > 0.8 && x.t === x.t.toUpperCase() && !/^MENSAGEM/.test(x.t)); const tp = nx ? nx.t.replace(/\s+N[º°O].*$/i, "") : "PROPOSIÇÃO";
+            // texto da própria mensagem (até o próximo título): retificação, emenda/substitutivo ou encaminhamento de projeto
+            let corpo = ""; for (let j = li + 1; j < lines.length && j < li + 80 && !(lines[j].b > 0.8 && lines[j].t === lines[j].t.toUpperCase() && lines[j].t.length > 3); j++) corpo += " " + lines[j].t;
+            ultimaDescMsg = /retifica/i.test(corpo) ? "MENSAGEM DO GOVERNADOR QUE RETIFICA MENSAGEM ANTERIOR"
+              : /(emendas?|substitutivos?)\s+ao\s+Projeto/i.test(corpo.slice(0, 900)) ? "MENSAGEM DO GOVERNADOR QUE ENCAMINHA EMENDA OU SUBSTITUTIVO COM DESPACHO À MESA"
+              : "MENSAGEM DO GOVERNADOR QUE ENCAMINHA " + tp.toUpperCase() + (/cr[ée]dito suplementar/i.test(corpo) ? " - CRÉDITO SUPLEMENTAR" : "");
+          }
           desc = ultimaDescMsg || "MENSAGEM DO GOVERNADOR";
-          if (!(bold && upper)) continue;
+          if (!(bold && upper)) { if (/^[–-]\s*Anexe-se/i.test(t)) push(desc, t, l.p); continue; }   // despacho "– Anexe-se ao Projeto de Resolução nº 139/2026"; a mensagem citada no texto não entra
         } else if (doc && /^(PROJETO|PROPOSTA|VETO)/.test(doc) && ultimaDescMsg) {
           desc = ultimaDescMsg; if (!(bold && upper)) continue;
         } else desc = "OFÍCIOS";
@@ -174,7 +181,9 @@ export function extrairDL(lines){
         if (/^REQUERIMENTO/.test(d0)) { if (!(bold && upper)) push(desc, t, l.p, false, null, "RQN"); continue; }
         if (TIT_DOC.test(d0)) { if (!(bold && upper)) push(desc, t, l.p, false, null, TIPO_TITULO(d0)); continue; }
         if (!(bold && upper)) { push(desc, t, l.p, false, /^MSG /); continue; }
-      } else desc = sub.toUpperCase().replace(/^PALAVRAS D[AO] PRESIDENTE.*/, "PALAVRAS DO PRESIDENTE").replace(/^DESIGNAÇÃO DE COMISSÃO$/, "DESIGNAÇÃO DE COMISSÕES");
+      } else if (/^ACORDOS? DE LIDERES/.test(S)) desc = "DECISÃO DA PRESIDÊNCIA, ACORDO DE LÍDERES";
+      else if (/^RECEBIMENTO DE (SUBSTITUTIVO|EMENDA)/.test(S)) { desc = "EMENDAS OU SUBSTITUTIVOS PUBLICADOS"; if (!bold) continue; }   // só os títulos "SUBSTITUTIVO Nº 1 AO PROJETO ..."; a justificação cita mensagens
+      else desc = sub.toUpperCase().replace(/^PALAVRAS D[AO] PRESIDENTE.*/, "PALAVRAS DO PRESIDENTE").replace(/^DESIGNAÇÃO DE COMISSÃO$/, "DESIGNAÇÃO DE COMISSÕES");
     } else if (/^(TRAMITA|PARECERES)/.test(topo)) {
       if (bold && /^PARECER/i.test(t)) {
         flush();
