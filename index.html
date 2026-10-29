@@ -482,13 +482,15 @@ async function ajustarResumo(data, itens){
     const pa = resumo.dias.find(r => r.data === data && r.status === i.status); if (pa) pa.n += 1; else resumo.dias.push({ data, status: i.status, n: 1 });
   }
 }
+const cacheDia = new Map();
 async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
   if (dia && dia.itens) await ajustarResumo(sel, dia.itens);
   if (resumo && resumo.dias) {   // demais dias com divergentes: corrige o balão
-    const outros = [...new Set(resumo.dias.filter(r => ["divergente", "revisar", "aguardando", "pendente"].includes(r.status) && r.n > 0 && r.data !== sel).map(r => r.data))];
-    await Promise.all(outros.map(async d => { try { const x = await get("/api/dia?data=" + d); if (x && x.itens) await ajustarResumo(d, x.itens); } catch (e) {} }));
+    // só divergentes/revisar, e no máximo uma consulta por dia a cada 30 min (poupa o limite diário do banco D1)
+    const outros = [...new Set(resumo.dias.filter(r => ["divergente", "revisar"].includes(r.status) && r.n > 0 && r.data !== sel).map(r => r.data))];
+    await Promise.all(outros.map(async d => { try { let c = cacheDia.get(d); if (!c || Date.now() - c.t > 30 * 60000) { c = { t: Date.now(), s: JSON.stringify(await get("/api/dia?data=" + d)) }; cacheDia.set(d, c); } const x = JSON.parse(c.s); if (x && x.itens) await ajustarResumo(d, x.itens); } catch (e) {} }));
   }
   try { await carregarDiarios(); } catch (e) { diarios = []; }
   renderDays(); render();
@@ -502,7 +504,7 @@ $("rodar").addEventListener("click", async () => {
   try { const j = await get("/api/rodar"); b.textContent = j.ok ? "Iniciado; atualiza em 1 min" : j.msg; } catch { b.textContent = "Erro"; }
   setTimeout(() => { load(); b.disabled = false; b.textContent = "↻ Conferir agora"; }, 60000);
 });
-load(); setInterval(load, 60000);
+load(); setInterval(() => { if (!document.hidden) load(); }, 5 * 60000);   // atualiza a cada 5 min, só com a aba visível
 })();
 (function(){const f=document.getElementById("fixo");const sen=document.createElement("div");sen.style.cssText="position:absolute;top:0;left:0;height:1px;width:1px";f.parentNode.style.position="relative";f.before(sen);new IntersectionObserver(([e])=>f.classList.toggle("stuck",!e.isIntersecting)).observe(sen);})();
 </script>
