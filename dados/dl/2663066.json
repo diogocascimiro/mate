@@ -1,0 +1,1175 @@
+{
+ "versao": 17,
+ "id": "2663066",
+ "data": "2026-10-30",
+ "url": "https://mediaserver.almg.gov.br/acervo/663/66/2663066.pdf",
+ "obs": "",
+ "paginas": 91,
+ "extraido_em": "2026-10-30T16:40:30.782Z",
+ "grupos": [
+  {
+   "desc": "PROPOSIÇÕES DE LEI",
+   "pag": "1 - 8",
+   "props": [
+    {
+     "prop": "PL 4564/2025",
+     "pag": 1,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27031"
+    },
+    {
+     "prop": "PL 4430/2025",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27032"
+    },
+    {
+     "prop": "PL 3825/2025",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27033"
+    },
+    {
+     "prop": "PL 2443/2024",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27034"
+    },
+    {
+     "prop": "PL 2352/2024",
+     "pag": 4,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27035"
+    },
+    {
+     "prop": "PL 2172/2024",
+     "pag": 4,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27036"
+    },
+    {
+     "prop": "PL 873/2023",
+     "pag": 6,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27037"
+    },
+    {
+     "prop": "PL 892/2019",
+     "pag": 6,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27038"
+    },
+    {
+     "prop": "PL 179/2019",
+     "pag": 7,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27039"
+    },
+    {
+     "prop": "PL 4131/2025",
+     "pag": 8,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27040"
+    },
+    {
+     "prop": "PL 5428/2026",
+     "pag": 8,
+     "status": "aguardando",
+     "mate": "",
+     "origem": "Proposição de Lei 27041"
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA OFÍCIOS",
+   "pag": "10",
+   "props": [
+    {
+     "prop": "MSG 296/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE RETIFICA MENSAGEM ANTERIOR",
+   "pag": "10",
+   "props": [
+    {
+     "prop": "MSG 300/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA EMENDA OU SUBSTITUTIVO COM DESPACHO À MESA",
+   "pag": "10",
+   "props": [
+    {
+     "prop": "MSG 301/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - REQUERIMENTOS",
+   "pag": "10",
+   "props": [
+    {
+     "prop": "RQN 19110/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19348/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - PROJETOS DE LEI",
+   "pag": "10",
+   "props": [
+    {
+     "prop": "PL 6186/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6187/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE LEI",
+   "pag": "11 - 19",
+   "props": [
+    {
+     "prop": "PL 6199/2026",
+     "pag": 11,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6201/2026",
+     "pag": 11,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6202/2026",
+     "pag": 12,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6204/2026",
+     "pag": 13,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6216/2026",
+     "pag": 14,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6217/2026",
+     "pag": 15,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6221/2026",
+     "pag": 16,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6222/2026",
+     "pag": 18,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6223/2026",
+     "pag": 18,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6225/2026",
+     "pag": 19,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6226/2026",
+     "pag": 19,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6227/2026",
+     "pag": 19,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - MESA DA ASSEMBLEIA, VOTADO EM PLENÁRIO",
+   "pag": "20 - 23",
+   "props": [
+    {
+     "prop": "RQN 19561/2026",
+     "pag": 20,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19722/2026",
+     "pag": 20,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19728/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19746/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19747/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19748/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19758/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19761/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, COM COMUNICAÇÃO",
+   "pag": "20 - 25",
+   "props": [
+    {
+     "prop": "RQN 19721/2026",
+     "pag": 20,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19740/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19741/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19742/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19743/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19744/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19745/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19750/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19751/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19752/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19753/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19754/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19755/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19757/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19759/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19760/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19763/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19766/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19767/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19768/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19769/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19770/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19773/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19774/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19775/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19776/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19777/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19778/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19779/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19780/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19781/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19782/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19783/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19784/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19785/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - COMISSÕES TEMÁTICAS",
+   "pag": "21 - 24",
+   "props": [
+    {
+     "prop": "RQN 19732/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19733/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19734/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19735/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19738/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19756/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19762/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19764/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19765/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - ANEXADOS",
+   "pag": "21",
+   "props": [
+    {
+     "prop": "RQN 19736/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19575/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, REUNIÃO ESPECIAL",
+   "pag": "21",
+   "props": [
+    {
+     "prop": "RQN 19739/2026",
+     "pag": 21,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE RESOLUÇÃO",
+   "pag": "25",
+   "props": [
+    {
+     "prop": "PRE 138/2026",
+     "pag": 25,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "COMUNICAÇÃO DA PRESIDÊNCIA",
+   "pag": "28",
+   "props": [
+    {
+     "prop": "RQN 19721/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19759/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19760/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19740/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19741/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19742/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19743/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19744/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19745/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19750/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19751/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19752/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19753/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19754/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19755/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19757/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19763/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19766/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19767/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19768/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19769/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19770/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19773/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19774/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19775/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19776/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19777/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19778/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19779/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19780/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19781/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19782/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19783/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19784/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19785/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "LEITURA DE COMUNICAÇÕES",
+   "pag": "28 - 29",
+   "props": [
+    {
+     "prop": "RQN 19318/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19568/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19571/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 5385/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 3978/2025",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19572/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 3380/2023",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 3382/2023",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 5131/2023",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 5137/2023",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 7112/2024",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 8383/2024",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 11154/2025",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 11159/2025",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 11160/2025",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 5399/2023",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 5613/2024",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 13533/2025",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19327/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19358/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 10581/2025",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 18454/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 18996/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "DESPACHO DE REQUERIMENTOS",
+   "pag": "29",
+   "props": [
+    {
+     "prop": "RQN 19580/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 5853/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19171/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19480/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: SAÚDE, 21/10",
+   "pag": "75 - 77",
+   "props": [
+    {
+     "prop": "RQC 22978/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 22980/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23042/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23055/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23174/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23175/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23176/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23177/2026",
+     "pag": 75,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23178/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23179/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23180/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23181/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23182/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23183/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23544/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23545/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23546/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23547/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23548/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23549/2026",
+     "pag": 76,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23552/2026",
+     "pag": 77,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23554/2026",
+     "pag": 77,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23555/2026",
+     "pag": 77,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23565/2026",
+     "pag": 77,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23601/2026",
+     "pag": 77,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "ERRATAS",
+   "pag": "91",
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "ACORDOS DE LÍDERES",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 29/10/2026, na pág. 12, no fecho das duas decisões da presidência, onde se lê: “Leninha, 2ª-vice-presidenta, no exercício da presidência.”, leia-se: “Leninha, presidente em exercício.”.",
+     "pag": 91
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-10-30T16:43:27.042Z"
+}
