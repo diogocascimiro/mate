@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-03T17:47:50.284Z",
+ "atualizado_em": "2026-11-04T17:59:33.975Z",
  "edicoes": [
   {
    "fonte": "PRAZO",
@@ -12,15 +12,35 @@
   },
   {
    "fonte": "DL",
+   "id": "2664128",
+   "data": "2026-11-04",
+   "url": "https://mediaserver.almg.gov.br/acervo/664/128/2664128.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2664128.json",
+   "contagem": {
+    "ok": 61
+   }
+  },
+  {
+   "fonte": "DL",
    "id": "2663066",
    "data": "2026-10-30",
    "url": "https://mediaserver.almg.gov.br/acervo/663/66/2663066.pdf",
    "obs": "",
    "arquivo": "dados/dl/2663066.json",
    "contagem": {
-    "aguardando": 14,
-    "ok": 159
+    "ok": 170,
+    "pendente": 3
    }
+  },
+  {
+   "fonte": "DL",
+   "id": "2664487",
+   "data": "2026-10-30",
+   "url": "https://mediaserver.almg.gov.br/acervo/664/487/2664487.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2664487.json",
+   "contagem": {}
   },
   {
    "fonte": "DL",
@@ -32,6 +52,15 @@
    "contagem": {
     "ok": 54
    }
+  },
+  {
+   "fonte": "DL",
+   "id": "2664115",
+   "data": "2026-10-29",
+   "url": "https://mediaserver.almg.gov.br/acervo/664/115/2664115.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2664115.json",
+   "contagem": {}
   },
   {
    "fonte": "DL",

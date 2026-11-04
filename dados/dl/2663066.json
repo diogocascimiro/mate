@@ -14,78 +14,78 @@
     {
      "prop": "PL 4564/2025",
      "pag": 1,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 1",
      "origem": "Proposição de Lei 27031"
     },
     {
      "prop": "PL 4430/2025",
      "pag": 2,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 2",
      "origem": "Proposição de Lei 27032"
     },
     {
      "prop": "PL 3825/2025",
      "pag": 3,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 3",
      "origem": "Proposição de Lei 27033"
     },
     {
      "prop": "PL 2443/2024",
      "pag": 3,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 3",
      "origem": "Proposição de Lei 27034"
     },
     {
      "prop": "PL 2352/2024",
      "pag": 4,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 4",
      "origem": "Proposição de Lei 27035"
     },
     {
      "prop": "PL 2172/2024",
      "pag": 4,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 4",
      "origem": "Proposição de Lei 27036"
     },
     {
      "prop": "PL 873/2023",
      "pag": 6,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 6",
      "origem": "Proposição de Lei 27037"
     },
     {
      "prop": "PL 892/2019",
      "pag": 6,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 6",
      "origem": "Proposição de Lei 27038"
     },
     {
      "prop": "PL 179/2019",
      "pag": 7,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 7",
      "origem": "Proposição de Lei 27039"
     },
     {
      "prop": "PL 4131/2025",
      "pag": 8,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 8",
      "origem": "Proposição de Lei 27040"
     },
     {
      "prop": "PL 5428/2026",
      "pag": 8,
-     "status": "aguardando",
-     "mate": "",
+     "status": "ok",
+     "mate": "publicada no DL em 30 10 2026, pág 8",
      "origem": "Proposição de Lei 27041"
     }
    ]
@@ -97,7 +97,7 @@
     {
      "prop": "MSG 296/2026",
      "pag": 10,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     }
    ]
@@ -109,7 +109,7 @@
     {
      "prop": "MSG 300/2026",
      "pag": 10,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     }
    ]
@@ -121,7 +121,7 @@
     {
      "prop": "MSG 301/2026",
      "pag": 10,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     }
    ]
@@ -1171,5 +1171,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-03T17:47:46.392Z"
+ "conferido_em": "2026-11-04T17:57:22.070Z"
 }

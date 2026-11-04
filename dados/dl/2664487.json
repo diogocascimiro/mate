@@ -1,0 +1,24 @@
+{
+ "versao": 17,
+ "id": "2664487",
+ "data": "2026-10-30",
+ "url": "https://mediaserver.almg.gov.br/acervo/664/487/2664487.pdf",
+ "obs": "",
+ "paginas": 1,
+ "extraido_em": "2026-11-04T17:57:23.067Z",
+ "grupos": [
+  {
+   "desc": "ERRATAS",
+   "pag": "1",
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "",
+     "texto": "",
+     "pag": 1
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-04T17:57:23.067Z"
+}

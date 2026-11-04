@@ -1,0 +1,24 @@
+{
+ "versao": 17,
+ "id": "2664115",
+ "data": "2026-10-29",
+ "url": "https://mediaserver.almg.gov.br/acervo/664/115/2664115.pdf",
+ "obs": "",
+ "paginas": 1,
+ "extraido_em": "2026-11-04T17:57:04.877Z",
+ "grupos": [
+  {
+   "desc": "ERRATAS",
+   "pag": "1",
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "",
+     "texto": "",
+     "pag": 1
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-04T17:57:04.877Z"
+}
