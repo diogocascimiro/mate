@@ -1,0 +1,522 @@
+{
+ "versao": 17,
+ "id": "2665964",
+ "data": "2026-11-05",
+ "url": "https://mediaserver.almg.gov.br/acervo/665/964/2665964.pdf",
+ "obs": "",
+ "paginas": 38,
+ "extraido_em": "2026-11-05T17:58:03.754Z",
+ "grupos": [
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: ESPORTE, LAZER E JUVENTUDE, 13/08",
+   "pag": "1",
+   "props": [
+    {
+     "prop": "RQC 19111/2026",
+     "pag": 1,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: DEFESA DOS DIREITOS DA MULHER, 20/10",
+   "pag": "2 - 5",
+   "props": [
+    {
+     "prop": "RQC 15762/2025",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 18531/2026",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 3016/2023",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 17980/2026",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 16964/2026",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 14276/2025",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 6579/2024",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23100/2026",
+     "pag": 2,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23101/2026",
+     "pag": 2,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23104/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23105/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23106/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23107/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23109/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23110/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23111/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23112/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23114/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23153/2026",
+     "pag": 3,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23154/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23155/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23156/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23157/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23158/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23239/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23264/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23265/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23291/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23656/2026",
+     "pag": 4,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23657/2026",
+     "pag": 5,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23658/2026",
+     "pag": 5,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23659/2026",
+     "pag": 5,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    },
+    {
+     "prop": "RQC 23660/2026",
+     "pag": 5,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 1"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: SAÚDE, 28/10",
+   "pag": "6",
+   "props": [
+    {
+     "prop": "RQC 23675/2026",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 6"
+    },
+    {
+     "prop": "RQC 23693/2026",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 6"
+    },
+    {
+     "prop": "RQC 23719/2026",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 6"
+    },
+    {
+     "prop": "RQC 23720/2026",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 6"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: EXTRAORDINÁRIA DE DEFESA DA HABITAÇÃO E DA REFORMA URBANA, 28/10",
+   "pag": "7",
+   "props": [
+    {
+     "prop": "RQC 23268/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 7"
+    },
+    {
+     "prop": "RQC 23269/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 7"
+    },
+    {
+     "prop": "RQC 23270/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 7"
+    },
+    {
+     "prop": "RQC 23271/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 7"
+    },
+    {
+     "prop": "RQC 23664/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 7"
+    },
+    {
+     "prop": "RQC 23713/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 7"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: SAÚDE, 04/11",
+   "pag": "10",
+   "props": [
+    {
+     "prop": "RQC 23788/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 9"
+    },
+    {
+     "prop": "RQC 23811/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 9"
+    },
+    {
+     "prop": "RQC 23818/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 9"
+    },
+    {
+     "prop": "RQC 23822/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 9"
+    },
+    {
+     "prop": "RQC 23823/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 9"
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: FISCALIZAÇÃO FINANCEIRA E ORÇAMENTÁRIA, 04/11",
+   "pag": "10 - 11",
+   "props": [
+    {
+     "prop": "RQC 23829/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 10"
+    },
+    {
+     "prop": "RQC 23830/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 10"
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
+   "pag": "11 - 12",
+   "props": [
+    {
+     "prop": "MSG 299/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicada no DL em 5 11 2026, pág 11"
+    },
+    {
+     "prop": "PL 6220/2026",
+     "pag": 12,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 12"
+    }
+   ]
+  },
+  {
+   "desc": "EMENDAS OU SUBSTITUTIVOS PUBLICADOS",
+   "pag": "12 - 13",
+   "props": [
+    {
+     "prop": "PLC 8/2023",
+     "pag": 12,
+     "status": "ok",
+     "mate": "publicada no DL em 5 11 2026, pág 12"
+    },
+    {
+     "prop": "PL 1208/2023",
+     "pag": 13,
+     "status": "ok",
+     "mate": "publicada no DL em 5 11 2026, pág 13"
+    },
+    {
+     "prop": "PLC 96/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "publicada no DL em 5 11 2026, pág 13"
+    }
+   ]
+  },
+  {
+   "desc": "ACORDO DE LÍDERES",
+   "pag": "13 - 14",
+   "props": [
+    {
+     "prop": "PL 6186/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "publicada no DL em 5 11 2026, pág 13"
+    },
+    {
+     "prop": "PL 6187/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "publicada no DL em 5 11 2026, pág 13"
+    },
+    {
+     "prop": "VET 37/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicada no DL em 5 11 2026, pág 13"
+    }
+   ]
+  },
+  {
+   "desc": "PARECERES",
+   "pag": "20 - 37",
+   "props": [
+    {
+     "prop": "PL 4062/2025",
+     "pag": 20,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 20"
+    },
+    {
+     "prop": "PL 5175/2026",
+     "pag": 23,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 23"
+    },
+    {
+     "prop": "PL 779/2019",
+     "pag": 25,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 25"
+    },
+    {
+     "prop": "PL 4483/2025",
+     "pag": 27,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 27"
+    },
+    {
+     "prop": "PL 4614/2025",
+     "pag": 28,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 28"
+    },
+    {
+     "prop": "PRE 188/2022",
+     "pag": 30,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 30"
+    },
+    {
+     "prop": "PL 356/2023",
+     "pag": 30,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 30"
+    },
+    {
+     "prop": "PRE 43/2024",
+     "pag": 31,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 31"
+    },
+    {
+     "prop": "PL 2303/2024",
+     "pag": 32,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 32"
+    },
+    {
+     "prop": "PL 2705/2024",
+     "pag": 32,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 32"
+    },
+    {
+     "prop": "PL 3565/2025",
+     "pag": 34,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 34"
+    },
+    {
+     "prop": "PL 3830/2025",
+     "pag": 34,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 34"
+    },
+    {
+     "prop": "PL 3980/2025",
+     "pag": 36,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 36"
+    },
+    {
+     "prop": "PL 4172/2025",
+     "pag": 36,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 36"
+    },
+    {
+     "prop": "PL 5417/2026",
+     "pag": 37,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 37"
+    },
+    {
+     "prop": "PL 5647/2026",
+     "pag": 37,
+     "status": "ok",
+     "mate": "Publicado no DL em 5 11 2026, pág 37"
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-05T17:59:35.851Z"
+}

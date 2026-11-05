@@ -1,6 +1,18 @@
 {
- "atualizado_em": "2026-11-04T17:59:33.975Z",
+ "atualizado_em": "2026-11-05T18:00:23.768Z",
  "edicoes": [
+  {
+   "fonte": "DL",
+   "id": "2665964",
+   "data": "2026-11-05",
+   "url": "https://mediaserver.almg.gov.br/acervo/665/964/2665964.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2665964.json",
+   "contagem": {
+    "aguardando": 8,
+    "ok": 67
+   }
+  },
   {
    "fonte": "PRAZO",
    "id": "2663066",
