@@ -1,0 +1,92 @@
+{
+ "data": "2026-11-07",
+ "grupos": [
+  {
+   "desc": "LEIS",
+   "pag": "1 - 2",
+   "props": [
+    {
+     "prop": "LEI 26064/2026",
+     "pag": 2,
+     "norma": "Lei 26064 2026",
+     "status": "ok",
+     "mate": "Lei 26064 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 4448/2025"
+    },
+    {
+     "prop": "LEI 26063/2026",
+     "pag": 2,
+     "norma": "Lei 26063 2026",
+     "status": "ok",
+     "mate": "Lei 26063 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 4703/2025"
+    },
+    {
+     "prop": "LEI 26062/2026",
+     "pag": 2,
+     "norma": "Lei 26062 2026",
+     "status": "aguardando",
+     "mate": "",
+     "origem": ""
+    },
+    {
+     "prop": "LEI 26061/2026",
+     "pag": 2,
+     "norma": "Lei 26061 2026",
+     "status": "ok",
+     "mate": "Lei 26061 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 5004/2025"
+    },
+    {
+     "prop": "LEI 26060/2026",
+     "pag": 1,
+     "norma": "Lei 26060 2026",
+     "status": "ok",
+     "mate": "Lei 26060 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 3632/2022"
+    },
+    {
+     "prop": "LEI 26059/2026",
+     "pag": 1,
+     "norma": "Lei 26059 2026",
+     "status": "ok",
+     "mate": "Lei 26059 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 4027/2022"
+    },
+    {
+     "prop": "LEI 26058/2026",
+     "pag": 1,
+     "norma": "Lei 26058 2026",
+     "status": "ok",
+     "mate": "Lei 26058 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 2196/2024"
+    },
+    {
+     "prop": "LEI 26057/2026",
+     "pag": 1,
+     "norma": "Lei 26057 2026",
+     "status": "ok",
+     "mate": "Lei 26057 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 4294/2025"
+    },
+    {
+     "prop": "LEI 26056/2026",
+     "pag": 1,
+     "norma": "Lei 26056 2026",
+     "status": "ok",
+     "mate": "Lei 26056 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 3238/2025"
+    },
+    {
+     "prop": "LEI 26055/2026",
+     "pag": 1,
+     "norma": "Lei 26055 2026",
+     "status": "ok",
+     "mate": "Lei 26055 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 2343/2024"
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-09T20:42:05.921Z"
+}

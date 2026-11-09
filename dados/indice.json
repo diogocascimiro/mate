@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-06T17:31:23.073Z",
+ "atualizado_em": "2026-11-09T20:42:05.928Z",
  "edicoes": [
   {
    "fonte": "PRAZO",
@@ -12,15 +12,44 @@
   },
   {
    "fonte": "DL",
+   "id": "2667933",
+   "data": "2026-11-07",
+   "url": "https://mediaserver.almg.gov.br/acervo/667/933/2667933.pdf",
+   "obs": "Nomeações de candidatos das especialidades de Consultor legislativo - Área I - Desenvolvimento Econômico e Regional - Cód 211 e Jornalista - Área II - Rádio e Televisão - Cód 226 e Técnico de Apoio Legislativo - Cód. 101",
+   "arquivo": "dados/dl/2667933.json",
+   "contagem": {
+    "ok": 58
+   }
+  },
+  {
+   "fonte": "DE",
+   "data": "2026-11-07",
+   "arquivo": "dados/de/2026-11-07.json",
+   "contagem": {
+    "ok": 9,
+    "aguardando": 1
+   }
+  },
+  {
+   "fonte": "DL",
    "id": "2667434",
    "data": "2026-11-06",
    "url": "https://mediaserver.almg.gov.br/acervo/667/434/2667434.pdf",
    "obs": "",
    "arquivo": "dados/dl/2667434.json",
    "contagem": {
-    "aguardando": 24,
-    "ok": 307
+    "ok": 330,
+    "aguardando": 1
    }
+  },
+  {
+   "fonte": "DL",
+   "id": "2668395",
+   "data": "2026-11-06",
+   "url": "https://mediaserver.almg.gov.br/acervo/668/395/2668395.pdf",
+   "obs": "",
+   "arquivo": "dados/dl/2668395.json",
+   "contagem": {}
   },
   {
    "fonte": "DL",

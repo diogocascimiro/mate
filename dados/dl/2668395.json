@@ -1,0 +1,24 @@
+{
+ "versao": 17,
+ "id": "2668395",
+ "data": "2026-11-06",
+ "url": "https://mediaserver.almg.gov.br/acervo/668/395/2668395.pdf",
+ "obs": "",
+ "paginas": 1,
+ "extraido_em": "2026-11-09T20:40:18.695Z",
+ "grupos": [
+  {
+   "desc": "ERRATAS",
+   "pag": "1",
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "",
+     "texto": "",
+     "pag": 1
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-09T20:40:18.695Z"
+}
