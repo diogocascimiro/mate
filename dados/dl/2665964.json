@@ -14,7 +14,7 @@
     {
      "prop": "RQC 19111/2026",
      "pag": 1,
-     "status": "aguardando",
+     "status": "nao_cadastrada",
      "mate": ""
     }
    ]
@@ -26,43 +26,43 @@
     {
      "prop": "RQC 15762/2025",
      "pag": 2,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
      "prop": "RQC 18531/2026",
      "pag": 2,
-     "status": "aguardando",
+     "status": "nao_cadastrada",
      "mate": ""
     },
     {
      "prop": "RQC 3016/2023",
      "pag": 2,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
      "prop": "RQC 17980/2026",
      "pag": 2,
-     "status": "aguardando",
+     "status": "nao_cadastrada",
      "mate": ""
     },
     {
      "prop": "RQC 16964/2026",
      "pag": 2,
-     "status": "aguardando",
+     "status": "nao_cadastrada",
      "mate": ""
     },
     {
      "prop": "RQC 14276/2025",
      "pag": 2,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
      "prop": "RQC 6579/2024",
      "pag": 2,
-     "status": "aguardando",
+     "status": "nao_cadastrada",
      "mate": ""
     },
     {
@@ -518,5 +518,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-09T20:39:47.714Z"
+ "conferido_em": "2026-11-10T17:42:09.376Z"
 }

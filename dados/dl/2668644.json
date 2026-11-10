@@ -1,0 +1,90 @@
+{
+ "versao": 17,
+ "id": "2668644",
+ "data": "2026-11-10",
+ "url": "https://mediaserver.almg.gov.br/acervo/668/644/2668644.pdf",
+ "obs": "",
+ "paginas": 45,
+ "extraido_em": "2026-11-10T17:42:13.025Z",
+ "grupos": [
+  {
+   "desc": "PARECERES",
+   "pag": "11 - 29",
+   "props": [
+    {
+     "prop": "VET 37/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 11"
+    },
+    {
+     "prop": "PL 378/2023",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 14"
+    },
+    {
+     "prop": "PL 5707/2026",
+     "pag": 15,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 15"
+    },
+    {
+     "prop": "RQN 16516/2026",
+     "pag": 17,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 17"
+    },
+    {
+     "prop": "RQN 17473/2026",
+     "pag": 19,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 19"
+    },
+    {
+     "prop": "RQN 17499/2026",
+     "pag": 20,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 20"
+    },
+    {
+     "prop": "RQN 18336/2026",
+     "pag": 21,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 21"
+    },
+    {
+     "prop": "RQN 18579/2026",
+     "pag": 23,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 23"
+    },
+    {
+     "prop": "RQN 19450/2026",
+     "pag": 24,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 24"
+    },
+    {
+     "prop": "RQN 19494/2026",
+     "pag": 26,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 26"
+    },
+    {
+     "prop": "RQN 19505/2026",
+     "pag": 28,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 28"
+    },
+    {
+     "prop": "RQN 19940/2026",
+     "pag": 29,
+     "status": "ok",
+     "mate": "Publicado no DL em 10 11 2026, pág 29"
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-10T17:42:26.807Z"
+}
