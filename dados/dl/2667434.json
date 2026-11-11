@@ -174,7 +174,7 @@
     {
      "prop": "MSG 299/2026",
      "pag": 13,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     }
    ]
@@ -2130,5 +2130,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-10T17:42:10.612Z"
+ "conferido_em": "2026-11-11T17:51:17.508Z"
 }
