@@ -298,8 +298,8 @@
     },
     {
      "prop": "RQN 19827/2026",
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Encerrado o prazo do artigo 104 do Regimento Interno, sem apresentação de recurso."
     },
     {
      "prop": "RQN 19828/2026",
@@ -464,5 +464,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-11T17:57:05.318Z"
+ "conferido_em": "2026-11-12T18:17:08.517Z"
 }

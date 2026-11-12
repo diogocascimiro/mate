@@ -1130,8 +1130,8 @@
     {
      "prop": "PL 2399/2024",
      "pag": 32,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 11 11 2026, pág 32"
     },
     {
      "prop": "PL 4886/2025",
@@ -1502,5 +1502,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-11T17:55:00.024Z"
+ "conferido_em": "2026-11-12T18:12:05.212Z"
 }
