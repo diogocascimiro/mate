@@ -1,0 +1,38 @@
+{
+ "data": "2026-11-18",
+ "referencia": "2026-11-13",
+ "grupos": [
+  {
+   "desc": "PRECLUSÃO DE PRAZO: REQUERIMENTOS, APROVADOS",
+   "pag": "13/11/2026",
+   "props": [
+    {
+     "prop": "RQN 19906/2026",
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19921/2026",
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20003/2026",
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20031/2026",
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20032/2026",
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-13T17:42:18.132Z"
+}
