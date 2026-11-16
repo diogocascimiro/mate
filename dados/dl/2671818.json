@@ -12,22 +12,25 @@
    "pag": "1 - 2",
    "props": [
     {
-     "prop": "PROPLEI 27065",
+     "prop": "PL 4987/2025",
      "pag": 1,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 13 11 2026, pág 1",
+     "origem": "Proposição de Lei 27065"
     },
     {
-     "prop": "PROPLEI 27066",
+     "prop": "PL 4370/2025",
      "pag": 1,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 13 11 2026, pág 1",
+     "origem": "Proposição de Lei 27066"
     },
     {
-     "prop": "PROPLEI 27067",
+     "prop": "PL 5436/2026",
      "pag": 2,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 13 11 2026, pág 2",
+     "origem": "Proposição de Lei 27067"
     }
    ]
   },
@@ -765,5 +768,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-13T17:42:06.180Z"
+ "conferido_em": "2026-11-16T20:20:46.357Z"
 }

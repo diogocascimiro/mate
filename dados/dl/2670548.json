@@ -1118,13 +1118,13 @@
     {
      "prop": "PL 2050/2024",
      "pag": 31,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
      "prop": "PL 2146/2024",
      "pag": 31,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
@@ -1136,7 +1136,7 @@
     {
      "prop": "PL 4886/2025",
      "pag": 35,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
@@ -1502,5 +1502,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-13T17:39:45.007Z"
+ "conferido_em": "2026-11-16T20:20:36.251Z"
 }
