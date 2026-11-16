@@ -266,7 +266,18 @@ async function rodarDE(){
 function contar(grupos){ const c = {}; for (const g of grupos) for (const p of g.props) c[p.status] = (c[p.status] || 0) + 1; return c; }
 
 const t0 = Date.now();
-const dl = await rodarDL();
+// ALMG fora do ar (ex.: HTTP 522 na ponte da Cloudflare) é passageiro: pula esta rodada sem falhar
+// (sem e-mail de "Run failed"); a próxima rodada, 30 min depois, tenta de novo.
+let dl;
+try { dl = await rodarDL(); }
+catch (e) {
+  const msg = String((e && e.message) || e) + " " + String((e && e.cause && e.cause.code) || "");
+  if (/HTTP (5\d\d|429)|fetch failed|ECONNRESET|ECONNREFUSED|ETIMEDOUT|ENOTFOUND|EAI_AGAIN|UND_ERR|socket hang up|aborted/i.test(msg)) {
+    console.log("::warning::ALMG indisponível (" + msg.trim() + "): rodada pulada, tenta de novo na próxima.");
+    process.exit(0);
+  }
+  throw e;
+}
 let de = [];
 try { de = await rodarDE(); } catch (e) { console.log("DE falhou:", e.message); }
 let pz = [];
