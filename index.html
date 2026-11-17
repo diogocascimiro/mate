@@ -292,11 +292,38 @@ async function carregarDiarios(){
     let j = cacheDiario.get(chave);
     if (!j) { try { j = await (await fetch(DADOS + "/" + e.arquivo + "?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })).json(); cacheDiario.set(chave, j); } catch (err) { continue; } }
     if (e.fonte === "DL") await reconfDL(e, j);
+    if (e.fonte === "PRAZO") await reconfPZ(e, j);
     const itens = [];
     (j.grupos || []).forEach((g, k) => g.props.forEach(p => itens.push({ grupo: k, prop: p.prop, acao: e.fonte === "DL" ? "Publicação no DL" : e.fonte === "PRAZO" ? "Preclusão de prazo (art. 104)" : "Publicação no DE", detalhe: [p.pag ? "pág. " + p.pag : "", p.origem || ""].filter(Boolean).join(" · "), mate: p.mate || "", status: p.status === "novo" ? "aguardando" : p.status })));
     out.push({ fonte: e.fonte, chave: String(e.id || e.data), data: e.data, ref: j.referencia || null, url: e.url || j.url, obs: e.obs || "", paginas: j.paginas || 0, grupos: j.grupos || [], itens });
   }
   diarios = out;
+  // balões dos outros dias: a rodada dos diários é de 30 em 30 min; o que já foi lançado depois dela é reconferido aqui, direto no portal
+  const desde = new Date(Date.now() - 14 * 864e5).toISOString().slice(0, 10);
+  await Promise.all((indice.edicoes || []).filter(e => diaTrab(e.data) !== sel && e.data >= desde && ["DL", "PRAZO"].includes(e.fonte) && Object.keys(e.contagem || {}).some(k => k !== "ok")).map(async e => {
+    const chave = e.arquivo + "@" + JSON.stringify(e.contagem);
+    let j = cacheDiario.get(chave);
+    if (!j) { try { j = await (await fetch(DADOS + "/" + e.arquivo + "?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })).json(); cacheDiario.set(chave, j); } catch (err) { return; } }
+    if (e.fonte === "DL") await reconfDL(e, j); else await reconfPZ(e, j);
+  }));
+}
+// preclusão de prazo lançada depois da última rodada: confere no portal o "Encerrado o prazo do artigo 104" a partir da data da publicação
+async function reconfPZ(e, j){
+  const ref = j.referencia; if (!ref) return;
+  const fila = []; for (const g of j.grupos || []) for (const p of g.props) if (p.status !== "ok" && /^[A-Z]{2,4} \d+\/\d{4}$/.test(p.prop)) fila.push(p);
+  if (!fila.length) return;
+  const um = async p => {
+    const k = "pz|" + p.prop + "|" + ref; let mate = null;
+    try { mate = sessionStorage.getItem(k); } catch (er) {}
+    if (mate === null) {
+      const [tp, na] = p.prop.split(" "); const [n, a] = na.split("/");
+      try { const r = await (await fetch(`https://dadosabertos.almg.gov.br/api/v2/proposicoes/${tp}/${n}/${a}?formato=json`)).json(); const h = ((r.resultado.listaItem[0] || {}).listaHistoricoTramitacoes || []); const x = h.find(x => x.data >= ref && /encerrado o prazo do artigo 104/i.test(String(x.historico || ""))); mate = x ? (String(x.historico).replace(/\s+/g, " ").match(/Encerrado o prazo[^.]*\./i) || [""])[0] : ""; } catch (er) { return; }
+      try { if (mate) sessionStorage.setItem(k, mate); } catch (er) {}
+    }
+    if (mate) { p.status = "ok"; p.mate = mate; }
+  };
+  for (let i = 0; i < fila.length; i += 8) await Promise.all(fila.slice(i, i + 8).map(um));
+  const c = {}; for (const g of j.grupos || []) for (const p of g.props) c[p.status] = (c[p.status] || 0) + 1; e.contagem = c;
 }
 
 function renderDays(){
