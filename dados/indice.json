@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-17T17:25:08.702Z",
+ "atualizado_em": "2026-11-17T17:33:34.368Z",
  "edicoes": [
   {
    "fonte": "PRAZO",
@@ -7,7 +7,7 @@
    "data": "2026-11-18",
    "arquivo": "dados/prazo/2671818.json",
    "contagem": {
-    "aguardando": 5
+    "aguardando": 6
    }
   },
   {
@@ -23,12 +23,21 @@
   },
   {
    "fonte": "PRAZO",
+   "id": "2671525",
+   "data": "2026-11-17",
+   "arquivo": "dados/prazo/2671525.json",
+   "contagem": {
+    "ok": 23
+   }
+  },
+  {
+   "fonte": "PRAZO",
    "id": "2670548",
    "data": "2026-11-16",
    "arquivo": "dados/prazo/2670548.json",
    "contagem": {
     "ok": 62,
-    "aguardando": 1
+    "pendente": 1
    }
   },
   {
@@ -89,7 +98,7 @@
    "data": "2026-11-11",
    "arquivo": "dados/prazo/2667434.json",
    "contagem": {
-    "ok": 91
+    "ok": 122
    }
   },
   {
@@ -188,7 +197,7 @@
    "data": "2026-11-04",
    "arquivo": "dados/prazo/2663066.json",
    "contagem": {
-    "ok": 35
+    "ok": 58
    }
   },
   {
@@ -251,6 +260,15 @@
    "arquivo": "dados/dl/2660955.json",
    "contagem": {
     "ok": 492
+   }
+  },
+  {
+   "fonte": "PRAZO",
+   "id": "2658668",
+   "data": "2026-10-28",
+   "arquivo": "dados/prazo/2658668.json",
+   "contagem": {
+    "ok": 10
    }
   },
   {
