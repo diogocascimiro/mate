@@ -25,9 +25,9 @@
      "prop": "LEI 26062/2026",
      "pag": 2,
      "norma": "Lei 26062 2026",
-     "status": "pendente",
-     "mate": "",
-     "origem": ""
+     "status": "ok",
+     "mate": "Lei 26062 publicada no Diário do Executivo em 7 11 2026",
+     "origem": "PL 4775/2025"
     },
     {
      "prop": "LEI 26061/2026",
@@ -88,5 +88,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:19:24.609Z"
+ "conferido_em": "2026-11-17T16:30:52.842Z"
 }
