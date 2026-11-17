@@ -488,7 +488,8 @@ function reconferir(i){
   if (i.status === "aguardando" && !i.mate && i.reuniao_id && !/^RQC /.test(i.prop) && i.acao !== "Designação de relatoria") { i.status = "pendente"; return false; }   // reunião com resultado publicado: o lançamento já é devido (sem carência de 2 dias úteis)
   if (i.status === "revisar" && i.mate && normC(i.acao).length > 8 && normC(i.mate).includes(normC(i.acao))) { i.status = "ok"; return true; }   // ação sem regra própria, com o mesmo texto no portal ("Concedida vista do parecer")
   if (i.status === "revisar" && i.mate && /^rejeitad/.test(normC(i.acao))) { const ok = /rejeitad/.test(normC(i.mate)); if (ok) i.status = "ok"; return ok; }   // "Rejeitado": parecer rejeitado na reunião
-  if (i.status === "divergente" && i.mate && /vista/.test(normC(i.acao)) && /vista/.test(normC(i.mate))) { i.status = "ok"; return true; }   // "Concedida vista do parecer" × portal "Parecer pela aprovação. Vista ao Dep. ..."
+  if (i.status === "divergente" && i.mate && /vista/.test(normC(i.acao)) && /vista/.test(normC(i.mate))) { i.status = "ok"; return true; }
+  if (i.status === "divergente" && i.mate && /prazo regimental/.test(normC(i.acao)) && /prazo regimental/.test(normC(i.mate))) { i.status = "ok"; return true; }   // "Prazo regimental do relator" × portal "Pedido de prazo regimental pelo relator"   // "Concedida vista do parecer" × portal "Parecer pela aprovação. Vista ao Dep. ..."
   if (i.status === "divergente" && i.mate && /^RQN /.test(i.prop) && normC(i.acao).startsWith("parecer aprovado") && /aprovado o requerimento|aprovada a proposicao/.test(normC(i.mate))) { i.status = "ok"; return true; }   // RQN votado na comissão: o resultado diz "Parecer aprovado", o portal "Aprovado o requerimento na comissão"
   if (i.status !== "divergente" || !i.mate || /^RQ/.test(i.prop) || !normC(i.acao).startsWith("parecer aprovado")) return false;
   const t = normC(i.mate), d = normC(i.detalhe);
@@ -518,7 +519,7 @@ async function especiais(itens){
       }
       const t = normC(mate), ac = normC(i.acao);
       i._de = i.status; i.mate = mate;
-      if (ac.startsWith("parecer aprovado") || /vista/.test(ac)) { i.status = "divergente"; reconferir(i); return; }
+      if (ac.startsWith("parecer aprovado") || /vista|prazo regimental/.test(ac)) { i.status = "divergente"; reconferir(i); return; }
       // "Retirado de pauta por deliberação da Comissão a requerimento do(a)" × portal "Retirado de pauta a requerimento do dep. ...";
       // "Baixado em diligência ao autor" × portal "Aprovado pedido de informação ao autor": mesmo fato, redação diferente
       const ok = /^retirad/.test(ac) ? /retirad[oa] de pauta/.test(t) : /diligencia/.test(ac) ? /diligencia|pedido de informac/.test(t) : /^aprovad/.test(ac) ? /aprovad/.test(t) : /^recebid/.test(ac) ? /recebid/.test(t) : /relatorio/.test(ac) ? /relatorio/.test(t) : /^plenario/.test(ac) ? true : t.includes(ac);
