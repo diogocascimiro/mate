@@ -91,42 +91,6 @@
    ]
   },
   {
-   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA OFÍCIOS",
-   "pag": "10",
-   "props": [
-    {
-     "prop": "MSG 296/2026",
-     "pag": 10,
-     "status": "pendente",
-     "mate": ""
-    }
-   ]
-  },
-  {
-   "desc": "MENSAGEM DO GOVERNADOR QUE RETIFICA MENSAGEM ANTERIOR",
-   "pag": "10",
-   "props": [
-    {
-     "prop": "MSG 300/2026",
-     "pag": 10,
-     "status": "pendente",
-     "mate": ""
-    }
-   ]
-  },
-  {
-   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA EMENDA OU SUBSTITUTIVO COM DESPACHO À MESA",
-   "pag": "10",
-   "props": [
-    {
-     "prop": "MSG 301/2026",
-     "pag": 10,
-     "status": "pendente",
-     "mate": ""
-    }
-   ]
-  },
-  {
    "desc": "OFÍCIOS - REQUERIMENTOS",
    "pag": "10",
    "props": [
@@ -1155,18 +1119,6 @@
      "pag": 77,
      "status": "ok",
      "mate": "Publicado no DL em 30 10 2026, pág 74"
-    }
-   ]
-  },
-  {
-   "desc": "ERRATAS",
-   "pag": "91",
-   "props": [],
-   "erratas": [
-    {
-     "titulo": "ACORDOS DE LÍDERES",
-     "texto": "Na publicação da matéria em epígrafe, na edição de 29/10/2026, na pág. 12, no fecho das duas decisões da presidência, onde se lê: “Leninha, 2ª-vice-presidenta, no exercício da presidência.”, leia-se: “Leninha, presidente em exercício.”.",
-     "pag": 91
     }
    ]
   }
