@@ -10,9 +10,10 @@ const TIPOS = [
   [/^mensage(m|ns)/i, "MSG"],
   [/^vetos?/i, "VET"],
   [/^indica[cç](ão|ao|ões|oes)/i, "IND"],
+  [/^relat[oó]rios? de evento institucional/i, "REL"],
 ];
 const QUEBRA = /^(emendas?|substitutivos?|of[ií]cios?|leis?|decretos?|resolu[cç](ão|ões)|pareceres?|atas?|portarias?|deliberaç(ão|ões)|editais?|avulsos?|subemendas?|artigos?|art\.|incisos?|processos?|contratos?|convênios?|reuni(ão|ões)|termos?)$/i;
-const KW = /(projetos? de lei complementar|projetos? de lei|projetos? de resolu[cç][aã]o|propostas? de emenda [aà] constitui[cç][aã]o|requerimentos? de comiss[aã]o|requerimentos?|mensage(?:m|ns)|vetos?|indica[cç](?:ão|ao|ões|oes)|emendas?|subemendas?|substitutivos?|of[ií]cios?|leis?|leis complementares|lei complementar|decretos?|resolu[cç](?:ão|ões)|pareceres?|deliberaç(?:ão|ões)|portarias?|atos?|avisos?|processos?)\s*:?\s*$/i;
+const KW = /(relat[oó]rios? de evento institucional|projetos? de lei complementar|projetos? de lei|projetos? de resolu[cç][aã]o|propostas? de emenda [aà] constitui[cç][aã]o|requerimentos? de comiss[aã]o|requerimentos?|mensage(?:m|ns)|vetos?|indica[cç](?:ão|ao|ões|oes)|emendas?|subemendas?|substitutivos?|of[ií]cios?|leis?|leis complementares|lei complementar|decretos?|resolu[cç](?:ão|ões)|pareceres?|deliberaç(?:ão|ões)|portarias?|atos?|avisos?|processos?)\s*:?\s*$/i;
 function tipoDe(palavra){
   if (QUEBRA.test(palavra) || /^(leis? complementar(es)?|portarias?|atos?|avisos?|processos?)$/i.test(palavra)) return null;
   for (const [rx, sg] of TIPOS) if (rx.test(palavra)) return sg;
@@ -28,9 +29,13 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     const [ini, i] = pos[q];
     const antes = texto.slice(Math.max(0, ini - 70), ini);
     const kw = antes.match(KW);
-    if (kw) tipo = tipoDe(kw[1]);
-    else if (!/[;:.()]\s*[–-]?\s*$/.test(antes) && antes.trim()) tipo = null;
-    else if (tipoBase && (!tipo || /;\s*$/.test(antes))) tipo = tipoBase;   // lista ("...; nº 23.409/2026, ..."): cada item volta ao tipo da lista, mesmo depois de "Projeto de Lei nº ..." citado no item anterior
+    // "na forma do Substitutivo nº 1, 4.695/2025, do deputado ...": o nº da emenda/substitutivo não interrompe a lista de projetos;
+    // os números com ano que vêm depois dele continuam sendo do tipo da lista
+    let emendaNaLista = false;
+    if (kw && /^(sub)?emendas?$|^substitutivos?$/i.test(kw[1].trim()) && tipo) emendaNaLista = true;
+    else if (kw) tipo = tipoDe(kw[1]);
+    else if (!/([;:.()]|[;,]\s*e)\s*[–-]?\s*$/.test(antes) && antes.trim()) tipo = null;   // item de lista também termina em "; e"
+    else if (tipoBase && (!tipo || /;\s*(e\s*)?$/.test(antes))) tipo = tipoBase;   // lista ("...; nº 23.409/2026, ..."): cada item volta ao tipo da lista, mesmo depois de "Projeto de Lei nº ..." citado no item anterior
     // ata de comissão: correspondência "prestando informações relativas ao Requerimento nº ..." só cita requerimento antigo (não é RQC a lançar)
     // idem para "voto de congratulações formulado em atenção ao Requerimento nº ..." e "de que trata o Requerimento nº ..."
     if (forcarRQC && /\b(relativ[ao]s?|referentes?|em resposta|em atenção|de que trata)\s+(a|ao|aos|à|às|o|os)\s+requerimentos?(\s+em\s+comiss[aã]o)?\s*$/i.test(antes)) { tipo = null; continue; }
@@ -40,7 +45,8 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     const prox = q + 1 < pos.length ? pos[q + 1][0] : texto.length;
     const pv = texto.indexOf(";", i);
     const fim = Math.min(prox, pv < 0 ? texto.length : pv);
-    const trecho = texto.slice(i, fim);
+    let trecho = texto.slice(i, fim), desloc = 0;
+    if (emendaNaLista) { const mm = trecho.match(/^\s*\d{1,4}(?![\d.\/])(?:\s*(?:,|e|a)\s*\d{1,4}(?![\d.\/]))*/); if (mm) { desloc = mm[0].length; trecho = trecho.slice(desloc); } }
     const rn = /(\d{1,3}(?:\.\d{3})+|\d{1,5})(?:\/((?:19|20)\d\d)(?!\d))?/g; let k, pend = [], achados = [], ultimo = 0;
     while ((k = rn.exec(trecho))) {
       const antesC = trecho[k.index - 1], depois = trecho.slice(rn.lastIndex, rn.lastIndex + 3);
@@ -49,7 +55,7 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
       const entre = trecho.slice(Math.max(0, k.index - 4), k.index);
       if (/\sa\s+$/.test(entre) && pend.length) { const ini2 = pend[pend.length - 1]; if (n > ini2 && n - ini2 <= 600) for (let x = ini2 + 1; x < n; x++) pend.push(x); }
       pend.push(n);
-      if (k[2]) { for (const x of pend) achados.push({ n: String(x), ano: k[2], idx: i + k.index }); pend = []; ultimo = rn.lastIndex; }
+      if (k[2]) { for (const x of pend) achados.push({ n: String(x), ano: k[2], idx: i + desloc + k.index }); pend = []; ultimo = rn.lastIndex; }
     }
     if (!t || !achados.length) continue;
     if (/^[\s,.]*(e\s+[\d.]+\/\d{4}\s*)?(foram|foi)\s+publicad|^[^.;]{0,40}publicad[oa]s?\s+na\s+edi[cç][aã]o\s+anterior/i.test(trecho.slice(ultimo))) continue;
@@ -81,7 +87,13 @@ const IGNORA_SUB2 = /^(Discuss[aã]o e Vota[cç][aã]o d|Mat[eé]ria Votada|Home
 // (“nº 12.465/2025, do deputado ...”: em ata de comissão é RQC); senão, a do texto.
 // O número citado em "onde se lê" é o errado, e "logo após o resumo do Requerimento nº X" é só referência.
 export function refsErrata(e){
-  const tit = refs(e.titulo); if (tit.length) return tit;
+  const tit = refs(e.titulo);
+  if (tit.length) {
+    // "onde se lê: “Anexe-se ao Projeto de Lei nº 2.864/2024”, leia-se: “Anexe-se ao Projeto de Lei nº 2.865/2024”": o principal correto também recebe lançamento
+    const ls = [...String(e.texto).matchAll(/leia-se\s*:?\s*[“"]([^”"]*anexe-se[^”"]*)[”"]/gi)].map(x => x[1]).join(" ; ");
+    for (const r of (ls ? refs(ls) : [])) if (!tit.includes(r)) tit.push(r);
+    return tit;
+  }
   const txt = e.texto.replace(/onde se l[eê]\s*:?\s*[“"][^”"]*[”"]/gi, " ");
   const base = /COMISS/i.test(e.titulo) ? "RQC" : null;
   const cit = [...txt.matchAll(/[“"]([^”"]{5,})[”"]/g)].map(x => x[1]).join(" ; ");
@@ -156,6 +168,9 @@ export function extrairDL(lines){
     }
     if (sumario) { if (bold && /^(Comparecimento|Abertura)/.test(t)) sumario = false; else continue; }
     if (topo === "ATAS" && ata && ata.comissao) { push("REQUERIMENTOS DE COMISSÃO: " + ata.comissao + ", " + ata.data, t, l.p, true, /^RQC /, "RQC"); continue; }
+    // "Despacho de Requerimentos" (caixa baixa, negrito) vem logo depois da Comunicação da Presidência, que é seção de topo:
+    // é outro grupo; sem isso, os requerimentos despachados entravam na comunicação (e na preclusão de prazo)
+    if (bold && !upper && /^Despacho de Requerimentos?$/i.test(t) && /^COMUNICACAO DA PRESIDENCIA/.test(topo)) { flush(); topoTxt = "DESPACHO DE REQUERIMENTOS"; continue; }
     const plenMat = /^MATERIA DE REUNIAO D[OE] PLENARIO/.test(topo);
     const temNum = /n[º°o]\s*[\d.]+\/\d{4}/i.test(t);
     if (bold && t.length < 90 && !temNum && ((!upper && !plenMat && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t) && !/^ANEXOS?\b/.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
@@ -179,6 +194,11 @@ export function extrairDL(lines){
           }
           desc = ultimaDescMsg || "MENSAGEM DO GOVERNADOR";
           if (!(bold && upper)) { if (/^[–-]\s*Anexe-se/i.test(t)) push(desc, t, l.p); continue; }   // despacho "– Anexe-se ao Projeto de Resolução nº 139/2026"; a mensagem citada no texto não entra
+        } else if (doc && /^PROPOSTAS? DE A[CÇ][AÃ]O LEGISLATIVA/.test(doc)) {
+          // Proposta de Ação Legislativa (PPAG/LOA): lança só a PLE do título; a ementa cita o projeto de lei, que não entra
+          const m = bold && upper && t.match(/^PROPOSTAS? DE A[CÇ][AÃ]O LEGISLATIVA N[º°O]\s*([\d.]+)\/(\d{4})/i);
+          if (m) { flush(); add("PROPOSTAS DE AÇÃO LEGISLATIVA", "PLE " + m[1].replace(/\./g, "") + "/" + m[2], l.p); }
+          continue;
         } else if (doc && /^(PROJETO|PROPOSTA|VETO|EMENDA|SUBSTITUTIVO)/.test(doc) && ultimaDescMsg) {
           desc = ultimaDescMsg; if (!(bold && upper)) continue;
         } else desc = "OFÍCIOS";

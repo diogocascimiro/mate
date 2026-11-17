@@ -10,7 +10,7 @@ import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { extrairDL, refs, refsErrata } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
-const VERSAO = 20;                 // muda quando a extração muda: reprocessa as edições
+const VERSAO = 21;                 // muda quando a extração muda: reprocessa as edições
 const JANELA = 14;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -117,6 +117,9 @@ async function propsErrata(g){
     if (diretos.length) { for (const r of diretos) if (!g.props.some(p => p.prop === r)) g.props.push({ prop: r, pag: e.pag }); continue; }
     const achados = new Set();
     const chave = normT(e.titulo).slice(0, 45);
+    // errata de ata que só acrescenta/corrige texto sem número de proposição (ex.: comunicado da presidência acrescentado à ata):
+    // não há proposição a lançar; ir à página corrigida pegaria todas as proposições da reunião
+    if (/^ATA D/.test(chave) && /[“"][^”"]{5,}[”"]/.test(e.texto)) continue;
     for (const m of e.texto.matchAll(/edi[cç][aã]o de (\d{1,2})\/(\d{1,2})\/(\d{4}),?\s*(?:na\s+)?p[áa]gs?\.?\s*(\d+)/gi)) {
       const data = `${m[3]}-${m[2].padStart(2, "0")}-${m[1].padStart(2, "0")}`;
       const ls = await paginasEdicao(data, +m[4]);
