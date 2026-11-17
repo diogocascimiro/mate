@@ -38,7 +38,7 @@
     {
      "prop": "PL 6187/2026",
      "pag": 8,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     }
    ]
@@ -1406,5 +1406,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-16T20:20:37.510Z"
+ "conferido_em": "2026-11-17T15:46:55.277Z"
 }
