@@ -32,8 +32,11 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     else if (!/[;:.()]\s*[–-]?\s*$/.test(antes) && antes.trim()) tipo = null;
     else if (tipoBase && (!tipo || /;\s*$/.test(antes))) tipo = tipoBase;   // lista ("...; nº 23.409/2026, ..."): cada item volta ao tipo da lista, mesmo depois de "Projeto de Lei nº ..." citado no item anterior
     // ata de comissão: correspondência "prestando informações relativas ao Requerimento nº ..." só cita requerimento antigo (não é RQC a lançar)
-    if (forcarRQC && /\b(relativ[ao]s?|referentes?|em resposta)\s+(a|ao|aos|à|às)\s+requerimentos?\s*$/i.test(antes)) { tipo = null; continue; }
-    let t = tipo; if (t === "RQN" && forcarRQC && !(kw && /^requerimentos$/i.test(kw[1].trim()) && /n[º°]s/i.test(texto.slice(ini, i)))) t = "RQC";   // "aprovados os Requerimentos nºs 19.294, ... e 19.401/2026" na ata de comissão: são RQN (dispensam o Plenário)
+    // idem para "voto de congratulações formulado em atenção ao Requerimento nº ..." e "de que trata o Requerimento nº ..."
+    if (forcarRQC && /\b(relativ[ao]s?|referentes?|em resposta|em atenção|de que trata)\s+(a|ao|aos|à|às|o|os)\s+requerimentos?(\s+em\s+comiss[aã]o)?\s*$/i.test(antes)) { tipo = null; continue; }
+    // "Submetido a votação, é aprovado o Requerimento nº 19.572/2026" (2ª Fase, dispensa o Plenário): é RQN, como no plural
+    const rqnVotado = /(?:^|\s)(é|foi)\s+aprovad[oa]\s+o\s+requerimento\s*$/i.test(antes);
+    let t = tipo; if (t === "RQN" && forcarRQC && !rqnVotado && !(kw && /^requerimentos$/i.test(kw[1].trim()) && /n[º°]s/i.test(texto.slice(ini, i)))) t = "RQC";   // "aprovados os Requerimentos nºs 19.294, ... e 19.401/2026" na ata de comissão: são RQN (dispensam o Plenário)
     const prox = q + 1 < pos.length ? pos[q + 1][0] : texto.length;
     const pv = texto.indexOf(";", i);
     const fim = Math.min(prox, pv < 0 ? texto.length : pv);
