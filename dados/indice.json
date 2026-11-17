@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-17T15:49:19.558Z",
+ "atualizado_em": "2026-11-17T16:13:05.360Z",
  "edicoes": [
   {
    "fonte": "PRAZO",
@@ -40,7 +40,6 @@
    "obs": "",
    "arquivo": "dados/dl/2672341.json",
    "contagem": {
-    "aguardando": 6,
     "ok": 74
    }
   },
@@ -53,7 +52,7 @@
    "arquivo": "dados/dl/2671818.json",
    "contagem": {
     "ok": 105,
-    "aguardando": 4
+    "aguardando": 3
    }
   },
   {
@@ -184,8 +183,6 @@
    "obs": "",
    "arquivo": "dados/dl/2665964.json",
    "contagem": {
-    "nao_cadastrada": 5,
-    "pendente": 3,
     "ok": 67
    }
   },

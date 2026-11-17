@@ -1,11 +1,11 @@
 {
- "versao": 17,
+ "versao": 18,
  "id": "2671525",
  "data": "2026-11-12",
  "url": "https://mediaserver.almg.gov.br/acervo/671/525/2671525.pdf",
  "obs": "",
  "paginas": 218,
- "extraido_em": "2026-11-12T18:12:12.096Z",
+ "extraido_em": "2026-11-17T16:11:49.533Z",
  "grupos": [
   {
    "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
@@ -1406,5 +1406,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T15:46:55.277Z"
+ "conferido_em": "2026-11-17T16:11:50.310Z"
 }

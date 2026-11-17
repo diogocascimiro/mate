@@ -1,70 +1,16 @@
 {
- "versao": 17,
+ "versao": 18,
  "id": "2665964",
  "data": "2026-11-05",
  "url": "https://mediaserver.almg.gov.br/acervo/665/964/2665964.pdf",
  "obs": "",
  "paginas": 38,
- "extraido_em": "2026-11-05T17:58:03.754Z",
+ "extraido_em": "2026-11-17T16:11:00.780Z",
  "grupos": [
-  {
-   "desc": "REQUERIMENTOS DE COMISSÃO: ESPORTE, LAZER E JUVENTUDE, 13/08",
-   "pag": "1",
-   "props": [
-    {
-     "prop": "RQC 19111/2026",
-     "pag": 1,
-     "status": "nao_cadastrada",
-     "mate": ""
-    }
-   ]
-  },
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: DEFESA DOS DIREITOS DA MULHER, 20/10",
    "pag": "2 - 5",
    "props": [
-    {
-     "prop": "RQC 15762/2025",
-     "pag": 2,
-     "status": "pendente",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 18531/2026",
-     "pag": 2,
-     "status": "nao_cadastrada",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 3016/2023",
-     "pag": 2,
-     "status": "pendente",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 17980/2026",
-     "pag": 2,
-     "status": "nao_cadastrada",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 16964/2026",
-     "pag": 2,
-     "status": "nao_cadastrada",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 14276/2025",
-     "pag": 2,
-     "status": "pendente",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 6579/2024",
-     "pag": 2,
-     "status": "nao_cadastrada",
-     "mate": ""
-    },
     {
      "prop": "RQC 23100/2026",
      "pag": 2,
@@ -518,5 +464,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T15:46:49.076Z"
+ "conferido_em": "2026-11-17T16:11:00.780Z"
 }

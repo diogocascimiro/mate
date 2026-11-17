@@ -1,11 +1,11 @@
 {
- "versao": 17,
+ "versao": 18,
  "id": "2670548",
  "data": "2026-11-11",
  "url": "https://mediaserver.almg.gov.br/acervo/670/548/2670548.pdf",
  "obs": "",
  "paginas": 118,
- "extraido_em": "2026-11-11T17:51:23.048Z",
+ "extraido_em": "2026-11-17T16:11:40.882Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: EDUCAÇÃO, CIÊNCIA E TECNOLOGIA, 05/11",
@@ -1502,5 +1502,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T15:46:54.038Z"
+ "conferido_em": "2026-11-17T16:11:40.883Z"
 }

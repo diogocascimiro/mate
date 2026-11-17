@@ -1,11 +1,11 @@
 {
- "versao": 17,
+ "versao": 18,
  "id": "2671818",
  "data": "2026-11-13",
  "url": "https://mediaserver.almg.gov.br/acervo/671/818/2671818.pdf",
  "obs": "",
  "paginas": 143,
- "extraido_em": "2026-11-13T17:39:51.620Z",
+ "extraido_em": "2026-11-17T16:11:56.089Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -411,12 +411,6 @@
      "mate": "Publicado no DL em 13 11 2026, pág 129"
     },
     {
-     "prop": "RQC 18457/2026",
-     "pag": 131,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
      "prop": "RQC 23350/2026",
      "pag": 131,
      "status": "ok",
@@ -768,5 +762,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T15:47:00.223Z"
+ "conferido_em": "2026-11-17T16:12:03.445Z"
 }

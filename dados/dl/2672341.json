@@ -1,28 +1,16 @@
 {
- "versao": 17,
+ "versao": 18,
  "id": "2672341",
  "data": "2026-11-14",
  "url": "https://mediaserver.almg.gov.br/acervo/672/341/2672341.pdf",
  "obs": "",
  "paginas": 21,
- "extraido_em": "2026-11-16T20:20:48.240Z",
+ "extraido_em": "2026-11-17T16:12:08.156Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: DESENVOLVIMENTO ECONÔMICO, 27/10",
    "pag": "7 - 8",
    "props": [
-    {
-     "prop": "RQC 17492/2026",
-     "pag": 7,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 16718/2026",
-     "pag": 7,
-     "status": "aguardando",
-     "mate": ""
-    },
     {
      "prop": "RQC 22086/2026",
      "pag": 7,
@@ -417,32 +405,8 @@
   },
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: DEFESA DOS DIREITOS DA MULHER, 04/11",
-   "pag": "15 - 16",
+   "pag": "16",
    "props": [
-    {
-     "prop": "RQC 3016/2023",
-     "pag": 15,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 18625/2026",
-     "pag": 15,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 15126/2025",
-     "pag": 16,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 18538/2026",
-     "pag": 16,
-     "status": "aguardando",
-     "mate": ""
-    },
     {
      "prop": "RQC 23696/2026",
      "pag": 16,
@@ -549,5 +513,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T15:47:06.441Z"
+ "conferido_em": "2026-11-17T16:12:08.156Z"
 }
