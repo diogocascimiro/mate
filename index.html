@@ -515,7 +515,9 @@ async function especiais(itens){
       const t = normC(mate), ac = normC(i.acao);
       i._de = i.status; i.mate = mate;
       if (ac.startsWith("parecer aprovado")) { i.status = "divergente"; reconferir(i); return; }
-      const ok = /^aprovad/.test(ac) ? /aprovad/.test(t) : /^recebid/.test(ac) ? /recebid/.test(t) : /relatorio/.test(ac) ? /relatorio/.test(t) : /^plenario/.test(ac) ? true : t.includes(ac);
+      // "Retirado de pauta por deliberação da Comissão a requerimento do(a)" × portal "Retirado de pauta a requerimento do dep. ...";
+      // "Baixado em diligência ao autor" × portal "Aprovado pedido de informação ao autor": mesmo fato, redação diferente
+      const ok = /^retirad/.test(ac) ? /retirad[oa] de pauta/.test(t) : /diligencia/.test(ac) ? /diligencia|pedido de informac/.test(t) : /^aprovad/.test(ac) ? /aprovad/.test(t) : /^recebid/.test(ac) ? /recebid/.test(t) : /relatorio/.test(ac) ? /relatorio/.test(t) : /^plenario/.test(ac) ? true : t.includes(ac);
       i.status = ok ? "ok" : "divergente";
     } catch (e) {}
   };
