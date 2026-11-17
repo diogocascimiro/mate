@@ -154,7 +154,8 @@ async function rodarPrazos(){
       if (brHoje() < alvo) { p.status = "aguardando"; continue; }
       const h = await historico(p.prop); if (h === undefined) continue;
       const x = (h || []).find(x => x.data >= ed.data && /encerrado o prazo do artigo 104/i.test(String(x.historico || "")));
-      p.status = x ? "ok" : h === null ? "nao_cadastrada" : uteisDesde(alvo) <= CARENCIA ? "aguardando" : "pendente";
+      // a preclusão é lançada no dia do vencimento (alvo): passado esse dia sem o lançamento, já é pendente (sem carência)
+      p.status = x ? "ok" : h === null ? "nao_cadastrada" : brHoje() > alvo ? "pendente" : "aguardando";
       p.mate = x ? String(x.historico).replace(/\s+/g, " ").match(/Encerrado o prazo[^.]*\./i)[0] : "";
     }
     gravar(arq, { data: alvo, referencia: ed.data, grupos: [grupo], conferido_em: new Date().toISOString() });
