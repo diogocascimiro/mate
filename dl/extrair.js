@@ -168,6 +168,8 @@ export function extrairDL(lines){
             const nx = lines.slice(li + 1, li + 120).find(x => x.b > 0.8 && x.t === x.t.toUpperCase() && !/^MENSAGEM/.test(x.t)); const tp = nx ? nx.t.replace(/\s+N[º°O].*$/i, "") : "PROPOSIÇÃO";
             // texto da própria mensagem (até o próximo título): retificação, emenda/substitutivo ou encaminhamento de projeto
             let corpo = ""; for (let j = li + 1; j < lines.length && j < li + 80 && !(lines[j].b > 0.8 && lines[j].t === lines[j].t.toUpperCase() && lines[j].t.length > 3); j++) corpo += " " + lines[j].t;
+            // "– A Mensagem nº 296/2026, encaminhando ..., foi publicada na edição anterior.": só a leitura em Plenário; o lançamento é na edição anterior
+            if (/^\s*[–-]\s*A\s+Mensage(m|ns)\s+n[º°o]s?\s*[\d.]+\/\d{4}[^]{0,300}?\b(foi|foram)\s+publicad[ao]s?\s+na\s+edi[cç][aã]o\s+anterior/i.test(corpo)) continue;
             ultimaDescMsg = /retifica/i.test(corpo) ? "MENSAGEM DO GOVERNADOR QUE RETIFICA MENSAGEM ANTERIOR"
               : /(emendas?|substitutivos?)\s+ao\s+Projeto/i.test(corpo.slice(0, 900)) ? "MENSAGEM DO GOVERNADOR QUE ENCAMINHA EMENDA OU SUBSTITUTIVO COM DESPACHO À MESA"
               : "MENSAGEM DO GOVERNADOR QUE ENCAMINHA " + tp.toUpperCase() + (/cr[ée]dito suplementar/i.test(corpo) ? " - CRÉDITO SUPLEMENTAR" : "");
