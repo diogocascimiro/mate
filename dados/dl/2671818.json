@@ -1,11 +1,11 @@
 {
- "versao": 20,
+ "versao": 21,
  "id": "2671818",
  "data": "2026-11-13",
  "url": "https://mediaserver.almg.gov.br/acervo/671/818/2671818.pdf",
  "obs": "",
  "paginas": 143,
- "extraido_em": "2026-11-17T16:59:40.171Z",
+ "extraido_em": "2026-11-17T17:23:41.294Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -35,15 +35,381 @@
    ]
   },
   {
-   "desc": "OFÍCIOS - PROJETOS DE LEI",
-   "pag": "3 - 115",
+   "desc": "PROPOSTAS DE AÇÃO LEGISLATIVA",
+   "pag": "3 - 96",
    "props": [
     {
-     "prop": "PL 6186/2026",
+     "prop": "PLE 219/2026",
      "pag": 3,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 3"
     },
+    {
+     "prop": "PLE 220/2026",
+     "pag": 5,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 5"
+    },
+    {
+     "prop": "PLE 221/2026",
+     "pag": 6,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 6"
+    },
+    {
+     "prop": "PLE 222/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 7"
+    },
+    {
+     "prop": "PLE 223/2026",
+     "pag": 7,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 7"
+    },
+    {
+     "prop": "PLE 224/2026",
+     "pag": 10,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 10"
+    },
+    {
+     "prop": "PLE 225/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 11"
+    },
+    {
+     "prop": "PLE 226/2026",
+     "pag": 11,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 11"
+    },
+    {
+     "prop": "PLE 227/2026",
+     "pag": 13,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 13"
+    },
+    {
+     "prop": "PLE 228/2026",
+     "pag": 14,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 14"
+    },
+    {
+     "prop": "PLE 229/2026",
+     "pag": 16,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 16"
+    },
+    {
+     "prop": "PLE 230/2026",
+     "pag": 17,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 17"
+    },
+    {
+     "prop": "PLE 231/2026",
+     "pag": 19,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 19"
+    },
+    {
+     "prop": "PLE 232/2026",
+     "pag": 20,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 20"
+    },
+    {
+     "prop": "PLE 233/2026",
+     "pag": 22,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 22"
+    },
+    {
+     "prop": "PLE 234/2026",
+     "pag": 22,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 22"
+    },
+    {
+     "prop": "PLE 235/2026",
+     "pag": 23,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 23"
+    },
+    {
+     "prop": "PLE 236/2026",
+     "pag": 23,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 23"
+    },
+    {
+     "prop": "PLE 237/2026",
+     "pag": 25,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 25"
+    },
+    {
+     "prop": "PLE 238/2026",
+     "pag": 26,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 26"
+    },
+    {
+     "prop": "PLE 239/2026",
+     "pag": 26,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 26"
+    },
+    {
+     "prop": "PLE 240/2026",
+     "pag": 26,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 26"
+    },
+    {
+     "prop": "PLE 241/2026",
+     "pag": 27,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 27"
+    },
+    {
+     "prop": "PLE 242/2026",
+     "pag": 28,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 28"
+    },
+    {
+     "prop": "PLE 243/2026",
+     "pag": 30,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 30"
+    },
+    {
+     "prop": "PLE 244/2026",
+     "pag": 31,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 31"
+    },
+    {
+     "prop": "PLE 245/2026",
+     "pag": 32,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 32"
+    },
+    {
+     "prop": "PLE 246/2026",
+     "pag": 32,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 32"
+    },
+    {
+     "prop": "PLE 247/2026",
+     "pag": 42,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 42"
+    },
+    {
+     "prop": "PLE 248/2026",
+     "pag": 43,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 43"
+    },
+    {
+     "prop": "PLE 249/2026",
+     "pag": 44,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 44"
+    },
+    {
+     "prop": "PLE 250/2026",
+     "pag": 46,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 46"
+    },
+    {
+     "prop": "PLE 251/2026",
+     "pag": 49,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 49"
+    },
+    {
+     "prop": "PLE 252/2026",
+     "pag": 51,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 51"
+    },
+    {
+     "prop": "PLE 253/2026",
+     "pag": 52,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 52"
+    },
+    {
+     "prop": "PLE 254/2026",
+     "pag": 53,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 53"
+    },
+    {
+     "prop": "PLE 255/2026",
+     "pag": 53,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 53"
+    },
+    {
+     "prop": "PLE 256/2026",
+     "pag": 56,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 56"
+    },
+    {
+     "prop": "PLE 257/2026",
+     "pag": 56,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 56"
+    },
+    {
+     "prop": "PLE 258/2026",
+     "pag": 59,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 59"
+    },
+    {
+     "prop": "PLE 259/2026",
+     "pag": 60,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 60"
+    },
+    {
+     "prop": "PLE 260/2026",
+     "pag": 60,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 60"
+    },
+    {
+     "prop": "PLE 261/2026",
+     "pag": 61,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 61"
+    },
+    {
+     "prop": "PLE 262/2026",
+     "pag": 66,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág "
+    },
+    {
+     "prop": "PLE 263/2026",
+     "pag": 67,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 67"
+    },
+    {
+     "prop": "PLE 264/2026",
+     "pag": 69,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 69"
+    },
+    {
+     "prop": "PLE 265/2026",
+     "pag": 69,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 69"
+    },
+    {
+     "prop": "PLE 266/2026",
+     "pag": 70,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 70"
+    },
+    {
+     "prop": "PLE 267/2026",
+     "pag": 72,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 72"
+    },
+    {
+     "prop": "PLE 268/2026",
+     "pag": 74,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 74"
+    },
+    {
+     "prop": "PLE 269/2026",
+     "pag": 76,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 76"
+    },
+    {
+     "prop": "PLE 270/2026",
+     "pag": 83,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 83"
+    },
+    {
+     "prop": "PLE 271/2026",
+     "pag": 87,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 87"
+    },
+    {
+     "prop": "PLE 272/2026",
+     "pag": 88,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 88"
+    },
+    {
+     "prop": "PLE 273/2026",
+     "pag": 89,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 89"
+    },
+    {
+     "prop": "PLE 274/2026",
+     "pag": 91,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 91"
+    },
+    {
+     "prop": "PLE 275/2026",
+     "pag": 91,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 91"
+    },
+    {
+     "prop": "PLE 276/2026",
+     "pag": 95,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 95"
+    },
+    {
+     "prop": "PLE 277/2026",
+     "pag": 95,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 95"
+    },
+    {
+     "prop": "PLE 278/2026",
+     "pag": 96,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 96"
+    },
+    {
+     "prop": "PLE 279/2026",
+     "pag": 96,
+     "status": "ok",
+     "mate": "Publicada no DL em 13 11 2026, pág 96"
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - PROJETOS DE LEI",
+   "pag": "115",
+   "props": [
     {
      "prop": "PL 5863/2026",
      "pag": 115,
@@ -733,6 +1099,12 @@
      "pag": 142,
      "status": "ok",
      "mate": "publicada no DL em 13 11 2026, pág 143, "
+    },
+    {
+     "prop": "PL 2865/2024",
+     "pag": 142,
+     "status": "ok",
+     "mate": "publicada no DL em 13 11 2026, pág 142, "
     }
    ],
    "erratas": [
@@ -744,5 +1116,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:59:44.047Z"
+ "conferido_em": "2026-11-17T17:25:01.136Z"
 }

@@ -1,11 +1,11 @@
 {
- "versao": 20,
+ "versao": 21,
  "id": "2665964",
  "data": "2026-11-05",
  "url": "https://mediaserver.almg.gov.br/acervo/665/964/2665964.pdf",
  "obs": "",
  "paginas": 38,
- "extraido_em": "2026-11-17T16:58:54.517Z",
+ "extraido_em": "2026-11-17T17:22:53.819Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: DEFESA DOS DIREITOS DA MULHER, 20/10",
@@ -464,5 +464,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:58:54.518Z"
+ "conferido_em": "2026-11-17T17:22:53.819Z"
 }

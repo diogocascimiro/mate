@@ -1,11 +1,11 @@
 {
- "versao": 20,
+ "versao": 21,
  "id": "2670548",
  "data": "2026-11-11",
  "url": "https://mediaserver.almg.gov.br/acervo/670/548/2670548.pdf",
  "obs": "",
  "paginas": 118,
- "extraido_em": "2026-11-17T16:59:29.209Z",
+ "extraido_em": "2026-11-17T17:23:28.557Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: EDUCAÇÃO, CIÊNCIA E TECNOLOGIA, 05/11",
@@ -1036,7 +1036,13 @@
      "pag": 16,
      "status": "ok",
      "mate": "Publicado no DL em 11 11 2026, pág 14"
-    },
+    }
+   ]
+  },
+  {
+   "desc": "DESPACHO DE REQUERIMENTOS",
+   "pag": "16",
+   "props": [
     {
      "prop": "RQN 14987/2025",
      "pag": 16,
@@ -1502,5 +1508,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:59:29.209Z"
+ "conferido_em": "2026-11-17T17:23:28.557Z"
 }

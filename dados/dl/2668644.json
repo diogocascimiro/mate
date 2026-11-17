@@ -1,11 +1,11 @@
 {
- "versao": 20,
+ "versao": 21,
  "id": "2668644",
  "data": "2026-11-10",
  "url": "https://mediaserver.almg.gov.br/acervo/668/644/2668644.pdf",
  "obs": "",
  "paginas": 45,
- "extraido_em": "2026-11-17T16:59:25.701Z",
+ "extraido_em": "2026-11-17T17:23:25.377Z",
  "grupos": [
   {
    "desc": "PARECERES",
@@ -86,5 +86,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:59:25.701Z"
+ "conferido_em": "2026-11-17T17:23:25.377Z"
 }

@@ -1,11 +1,11 @@
 {
- "versao": 20,
+ "versao": 21,
  "id": "2671525",
  "data": "2026-11-12",
  "url": "https://mediaserver.almg.gov.br/acervo/671/525/2671525.pdf",
  "obs": "",
  "paginas": 218,
- "extraido_em": "2026-11-17T16:59:36.949Z",
+ "extraido_em": "2026-11-17T17:23:33.256Z",
  "grupos": [
   {
    "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
@@ -384,6 +384,24 @@
      "mate": "publicada no DL em 12 11 2026, pág 58"
     },
     {
+     "prop": "PL 4695/2025",
+     "pag": 58,
+     "status": "ok",
+     "mate": "publicada no DL em 12 11 2026, pág 58"
+    },
+    {
+     "prop": "PL 5486/2026",
+     "pag": 58,
+     "status": "ok",
+     "mate": "publicada no DL em 12 11 2026, pág 58"
+    },
+    {
+     "prop": "PL 5496/2026",
+     "pag": 58,
+     "status": "ok",
+     "mate": "publicada no DL em 12 11 2026, pág 58"
+    },
+    {
      "prop": "RQN 19163/2026",
      "pag": 58,
      "status": "ok",
@@ -574,6 +592,12 @@
      "pag": 68,
      "status": "ok",
      "mate": "Publicado no DL em 12 11 2026, pág 68"
+    },
+    {
+     "prop": "REL 4/2026",
+     "pag": 71,
+     "status": "ok",
+     "mate": "Publicado no DL em 12 11 2026, pág 71"
     },
     {
      "prop": "PL 469/2023",
@@ -1406,5 +1430,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:59:37.087Z"
+ "conferido_em": "2026-11-17T17:23:38.385Z"
 }

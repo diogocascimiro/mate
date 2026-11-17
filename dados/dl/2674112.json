@@ -1,11 +1,11 @@
 {
- "versao": 20,
+ "versao": 21,
  "id": "2674112",
  "data": "2026-11-17",
  "url": "https://mediaserver.almg.gov.br/acervo/674/112/2674112.pdf",
  "obs": "",
  "paginas": 45,
- "extraido_em": "2026-11-17T16:59:46.896Z",
+ "extraido_em": "2026-11-17T17:25:04.646Z",
  "grupos": [
   {
    "desc": "PARECERES",
@@ -430,158 +430,7 @@
   {
    "desc": "ERRATAS",
    "pag": "45",
-   "props": [
-    {
-     "prop": "PL 1394/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 2639/2024",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 3823/2025",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PLC 63/2021",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 3200/2024",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 310/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 4541/2025",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 2176/2024",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 4551/2025",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 1491/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 727/2019",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 3380/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 3382/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 5131/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 5137/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 5399/2023",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 22829/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 22927/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 22978/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 22980/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 23042/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 23055/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 23174/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 23175/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQC 23176/2026",
-     "pag": 45,
-     "status": "aguardando",
-     "mate": ""
-    }
-   ],
+   "props": [],
    "erratas": [
     {
      "titulo": "ATA DA 18ª REUNIÃO ORDINÁRIA DA COMISSÃO DE SAÚDE NA 4ª SESSÃO LEGISLATIVA ORDINÁRIA DA 20ª LEGISLATURA, EM 21/10/2026",
@@ -591,5 +440,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T17:00:16.706Z"
+ "conferido_em": "2026-11-17T17:25:04.646Z"
 }
