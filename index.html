@@ -136,7 +136,7 @@ input[type=date]{border-color:#cfd8d5;background:#fff}
 .day.tem-prob:not(.sel){border-color:#e9b8b3}
 .dots{gap:4px;min-height:16px}
 .dots i{width:auto;height:auto;min-width:16px;padding:1px 5px;border-radius:999px;font-style:normal;font-family:var(--fm);font-size:10.5px;font-weight:600;line-height:14px;color:#fff;text-align:center}
-.dots i.dp{background:#c2410c}.dots i.de{background:#b7791f}.dots i.do{background:#1e7a4c}
+.dots i.dd{background:#8c1c2e}.dots i.dp{background:#c2410c}.dots i.de{background:#b7791f}.dots i.do{background:#1e7a4c}
 .day.sel .dots i{box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
 table.grade tr.cap td{padding:9px 12px;border-top:0;background:linear-gradient(90deg,var(--sc-t),transparent 70%);color:var(--sc)}
 table.grade tr.cap b{font-family:var(--fd);font-weight:700;letter-spacing:.05em;font-size:13.5px}
@@ -336,8 +336,10 @@ function renderDays(){
     const b = el("button", "day" + (d === sel ? " sel" : ""));
     b.append(el("small", null, wd(d)), el("b", null, fmtD(d)));
     const dots = el("span", "dots"); const s = by[d] || {};
-    const prob = (s.divergente || 0) + (s.pendente || 0) + (s.nao_cadastrada || 0) + (s.revisar || 0), esp = (s.aguardando || 0);
-    if (prob) { const x = el("i", "dp", String(prob)); x.title = prob + " com problema"; dots.appendChild(x); }
+    // divergentes (vinho) e pendentes (laranja) em bolinhas separadas, como nos cartões de cima
+    const div = (s.divergente || 0) + (s.revisar || 0), pend = (s.pendente || 0) + (s.nao_cadastrada || 0), prob = div + pend, esp = (s.aguardando || 0);
+    if (div) { const x = el("i", "dd", String(div)); x.title = div + (div === 1 ? " divergente" : " divergentes"); dots.appendChild(x); }
+    if (pend) { const x = el("i", "dp", String(pend)); x.title = pend + (pend === 1 ? " pendente" : " pendentes"); dots.appendChild(x); }
     if (esp) { const x = el("i", "de", String(esp)); x.title = esp + " aguardando"; dots.appendChild(x); }
     if (prob) b.classList.add("tem-prob");
     b.appendChild(dots);
