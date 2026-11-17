@@ -38,8 +38,8 @@
     {
      "prop": "PL 6187/2026",
      "pag": 8,
-     "status": "pendente",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 12 11 2026, pág 8"
     }
    ]
   },
@@ -1430,5 +1430,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T17:31:37.617Z"
+ "conferido_em": "2026-11-17T17:57:12.592Z"
 }
