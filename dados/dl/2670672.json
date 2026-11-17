@@ -1,11 +1,11 @@
 {
- "versao": 18,
+ "versao": 19,
  "id": "2670672",
  "data": "2026-11-10",
  "url": "https://mediaserver.almg.gov.br/acervo/670/672/2670672.pdf",
  "obs": "",
  "paginas": 1,
- "extraido_em": "2026-11-17T16:11:37.426Z",
+ "extraido_em": "2026-11-17T16:18:06.173Z",
  "grupos": [
   {
    "desc": "ERRATAS",
@@ -20,5 +20,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:11:37.426Z"
+ "conferido_em": "2026-11-17T16:18:06.173Z"
 }

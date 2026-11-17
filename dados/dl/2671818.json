@@ -1,11 +1,11 @@
 {
- "versao": 18,
+ "versao": 19,
  "id": "2671818",
  "data": "2026-11-13",
  "url": "https://mediaserver.almg.gov.br/acervo/671/818/2671818.pdf",
  "obs": "",
  "paginas": 143,
- "extraido_em": "2026-11-17T16:11:56.089Z",
+ "extraido_em": "2026-11-17T16:18:26.672Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -762,5 +762,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:12:03.445Z"
+ "conferido_em": "2026-11-17T16:18:35.277Z"
 }

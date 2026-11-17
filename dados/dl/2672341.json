@@ -1,11 +1,11 @@
 {
- "versao": 18,
+ "versao": 19,
  "id": "2672341",
  "data": "2026-11-14",
  "url": "https://mediaserver.almg.gov.br/acervo/672/341/2672341.pdf",
  "obs": "",
  "paginas": 21,
- "extraido_em": "2026-11-17T16:12:08.156Z",
+ "extraido_em": "2026-11-17T16:18:38.462Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: DESENVOLVIMENTO ECONÔMICO, 27/10",
@@ -513,5 +513,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:12:08.156Z"
+ "conferido_em": "2026-11-17T16:18:38.462Z"
 }

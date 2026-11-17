@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-17T16:13:05.360Z",
+ "atualizado_em": "2026-11-17T16:19:31.125Z",
  "edicoes": [
   {
    "fonte": "PRAZO",
@@ -162,8 +162,7 @@
    "obs": "",
    "arquivo": "dados/dl/2667434.json",
    "contagem": {
-    "ok": 330,
-    "pendente": 1
+    "ok": 330
    }
   },
   {

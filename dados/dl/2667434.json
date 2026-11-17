@@ -1,11 +1,11 @@
 {
- "versao": 18,
+ "versao": 19,
  "id": "2667434",
  "data": "2026-11-06",
  "url": "https://mediaserver.almg.gov.br/acervo/667/434/2667434.pdf",
  "obs": "",
  "paginas": 85,
- "extraido_em": "2026-11-17T16:11:03.044Z",
+ "extraido_em": "2026-11-17T16:17:34.543Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -164,18 +164,6 @@
      "status": "ok",
      "mate": "publicada no DL em 6 11 2026, pág 11",
      "origem": "Proposição de Lei 27063"
-    }
-   ]
-  },
-  {
-   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA OFÍCIO",
-   "pag": "13",
-   "props": [
-    {
-     "prop": "MSG 299/2026",
-     "pag": 13,
-     "status": "pendente",
-     "mate": ""
     }
    ]
   },
@@ -2130,5 +2118,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:11:32.898Z"
+ "conferido_em": "2026-11-17T16:18:01.583Z"
 }
