@@ -31,6 +31,8 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     if (kw) tipo = tipoDe(kw[1]);
     else if (!/[;:.()]\s*[–-]?\s*$/.test(antes) && antes.trim()) tipo = null;
     else if (tipoBase && (!tipo || /;\s*$/.test(antes))) tipo = tipoBase;   // lista ("...; nº 23.409/2026, ..."): cada item volta ao tipo da lista, mesmo depois de "Projeto de Lei nº ..." citado no item anterior
+    // ata de comissão: correspondência "prestando informações relativas ao Requerimento nº ..." só cita requerimento antigo (não é RQC a lançar)
+    if (forcarRQC && /\b(relativ[ao]s?|referentes?|em resposta)\s+(a|ao|aos|à|às)\s+requerimentos?\s*$/i.test(antes)) { tipo = null; continue; }
     let t = tipo; if (t === "RQN" && forcarRQC && !(kw && /^requerimentos$/i.test(kw[1].trim()) && /n[º°]s/i.test(texto.slice(ini, i)))) t = "RQC";   // "aprovados os Requerimentos nºs 19.294, ... e 19.401/2026" na ata de comissão: são RQN (dispensam o Plenário)
     const prox = q + 1 < pos.length ? pos[q + 1][0] : texto.length;
     const pv = texto.indexOf(";", i);
