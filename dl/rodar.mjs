@@ -142,14 +142,25 @@ async function rodarPrazos(){
   const resumo = [];
   for (const f of fs.readdirSync(DIR_DL)) {
     const ed = lerJSON(path.join(DIR_DL, f), null); if (!ed) continue;
-    const props = []; for (const g of ed.grupos) if (/^COMUNICA[CÇ][AÃ]O DA PRESID/i.test(g.desc)) for (const p of g.props) if (/^RQN /.test(p.prop)) props.push(p.prop);
-    if (!props.length) continue;
+    // requerimentos aprovados conclusivamente (Comunicação da Presidência) e o que a presidência deu ciência na Leitura de Comunicações
+    // (projetos e requerimentos aprovados nas comissões): todos aguardam o prazo de recurso do art. 104
+    const rqn = [], pl = [];
+    for (const g of ed.grupos) {
+      if (!/^(COMUNICA[CÇ][AÃ]O DA PRESID|LEITURA DE COMUNICA)/i.test(g.desc)) continue;
+      for (const p of g.props) {
+        if (/^RQN /.test(p.prop) && !rqn.includes(p.prop)) rqn.push(p.prop);
+        else if (/^(PL|PLC) /.test(p.prop) && /^LEITURA/i.test(g.desc) && !pl.includes(p.prop)) pl.push(p.prop);
+      }
+    }
+    if (!rqn.length && !pl.length) continue;
     const alvo = somaUteis(ed.data, 3);
     const arq = path.join(DIR_PZ, ed.id + ".json");
-    const ant = lerJSON(arq, { grupos: [{ props: [] }] }); const antigo = new Map(ant.grupos[0].props.map(p => [p.prop, p]));
+    const ant = lerJSON(arq, { grupos: [] }); const antigo = new Map(); for (const g of ant.grupos || []) for (const p of g.props) antigo.set(p.prop, p);
     const [y, m, d] = ed.data.split("-");
-    const grupo = { desc: "PRECLUSÃO DE PRAZO: REQUERIMENTOS, APROVADOS", pag: `${d}/${m}/${y}`, props: props.map(p => antigo.get(p) || { prop: p, status: "novo", mate: "" }) };
-    for (const p of grupo.props) {
+    const grupos = [];
+    if (rqn.length) grupos.push({ desc: "PRECLUSÃO DE PRAZO: REQUERIMENTOS, APROVADOS", pag: `${d}/${m}/${y}`, props: rqn.map(p => antigo.get(p) || { prop: p, status: "novo", mate: "" }) });
+    if (pl.length) grupos.push({ desc: "PRECLUSÃO DE PRAZO: PROJETOS DE LEI", pag: `${d}/${m}/${y}`, props: pl.map(p => antigo.get(p) || { prop: p, status: "novo", mate: "" }) });
+    for (const grupo of grupos) for (const p of grupo.props) {
       if (p.status === "ok") continue;
       if (brHoje() < alvo) { p.status = "aguardando"; continue; }
       const h = await historico(p.prop); if (h === undefined) continue;
@@ -158,8 +169,8 @@ async function rodarPrazos(){
       p.status = x ? "ok" : h === null ? "nao_cadastrada" : brHoje() > alvo ? "pendente" : "aguardando";
       p.mate = x ? String(x.historico).replace(/\s+/g, " ").match(/Encerrado o prazo[^.]*\./i)[0] : "";
     }
-    gravar(arq, { data: alvo, referencia: ed.data, grupos: [grupo], conferido_em: new Date().toISOString() });
-    resumo.push({ fonte: "PRAZO", id: ed.id, data: alvo, arquivo: "dados/prazo/" + ed.id + ".json", contagem: contar([grupo]) });
+    gravar(arq, { data: alvo, referencia: ed.data, grupos, conferido_em: new Date().toISOString() });
+    resumo.push({ fonte: "PRAZO", id: ed.id, data: alvo, arquivo: "dados/prazo/" + ed.id + ".json", contagem: contar(grupos) });
   }
   return resumo;
 }
