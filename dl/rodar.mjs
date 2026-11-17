@@ -239,11 +239,15 @@ async function rodarDE(){
       if (p.status === "ok") continue;
       const [tp, na] = p.prop.split(" "); const [num, ano] = na.split("/");
       const rx = new RegExp(`(Lei|Lei Complementar|Emenda à Constituição)\\s+(n[º°.]\\s*)?${num}\\s+publicada\\s+no\\s+Di[áa]rio\\s+do\\s+Executivo\\s+em\\s+${dataRx(data)}`, "i");
-      // proposição de origem: pesquisa pelo número da norma e confirma no histórico
+      // proposição de origem: pesquisa pelo número da norma (entre aspas, frase exata: sem aspas a busca traz PECs que não têm a lei) e confirma no histórico
       let achou = null, existe = false;
       const cands = p.origem ? [p.origem] : [];
       if (!cands.length) {
-        try { const j = await api(`/proposicoes/pesquisa/avancada?tp=10&p=1&expr=${encodeURIComponent((tp === "LCP" ? "Lei Complementar " : tp === "EMC" ? "Emenda à Constituição " : "Lei ") + num)}`); for (const it of (j && j.resultado && j.resultado.listaItem) || []) cands.push(it.siglaTipoProjeto + " " + it.numero + "/" + it.ano); } catch {}
+        const nome = (tp === "LCP" ? "Lei Complementar " : tp === "EMC" ? "Emenda à Constituição " : "Lei ") + num;
+        for (const expr of ['"' + nome + '"', nome]) {
+          try { const j = await api(`/proposicoes/pesquisa/avancada?tp=10&p=1&expr=${encodeURIComponent(expr)}`); for (const it of (j && j.resultado && j.resultado.listaItem) || []) cands.push(it.siglaTipoProjeto + " " + it.numero + "/" + it.ano); } catch {}
+          if (cands.length) break;
+        }
       }
       for (const c of cands.slice(0, 5)) {
         const h = await historico(c); if (!h) continue;
