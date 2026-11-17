@@ -1,11 +1,11 @@
 {
- "versao": 19,
+ "versao": 20,
  "id": "2667933",
  "data": "2026-11-07",
  "url": "https://mediaserver.almg.gov.br/acervo/667/933/2667933.pdf",
  "obs": "Nomeações de candidatos das especialidades de Consultor legislativo - Área I - Desenvolvimento Econômico e Regional - Cód 211 e Jornalista - Área II - Rádio e Televisão - Cód 226 e Técnico de Apoio Legislativo - Cód. 101",
  "paginas": 26,
- "extraido_em": "2026-11-17T16:18:04.035Z",
+ "extraido_em": "2026-11-17T16:59:24.453Z",
  "grupos": [
   {
    "desc": "PARECERES",
@@ -387,5 +387,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:30:09.956Z"
+ "conferido_em": "2026-11-17T16:59:24.453Z"
 }

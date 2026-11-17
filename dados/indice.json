@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-17T16:30:59.103Z",
+ "atualizado_em": "2026-11-17T17:00:26.825Z",
  "edicoes": [
   {
    "fonte": "PRAZO",
@@ -52,7 +52,7 @@
    "arquivo": "dados/dl/2671818.json",
    "contagem": {
     "ok": 105,
-    "aguardando": 3
+    "aguardando": 1
    }
   },
   {

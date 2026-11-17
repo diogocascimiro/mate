@@ -1,11 +1,11 @@
 {
- "versao": 19,
+ "versao": 20,
  "id": "2671818",
  "data": "2026-11-13",
  "url": "https://mediaserver.almg.gov.br/acervo/671/818/2671818.pdf",
  "obs": "",
  "paginas": 143,
- "extraido_em": "2026-11-17T16:18:26.672Z",
+ "extraido_em": "2026-11-17T16:59:40.171Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -287,18 +287,6 @@
    ]
   },
   {
-   "desc": "REQUERIMENTOS DE COMISSÃO: DEFESA DOS DIREITOS DA PESSOA COM DEFICIÊNCIA, 20/10",
-   "pag": "127",
-   "props": [
-    {
-     "prop": "RQC 19572/2026",
-     "pag": 127,
-     "status": "aguardando",
-     "mate": ""
-    }
-   ]
-  },
-  {
    "desc": "REQUERIMENTOS DE COMISSÃO: AGROPECUÁRIA E AGROINDÚSTRIA, 27/10",
    "pag": "128 - 129",
    "props": [
@@ -313,12 +301,6 @@
      "pag": 128,
      "status": "ok",
      "mate": "Publicado no DL em 13 11 2026, pág 127"
-    },
-    {
-     "prop": "RQC 19055/2026",
-     "pag": 128,
-     "status": "aguardando",
-     "mate": ""
     },
     {
      "prop": "RQC 22923/2026",
@@ -762,5 +744,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-17T16:30:15.033Z"
+ "conferido_em": "2026-11-17T16:59:44.047Z"
 }
