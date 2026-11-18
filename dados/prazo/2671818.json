@@ -8,28 +8,28 @@
    "props": [
     {
      "prop": "RQN 19906/2026",
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Encerrado o prazo do artigo 104 do Regimento Interno, sem apresentação de recurso."
     },
     {
      "prop": "RQN 19921/2026",
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Encerrado o prazo do artigo 104 do Regimento Interno, sem apresentação de recurso."
     },
     {
      "prop": "RQN 20003/2026",
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Encerrado o prazo do artigo 104 do Regimento Interno, sem apresentação de recurso."
     },
     {
      "prop": "RQN 20031/2026",
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Encerrado o prazo do artigo 104 do Regimento Interno, sem apresentação de recurso."
     },
     {
      "prop": "RQN 20032/2026",
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Encerrado o prazo do artigo 104 do Regimento Interno, sem apresentação de recurso."
     }
    ]
   },
@@ -39,11 +39,11 @@
    "props": [
     {
      "prop": "PL 5696/2026",
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Encerrado o prazo do artigo 104 do Regimento Interno, sem apresentação de recurso."
     }
    ]
   }
  ],
- "conferido_em": "2026-11-17T19:06:54.183Z"
+ "conferido_em": "2026-11-18T13:45:55.011Z"
 }
