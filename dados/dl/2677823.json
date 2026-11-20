@@ -1,0 +1,4428 @@
+{
+ "versao": 21,
+ "id": "2677823",
+ "data": "2026-11-20",
+ "url": "https://mediaserver.almg.gov.br/acervo/677/823/2677823.pdf",
+ "obs": "",
+ "paginas": 125,
+ "extraido_em": "2026-11-20T18:32:50.357Z",
+ "grupos": [
+  {
+   "desc": "PROPOSIÇÕES DE LEI",
+   "pag": "1 - 5",
+   "props": [
+    {
+     "prop": "PROPLEI 27069",
+     "pag": 1,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27070",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27071",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27072",
+     "pag": 2,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27073",
+     "pag": 3,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27074",
+     "pag": 4,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27075",
+     "pag": 5,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PROPLEI 27076",
+     "pag": 5,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "MENSAGEM DO GOVERNADOR QUE ENCAMINHA PROJETO DE LEI",
+   "pag": "7",
+   "props": [
+    {
+     "prop": "MSG 305/2026",
+     "pag": 7,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6309/2026",
+     "pag": 7,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - PROJETOS DE LEI",
+   "pag": "8",
+   "props": [
+    {
+     "prop": "PL 4673/2025",
+     "pag": 8,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 4674/2025",
+     "pag": 8,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 5946/2026",
+     "pag": 8,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "OFÍCIOS - REQUERIMENTOS",
+   "pag": "8 - 10",
+   "props": [
+    {
+     "prop": "RQN 12579/2022",
+     "pag": 8,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 17381/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19438/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19439/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19440/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19441/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19442/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19443/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19444/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19447/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19448/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19449/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19451/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19452/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19455/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19456/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19457/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19458/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19459/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19467/2026",
+     "pag": 9,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19468/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19469/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19470/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19471/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19509/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19534/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19535/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19536/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19537/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19538/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19540/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19542/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19543/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19838/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19908/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE LEI COMPLEMENTAR",
+   "pag": "10 - 11",
+   "props": [
+    {
+     "prop": "PLC 113/2026",
+     "pag": 10,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PLC 120/2026",
+     "pag": 11,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE RESOLUÇÃO",
+   "pag": "15 - 66",
+   "props": [
+    {
+     "prop": "PRE 143/2026",
+     "pag": 15,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PRE 145/2026",
+     "pag": 15,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PRE 146/2026",
+     "pag": 15,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PRE 147/2026",
+     "pag": 16,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PRE 140/2026",
+     "pag": 66,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE LEI",
+   "pag": "16 - 38",
+   "props": [
+    {
+     "prop": "PL 6268/2026",
+     "pag": 16,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6270/2026",
+     "pag": 18,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6271/2026",
+     "pag": 20,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6274/2026",
+     "pag": 22,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6275/2026",
+     "pag": 23,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6276/2026",
+     "pag": 24,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6280/2026",
+     "pag": 27,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6283/2026",
+     "pag": 28,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6286/2026",
+     "pag": 29,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6287/2026",
+     "pag": 31,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6289/2026",
+     "pag": 33,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6290/2026",
+     "pag": 34,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6291/2026",
+     "pag": 34,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6292/2026",
+     "pag": 35,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6294/2026",
+     "pag": 36,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6296/2026",
+     "pag": 37,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6306/2026",
+     "pag": 38,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "PL 6315/2026",
+     "pag": 38,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, COM COMUNICAÇÃO",
+   "pag": "39 - 65",
+   "props": [
+    {
+     "prop": "RQN 20030/2026",
+     "pag": 39,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20036/2026",
+     "pag": 39,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20055/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20060/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20061/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20062/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20063/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20064/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20065/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20066/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20067/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20068/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20069/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20070/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20071/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20072/2026",
+     "pag": 42,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20073/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20074/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20075/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20076/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20078/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20079/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20080/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20081/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20082/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20083/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20084/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20085/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20086/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20087/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20088/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20089/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20090/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20091/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20092/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20093/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20094/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20098/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20099/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20100/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20101/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20102/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20103/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20104/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20105/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20106/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20107/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20108/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20109/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20110/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20111/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20112/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20113/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20114/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20115/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20116/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20117/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20118/2026",
+     "pag": 46,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20119/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20120/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20121/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20122/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20123/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20124/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20125/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20126/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20127/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20128/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20129/2026",
+     "pag": 47,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20130/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20131/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20132/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20133/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20134/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20135/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20136/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20137/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20138/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20139/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20140/2026",
+     "pag": 48,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20141/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20142/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20143/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20144/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20145/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20146/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20147/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20148/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20149/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20150/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20151/2026",
+     "pag": 49,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20152/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20153/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20154/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20155/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20156/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20157/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20158/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20159/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20160/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20161/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20162/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20163/2026",
+     "pag": 50,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20164/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20166/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20167/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20168/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20169/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20170/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20171/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20172/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20173/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20174/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20175/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20176/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20177/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20178/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20179/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20180/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20181/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20184/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20185/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20188/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20189/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20190/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20191/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20193/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20194/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20195/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20196/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20197/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20198/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20199/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20200/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20201/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20202/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20203/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20204/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20205/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20206/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20207/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20208/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20211/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20212/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20213/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20214/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20215/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20216/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20217/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20218/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20219/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20220/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20221/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20222/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20223/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20224/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20225/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20226/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20227/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20228/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20229/2026",
+     "pag": 56,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20230/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20232/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20233/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20234/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20235/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20236/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20237/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20238/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20244/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20246/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20247/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20258/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20261/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20262/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20263/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20265/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20266/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20267/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20268/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20269/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20270/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20274/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20279/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20280/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20282/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20284/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20285/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20286/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20287/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20288/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20290/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20292/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20294/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20295/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20296/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20297/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20299/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20300/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20301/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20302/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20303/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20306/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20308/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20316/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20317/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20318/2026",
+     "pag": 65,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20320/2026",
+     "pag": 65,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - MESA DA ASSEMBLEIA, VOTADO EM PLENÁRIO",
+   "pag": "39 - 65",
+   "props": [
+    {
+     "prop": "RQN 20034/2026",
+     "pag": 39,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20037/2026",
+     "pag": 39,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20038/2026",
+     "pag": 39,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20039/2026",
+     "pag": 39,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20041/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20047/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20050/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20052/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20077/2026",
+     "pag": 43,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20095/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20096/2026",
+     "pag": 44,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20097/2026",
+     "pag": 45,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20165/2026",
+     "pag": 51,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20183/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20186/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20209/2026",
+     "pag": 54,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20248/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20249/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20250/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20251/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20252/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20253/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20254/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20259/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20260/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20275/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20277/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20281/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20283/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20289/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20291/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20293/2026",
+     "pag": 62,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20305/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20307/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20311/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20312/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20313/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20314/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20315/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20319/2026",
+     "pag": 65,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20322/2026",
+     "pag": 65,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - COMISSÕES TEMÁTICAS",
+   "pag": "40 - 65",
+   "props": [
+    {
+     "prop": "RQN 20040/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20042/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20044/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20045/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20046/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20048/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20049/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20051/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20053/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20054/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20056/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20057/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20058/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20059/2026",
+     "pag": 41,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20182/2026",
+     "pag": 52,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20192/2026",
+     "pag": 53,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20240/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20241/2026",
+     "pag": 57,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20242/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20245/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20255/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20256/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20257/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20264/2026",
+     "pag": 59,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20271/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20272/2026",
+     "pag": 60,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20273/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20276/2026",
+     "pag": 61,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20298/2026",
+     "pag": 63,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20323/2026",
+     "pag": 65,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20324/2026",
+     "pag": 65,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20328/2026",
+     "pag": 65,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - ANEXADOS",
+   "pag": "40 - 64",
+   "props": [
+    {
+     "prop": "RQN 20043/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20039/2026",
+     "pag": 40,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20210/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20091/2026",
+     "pag": 55,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20309/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 16444/2026",
+     "pag": 64,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: REQUERIMENTOS - SEM DESPACHO, REUNIÃO ESPECIAL",
+   "pag": "58",
+   "props": [
+    {
+     "prop": "RQN 20243/2026",
+     "pag": 58,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "COMUNICAÇÃO DA PRESIDÊNCIA",
+   "pag": "73 - 74",
+   "props": [
+    {
+     "prop": "RQN 20030/2026",
+     "pag": 73,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20036/2026",
+     "pag": 73,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20055/2026",
+     "pag": 73,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20060/2026",
+     "pag": 73,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20061/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20062/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20063/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20064/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20065/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20066/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20067/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20068/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20069/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20070/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20071/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20072/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20073/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20074/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20075/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20076/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20077/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20078/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20079/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20080/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20081/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20082/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20083/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20084/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20085/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20086/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20087/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20088/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20089/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20090/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20091/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20092/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20093/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20094/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20098/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20099/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20100/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20101/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20102/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20103/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20104/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20105/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20106/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20107/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20108/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20109/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20110/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20111/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20112/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20113/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20114/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20115/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20116/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20117/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20118/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20119/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20120/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20121/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20122/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20123/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20124/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20125/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20126/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20127/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20128/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20129/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20130/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20131/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20132/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20133/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20134/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20135/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20136/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20137/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20138/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20139/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20140/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20141/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20142/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20143/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20144/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20145/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20146/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20147/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20148/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20149/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20150/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20151/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20152/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20153/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20154/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20155/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20156/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20157/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20158/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20159/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20160/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20161/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20162/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20163/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20164/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20166/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20167/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20168/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20169/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20170/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20171/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20172/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20173/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20174/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20175/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20176/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20177/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20178/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20179/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20180/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20181/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20184/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20185/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20188/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20189/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20190/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20191/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20193/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20194/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20195/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20196/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20197/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20198/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20199/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20200/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20201/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20202/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20203/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20204/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20205/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20206/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20207/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20208/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20211/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20212/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20213/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20214/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20215/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20216/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20217/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20218/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20219/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20220/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20221/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20222/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20223/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20224/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20225/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20226/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20227/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20228/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20229/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20230/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20232/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20233/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20234/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20235/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20236/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20237/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20238/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20244/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20279/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20280/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20282/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20284/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20285/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20286/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20287/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20288/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20290/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20292/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20294/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20295/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20296/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20297/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20299/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20300/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20301/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20302/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20303/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20306/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20308/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20316/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20317/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20318/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20320/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20246/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20247/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20258/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20261/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20262/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20263/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20265/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20266/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20267/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20268/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20269/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20270/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 20274/2026",
+     "pag": 74,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: SEGURANÇA PÚBLICA, 28/10",
+   "pag": "108 - 114",
+   "props": [
+    {
+     "prop": "RQC 23276/2026",
+     "pag": 108,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23277/2026",
+     "pag": 108,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23278/2026",
+     "pag": 108,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23279/2026",
+     "pag": 108,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23286/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23322/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23323/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23324/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23326/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23327/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23328/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23344/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23346/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 19908/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23411/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23412/2026",
+     "pag": 109,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23413/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23416/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23417/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23418/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23419/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23420/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23504/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23505/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23506/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23507/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23508/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23509/2026",
+     "pag": 110,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23510/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23511/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23512/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23513/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23519/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23529/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23530/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23531/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23532/2026",
+     "pag": 111,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23533/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23574/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23575/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23576/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23577/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23578/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23579/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23580/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23582/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23583/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23584/2026",
+     "pag": 112,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23633/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23634/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23635/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23636/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23637/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23669/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23670/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23671/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23672/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23673/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23674/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23688/2026",
+     "pag": 113,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23723/2026",
+     "pag": 114,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: DIREITOS HUMANOS, 11/11",
+   "pag": "115 - 118",
+   "props": [
+    {
+     "prop": "RQC 23897/2026",
+     "pag": 115,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23898/2026",
+     "pag": 115,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23899/2026",
+     "pag": 115,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23902/2026",
+     "pag": 115,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23918/2026",
+     "pag": 115,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23920/2026",
+     "pag": 115,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23922/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23923/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23924/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23925/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23926/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23927/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23928/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23929/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23930/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23931/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23932/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23952/2026",
+     "pag": 116,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23953/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23954/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23955/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23956/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23957/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23958/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23959/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23960/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23961/2026",
+     "pag": 117,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23962/2026",
+     "pag": 118,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23963/2026",
+     "pag": 118,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23967/2026",
+     "pag": 118,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQC 23970/2026",
+     "pag": 118,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "REQUERIMENTOS DE COMISSÃO: DESENVOLVIMENTO ECONÔMICO, 17/11",
+   "pag": "119",
+   "props": [
+    {
+     "prop": "RQC 24003/2026",
+     "pag": 119,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "PARECERES",
+   "pag": "121",
+   "props": [
+    {
+     "prop": "PL 3304/2025",
+     "pag": 121,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "CORRESPONDÊNCIA: OFÍCIOS - REQUERIMENTOS",
+   "pag": "122 - 125",
+   "props": [
+    {
+     "prop": "RQN 13533/2025",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19544/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19545/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19546/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19591/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19598/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19605/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19608/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19609/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19610/2026",
+     "pag": 122,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19615/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19616/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19618/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19619/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19621/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19622/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19623/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19624/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19626/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19627/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19628/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19632/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19633/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19634/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19636/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19637/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19639/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19642/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19643/2026",
+     "pag": 123,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19645/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19648/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19652/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19660/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19682/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19684/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19689/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19690/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19692/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19697/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19700/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19702/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19704/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19705/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19706/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19750/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19751/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19752/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19753/2026",
+     "pag": 124,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19754/2026",
+     "pag": 125,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19840/2026",
+     "pag": 125,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19842/2026",
+     "pag": 125,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 19963/2026",
+     "pag": 125,
+     "status": "aguardando",
+     "mate": ""
+    }
+   ]
+  },
+  {
+   "desc": "ERRATAS",
+   "pag": "125",
+   "props": [],
+   "erratas": [
+    {
+     "titulo": "ATOS DA MESA DA ASSEMBLEIA",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 7/11/2026, na pág. 24, onde se lê: “nomeando Danilo Jorge Veira”, leia-se: “nomeando Danilo Jorge Vieira”.",
+     "pag": 125
+    }
+   ]
+  }
+ ],
+ "conferido_em": "2026-11-20T18:43:35.280Z"
+}
