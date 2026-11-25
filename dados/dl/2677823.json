@@ -334,7 +334,7 @@
     {
      "prop": "PLC 113/2026",
      "pag": 10,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
@@ -352,7 +352,7 @@
     {
      "prop": "PRE 143/2026",
      "pag": 15,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
@@ -1972,7 +1972,7 @@
     {
      "prop": "RQN 20313/2026",
      "pag": 64,
-     "status": "aguardando",
+     "status": "nao_cadastrada",
      "mate": ""
     },
     {
@@ -3598,7 +3598,7 @@
     {
      "prop": "RQC 19908/2026",
      "pag": 109,
-     "status": "aguardando",
+     "status": "pendente",
      "mate": ""
     },
     {
@@ -4432,5 +4432,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-24T20:47:48.513Z"
+ "conferido_em": "2026-11-25T18:41:26.077Z"
 }
