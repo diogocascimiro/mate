@@ -38,9 +38,15 @@ async function api(p){
 const brHoje = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
 const ymd = d => d.toISOString().slice(0, 10);
 const compact = s => s.replace(/-/g, "");
+// Feriados e recessos da ALMG (calendário oficial, o mesmo do ponto.almg.digital): não contam como dia útil.
+// Ano sem calendário aqui: valem só sábado e domingo.
+const SEM_EXPEDIENTE = {
+  2026: ["01-01", "01-02", "02-16", "02-17", "02-18", "04-02", "04-03", "04-20", "04-21", "05-01", "06-04", "06-05", "09-07", "10-12", "10-30", "11-02", "11-20", "12-07", "12-08", "12-24", "12-25", "12-31"]
+};
+const ehUtil = d => { const w = d.getUTCDay(); if (w === 0 || w === 6) return false; const s = ymd(d); return !(SEM_EXPEDIENTE[s.slice(0, 4)] || []).includes(s.slice(5)); };
 function uteisDesde(data){
   const d = new Date(data + "T12:00:00Z"), h = new Date(brHoje() + "T12:00:00Z"); let n = 0;
-  while (d < h) { d.setUTCDate(d.getUTCDate() + 1); const w = d.getUTCDay(); if (w > 0 && w < 6) n++; }
+  while (d < h) { d.setUTCDate(d.getUTCDate() + 1); if (ehUtil(d)) n++; }
   return n;
 }
 const lerJSON = (f, def) => { try { return JSON.parse(fs.readFileSync(f, "utf8")); } catch { return def; } };
@@ -137,7 +143,9 @@ async function propsErrata(g){
 }
 
 // ---------- preclusão de prazo (art. 104): requerimentos aprovados conclusivamente na Comunicação da Presidência ----------
-function somaUteis(data, n){ const d = new Date(data + "T12:00:00Z"); while (n > 0) { d.setUTCDate(d.getUTCDate() + 1); const w = d.getUTCDay(); if (w > 0 && w < 6) n--; } return ymd(d); }
+function somaUteis(data, n){ const d = new Date(data + "T12:00:00Z"); while (n > 0) { d.setUTCDate(d.getUTCDate() + 1); if (ehUtil(d)) n--; } return ymd(d); }
+// Diário publicado em dia sem expediente (feriado, recesso, fim de semana): o prazo conta a partir do dia útil seguinte.
+function inicioUtil(data){ const d = new Date(data + "T12:00:00Z"); while (!ehUtil(d)) d.setUTCDate(d.getUTCDate() + 1); return ymd(d); }
 async function rodarPrazos(){
   const resumo = [];
   for (const f of fs.readdirSync(DIR_DL)) {
@@ -153,10 +161,10 @@ async function rodarPrazos(){
       }
     }
     if (!rqn.length && !pl.length) continue;
-    const alvo = somaUteis(ed.data, 3);
+    const inicio = inicioUtil(ed.data), alvo = somaUteis(inicio, 3);
     const arq = path.join(DIR_PZ, ed.id + ".json");
     const ant = lerJSON(arq, { grupos: [] }); const antigo = new Map(); for (const g of ant.grupos || []) for (const p of g.props) antigo.set(p.prop, p);
-    const [y, m, d] = ed.data.split("-");
+    const [y, m, d] = inicio.split("-");   // a linha mostra a data em que o prazo começa a contar, como na planilha
     const grupos = [];
     if (rqn.length) grupos.push({ desc: "PRECLUSÃO DE PRAZO: REQUERIMENTOS, APROVADOS", pag: `${d}/${m}/${y}`, props: rqn.map(p => antigo.get(p) || { prop: p, status: "novo", mate: "" }) });
     if (pl.length) grupos.push({ desc: "PRECLUSÃO DE PRAZO: PROJETOS DE LEI", pag: `${d}/${m}/${y}`, props: pl.map(p => antigo.get(p) || { prop: p, status: "novo", mate: "" }) });
