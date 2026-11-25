@@ -2,17 +2,19 @@ name: DL e DE
 on:
   schedule:
     - cron: "7,37 10-23 * * 1-5"
+    - cron: "22,52 10-12 * * 1-5"
     - cron: "17 12,18 * * 0,6"
   workflow_dispatch:
 permissions:
   contents: write
-concurrency:
-  group: dados
-  cancel-in-progress: false
+  actions: write
 jobs:
   rodar:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    concurrency:
+      group: dados
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,3 +41,29 @@ jobs:
             sleep 10
           done
           exit 1
+
+  # O agendamento do GitHub (schedule) dispara só de vez em quando. Para a leitura acontecer de 30 em 30 minutos,
+  # cada rodada espera até o próximo horário (:07 ou :37) e dispara a seguinte. Uma rodada nova (agendada ou manual)
+  # cancela a espera anterior e assume a vez, então só existe uma espera por vez. Fora do horário de leitura
+  # (dias úteis, 10h às 23h37 UTC) a corrente para, e o schedule a reinicia no dia seguinte.
+  proxima:
+    needs: rodar
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    concurrency:
+      group: dados-espera
+      cancel-in-progress: true
+    steps:
+      - name: Esperar o proximo horario e disparar a rodada seguinte
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          dia=$(date -u +%u); hora=$((10#$(date -u +%H))); min=$((10#$(date -u +%M))); seg=$((10#$(date -u +%S)))
+          if [ "$dia" -gt 5 ] || [ "$hora" -lt 10 ]; then echo "Fora do horario de leitura: a proxima rodada fica com o schedule."; exit 0; fi
+          if [ "$min" -lt 7 ]; then alvo=7; elif [ "$min" -lt 37 ]; then alvo=37; else alvo=67; fi
+          if [ "$hora" -eq 23 ] && [ "$alvo" -eq 67 ]; then echo "Ultima rodada do dia."; exit 0; fi
+          espera=$(( (alvo - min) * 60 - seg ))
+          echo "Proxima rodada em ${espera}s"
+          sleep "$espera"
+          gh workflow run dados.yml --repo "$GITHUB_REPOSITORY" --ref main
