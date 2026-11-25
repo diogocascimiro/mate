@@ -448,7 +448,7 @@ function render(){
     secao("REUNIÕES DE COMISSÕES", plural(com.length, "reunião", "reuniões"), "sec-com", plural(visiveis.filter(i => !/^RQC /.test(i.prop) && com.some(r => r.id === i.reuniao_id)).length, "ação", "ações"), URLS.com(sel), visiveis.filter(i => !/^RQC /.test(i.prop) && com.some(r => r.id === i.reuniao_id)));
     for (const r of com) {
       const todas = visiveis.filter(i => i.reuniao_id === r.id && !/^RQC /.test(i.prop));
-      const nome = (/^comiss/i.test(r.comissao) ? r.comissao : "Comissão de " + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
+      const nome = (/^comiss/i.test(r.comissao) ? r.comissao : (/^trabalho/i.test(r.comissao) ? "Comissão do " : "Comissão de ") + r.comissao).toUpperCase() + (r.tipo && !/^ordin/i.test(r.tipo) ? " - " + r.tipo.toUpperCase() : "");
       linha(r.id, r.hora, nome, estado(r, todas.length), todas, r.ocorrida !== "S" && naoHouve(r), URLS.reuCom(r));
     }
     // Requerimentos de comissões, como na planilha: "RQC: SAÚDE, APROVADOS"
