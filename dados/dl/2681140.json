@@ -290,20 +290,20 @@
     {
      "prop": "PL 6255/2026",
      "pag": 76,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 25 11 2026, pág 76"
     },
     {
      "prop": "PL 2105/2024",
      "pag": 77,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 25 11 2026, pág 77"
     },
     {
      "prop": "PL 3531/2025",
      "pag": 78,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 25 11 2026, pág 78"
     }
    ]
   },
@@ -495,5 +495,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-25T18:43:04.745Z"
+ "conferido_em": "2026-11-25T19:53:15.373Z"
 }
