@@ -231,6 +231,10 @@ const ST = [["todos","Ações"],["lancados","Lançados"],["ok","Conferidos"],["d
 const COR = { ok:"var(--ok)", divergente:"var(--bad)", pendente:"var(--bad)", nao_cadastrada:"var(--bad)", aguardando:"var(--warn)", revisar:"var(--bad)", novo:"var(--muted)" };
 const LBL = { ok:"ok", divergente:"divergente", pendente:"pendente", nao_cadastrada:"não cadastrada", aguardando:"aguardando", revisar:"divergente", silegis:"via Silegis", pre_cadastro:"pré-cadastro", novo:"na fila" };
 const hoje = new Date(Date.now() - 3*3600e3).toISOString().slice(0,10);
+// Feriados e recessos da ALMG (mesmo calendário do dl/rodar.mjs e do ponto.almg.digital): não contam como dia útil.
+// Ano sem calendário aqui: valem só sábado e domingo.
+const SEM_EXPEDIENTE = { 2026: ["01-01","01-02","02-16","02-17","02-18","04-02","04-03","04-20","04-21","05-01","06-04","06-05","09-07","10-12","10-30","11-02","11-20","12-07","12-08","12-24","12-25","12-31"] };
+const ehUtil = s => { const w = new Date(s + "T12:00:00Z").getUTCDay(); if (w === 0 || w === 6) return false; return !(SEM_EXPEDIENTE[s.slice(0,4)] || []).includes(s.slice(5)); };
 const abertas = new Set();
 let filtro = "todos", sel = new URLSearchParams(location.search).get("data") || hoje, dia = null, resumo = null;
 const fmtD = s => { const [y,m,d] = s.split("-"); return d + "/" + m; };
@@ -262,8 +266,8 @@ const DADOS = location.hostname === "mate.almg.digital" ? "" : "https://mate.alm
 let indice = null, diarios = [];
 let fechadas = new Set(); try { fechadas = new Set(JSON.parse(localStorage.getItem("mate_fechadas") || "[]")); } catch (e) {}
 const cacheDiario = new Map();
-// edição de sábado/domingo é trabalhada no dia útil seguinte (como na planilha)
-function diaTrab(d){ const x = new Date(d + "T12:00:00Z"); while (x.getUTCDay() === 0 || x.getUTCDay() === 6) x.setUTCDate(x.getUTCDate() + 1); return x.toISOString().slice(0, 10); }
+// edição de sábado/domingo ou de feriado em dia útil é trabalhada no próximo dia útil seguinte (como na planilha: não há aba para o feriado)
+function diaTrab(d){ let s = d; while (!ehUtil(s)) s = new Date(new Date(s + "T12:00:00Z").getTime() + 864e5).toISOString().slice(0, 10); return s; }
 // reconferência no navegador dos itens do DL ainda não conferidos (a rodada do GitHub pode estar atrasada ou sem acesso à API)
 async function reconfDL(e, j){
   const [y, m, d] = e.data.split("-");
