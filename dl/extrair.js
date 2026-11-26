@@ -20,7 +20,7 @@ function tipoDe(palavra){
   return null;
 }
 export function refs(texto, forcarRQC, comPos, tipoBase){
-  const out = [];
+  const out = [], anteriores = new Set();
   texto = String(texto).replace(/\bn[º°]s?\s+(?=n[º°])/gi, "");   // "nº nº 3.734/2023"
   const rn0 = /\bn[º°]s?\.?\s*(?=\d)/gi;
   let m, tipo = tipoBase || null;
@@ -39,6 +39,8 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
     // ata de comissão: correspondência "prestando informações relativas ao Requerimento nº ..." só cita requerimento antigo (não é RQC a lançar)
     // idem para "voto de congratulações formulado em atenção ao Requerimento nº ..." e "de que trata o Requerimento nº ..."
     if (forcarRQC && /\b(relativ[ao]s?|referentes?|em resposta|em atenção|de que trata)\s+(a|ao|aos|à|às|o|os)\s+requerimentos?(\s+em\s+comiss[aã]o)?\s*$/i.test(antes)) { tipo = null; continue; }
+    // "medidas solicitadas por meio do Requerimento nº 19.908/2026", "objeto do Requerimento nº ...": requerimento antigo citado no texto do RQC
+    if (forcarRQC && /\b(por\s+meio|atrav[ée]s|objeto|nos\s+termos|aprovad[oa]s?\s+por\s+meio)\s+d[oa]s?\s+requerimentos?(\s+de\s+comiss[aã]o)?\s*$/i.test(antes)) { tipo = null; continue; }
     // "Submetido a votação, é aprovado o Requerimento nº 19.572/2026" (2ª Fase, dispensa o Plenário): é RQN, como no plural
     const rqnVotado = /(?:^|\s)(é|foi)\s+aprovad[oa]\s+o\s+requerimento\s*$/i.test(antes);
     let t = tipo; if (t === "RQN" && forcarRQC && !rqnVotado && !(kw && /^requerimentos$/i.test(kw[1].trim()) && /n[º°]s/i.test(texto.slice(ini, i)))) t = "RQC";   // "aprovados os Requerimentos nºs 19.294, ... e 19.401/2026" na ata de comissão: são RQN (dispensam o Plenário)
@@ -58,10 +60,15 @@ export function refs(texto, forcarRQC, comPos, tipoBase){
       if (k[2]) { for (const x of pend) achados.push({ n: String(x), ano: k[2], idx: i + desloc + k.index }); pend = []; ultimo = rn.lastIndex; }
     }
     if (!t || !achados.length) continue;
-    if (/^[\s,.]*(e\s+[\d.]+\/\d{4}\s*)?(foram|foi)\s+publicad|^[^.;]{0,40}publicad[oa]s?\s+na\s+edi[cç][aã]o\s+anterior/i.test(trecho.slice(ultimo))) continue;
+    if (/^[\s,.]*(e\s+[\d.]+\/\d{4}\s*)?(foram|foi)\s+publicad|^[^.;]{0,40}publicad[oa]s?\s+na\s+edi[cç][aã]o\s+anterior/i.test(trecho.slice(ultimo))) {
+      // "PROJETO DE LEI COMPLEMENTAR Nº 113/2026 – O Projeto de Lei Complementar nº 113/2026 foi publicado na edição anterior.":
+      // só a leitura em Plenário; o lançamento é na edição anterior. O título (citação anterior) também sai.
+      for (const a of achados) anteriores.add(t + " " + a.n + "/" + a.ano);
+      continue;
+    }
     for (const a of achados) { const prop = t + " " + a.n + "/" + a.ano; out.push(comPos ? { prop, idx: a.idx } : prop); }
   }
-  return out;
+  return anteriores.size ? out.filter(o => !anteriores.has(comPos ? o.prop : o)) : out;
 }
 const TIPO_TITULO = s => /^REQUERIMENTOS? DE COMISS/.test(s) ? "RQC" : /^REQUERIMENTO/.test(s) ? "RQN" : /^PROJETOS? DE LEI COMPLEMENTAR/.test(s) ? "PLC" : /^PROJETOS? DE LEI/.test(s) ? "PL" : /^PROJETOS? DE RESOLU/.test(s) ? "PRE" : /^PROPOSTAS? DE EMENDA/.test(s) ? "PEC" : /^MENSAGE/.test(s) ? "MSG" : /^VETO/.test(s) ? "VET" : null;
 function classeRQ(item){
@@ -101,6 +108,29 @@ export function refsErrata(e){
   return rc.length ? rc : refs(txt.replace(/ap[óo]s o resumo d[oa] [^,.;]*?n[º°]\s*[\d.]+\/\d{4}/gi, " "), !!base, false, base);
 }
 
+// Votações nominais na ata de Plenário: "Em votação, o projeto. – Procede-se à votação por meio eletrônico. ... Votaram “sim” N ..."
+// Cada proposição votada nominalmente recebe "Votação Nominal publicada no DL em <data>, pág N" (manual GGA 4.12).
+// Votação tornada sem efeito por falta de quórum não entra. Requerimentos incidentais (retirada de pauta, adiamento...) não entram (4.12.1).
+const ITEM_PLEN = /(?:Discuss[aã]o|Vota[cç][aã]o),\s+em\s+(?:turno\s+[úu]nico|[12][ºo°]\s+turno|reda[cç][aã]o\s+final),\s+d[oa]s?\s+(Projeto\s+de\s+Lei\s+Complementar|Projeto\s+de\s+Lei|Projeto\s+de\s+Resolu[cç][aã]o|Proposta\s+de\s+Emenda\s+[àa]\s+Constitui[cç][aã]o|Veto|Requerimento|Mensagem)\s+n[º°]\s*([\d.]+)\/(\d{4})/gi;
+function votacoesNominais(plen, add){
+  if (!plen.length) return;
+  let txt = "", mapa = [];
+  for (const l of plen) { mapa.push([txt.length, l.p]); txt += (txt && !txt.endsWith("-") ? " " : "") + l.t; }
+  const pagDe = idx => { let pag = mapa[0][1]; for (const [o, p] of mapa) { if (o <= idx) pag = p; else break; } return pag; };
+  const itens = []; let m; ITEM_PLEN.lastIndex = 0;
+  while ((m = ITEM_PLEN.exec(txt))) itens.push({ idx: m.index, prop: (TIPO_TITULO(norm(m[1])) || (/^veto/i.test(m[1]) ? "VET" : null)) + " " + m[2].replace(/\./g, "") + "/" + m[3] });
+  const rx = /Procede-se\s+[àa]\s+vota[cç][aã]o\s+por\s+meio\s+eletr[ôo]nico/gi;
+  while ((m = rx.exec(txt))) {
+    const it = itens.filter(x => x.idx < m.index).pop(); if (!it || /^null /.test(it.prop)) continue;
+    const depois = txt.slice(m.index, m.index + 600);
+    if (/votação\s+sem\s+efeito|n[ãa]o\s+h[áa]\s+qu[óo]rum\s+para\s+vota[cç][aã]o/i.test(depois.slice(0, 400))) continue;
+    const antes = txt.slice(it.idx, m.index);
+    if (/requerimento\s+[^.]{0,120}(retirada de pauta|adiamento|invers[ãa]o|prefer[êe]ncia)[^.]{0,200}\.\s*[^.]*Em vota[cç][aã]o,\s+o\s+requerimento/i.test(antes)) continue;
+    const ev = antes.lastIndexOf("Em votação");
+    add("VOTAÇÕES NOMINAIS", it.prop, pagDe(ev >= 0 ? it.idx + ev : m.index));
+  }
+}
+
 export function extrairDL(lines){
   const grupos = new Map();
   const doSumario = new Set(lines.filter(l => l.p === 1 && l.b > 0.8).map(l => (l.t.match(/^\d+ [–-] (.+)$/) || [])[1]).filter(Boolean).map(norm));
@@ -114,6 +144,7 @@ export function extrairDL(lines){
     g.pags.add(pag);
   };
   let buf = "", mapa = [], bdesc = null, bRQC = false, bFiltro = null, bTipo = null;
+  const plen = [];
   const pagDe = idx => { let pag = mapa[0][1]; for (const [o, p] of mapa) { if (o <= idx) pag = p; else break; } return pag; };
   const flush = () => {
     if (bdesc && buf) {
@@ -167,6 +198,7 @@ export function extrairDL(lines){
       sub = null; doc = null; sumario = !ata.comissao; if (ata.comissao && lines[li + 1] && lines[li + 1].b > 0.8) li++; continue;
     }
     if (sumario) { if (bold && /^(Comparecimento|Abertura)/.test(t)) sumario = false; else continue; }
+    if (topo === "ATAS" && ata && !ata.comissao) plen.push(l);   // ata de Plenário: guardada para as votações nominais (abaixo)
     if (topo === "ATAS" && ata && ata.comissao) { push("REQUERIMENTOS DE COMISSÃO: " + ata.comissao + ", " + ata.data, t, l.p, true, /^RQC /, "RQC"); continue; }
     // "Despacho de Requerimentos" (caixa baixa, negrito) vem logo depois da Comunicação da Presidência, que é seção de topo:
     // é outro grupo; sem isso, os requerimentos despachados entravam na comunicação (e na preclusão de prazo)
@@ -176,6 +208,9 @@ export function extrairDL(lines){
     if (bold && t.length < 90 && !temNum && ((!upper && !plenMat && (topo !== "ATAS" || ATA_SUB.test(t))) || (plenMat && upper && !TIT_DOC.test(t) && !/^ANEXOS?\b/.test(t)))) { flush(); sub = t; doc = null; ultimaDescMsg = null; continue; }
     if (bold && !upper && topo === "ATAS") continue;
     if (bold && upper && t.length < 120) { flush(); doc = t; }
+    // "PROJETO DE RESOLUÇÃO Nº 143/2026" seguido de "– O Projeto de Resolução nº 143/2026 foi publicado na edição anterior.":
+    // só a leitura em Plenário; o lançamento "Publicado no DL" é da edição anterior
+    if (bold && upper && /N[º°O]\s*[\d.]+\/\d{4}$/i.test(t) && lines[li + 1] && /^[–-]\s*[AO]s?\s.{0,80}?\b(foi|foram)\s+publicad[oa]s?\s+na\s+edi[cç][aã]o\s+anterior/i.test(lines[li + 1].t)) { li++; continue; }
     let desc = null;
     if (topo === "ATAS" || plenMat) {
       if (!sub || IGNORA_SUB.test(sub) || IGNORA_SUB2.test(sub)) continue;
@@ -235,6 +270,7 @@ export function extrairDL(lines){
     push(desc, t, l.p, false, null, doc ? TIPO_TITULO(doc) : null);
   }
   flush();
+  votacoesNominais(plen, add);
   const out = [];
   for (const g of grupos.values()) {
     const ps = [...g.pags].sort((a, b) => a - b);
