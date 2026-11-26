@@ -215,7 +215,14 @@ export function extrairDL(lines){
       if (bold && /^PARECER/i.test(t)) {
         flush();
         let titulo = t; let j = li + 1; while (lines[j] && lines[j].b > 0.8 && titulo.length < 300 && !/n[º°o]\s*[\d.]+\/\d{4}/i.test(titulo)) titulo += " " + lines[j++].t;
-        for (const r of refs(titulo).slice(0, 1)) add(/^PARECERES SOBRE VETO/.test(topo) ? "PARECERES SOBRE VETO" : "PARECERES", r, l.p);
+        const grupoPar = /^PARECERES SOBRE VETO/.test(topo) ? "PARECERES SOBRE VETO" : "PARECERES";
+        // parecer sobre Ofício (ex.: prestação de contas, pág 86-91): "Ofício" é palavra de quebra em refs() (reseta o tipo
+        // dentro de listas comuns), então um parecer cujo título é o próprio Ofício nunca vira PL/PLC ali — some do grupo.
+        // Aqui o título já está isolado (só a linha do parecer), então extrai o nº/ano do Ofício direto, sem mexer em
+        // refs()/TIPOS/QUEBRA (usados em todo o resto do arquivo).
+        const mOfi = titulo.match(/of[ií]cios?\s*n[º°o]?\.?\s*([\d.]+)\s*\/\s*(\d{4})/i);
+        if (mOfi) add(grupoPar, "OFI " + mOfi[1].replace(/\./g, "") + "/" + mOfi[2], l.p);
+        else for (const r of refs(titulo).slice(0, 1)) add(grupoPar, r, l.p);
       }
       continue;
     } else if (/^PROPOSICOES DE LEI/.test(topo)) {
