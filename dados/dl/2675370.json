@@ -1,11 +1,11 @@
 {
- "versao": 21,
+ "versao": 23,
  "id": "2675370",
  "data": "2026-11-18",
  "url": "https://mediaserver.almg.gov.br/acervo/675/370/2675370.pdf",
  "obs": "",
  "paginas": 123,
- "extraido_em": "2026-11-18T13:43:31.005Z",
+ "extraido_em": "2026-11-26T18:24:33.692Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -179,7 +179,7 @@
   },
   {
    "desc": "PARECERES",
-   "pag": "14 - 85",
+   "pag": "14 - 91",
    "props": [
     {
      "prop": "PL 2097/2024",
@@ -492,6 +492,24 @@
      "pag": 85,
      "status": "ok",
      "mate": "Publicado no DL em 18 11 2026, pág 85"
+    },
+    {
+     "prop": "OFI 12/2024",
+     "pag": 86,
+     "status": "ok",
+     "mate": "Publicado no DL em 18 11 2026, pág 86"
+    },
+    {
+     "prop": "OFI 13/2025",
+     "pag": 89,
+     "status": "ok",
+     "mate": "Publicado no DL em 18 11 2026, pág 89"
+    },
+    {
+     "prop": "OFI 24/2026",
+     "pag": 91,
+     "status": "ok",
+     "mate": "Publicado no DL em 18 11 2026, pág 91"
     }
    ]
   },
@@ -670,5 +688,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-25T21:37:15.271Z"
+ "conferido_em": "2026-11-26T18:24:38.971Z"
 }

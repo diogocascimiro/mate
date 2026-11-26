@@ -1,11 +1,11 @@
 {
- "versao": 21,
+ "versao": 23,
  "id": "2677823",
  "data": "2026-11-20",
  "url": "https://mediaserver.almg.gov.br/acervo/677/823/2677823.pdf",
  "obs": "",
  "paginas": 125,
- "extraido_em": "2026-11-20T18:32:50.357Z",
+ "extraido_em": "2026-11-26T18:24:46.919Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -329,14 +329,8 @@
   },
   {
    "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE LEI COMPLEMENTAR",
-   "pag": "10 - 11",
+   "pag": "11",
    "props": [
-    {
-     "prop": "PLC 113/2026",
-     "pag": 10,
-     "status": "pendente",
-     "mate": ""
-    },
     {
      "prop": "PLC 120/2026",
      "pag": 11,
@@ -349,12 +343,6 @@
    "desc": "APRESENTAÇÃO DE PROPOSIÇÕES: PROJETOS DE RESOLUÇÃO",
    "pag": "15 - 66",
    "props": [
-    {
-     "prop": "PRE 143/2026",
-     "pag": 15,
-     "status": "pendente",
-     "mate": ""
-    },
     {
      "prop": "PRE 145/2026",
      "pag": 15,
@@ -3514,6 +3502,138 @@
    ]
   },
   {
+   "desc": "VOTAÇÕES NOMINAIS",
+   "pag": "75 - 104",
+   "props": [
+    {
+     "prop": "VET 37/2026",
+     "pag": 75,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 3597/2022",
+     "pag": 78,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 5744/2026",
+     "pag": 80,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PRE 141/2026",
+     "pag": 82,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PRE 142/2026",
+     "pag": 83,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 2399/2024",
+     "pag": 84,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 779/2019",
+     "pag": 86,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 2420/2021",
+     "pag": 87,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 737/2023",
+     "pag": 89,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 1725/2023",
+     "pag": 90,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 2119/2024",
+     "pag": 91,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 2404/2024",
+     "pag": 93,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 2863/2024",
+     "pag": 94,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 2868/2024",
+     "pag": 95,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 3085/2024",
+     "pag": 97,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 3476/2025",
+     "pag": 98,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 3794/2025",
+     "pag": 99,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 4137/2025",
+     "pag": 100,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 4152/2025",
+     "pag": 102,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 4614/2025",
+     "pag": 103,
+     "status": "pendente",
+     "mate": ""
+    },
+    {
+     "prop": "PL 5155/2026",
+     "pag": 104,
+     "status": "pendente",
+     "mate": ""
+    }
+   ]
+  },
+  {
    "desc": "REQUERIMENTOS DE COMISSÃO: SEGURANÇA PÚBLICA, 28/10",
    "pag": "108 - 114",
    "props": [
@@ -3594,12 +3714,6 @@
      "pag": 109,
      "status": "ok",
      "mate": "Publicado no DL em 20 11 2026, pág 107"
-    },
-    {
-     "prop": "RQC 19908/2026",
-     "pag": 109,
-     "status": "pendente",
-     "mate": ""
     },
     {
      "prop": "RQC 23411/2026",
@@ -4432,5 +4546,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-25T21:37:20.200Z"
+ "conferido_em": "2026-11-26T18:25:24.160Z"
 }

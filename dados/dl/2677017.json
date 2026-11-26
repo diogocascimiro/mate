@@ -1,11 +1,11 @@
 {
- "versao": 21,
+ "versao": 23,
  "id": "2677017",
  "data": "2026-11-19",
  "url": "https://mediaserver.almg.gov.br/acervo/677/17/2677017.pdf",
  "obs": "",
  "paginas": 69,
- "extraido_em": "2026-11-19T18:57:52.439Z",
+ "extraido_em": "2026-11-26T18:24:41.232Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: CONSTITUIÇÃO E JUSTIÇA, 10/11",
@@ -656,5 +656,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-25T21:37:15.271Z"
+ "conferido_em": "2026-11-26T18:24:41.232Z"
 }

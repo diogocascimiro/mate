@@ -1,11 +1,11 @@
 {
- "versao": 21,
+ "versao": 23,
  "id": "2681140",
  "data": "2026-11-25",
  "url": "https://mediaserver.almg.gov.br/acervo/681/140/2681140.pdf",
  "obs": "",
  "paginas": 83,
- "extraido_em": "2026-11-25T18:41:30.436Z",
+ "extraido_em": "2026-11-26T18:25:29.288Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: MEIO AMBIENTE E DESENVOLVIMENTO SUSTENTÁVEL, 17/11",
@@ -254,8 +254,8 @@
     {
      "prop": "PL 6102/2026",
      "pag": 67,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 25 11 2026, pág 67"
     },
     {
      "prop": "PL 6118/2026",
@@ -495,5 +495,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-25T21:37:22.670Z"
+ "conferido_em": "2026-11-26T18:25:29.462Z"
 }
