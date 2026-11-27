@@ -499,6 +499,8 @@ function reconferir(i){
     if (ok) { i.status = "ok"; return true; }
   }
   if (i.status === "divergente" && i.mate && /vista/.test(normC(i.acao)) && /vista/.test(normC(i.mate))) { i.status = "ok"; return true; }
+  if ((i.status === "divergente" || i.status === "revisar") && i.mate && /distribuido em avulso/.test(normC(i.acao)) && /distribuido em avulso/.test(normC(i.mate))) { i.status = "ok"; return true; }   // "Distribuído em avulso o parecer" × portal "Parecer ... Distribuído em avulso."
+  if ((i.status === "divergente" || i.status === "revisar") && i.mate && /^nova redacao do parecer/.test(normC(i.acao)) && /parecer .*aprovad/.test(normC(i.mate))) { i.status = "ok"; return true; }   // "Nova redação do parecer" × portal "Parecer pela aprovação ... Aprovado."
   if (i.status === "divergente" && i.mate && /prazo regimental/.test(normC(i.acao)) && /prazo regimental/.test(normC(i.mate))) { i.status = "ok"; return true; }   // "Prazo regimental do relator" × portal "Pedido de prazo regimental pelo relator"   // "Concedida vista do parecer" × portal "Parecer pela aprovação. Vista ao Dep. ..."
   if (i.status === "divergente" && i.mate && /^RQN /.test(i.prop) && normC(i.acao).startsWith("parecer aprovado") && /aprovado o requerimento|aprovada a proposicao/.test(normC(i.mate))) { i.status = "ok"; return true; }   // RQN votado na comissão: o resultado diz "Parecer aprovado", o portal "Aprovado o requerimento na comissão"
   if (i.status !== "divergente" || !i.mate || /^RQ/.test(i.prop) || !normC(i.acao).startsWith("parecer aprovado")) return false;
@@ -523,7 +525,7 @@ async function especiais(itens){
       let mate = achados.get(ck + "|" + com);
       if (!mate) {
         const j = await (await fetch(`https://dadosabertos.almg.gov.br/api/v2/proposicoes/${tp}/${n}/${a}?formato=json`)).json();
-        const h = (((j.resultado.listaItem || [])[0] || {}).listaHistoricoTramitacoes || []).filter(x => x.data === i.data && (!x.local || normC(x.local).includes(com) || (/^comissao especial/.test(com) && normC(x.local) === "comissao especial")));
+        const h = (((j.resultado.listaItem || [])[0] || {}).listaHistoricoTramitacoes || []).filter(x => (x.data === i.data && (!x.local || normC(x.local).includes(com) || (/^comissao especial/.test(com) && normC(x.local) === "comissao especial"))) || (/redacao final/.test(normC(i.acao)) && x.data <= i.data && /redacao final/.test(normC(x.historico))));   // redação final já aprovada antes (ex.: na Comissão de Redação) e repetida no resultado da reunião
         if (!h.length) { semLanc.set(ck, Date.now()); return; }
         mate = h.map(x => String(x.historico || "").replace(/\s+/g, " ").trim()).join(" ‖ "); achados.set(ck + "|" + com, mate);
       }
