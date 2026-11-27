@@ -22,6 +22,8 @@ function tipoDe(palavra){
 export function refs(texto, forcarRQC, comPos, tipoBase){
   const out = [], anteriores = new Set();
   texto = String(texto).replace(/\bn[º°]s?\s+(?=n[º°])/gi, "");   // "nº nº 3.734/2023"
+  // "Requerimentos nºs 20.077/2026, na pág. 43, e 20.165/2026": o número da página não é proposição (troca por espaços, mantendo as posições)
+  texto = texto.replace(/\bp[áa]g(?:ina)?s?\.?\s*\d+(?:\s*(?:,|e|a)\s*\d+(?![\d.\/]))*/gi, x => " ".repeat(x.length));
   const rn0 = /\bn[º°]s?\.?\s*(?=\d)/gi;
   let m, tipo = tipoBase || null;
   const pos = []; while ((m = rn0.exec(texto))) pos.push([m.index, rn0.lastIndex]);
