@@ -380,8 +380,8 @@
     {
      "prop": "PL 1031/2019",
      "pag": 23,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026, pág 23"
     },
     {
      "prop": "PL 723/2023",
@@ -398,20 +398,20 @@
     {
      "prop": "PL 3859/2025",
      "pag": 27,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026, pág 27"
     },
     {
      "prop": "PL 3883/2025",
      "pag": 29,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026, pág 29"
     },
     {
      "prop": "PL 4616/2025",
      "pag": 31,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026, pág 31"
     },
     {
      "prop": "PL 5175/2026",
@@ -428,8 +428,8 @@
     {
      "prop": "PL 5913/2026",
      "pag": 36,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026, pág 36"
     },
     {
      "prop": "PL 5948/2026",
@@ -680,5 +680,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-27T17:37:50.370Z"
+ "conferido_em": "2026-11-27T18:07:50.188Z"
 }
