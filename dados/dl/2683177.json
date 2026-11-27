@@ -482,8 +482,8 @@
     {
      "prop": "PL 1529/2023",
      "pag": 229,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 27 11 2026, pág 229"
     },
     {
      "prop": "RQN 1786/2023",
@@ -1914,5 +1914,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:10:43.951Z"
+ "conferido_em": "2026-11-27T18:37:59.422Z"
 }
