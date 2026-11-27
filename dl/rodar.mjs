@@ -10,7 +10,7 @@ import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { extrairDL, refs, refsErrata } from "./extrair.js";
 
 const API = "https://dadosabertos.almg.gov.br/api/v2";
-const VERSAO = 24;                 // muda quando a extração muda: reprocessa as edições
+const VERSAO = 25;                 // muda quando a extração muda: reprocessa as edições
 const JANELA = 14;                // dias para trás
 const CARENCIA = 2;               // dias úteis
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -131,7 +131,14 @@ async function propsErrata(g){
       const ls = await paginasEdicao(data, +m[4]);
       for (let i = 0; i < ls.length; i++) {
         if (!(ls[i].b > 0.8) || !chave || !normT(ls[i].t + " " + (ls[i + 1] ? ls[i + 1].t : "")).startsWith(chave.slice(0, 30))) continue;
-        let txt = ""; for (let j = i; j < ls.length && j < i + 60; j++) { if (j > i + 2 && ls[j].b > 0.8 && /^ERRATAS?$/.test(ls[j].t)) break; txt += " " + ls[j].t; }
+        let txt = ""; for (let j = i; j < ls.length && j < i + 60; j++) {
+          if (j > i + 2 && ls[j].b > 0.8 && /^ERRATAS?$/.test(ls[j].t)) break;
+          // epígrafe que é a própria seção ("LEIS", "ACORDO DE LÍDERES"): o trecho acaba na seção seguinte
+          if (!/^ATA D/.test(chave) && j > i + 1 && ls[j].b > 0.8 && /^[A-ZÀ-Ú0-9ºª ,–-]{4,}$/.test(ls[j].t) && !/^PROPOSI[CÇ][AÃ]O DE LEI/.test(ls[j].t) && normT(ls[j].t) !== chave) break;
+          // "LEIS" × "PROPOSIÇÕES DE LEI": o lançamento vai no projeto de origem da proposição de lei
+          const pl = ls[j].b > 0.8 && ls[j].t.match(/^PROPOSI[CÇ][AÃ]O DE LEI N[º°]\s*([\d.]+)$/i); if (pl) achados.add("PROPLEI " + pl[1].replace(/\./g, ""));
+          txt += " " + ls[j].t;
+        }
         // o que foi acrescentado/corrigido vem entre aspas: “nº 3.670/2023, do deputado ...”
         const cit = [...txt.matchAll(/[“"]([^”"]{5,})[”"]/g)].map(x => x[1]).join(" ; ");
         const base = /COMISS/.test(chave) ? "RQC" : null;
