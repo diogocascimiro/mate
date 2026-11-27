@@ -366,7 +366,7 @@ const URLS = {
 function render(){
   const itsD = diarios.flatMap(d => d.itens);
   const ocorreu = new Set((dia ? dia.reunioes : []).filter(r => r.ocorrida === "S").map(r => r.id));   // só reuniões com resultado publicado
-  const its = (dia ? dia.itens : []).filter(i => i.acao !== "Designação de relatoria" && ocorreu.has(i.reuniao_id)).concat(itsD);
+  const its = (dia ? dia.itens : []).filter(i => !ehDesig(i) && ocorreu.has(i.reuniao_id)).concat(itsD);
   const cnt = { todos: its.length }; its.forEach(i => { const k = i.status === "nao_cadastrada" ? "pendente" : i.status === "revisar" ? "divergente" : i.status; cnt[k] = (cnt[k] || 0) + 1; if (i.status === "ok" || i.status === "divergente") cnt.lancados = (cnt.lancados || 0) + 1; });
   const sm = $("summary"); sm.textContent = "";
   for (const [k, l] of ST) {
@@ -417,21 +417,22 @@ function render(){
     tr.addEventListener("click", () => { det.hidden = !det.hidden; if (det.hidden) abertas.delete(id); else abertas.add(id); tr.classList.toggle("aberta", !det.hidden); });
     tr.classList.toggle("aberta", aberta);
   }
-  const visiveis = its.filter(i => i.acao !== "Designação de relatoria");
+  const visiveis = its.filter(i => !ehDesig(i));
   // "não houve" só quando o resultado diz isso (reunião desconvocada ou resultado publicado sem a reunião ter ocorrido); antes disso, "?"
   const naoHouve = r => r.ocorrida === "D" || r.ocorrida === "NH";
   const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? (n ? String(n) : "-") : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
   // Diários (Executivo e Legislativo), no formato da planilha: páginas · seção · quantidade
   for (const [fonte, titulo, cls] of [["DE", "DIÁRIO DO EXECUTIVO", "sec-de"], ["DL", "DIÁRIO DO LEGISLATIVO", "sec-dl"]]) {
-    const eds = diarios.filter(d => d.fonte === fonte && d.grupos.length);
+    // tópico sem nenhuma proposição (ex.: errata só dos Atos da Mesa) não gera lançamento: fica fora do painel
+    const eds = diarios.filter(d => d.fonte === fonte).map(d => ({ ...d, ks: d.grupos.map((g, k) => k).filter(k => d.itens.some(i => i.grupo === k)) })).filter(d => d.ks.length);
     if (!eds.length) {   // como na planilha: o Diário do Executivo aparece mesmo sem nada a lançar
       if (fonte === "DE") { secao(titulo, "0 tópicos", cls, plural(0, "ação", "ações"), URLS.de(sel)); linha("DE-vazio", "-", "-", "-", [], true); }
       continue;
     }
-    const nGr = eds.reduce((n, d) => n + d.grupos.length, 0), nIt = eds.reduce((n, d) => n + d.itens.length, 0);
+    const nGr = eds.reduce((n, d) => n + d.ks.length, 0), nIt = eds.reduce((n, d) => n + d.itens.length, 0);
     secao(titulo, plural(nGr, "tópico", "tópicos"), cls, plural(nIt, "ação", "ações"), fonte === "DE" ? URLS.de(eds[0].data) : (eds[0].url || URLS.dl(eds[0].data)), eds.flatMap(d => d.itens));
     for (const d of eds) {
-      d.grupos.forEach((g, k) => { const l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc.replace(/^TRAMITA[ÇC][ÃA]O DE PROPOSI[ÇC][ÕO]ES: PARECERES$/, "PARECERES"), String(l.length), l, false, fonte === "DL" && d.url && parseInt(g.pag) ? d.url + "#page=" + parseInt(g.pag) : null); });
+      d.ks.forEach(k => { const g = d.grupos[k], l = d.itens.filter(i => i.grupo === k); linha(fonte + d.chave + "|" + k, g.pag || "—", g.desc.replace(/^TRAMITA[ÇC][ÃA]O DE PROPOSI[ÇC][ÕO]ES: PARECERES$/, "PARECERES"), String(l.length), l, false, fonte === "DL" && d.url && parseInt(g.pag) ? d.url + "#page=" + parseInt(g.pag) : null); });
     }
   }
   // Plenário
@@ -489,7 +490,7 @@ const normC = s => String(s || "").normalize("NFD").replace(/\p{M}/gu, "").toLow
 function reconferir(i){
   if (!i._de) i._de = i.status;
   if (i.status === "pendente" && !i.mate && /^RQC /.test(i.prop)) { i.status = "aguardando"; return false; }   // RQC: lançamento só aparece no portal após a publicação da ata
-  if (i.status === "aguardando" && !i.mate && i.reuniao_id && !/^RQC /.test(i.prop) && i.acao !== "Designação de relatoria") { i.status = "pendente"; return false; }   // reunião com resultado publicado: o lançamento já é devido (sem carência de 2 dias úteis)
+  if (i.status === "aguardando" && !i.mate && i.reuniao_id && !/^RQC /.test(i.prop) && !ehDesig(i)) { i.status = "pendente"; return false; }   // reunião com resultado publicado: o lançamento já é devido (sem carência de 2 dias úteis)
   if (i.status === "revisar" && i.mate && normC(i.acao).length > 8 && normC(i.mate).includes(normC(i.acao))) { i.status = "ok"; return true; }   // ação sem regra própria, com o mesmo texto no portal ("Concedida vista do parecer")
   if (i.status === "revisar" && i.mate && /^rejeitad/.test(normC(i.acao))) { const ok = /rejeitad/.test(normC(i.mate)); if (ok) i.status = "ok"; return ok; }   // "Rejeitado": parecer rejeitado na reunião
   if ((i.status === "divergente" || i.status === "revisar") && i.mate && /^(rejeitad|prejudicad)a\(s\) a\(s\) proposta/.test(normC(i.acao))) {   // "Rejeitada(s) a(s) Proposta(s) de Emenda(s) nº(s) 1" × portal "Rejeitada a Proposta de Emenda 1"
@@ -513,7 +514,7 @@ function reconferir(i){
 // comissão especial: o resultado traz "Comissão Especial para Emitir Parecer sobre o Veto nº 36/2026"; o portal registra só "Comissão Especial"
 const semLanc = new Map(), achados = new Map();   // achados: lançamento já encontrado no portal (não consulta de novo)
 async function especiais(itens){
-  const fila = itens.filter(i => ["aguardando", "pendente"].includes(i.status) && !i.mate && /^[A-Z]{2,4} \d+\/\d{4}$/.test(i.prop) && i.acao !== "Designação de relatoria");
+  const fila = itens.filter(i => ["aguardando", "pendente"].includes(i.status) && !i.mate && /^[A-Z]{2,4} \d+\/\d{4}$/.test(i.prop) && !ehDesig(i));
   const um = async i => {
     const ck = i.prop + "|" + i.data; if (Date.now() - (semLanc.get(ck) || 0) < 10 * 60000) return;   // sem lançamento há pouco: não consulta de novo antes de 10 min
     const [tp, na] = i.prop.split(" "); const [n, a] = na.split("/");
@@ -546,6 +547,12 @@ async function ajustarResumo(data, itens){
     const pa = resumo.dias.find(r => r.data === data && r.status === i.status); if (pa) pa.n += 1; else resumo.dias.push({ data, status: i.status, n: 1 });
   }
 }
+// designação de relator (inclusive "Designado relator" em RQC) não gera lançamento de resultado: fica fora do painel e do balão
+const ehDesig = i => i.acao === "Designação de relatoria" || /^designad[oa] relator/i.test(i.acao || "");
+function tirarDesig(x){
+  if (!x || !x.itens) return;
+  for (const i of x.itens) if (!i._desig && i.acao !== "Designação de relatoria" && ehDesig(i)) { i._desig = true; if (resumo && resumo.dias) { const c = resumo.dias.find(d => d.data === i.data && d.status === i.status); if (c) c.n = Math.max(0, c.n - 1); } }
+}
 // Plenário ainda por acontecer (hora marcada > agora): marca como "não houve" e tira os itens dele da contagem do balão
 function adiar(x){
   if (!x || !x.reunioes) return;
@@ -562,14 +569,14 @@ async function load(){
   history.replaceState(null, "", "?data=" + sel);
   try { [dia, resumo] = await Promise.all([get("/api/dia?data=" + sel), get("/api/resumo")]); } catch (e) { dia = null; }
   // Plenário: a API marca "com quórum" antes da hora da reunião; até a hora marcada, ainda não houve
-  adiar(dia);
-  if (dia && dia.itens) await ajustarResumo(sel, dia.itens.filter(i => !i._adiado));
+  adiar(dia); tirarDesig(dia);
+  if (dia && dia.itens) await ajustarResumo(sel, dia.itens.filter(i => !i._adiado && !i._desig));
   if (resumo && resumo.dias) {   // demais dias com divergentes: corrige o balão
     // só divergentes/revisar, e no máximo uma consulta por dia a cada 30 min (poupa o limite diário do banco D1)
     // aguardando/pendente: só os dias da faixa de balões (últimos 14 dias); a conferência desses itens é feita no navegador, direto no portal
     const desde = new Date(Date.now() - 14 * 864e5).toISOString().slice(0, 10);
     const outros = [...new Set(resumo.dias.filter(r => r.n > 0 && r.data !== sel && (["divergente", "revisar"].includes(r.status) || (["aguardando", "pendente"].includes(r.status) && r.data >= desde))).map(r => r.data))];
-    await Promise.all(outros.map(async d => { try { let c = cacheDia.get(d); if (!c || Date.now() - c.t > 30 * 60000 || !bate(d, c.s)) { c = { t: Date.now(), s: JSON.stringify(await get("/api/dia?data=" + d)) }; cacheDia.set(d, c); } const x = JSON.parse(c.s); adiar(x); if (x && x.itens) await ajustarResumo(d, x.itens.filter(i => !i._adiado)); } catch (e) {} }));
+    await Promise.all(outros.map(async d => { try { let c = cacheDia.get(d); if (!c || Date.now() - c.t > 30 * 60000 || !bate(d, c.s)) { c = { t: Date.now(), s: JSON.stringify(await get("/api/dia?data=" + d)) }; cacheDia.set(d, c); } const x = JSON.parse(c.s); adiar(x); tirarDesig(x); if (x && x.itens) await ajustarResumo(d, x.itens.filter(i => !i._adiado && !i._desig)); } catch (e) {} }));
   }
   try { await carregarDiarios(); } catch (e) { diarios = []; }
   renderDays(); render();
