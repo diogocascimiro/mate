@@ -22,6 +22,7 @@ function tipoDe(palavra){
 export function refs(texto, forcarRQC, comPos, tipoBase){
   const out = [], anteriores = new Set();
   texto = String(texto).replace(/\bn[º°]s?\s+(?=n[º°])/gi, "");   // "nº nº 3.734/2023"
+  texto = texto.replace(/(\d)(\s+)\/\s*((?:19|20)\d\d)(?!\d)/g, (x, d, sp, ano) => d + "/" + ano + " ".repeat(x.length - 6));   // "nº 20.184 /2026" (mantém as posições)
   // "Requerimentos nºs 20.077/2026, na pág. 43, e 20.165/2026": o número da página não é proposição (troca por espaços, mantendo as posições)
   texto = texto.replace(/\bp[áa]g(?:ina)?s?\.?\s*\d+(?:\s*(?:,|e|a)\s*\d+(?![\d.\/]))*/gi, x => " ".repeat(x.length));
   const rn0 = /\bn[º°]s?\.?\s*(?=\d)/gi;
@@ -180,15 +181,18 @@ export function extrairDL(lines){
     const l = lines[li]; const t = l.t; const bold = l.b > 0.8;
     if (/^Página \d+ de \d+/.test(t) || /^(Segunda|Terça|Quarta|Quinta|Sexta)-feira, \d+ de|^S[aá]bado, \d+ de/.test(t)) continue;
     const upper = t === t.toUpperCase();
-    if (bold && upper && !/^\d/.test(t) && ehTopo(t)) {
+    // dentro de ERRATAS, título em negrito seguido de "Na publicação/Na edição/onde se lê" é a epígrafe de mais uma errata, mesmo que pareça nome de seção ("LEIS", "ACORDO DE LÍDERES")
+    const epigrafe = topoTxt === "ERRATAS" && bold && (() => { for (let j = li + 1; j < lines.length && j <= li + 4; j++) { if (lines[j].b > 0.8) continue; return /^(Na publica[cç][aã]o|Na edi[cç][aã]o|No (avulso|sum[aá]rio)|Onde se l[eê])/i.test(lines[j].t); } return false; })();
+    if (bold && upper && !/^\d/.test(t) && ehTopo(t) && !epigrafe) {
       flush(); topo = norm(t); topoTxt = /^ERRATA/.test(topo) ? "ERRATAS" : t; ata = null; sub = null; doc = null; sumario = false; ultimaDescMsg = null;
       if (topoTxt === "ERRATAS") { add("ERRATAS", null, l.p); erratas.push({ titulo: "", texto: "", pag: l.p }); }
       continue;
     }
     if (!topo || IGNORA_TOPO.test(topo)) continue;
     if (topoTxt === "ERRATAS") {   // guarda título (epígrafe) e texto de cada errata: o lançamento é na proposição da matéria corrigida
-      const e = erratas[erratas.length - 1];
-      if (bold) e.titulo += (e.titulo ? " " : "") + t; else e.texto += (e.texto ? " " : "") + t;
+      let e = erratas[erratas.length - 1];
+      if (bold && e.texto && !/^[“"]/.test(t) && !/[“"][^”"]*$/.test(e.texto)) { e = { titulo: "", texto: "", pag: l.p }; erratas.push(e); }   // nova epígrafe depois do texto da errata anterior
+      if (bold && !(e.texto && (/^[“"]/.test(t) || /[“"][^”"]*$/.test(e.texto)))) e.titulo += (e.titulo ? " " : "") + t; else e.texto += (e.texto ? " " : "") + t;
       push("ERRATAS", t, l.p); continue;
     }
     if (bold && /^ATA DA /.test(t)) {
@@ -259,8 +263,11 @@ export function extrairDL(lines){
         // refs()/TIPOS/QUEBRA (usados em todo o resto do arquivo).
         const mOfi = titulo.match(/of[ií]cios?\s*n[º°o]?\.?\s*([\d.]+)\s*\/\s*(\d{4})/i);
         if (mOfi) add(grupoPar, "OFI " + mOfi[1].replace(/\./g, "") + "/" + mOfi[2], l.p);
-        else for (const r of refs(titulo).slice(0, 1)) add(grupoPar, r, l.p);
+        else for (const r of refs(titulo.replace(/\b(REQUERIMENTOS?|PROJETOS? DE LEI(?: COMPLEMENTAR)?|PROJETOS? DE RESOLU[CÇ][AÃ]O|PROPOSTAS? DE EMENDA [AÀ] CONSTITUI[CÇ][AÃ]O|VETOS?|INDICA[CÇ][AÃ]O)\s+(?=\d)/gi, "$1 Nº ")).slice(0, 1)) add(grupoPar, r, l.p);   // "PARECER SOBRE O REQUERIMENTO 10.724/2025" (sem "nº")
       }
+      continue;
+    } else if (/^EMENDAS A MATERIA ORCAMENTARIA/.test(topo)) {   // só o título "EMENDAS AO PROJETO DE LEI Nº 6.186/2026"; as justificativas citam outras proposições
+      if (bold && /^EMENDAS? AO /i.test(t)) for (const r of refs(t).slice(0, 1)) add(topoTxt, r, l.p);
       continue;
     } else if (/^PROPOSICOES DE LEI/.test(topo)) {
       const m = bold && t.match(/^PROPOSI[CÇ][AÃ]O DE LEI N[º°]\s*([\d.]+)$/i);
