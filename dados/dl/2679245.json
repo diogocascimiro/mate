@@ -1,11 +1,11 @@
 {
- "versao": 24,
+ "versao": 25,
  "id": "2679245",
  "data": "2026-11-20",
  "url": "https://mediaserver.almg.gov.br/acervo/679/245/2679245.pdf",
  "obs": "",
  "paginas": 1,
- "extraido_em": "2026-11-27T17:21:23.916Z",
+ "extraido_em": "2026-11-27T18:09:59.087Z",
  "grupos": [
   {
    "desc": "ERRATAS",
@@ -20,5 +20,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:07:43.882Z"
+ "conferido_em": "2026-11-27T18:09:59.087Z"
 }

@@ -1,11 +1,11 @@
 {
- "versao": 24,
+ "versao": 25,
  "id": "2672341",
  "data": "2026-11-14",
  "url": "https://mediaserver.almg.gov.br/acervo/672/341/2672341.pdf",
  "obs": "",
  "paginas": 21,
- "extraido_em": "2026-11-27T17:20:18.934Z",
+ "extraido_em": "2026-11-27T18:09:07.893Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: DESENVOLVIMENTO ECONÔMICO, 27/10",
@@ -512,12 +512,17 @@
    ],
    "erratas": [
     {
-     "titulo": "PROJETO DE RESOLUÇÃO Nº 141/2026 PROJETO DE RESOLUÇÃO Nº 142/2026",
-     "texto": "Na publicação da matéria em epígrafe, na edição de 13/11/2026, na pág. 116, no fecho, após o local e a data, acrescente-se o seguinte: “Mesa da Assembleia” Na publicação da matéria em epígrafe, na edição de 13/11/2026, na pág. 116, no fecho, após o local e a data, acrescente-se o seguinte: “Mesa da Assembleia”.",
+     "titulo": "PROJETO DE RESOLUÇÃO Nº 141/2026",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 13/11/2026, na pág. 116, no fecho, após o local e a data, acrescente-se o seguinte: “Mesa da Assembleia”",
+     "pag": 21
+    },
+    {
+     "titulo": "PROJETO DE RESOLUÇÃO Nº 142/2026",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 13/11/2026, na pág. 116, no fecho, após o local e a data, acrescente-se o seguinte: “Mesa da Assembleia”.",
      "pag": 21
     }
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:07:16.019Z"
+ "conferido_em": "2026-11-27T18:09:07.893Z"
 }

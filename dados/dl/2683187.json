@@ -1,11 +1,11 @@
 {
- "versao": 24,
+ "versao": 25,
  "id": "2683187",
  "data": "2026-11-26",
  "url": "https://mediaserver.almg.gov.br/acervo/683/187/2683187.pdf",
  "obs": "",
  "paginas": 1,
- "extraido_em": "2026-11-27T17:21:56.048Z",
+ "extraido_em": "2026-11-27T18:10:04.928Z",
  "grupos": [
   {
    "desc": "ERRATAS",
@@ -20,5 +20,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:07:50.188Z"
+ "conferido_em": "2026-11-27T18:10:04.928Z"
 }

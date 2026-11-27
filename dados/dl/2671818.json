@@ -1,11 +1,11 @@
 {
- "versao": 24,
+ "versao": 25,
  "id": "2671818",
  "data": "2026-11-13",
  "url": "https://mediaserver.almg.gov.br/acervo/671/818/2671818.pdf",
  "obs": "",
  "paginas": 143,
- "extraido_em": "2026-11-27T17:20:12.807Z",
+ "extraido_em": "2026-11-27T18:09:02.692Z",
  "grupos": [
   {
    "desc": "PROPOSIÇÕES DE LEI",
@@ -1089,32 +1089,42 @@
      "mate": "publicada no DL em 13 11 2026, pág 142, "
     },
     {
-     "prop": "PL 6224/2026",
+     "prop": "PL 2865/2024",
      "pag": 142,
+     "status": "ok",
+     "mate": "publicada no DL em 13 11 2026, pág 142, "
+    },
+    {
+     "prop": "PL 6224/2026",
+     "pag": 143,
      "status": "ok",
      "mate": "publicada no DL em 13 11 2026, pág 143, "
     },
     {
      "prop": "PL 3085/2024",
-     "pag": 142,
+     "pag": 143,
      "status": "ok",
      "mate": "publicada no DL em 13 11 2026, pág 143, "
-    },
-    {
-     "prop": "PL 2865/2024",
-     "pag": 142,
-     "status": "ok",
-     "mate": "publicada no DL em 13 11 2026, pág 142, "
     }
    ],
    "erratas": [
     {
-     "titulo": "PROJETO DE LEI Nº 4.700/2025 PROJETO DE LEI Nº 6.224/2026 PARECER PARA O 2º TURNO DO PROJETO DE LEI Nº 3.085/2024 Comissão de Desenvolvimento Econômico",
-     "texto": "Na publicação da matéria em epígrafe, na edição de 27/11/2025, na pág. 26, no despacho, onde se lê: “Anexe-se ao Projeto de Lei nº 2.864/2024”, leia-se: “Anexe-se ao Projeto de Lei nº 2.865/2024”. Na publicação da matéria em epígrafe, na edição de 12/11/2026, na pág. 21, antes do despacho, acrescente-se o seguinte: “– Os documentos mencionados na justificação podem ser acessados por meio dos links a seguir: https://mediaserver.almg.gov.br/acervo/671/601/2671601.pdf https://mediaserver.almg.gov.br/acervo/671/602/2671602.pdf”. Na publicação da matéria em epígrafe, na edição de 12/11/2026, na pág. 165, nas assinaturas, onde se lê: “Roberto Andrade, presidente e relator – João Magalhães – Tito Torres”, leia-se: “Roberto Andrade, presidente – João Magalhães, relator – Tito Torres.”.",
+     "titulo": "PROJETO DE LEI Nº 4.700/2025",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 27/11/2025, na pág. 26, no despacho, onde se lê: “Anexe-se ao Projeto de Lei nº 2.864/2024”, leia-se: “Anexe-se ao Projeto de Lei nº 2.865/2024”.",
      "pag": 142
+    },
+    {
+     "titulo": "PROJETO DE LEI Nº 6.224/2026",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 12/11/2026, na pág. 21, antes do despacho, acrescente-se o seguinte: “– Os documentos mencionados na justificação podem ser acessados por meio dos links a seguir: https://mediaserver.almg.gov.br/acervo/671/601/2671601.pdf https://mediaserver.almg.gov.br/acervo/671/602/2671602.pdf”.",
+     "pag": 143
+    },
+    {
+     "titulo": "PARECER PARA O 2º TURNO DO PROJETO DE LEI Nº 3.085/2024 Comissão de Desenvolvimento Econômico",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 12/11/2026, na pág. 165, nas assinaturas, onde se lê: “Roberto Andrade, presidente e relator – João Magalhães – Tito Torres”, leia-se: “Roberto Andrade, presidente – João Magalhães, relator – Tito Torres.”.",
+     "pag": 143
     }
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:07:16.015Z"
+ "conferido_em": "2026-11-27T18:09:05.452Z"
 }

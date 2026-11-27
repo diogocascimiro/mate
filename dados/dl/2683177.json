@@ -1,11 +1,11 @@
 {
- "versao": 24,
+ "versao": 25,
  "id": "2683177",
  "data": "2026-11-27",
  "url": "https://mediaserver.almg.gov.br/acervo/683/177/2683177.pdf",
  "obs": "",
  "paginas": 330,
- "extraido_em": "2026-11-27T17:22:03.650Z",
+ "extraido_em": "2026-11-27T18:10:23.348Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: PARTICIPAÇÃO POPULAR, 10/11",
@@ -459,41 +459,11 @@
   },
   {
    "desc": "EMENDAS A MATÉRIA ORÇAMENTÁRIA",
-   "pag": "16 - 214",
+   "pag": "16 - 79",
    "props": [
     {
      "prop": "PL 6186/2026",
      "pag": 16,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 6134/2026",
-     "pag": 22,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "PL 4541/2025",
-     "pag": 47,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 16856/2026",
-     "pag": 48,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 16853/2026",
-     "pag": 49,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
-     "prop": "RQN 2144/2023",
-     "pag": 51,
      "status": "aguardando",
      "mate": ""
     },
@@ -524,6 +494,12 @@
     {
      "prop": "RQN 10374/2025",
      "pag": 234,
+     "status": "aguardando",
+     "mate": ""
+    },
+    {
+     "prop": "RQN 10724/2025",
+     "pag": 235,
      "status": "aguardando",
      "mate": ""
     },
@@ -1380,6 +1356,12 @@
      "mate": "Publicado na íntegra o teor deste requerimento, no DL em 27 11 2026, pág 294, e"
     },
     {
+     "prop": "RQN 20184/2026",
+     "pag": 294,
+     "status": "ok",
+     "mate": "Publicado na íntegra o teor deste requerimento, no DL em 27 11 2026, pág 294, e"
+    },
+    {
      "prop": "RQN 20185/2026",
      "pag": 294,
      "status": "ok",
@@ -1875,32 +1857,14 @@
   },
   {
    "desc": "ERRATAS",
-   "pag": "329",
-   "props": [],
-   "erratas": [
-    {
-     "titulo": "ATOS DA MESA DA ASSEMBLEIA",
-     "texto": "Na publicação da matéria em epígrafe, na edição de 24/11/2026, na pág. 34, onde se lê: “Wanilton Cezar Silva”, leia-se: “Wanilton Cezar da Silva”.",
-     "pag": 329
-    }
-   ]
-  },
-  {
-   "desc": "LEIS",
-   "pag": "330",
+   "pag": "329 - 330",
    "props": [
     {
-     "prop": "RQN 24056/2026",
+     "prop": "RQC 24056/2026",
      "pag": 330,
-     "status": "aguardando",
-     "mate": ""
-    }
-   ]
-  },
-  {
-   "desc": "ACORDO DE LÍDERES",
-   "pag": "330",
-   "props": [
+     "status": "ok",
+     "mate": "publicada no DL em 27 11 2026, pág 330, "
+    },
     {
      "prop": "PL 2513/2024",
      "pag": 330,
@@ -1908,13 +1872,47 @@
      "mate": "publicada no DL em 27 11 2026, pág 330, "
     },
     {
-     "prop": "PL 2513/2023",
+     "prop": "PL 3978/2025",
      "pag": 330,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "publicada no DL em 27 11 2026, pág 330, ",
+     "origem": "Proposição de Lei 27077"
+    },
+    {
+     "prop": "PL 6208/2026",
+     "pag": 330,
+     "status": "ok",
+     "mate": "publicada no DL em 27 11 2026, pág 330, "
+    }
+   ],
+   "erratas": [
+    {
+     "titulo": "ATOS DA MESA DA ASSEMBLEIA",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 24/11/2026, na pág. 34, onde se lê: “Wanilton Cezar Silva”, leia-se: “Wanilton Cezar da Silva”.",
+     "pag": 329
+    },
+    {
+     "titulo": "LEIS",
+     "texto": "Na edição de 26/11/2026, na pág. 1, no sumário e na seção em epígrafe, onde se lê: “LEIS”, leia-se: “PROPOSIÇÕES DE LEI”.",
+     "pag": 330
+    },
+    {
+     "titulo": "ATA DA 20ª REUNIÃO EXTRAORDINÁRIA DA COMISSÃO DE SEGURANÇA PÚBLICA NA 4ª SESSÃO LEGISLATIVA ORDINÁRIA DA 20ª LEGISLATURA, EM 18/11/2026",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 26/11/2026, na pág. 9, após a lista de requerimentos recebidos e aprovados, onde se lê: “A presidência, nos termos do art. 284, I, do Regimento Interno, torna prejudicado o Requerimento nº 24.056/2026, do deputado Delegado Christiano Xavier,”, leia-se: “A presidência, nos termos do art. 173 do Regimento Interno, deixa de receber o Requerimento nº 24.056/2026, do deputado Delegado Christiano Xavier,”.",
+     "pag": 330
+    },
+    {
+     "titulo": "ACORDO DE LÍDERES",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 26/11/2026, na pág. 12, após as assinaturas, acrescente-se o seguinte: “Decisão da Presidência A presidência acolhe o acordo e determina seu cumprimento. Mesa da Assembleia, 25 de novembro de 2026. Leninha, presidente em exercício.”.",
+     "pag": 330
+    },
+    {
+     "titulo": "PARECER PARA O 2º TURNO DO PROJETO DE LEI Nº 2.513/2024 Comissão do Trabalho, da Previdência e da Assistência Social",
+     "texto": "Na publicação da matéria em epígrafe, na edição de 26/11/2026, na pág. 45, após as assinaturas, na redação do vencido, onde se lê: “Projeto de Lei nº 2.513/2023”, leia-se: “Projeto de Lei nº 2.513/2024”.",
+     "pag": 330
     }
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:08:14.165Z"
+ "conferido_em": "2026-11-27T18:10:43.951Z"
 }

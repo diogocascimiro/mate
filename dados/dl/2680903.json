@@ -1,11 +1,11 @@
 {
- "versao": 24,
+ "versao": 25,
  "id": "2680903",
  "data": "2026-11-26",
  "url": "https://mediaserver.almg.gov.br/acervo/680/903/2680903.pdf",
  "obs": "",
  "paginas": 67,
- "extraido_em": "2026-11-27T17:21:34.625Z",
+ "extraido_em": "2026-11-27T18:10:04.418Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: EXTRAORDINÁRIA DE PREVENÇÃO E ENFRENTAMENTO AO CÂNCER, ",
@@ -680,5 +680,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:07:50.188Z"
+ "conferido_em": "2026-11-27T18:10:04.418Z"
 }

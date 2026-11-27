@@ -1,11 +1,11 @@
 {
- "versao": 24,
+ "versao": 25,
  "id": "2674107",
  "data": "2026-11-13",
  "url": "https://mediaserver.almg.gov.br/acervo/674/107/2674107.pdf",
  "obs": "",
  "paginas": 1,
- "extraido_em": "2026-11-27T17:20:17.308Z",
+ "extraido_em": "2026-11-27T18:09:06.464Z",
  "grupos": [
   {
    "desc": "ERRATAS",
@@ -20,5 +20,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-27T18:07:16.018Z"
+ "conferido_em": "2026-11-27T18:09:06.464Z"
 }
