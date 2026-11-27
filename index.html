@@ -396,7 +396,7 @@ function render(){
     mostradas++;
     if (fechada()) return;
     const tr = el("tr", "reu" + (off ? " off" : "") + (todas.length ? " clic" : ""));
-    tr.appendChild(el("td", "h", hora)); const tn = el("td", "n"); if (href) { const a = el("a", "nlink", nome); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte (clique no restante da linha para ver os itens)"; a.addEventListener("click", e => e.stopPropagation()); tn.appendChild(a); } else tn.textContent = nome; tr.appendChild(tn); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + (qtdTxt === "não houve" ? "qn" : qtdTxt === "?" ? "qi" : qtdTxt === "-" ? "q0" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
+    tr.appendChild(el("td", "h", hora)); const tn = el("td", "n"); if (href) { const a = el("a", "nlink", nome); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.title = "Abrir a fonte (clique no restante da linha para ver os itens)"; a.addEventListener("click", e => e.stopPropagation()); tn.appendChild(a); } else tn.textContent = nome; tr.appendChild(tn); const qc = el("td", "q"); qc.appendChild(el("span", "qp " + ((qtdTxt === "não houve" || qtdTxt === "cancelada") ? "qn" : qtdTxt === "?" ? "qi" : qtdTxt === "-" ? "q0" : /^\d+$/.test(qtdTxt) ? (qtdTxt === "0" ? "q0" : "qv") : "qa"), qtdTxt)); tr.appendChild(qc);
     const sc = pills(todas); const cnt = {}; todas.forEach(i => cnt[i.status] = (cnt[i.status] || 0) + 1);
     tr.appendChild(sc);
     tr.classList.add(cnt.divergente || cnt.pendente || cnt.nao_cadastrada || cnt.revisar ? "prob" : cnt.aguardando ? "esp" : cnt.ok ? "okk" : "neutra");
@@ -418,9 +418,9 @@ function render(){
     tr.classList.toggle("aberta", aberta);
   }
   const visiveis = its.filter(i => !ehDesig(i));
-  // "não houve" só quando o resultado diz isso (reunião desconvocada ou resultado publicado sem a reunião ter ocorrido); antes disso, "?"
+  // "cancelada" quando a reunião foi desconvocada (portal: "Reunião cancelada."); "não houve" quando o resultado diz que não houve reunião; antes disso, "?"
   const naoHouve = r => r.ocorrida === "D" || r.ocorrida === "NH";
-  const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? (n ? String(n) : "-") : "aguardando resultado") : (naoHouve(r) ? "não houve" : "?");
+  const estado = (r, n) => r.ocorrida === "S" ? (r.res_em ? (n ? String(n) : "-") : "aguardando resultado") : (naoHouve(r) ? (r.ocorrida === "D" ? "cancelada" : "não houve") : "?");
   // Diários (Executivo e Legislativo), no formato da planilha: páginas · seção · quantidade
   for (const [fonte, titulo, cls] of [["DE", "DIÁRIO DO EXECUTIVO", "sec-de"], ["DL", "DIÁRIO DO LEGISLATIVO", "sec-dl"]]) {
     // tópico sem nenhuma proposição (ex.: errata só dos Atos da Mesa) não gera lançamento: fica fora do painel
