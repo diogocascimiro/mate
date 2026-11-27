@@ -1,11 +1,11 @@
 {
- "versao": 23,
+ "versao": 24,
  "id": "2678795",
  "data": "2026-11-24",
  "url": "https://mediaserver.almg.gov.br/acervo/678/795/2678795.pdf",
  "obs": "",
  "paginas": 35,
- "extraido_em": "2026-11-26T18:25:27.037Z",
+ "extraido_em": "2026-11-27T17:21:26.432Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: EDUCAÇÃO, CIÊNCIA E TECNOLOGIA, 17/11",
@@ -552,12 +552,6 @@
      "mate": "publicada no DL em 24 11 2026, pág 35, "
     },
     {
-     "prop": "RQN 43/2026",
-     "pag": 35,
-     "status": "aguardando",
-     "mate": ""
-    },
-    {
      "prop": "RQN 20165/2026",
      "pag": 35,
      "status": "ok",
@@ -573,5 +567,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-26T21:37:47.101Z"
+ "conferido_em": "2026-11-27T17:21:26.432Z"
 }

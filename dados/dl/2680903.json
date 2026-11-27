@@ -1,11 +1,11 @@
 {
- "versao": 23,
+ "versao": 24,
  "id": "2680903",
  "data": "2026-11-26",
  "url": "https://mediaserver.almg.gov.br/acervo/680/903/2680903.pdf",
  "obs": "",
  "paginas": 67,
- "extraido_em": "2026-11-26T18:25:30.924Z",
+ "extraido_em": "2026-11-27T17:21:34.625Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: EXTRAORDINÁRIA DE PREVENÇÃO E ENFRENTAMENTO AO CÂNCER, ",
@@ -374,8 +374,8 @@
     {
      "prop": "PL 455/2015",
      "pag": 22,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 1031/2019",
@@ -386,14 +386,14 @@
     {
      "prop": "PL 723/2023",
      "pag": 25,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 2412/2024",
      "pag": 26,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 3859/2025",
@@ -416,14 +416,14 @@
     {
      "prop": "PL 5175/2026",
      "pag": 33,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 5307/2026",
      "pag": 35,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 5913/2026",
@@ -434,32 +434,32 @@
     {
      "prop": "PL 5948/2026",
      "pag": 37,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 6219/2026",
      "pag": 39,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 276/2023",
      "pag": 40,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     },
     {
      "prop": "PL 2513/2024",
      "pag": 44,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026, pág 44"
     },
     {
      "prop": "PL 5367/2026",
      "pag": 45,
-     "status": "aguardando",
-     "mate": ""
+     "status": "ok",
+     "mate": "Publicado no DL em 26 11 2026"
     }
    ]
   },
@@ -680,5 +680,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-26T21:38:05.828Z"
+ "conferido_em": "2026-11-27T17:21:54.395Z"
 }

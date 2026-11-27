@@ -1,11 +1,11 @@
 {
- "versao": 23,
+ "versao": 24,
  "id": "2681140",
  "data": "2026-11-25",
  "url": "https://mediaserver.almg.gov.br/acervo/681/140/2681140.pdf",
  "obs": "",
  "paginas": 83,
- "extraido_em": "2026-11-26T18:25:29.288Z",
+ "extraido_em": "2026-11-27T17:21:31.799Z",
  "grupos": [
   {
    "desc": "REQUERIMENTOS DE COMISSÃO: MEIO AMBIENTE E DESENVOLVIMENTO SUSTENTÁVEL, 17/11",
@@ -495,5 +495,5 @@
    ]
   }
  ],
- "conferido_em": "2026-11-26T21:37:47.101Z"
+ "conferido_em": "2026-11-27T17:21:31.799Z"
 }
