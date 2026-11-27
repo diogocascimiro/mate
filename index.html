@@ -505,7 +505,7 @@ function reconferir(i){
   if (i.status === "divergente" && i.mate && /^RQN /.test(i.prop) && normC(i.acao).startsWith("parecer aprovado") && /aprovado o requerimento|aprovada a proposicao/.test(normC(i.mate))) { i.status = "ok"; return true; }   // RQN votado na comissão: o resultado diz "Parecer aprovado", o portal "Aprovado o requerimento na comissão"
   if (i.status !== "divergente" || !i.mate || /^RQ/.test(i.prop) || !normC(i.acao).startsWith("parecer aprovado")) return false;
   const t = normC(i.mate), d = normC(i.detalhe);
-  let ok = (/parecer/.test(t) && /aprovad/.test(t)) || /aprovada a proposicao/.test(t);
+  let ok = (/parecer/.test(t) && /aprovad/.test(t)) || /aprovada a proposicao/.test(t) || (/^PLE /.test(i.prop) && /aprovada a proposta/.test(t));   // PLE na Participação Popular: portal "Aprovada a proposta na forma dos requerimentos apresentados"
   for (const [, tp, n] of d.matchAll(/(substitutivo|emenda)s? n[ºo°.]*\s*(\d+)/g)) if (!new RegExp(tp + "s?\\s*(n[ºo°.]*\\s*)?" + n + "\\b").test(t)) ok = false;
   const relE = (String(i.detalhe || "").match(/Dep\. [^·,]+/g) || []).map(x => normC(x.replace(/^Dep\. /, "")));
   if (ok && relE.length && /relatori/.test(t) && !relE.some(r => t.includes(r)) && !/redistribu/.test(t)) ok = false;
