@@ -130,7 +130,9 @@ function votacoesNominais(plen, add){
     const antes = txt.slice(it.idx, m.index);
     if (/requerimento\s+[^.]{0,120}(retirada de pauta|adiamento|invers[ãa]o|prefer[êe]ncia)[^.]{0,200}\.\s*[^.]*Em vota[cç][aã]o,\s+o\s+requerimento/i.test(antes)) continue;
     const ev = antes.lastIndexOf("Em votação");
-    add("VOTAÇÕES NOMINAIS", it.prop, pagDe(ev >= 0 ? it.idx + ev : m.index));
+    // página: onde começa o "Votaram..." (resultado), não o "Em votação" (pode estar na página anterior)
+    const vt = txt.slice(m.index).search(/[Vv]ota(ram|u)\s+[“"]/);
+    add("VOTAÇÕES NOMINAIS", it.prop, pagDe(vt >= 0 ? m.index + vt : m.index));
   }
 }
 
